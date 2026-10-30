@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "release_title": "MacBrains Labs ANE Research Records, 2026: Public Measurement Summaries",
+  "record_class": "source-bound curated summary, not raw results",
+  "authors_public_name": "Nayte Wilson",
+  "publisher_identity": "MacBrains Labs (independent)",
+  "site_repository": "https://github.com/naytewilson/macbrainslabs-site",
+  "site_commit": "27ac1941b26e865b1894a715946e2db7bcf7ed8b",
+  "source_files": {
+    "notes/qwen-lut4/index.html": {
+      "sha256": "1a83a9091dc1e4260ca887f95269273b934033da143aa40b4265460ea26f5d25",
+      "url": "https://macbrainslabs.org/notes/qwen-lut4/"
+    },
+    "notes/lfm-parity/index.html": {
+      "sha256": "f23b5c38e8916a3b36c0e1f8f515577505a6d6f7d0f5ed701b66308000a3c198",
+      "url": "https://macbrainslabs.org/notes/lfm-parity/"
+    },
+    "notes/decode-regimes/index.html": {
+      "sha256": "5d70729baca8ea3d82db41588b30eb1e7cfcb48e1498b2ab6e7b36ec50821c03",
+      "url": "https://macbrainslabs.org/notes/decode-regimes/"
+    },
+    "methods/index.html": {
+      "sha256": "e22fc13c7a6665589ec29e642cbc6657a22cc09f68c961f8843cc9b29e79884f",
+      "url": "https://macbrainslabs.org/methods/"
+    }
+  },
+  "evidence_limits": [
+    "MLComputePlan ANE assignment is compiler placement and is not direct ANE hardware tracing",
+    "Measurement fixtures, compiled artifacts, and raw ledger receipts are not included",
+    "Production and debug LFM S2 compiled artifacts are distinct",
+    "Aggregate tokens/sec are not per-stream rates",
+    "The initially hypothesized 57.3 tok/s universal bandwidth ceiling was falsified"
+  ],
+  "doi_status": "not issued; Zenodo authorization and deposit still required"
+}

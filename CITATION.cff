@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite this versioned public ANE research-summary release. A Zenodo DOI is not yet assigned."
+type: dataset
+title: "MacBrains Labs ANE Research Records, 2026: Public Measurement Summaries"
+authors:
+  - family-names: Wilson
+    given-names: Nayte
+    affiliation: "Independent researcher"
+    website: "https://macbrainslabs.org"
+version: "0.1.0"
+date-released: "2026-10-30"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/macbrainslabs/ane-research-records"
+url: "https://macbrainslabs.org/research/"
+abstract: "Source-pinned tables of already-public Core ML ANE placement, LFM S2 parity, and Qwen batch throughput. Curated summaries; not raw measurements or full reproducibility artifacts."

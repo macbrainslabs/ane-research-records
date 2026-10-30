@@ -1,0 +1,3 @@
+artifact,output,ane_cosine_against_fp16_fixture,ane_relative_l2_against_fp16_fixture,passes_declared_ane_gate,ane_assigned_compute_ops,total_compute_ops,source_note
+sealed_LFM_S2_production,lfm_h_after_liv,0.999886220,0.017295585,true,743,743,https://macbrainslabs.org/notes/lfm-parity/
+sealed_LFM_S2_production,lfm_h_after_gqa,0.999761005,0.027863104,true,743,743,https://macbrainslabs.org/notes/lfm-parity/

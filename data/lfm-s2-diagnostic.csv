@@ -1,0 +1,3 @@
+artifact,output,ane_cosine_against_fp16_fixture,ane_relative_l2_against_fp16_fixture,source_note
+LFM_PARITY_DEBUG_46_outputs,liv_14_mlp_output,0.997936767,0.064227031,https://macbrainslabs.org/notes/lfm-parity/
+LFM_PARITY_DEBUG_46_outputs,gqa_15_head_merge,0.098921468,1.342520581,https://macbrainslabs.org/notes/lfm-parity/

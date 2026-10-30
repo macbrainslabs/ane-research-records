@@ -1,0 +1,5 @@
+primitive,ane_assigned_ops,cpu_assigned_ops,source_note
+slice_update,56,0,https://macbrainslabs.org/notes/qwen-lut4/
+read_state,57,0,https://macbrainslabs.org/notes/qwen-lut4/
+write_state,56,0,https://macbrainslabs.org/notes/qwen-lut4/
+slice_by_index,225,0,https://macbrainslabs.org/notes/qwen-lut4/

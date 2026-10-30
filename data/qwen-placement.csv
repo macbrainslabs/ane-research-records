@@ -1,0 +1,2 @@
+model,compiled_function,ane_assigned_ops,cpu_assigned_ops,total_assigned_ops,cpu_tail_description,placement_evidence,source_note
+Qwen2.5-1.5B-Instruct LUT4 28L,infer,2090,79,2169,language-model-head argmax/output tail,MLComputePlan,https://macbrainslabs.org/notes/qwen-lut4/

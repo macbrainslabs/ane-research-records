@@ -1,0 +1,5 @@
+model,device,batch_size,aggregate_tokens_per_second,reported_relative_to_b1,measurement_type,source_note
+Qwen2.5-1.5B LUT4,A18 Pro,1,45.4,1.00,real batch and five-round interleaved steady-state,https://macbrainslabs.org/notes/decode-regimes/
+Qwen2.5-1.5B LUT4,A18 Pro,2,68.1,1.50,real batch and five-round interleaved steady-state,https://macbrainslabs.org/notes/decode-regimes/
+Qwen2.5-1.5B LUT4,A18 Pro,4,102.1,2.25,real batch and five-round interleaved steady-state,https://macbrainslabs.org/notes/decode-regimes/
+Qwen2.5-1.5B LUT4,A18 Pro,8,125.8,2.77,real batch and five-round interleaved steady-state,https://macbrainslabs.org/notes/decode-regimes/
