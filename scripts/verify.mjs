@@ -94,7 +94,9 @@ check('DOI metadata consistency and private evidence limits', () => {
 check('License/citation/security metadata and workflow', () => {
   assert.ok(fs.readFileSync('LICENSE','utf8').includes('Attribution 4.0 International'));
   assert.ok(fs.readFileSync('LICENSE-MIT','utf8').includes('MIT License'));
-  assert.ok(fs.readFileSync('CITATION.cff','utf8').includes('license: "CC-BY-4.0"'));
+  const cff=fs.readFileSync('CITATION.cff','utf8');
+  assert.ok(cff.includes('license: "CC-BY-4.0"'));
+  for(const keyword of ['Apple Neural Engine','Core ML','Qwen2.5','LFM S2']) assert.ok(cff.includes('  - "'+keyword+'"'));
   assert.ok(fs.readFileSync('SECURITY.md','utf8').includes('research@macbrainslabs.org'));
   assert.ok(fs.readFileSync('.github/workflows/verify.yml','utf8').includes('node scripts/verify.mjs'));
 });
