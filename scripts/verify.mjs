@@ -77,13 +77,19 @@ check('Qwen real-batch aggregate throughput and rounded relative factors', () =>
     assert.ok(row.measurement_type.includes('five-round'));
   }
 });
-check('No issued DOI or raw/private artifact represented', () => {
-  assert.ok(manifest.doi_status.includes('not issued'));
+check('DOI metadata consistency and private evidence limits', () => {
+  assert.ok(manifest.doi_status.startsWith('issued;'));
+  assert.strictEqual(manifest.version_doi, '10.5281/zenodo.23798037');
+  assert.strictEqual(manifest.concept_doi, '10.5281/zenodo.23798036');
+  assert.strictEqual(manifest.release_tag, 'v0.1.0');
+  assert.strictEqual(manifest.zenodo_record_url, 'https://zenodo.org/records/23798037');
+  assert.ok(fs.readFileSync('CITATION.cff','utf8').includes('doi: "' + manifest.version_doi + '"'));
   const readme=fs.readFileSync('README.md','utf8');
   assert.ok(readme.includes('raw measurement output') && readme.includes('**not** raw measurement output'));
   assert.ok(readme.includes('not direct silicon tracing')||readme.includes('not direct ANE hardware tracing')||readme.includes('not direct silicon tracing'));
   assert.ok(readme.includes('not a complete reproducibility bundle'));
   assert.ok(readme.includes('Zenodo DOI'));
+  assert.ok(readme.includes('https://doi.org/' + manifest.version_doi));
 });
 check('License/citation/security metadata and workflow', () => {
   assert.ok(fs.readFileSync('LICENSE','utf8').includes('Attribution 4.0 International'));

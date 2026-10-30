@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite this versioned public ANE research-summary release. A Zenodo DOI is not yet assigned."
+message: "Please cite the registered Zenodo version DOI for this public ANE research-summary release."
 type: dataset
 title: "MacBrains Labs ANE Research Records, 2026: Public Measurement Summaries"
 authors:
@@ -8,6 +8,7 @@ authors:
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
 version: "0.1.0"
+doi: "10.5281/zenodo.23798037"
 date-released: "2026-10-30"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"
