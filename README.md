@@ -14,6 +14,8 @@ Source methods: <https://macbrainslabs.org/methods/>
 
 Correspondence: <research@macbrainslabs.org>
 
+Researcher attribution: **[Nayte Wilson](https://orcid.org/0009-0003-4026-8212)**, ORCID iD `0009-0003-4026-8212`. The ORCID identifier connects the researcher to the existing DOI without changing the original v0.1.0 archive.
+
 ## Contents
 
 | Data file | Scope | Key boundaries |
