@@ -31,5 +31,9 @@
     "Aggregate tokens/sec are not per-stream rates",
     "The initially hypothesized 57.3 tok/s universal bandwidth ceiling was falsified"
   ],
-  "doi_status": "not issued; Zenodo authorization and deposit still required"
+  "doi_status": "issued; verified against Zenodo, DataCite and DOI resolver on 2026-10-30",
+  "version_doi": "10.5281/zenodo.23798037",
+  "concept_doi": "10.5281/zenodo.23798036",
+  "zenodo_record_url": "https://zenodo.org/records/23798037",
+  "release_tag": "v0.1.0"
 }

@@ -53,7 +53,7 @@ These tests verify **the transcription and declared invariants**, not the existe
 
 ## How to cite
 
-See [CITATION.cff](CITATION.cff) for recommended attribution. The published release tag identifies this version. A **Zenodo DOI has not yet been assigned**; no DOI is claimed until a deposit is confirmed by Zenodo. Update the metadata only after the publisher issues a legitimate identifier.
+See [CITATION.cff](CITATION.cff) for recommended attribution. The **Zenodo DOI for v0.1.0** is [10.5281/zenodo.23798037](https://doi.org/10.5281/zenodo.23798037); the [all-versions DOI](https://doi.org/10.5281/zenodo.23798036) resolves to the release family. The version-specific [GitHub release](https://github.com/macbrainslabs/ane-research-records/releases/tag/v0.1.0) is pinned to commit `257e54868c26bbb407199fe042f55c82b14b9cc5`. Zenodo and DataCite independently confirmed the record on 2026-10-30. The immutable tag/archive retain the pre-assignment metadata; this default branch records the subsequently verified DOI. Only public curated summaries, not private experimental evidence, were archived.
 
 ## Legal and scope
 
