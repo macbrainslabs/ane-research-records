@@ -1,5 +1,9 @@
 # MacBrains Labs — ANE Research Records, 2026
 
+[![Zenodo v0.1.0 dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23798037.svg)](https://doi.org/10.5281/zenodo.23798037)
+
+[All-versions DOI](https://doi.org/10.5281/zenodo.23798036) · This is a citable archive of public summaries, not peer-reviewed validation.
+
 **Versioned public research summaries and machine-readable measurements**, bound to the source revision of the independent MacBrains Labs website.
 
 **Scope:** Apple Neural Engine (ANE), Core ML graph placement, numerical parity, Qwen2.5-1.5B LUT4 inference, and batch decode. This is a curated release of **already-public, source-attributed reported observations**. It is **not** raw measurement output, an independently repeated benchmark, a full model or fixture package, a peer-reviewed paper, or an Apple-affiliated result.

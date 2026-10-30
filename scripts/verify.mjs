@@ -90,6 +90,8 @@ check('DOI metadata consistency and private evidence limits', () => {
   assert.ok(readme.includes('not a complete reproducibility bundle'));
   assert.ok(readme.includes('Zenodo DOI'));
   assert.ok(readme.includes('https://doi.org/' + manifest.version_doi));
+  assert.ok(readme.includes('https://zenodo.org/badge/DOI/' + manifest.version_doi + '.svg'));
+  assert.ok(readme.includes('https://doi.org/' + manifest.concept_doi));
 });
 check('License/citation/security metadata and workflow', () => {
   assert.ok(fs.readFileSync('LICENSE','utf8').includes('Attribution 4.0 International'));
