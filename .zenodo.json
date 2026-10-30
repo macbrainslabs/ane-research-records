@@ -1,0 +1,19 @@
+{
+  "title": "MacBrains Labs ANE Research Records: Public Measurement Summaries",
+  "upload_type": "dataset",
+  "description": "<p>Source-pinned tables of already-public Core ML Apple Neural Engine placement, LFM S2 numerical parity, and Qwen2.5 batch decode throughput. Curated summaries; not raw measurements or full reproducibility artifacts. The reported measurements have not been independently replicated by this deposit.</p>",
+  "creators": [
+    {
+      "name": "Wilson, Nayte",
+      "affiliation": "Independent researcher",
+      "orcid": "0009-0003-4026-8212"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": ["Apple Neural Engine", "Core ML", "Qwen2.5", "LFM S2"],
+  "related_identifiers": [
+    {"identifier": "https://macbrainslabs.org/research/", "relation": "isDocumentedBy", "resource_type": "publication-other"},
+    {"identifier": "https://github.com/macbrainslabs/ane-research-records", "relation": "isSupplementTo", "resource_type": "software"}
+  ]
+}
