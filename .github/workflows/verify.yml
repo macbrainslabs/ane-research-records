@@ -18,3 +18,8 @@ jobs:
           node-version: '22'
       - name: Validate tabular invariants and evidence metadata
         run: node scripts/verify.mjs
+      - name: Confirm archive audit rejects mutated and malformed data
+        run: node --test tests/publication-audit.test.mjs
+      - name: Verify GitHub, Zenodo and DataCite published bytes
+        if: github.event_name == 'workflow_dispatch'
+        run: node scripts/audit-publication.mjs
