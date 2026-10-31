@@ -57,6 +57,17 @@ node scripts/verify.mjs --upstream
 
 These tests verify **the transcription and declared invariants**, not the existence or correctness of the private underlying measurements.
 
+## Public release integrity audit
+
+A separate check downloads the actual GitHub and Zenodo archives for v0.1.0, verifies the publisher hashes and DOI registration, and compares **every archived file** to the original tagged Git source. The deterministic corruption tests run in CI; the network audit runs locally or through the workflow's manual dispatch.
+
+```sh
+node --test tests/publication-audit.test.mjs
+node scripts/audit-publication.mjs --json
+```
+
+See [Public evidence audit and limitations](docs/PUBLIC_EVIDENCE_AUDIT.md) for precise proof boundaries and a machine-readable verification receipt. These checks **do not** validate private ANE experiments, physical silicon traces, full-model correctness, or independent replication.
+
 ## How to cite
 
 See [CITATION.cff](CITATION.cff) for recommended attribution. The **Zenodo DOI for v0.1.0** is [10.5281/zenodo.23798037](https://doi.org/10.5281/zenodo.23798037); the [all-versions DOI](https://doi.org/10.5281/zenodo.23798036) resolves to the release family. The version-specific [GitHub release](https://github.com/macbrainslabs/ane-research-records/releases/tag/v0.1.0) is pinned to commit `257e54868c26bbb407199fe042f55c82b14b9cc5`. Zenodo and DataCite independently confirmed the record on 2026-10-30. The immutable tag/archive retain the pre-assignment metadata; this default branch records the subsequently verified DOI. Only public curated summaries, not private experimental evidence, were archived.

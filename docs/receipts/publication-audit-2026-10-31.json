@@ -1,0 +1,67 @@
+{
+  "schema": "macbrainslabs.publication-audit.v1",
+  "checked_at_utc": "2026-10-31T01:49:20.833Z",
+  "source": {
+    "repository": "macbrainslabs/ane-research-records",
+    "tag": "v0.1.0",
+    "site_commit": "27ac1941b26e865b1894a715946e2db7bcf7ed8b",
+    "tag_commit": "257e54868c26bbb407199fe042f55c82b14b9cc5"
+  },
+  "checks": [
+    {
+      "name": "GitHub v0.1.0 published release and tag identity",
+      "result": "PASS",
+      "tag_commit": "257e54868c26bbb407199fe042f55c82b14b9cc5",
+      "published_at": "2026-10-30T08:17:50Z"
+    },
+    {
+      "name": "Zenodo publisher record is published dataset with same DOI",
+      "result": "PASS",
+      "doi": "10.5281/zenodo.23798037",
+      "concept_doi": "10.5281/zenodo.23798036"
+    },
+    {
+      "name": "DataCite DOI registration and version relationship",
+      "result": "PASS",
+      "doi_state": "findable",
+      "type": "Dataset"
+    },
+    {
+      "name": "GitHub release asset SHA-256 and independent SHA256SUMS",
+      "result": "PASS",
+      "archive_sha256": "6a05314d58d50481d4bb294f559253489829d45bb5c3a7868868d9e095b90bdd",
+      "sums_sha256": "657e8ae0cd72ce05aaaeaaa26e549f2c29d4ed737d24dc4acb66ad756aae932e"
+    },
+    {
+      "name": "Zenodo source ZIP MD5 matches actual published bytes",
+      "result": "PASS",
+      "zenodo_zip_md5": "9dcd6b011365b62a09597b73792eaadd"
+    },
+    {
+      "name": "Exact public Git commit tree is not truncated",
+      "result": "PASS",
+      "git_tag_commit": "257e54868c26bbb407199fe042f55c82b14b9cc5",
+      "blob_count": 15
+    },
+    {
+      "name": "GitHub release tarball matches every Git tag file byte-for-byte",
+      "result": "PASS",
+      "matching_files": 15
+    },
+    {
+      "name": "Zenodo archived ZIP matches every Git tag file byte-for-byte",
+      "result": "PASS",
+      "matching_files": 15
+    }
+  ],
+  "boundaries": {
+    "public_distribution_bytes": "assessed",
+    "exact_public_git_tag_files": "assessed",
+    "issuer_doi_metadata": "assessed",
+    "private_raw_measurements": "NOT_ASSESSED",
+    "numerical_model_correctness": "NOT_ASSESSED",
+    "direct_ane_hardware_execution": "NOT_ASSESSED",
+    "independent_human_replication": "NOT_ASSESSED"
+  },
+  "ok": true
+}
