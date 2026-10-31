@@ -102,6 +102,36 @@ check('License/citation/security metadata and workflow', () => {
   assert.ok(fs.readFileSync('SECURITY.md','utf8').includes('research@macbrainslabs.org'));
   assert.ok(fs.readFileSync('.github/workflows/verify.yml','utf8').includes('node scripts/verify.mjs'));
 });
+check('Every data table matches schema/tables.json', () => {
+  const spec = JSON.parse(fs.readFileSync('schema/tables.json', 'utf8')).tables;
+  const files = fs.readdirSync('data').filter(f => f.endsWith('.csv')).sort();
+  eq(files.join(','), Object.keys(spec).sort().join(','));
+  const types = {
+    string: v => assert.ok(v.length > 0 && !/[\r\n]/.test(v), 'empty or multi-line string'),
+    integer: v => assert.ok(/^-?[0-9]+$/.test(v), 'not an integer: ' + v),
+    nonnegative: v => assert.ok(n(v) >= 0, 'negative: ' + v),
+    cosine: v => assert.ok(Math.abs(n(v)) <= 1, 'cosine out of [-1, 1]: ' + v),
+    fraction: v => assert.ok(n(v) >= 0 && n(v) <= 1, 'fraction out of [0, 1]: ' + v),
+    real: v => n(v),
+    boolean: v => assert.ok(v === 'true' || v === 'false', 'not a boolean: ' + v),
+    site_url: v => assert.ok(v.startsWith('https://macbrainslabs.org/'), 'not a macbrainslabs.org URL: ' + v),
+    sha256: v => assert.match(v, /^[0-9a-f]{64}$/),
+  };
+  for (const f of files) {
+    const cols = spec[f].columns;
+    const rows = fs.readFileSync('data/' + f, 'utf8').trim().split(/\r?\n/);
+    eq(rows.shift(), Object.keys(cols).join(','));
+    assert.ok(rows.length > 0, f + ' has no rows');
+    for (const line of rows) {
+      const v = line.split(',');
+      eq(v.length, Object.keys(cols).length);
+      Object.values(cols).forEach((t, i) => {
+        assert.ok(types[t], 'unknown column type ' + t);
+        try { types[t](v[i]); } catch (e) { throw new Error(f + ': ' + e.message); }
+      });
+    }
+  }
+});
 for(const line of lines)console.log(line);
 if(process.exitCode)process.exit();
 if(process.argv.includes('--upstream')) {
