@@ -1,5 +1,5 @@
 {
-  "title": "MacBrains Labs ANE Research Records: Public Measurement Summaries",
+  "title": "MacBrains Labs ANE Research Records, 2026: Public Measurement Summaries",
   "upload_type": "dataset",
   "description": "<p>Source-pinned tables of already-public Core ML Apple Neural Engine placement, LFM S2 numerical parity, and Qwen2.5 batch decode throughput. Curated summaries; not raw measurements or full reproducibility artifacts. The reported measurements have not been independently replicated by this deposit.</p>",
   "creators": [
