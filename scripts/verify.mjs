@@ -93,6 +93,20 @@ check('DOI metadata consistency and private evidence limits', () => {
   assert.ok(readme.includes('https://zenodo.org/badge/DOI/' + manifest.version_doi + '.svg'));
   assert.ok(readme.includes('https://doi.org/' + manifest.concept_doi));
 });
+check('Zenodo deposit metadata agrees with CITATION.cff', () => {
+  // Zenodo reads .zenodo.json (not CITATION.cff) when the next GitHub release
+  // mints a version, so the two must not drift apart.
+  const zj=JSON.parse(fs.readFileSync('.zenodo.json','utf8'));
+  const cff=fs.readFileSync('CITATION.cff','utf8');
+  const field=k=>{const m=cff.match(new RegExp('^'+k+': "?([^"\n]*?)"?$','m'));assert.ok(m,'CITATION.cff missing '+k);return m[1];};
+  eq(zj.title,field('title'));
+  eq(zj.upload_type,field('type'));
+  eq(zj.license,field('license').toLowerCase());
+  const orcid=(cff.match(/orcid: "https:\/\/orcid\.org\/([0-9X-]+)"/)||[])[1];
+  assert.ok(orcid,'CITATION.cff missing author ORCID');
+  eq(zj.creators.length,1);eq(zj.creators[0].orcid,orcid);eq(zj.creators[0].name,'Wilson, Nayte');
+  assert.ok(zj.description.includes('not independently replicated')||zj.description.includes('have not been independently replicated'));
+});
 check('License/citation/security metadata and workflow', () => {
   assert.ok(fs.readFileSync('LICENSE','utf8').includes('Attribution 4.0 International'));
   assert.ok(fs.readFileSync('LICENSE-MIT','utf8').includes('MIT License'));
