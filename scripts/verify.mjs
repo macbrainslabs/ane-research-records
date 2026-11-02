@@ -17,6 +17,14 @@ function csv(p) {
   const header = s.shift().split(',');
   return s.map(line => Object.fromEntries(line.split(',').map((v,i) => [header[i],v])));
 }
+// Later versions are listed in records/index.json; v0.1.0 (manifest.json) is the baseline.
+const INDEX = fs.existsSync('records/index.json') ? JSON.parse(fs.readFileSync('records/index.json','utf8')) : null;
+const semver = v => { const m=/^v(\d+)\.(\d+)\.(\d+)$/.exec(v||''); assert.ok(m,'bad version '+v); return m.slice(1).map(Number); };
+const cmpVer = (a,b) => { const x=semver(a),y=semver(b); return x[0]-y[0]||x[1]-y[1]||x[2]-y[2]; };
+const LATEST = INDEX && INDEX.records.length ? [...INDEX.records].sort((a,b)=>cmpVer(a.version,b.version)).at(-1) : null;
+const canonicalJSON = v => v===null||typeof v!=='object' ? JSON.stringify(v) : Array.isArray(v) ? '['+v.map(canonicalJSON).join(',')+']' :
+  '{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonicalJSON(v[k])).join(',')+'}';
+const sha256 = s => crypto.createHash('sha256').update(s).digest('hex');
 function n(v) {const x=Number(v);assert.ok(Number.isFinite(x), 'non-finite number');return x;}
 function eq(a,b){assert.equal(a,b);}
 const P = csv('data/qwen-placement.csv'), S = csv('data/qwen-state-primitives.csv'), L = csv('data/lfm-s2-parity.csv'),
@@ -83,7 +91,14 @@ check('DOI metadata consistency and private evidence limits', () => {
   assert.strictEqual(manifest.concept_doi, '10.5281/zenodo.23798036');
   assert.strictEqual(manifest.release_tag, 'v0.1.0');
   assert.strictEqual(manifest.zenodo_record_url, 'https://zenodo.org/records/23798037');
-  assert.ok(fs.readFileSync('CITATION.cff','utf8').includes('doi: "' + manifest.version_doi + '"'));
+  // CITATION.cff cites the newest version: the baseline DOI until a later record
+  // exists, then that record's version DOI, or none while Zenodo is still minting it.
+  const cff=fs.readFileSync('CITATION.cff','utf8');
+  const citedDoi=(cff.match(/^doi: "([^"]+)"$/m)||[])[1]||null;
+  const citedVersion=(cff.match(/^version: "([^"]+)"$/m)||[])[1];
+  if(!LATEST){ eq(citedDoi, manifest.version_doi); eq(citedVersion, manifest.release_tag.slice(1)); }
+  else { eq(citedDoi, LATEST.versionDoi||null); eq(citedVersion, LATEST.version.slice(1));
+    assert.ok(cff.includes('value: "'+manifest.concept_doi+'"'),'CITATION.cff must carry the concept DOI'); }
   const readme=fs.readFileSync('README.md','utf8');
   assert.ok(readme.includes('raw measurement output') && readme.includes('**not** raw measurement output'));
   assert.ok(readme.includes('not direct silicon tracing')||readme.includes('not direct ANE hardware tracing')||readme.includes('not direct silicon tracing'));
@@ -106,6 +121,36 @@ check('Zenodo deposit metadata agrees with CITATION.cff', () => {
   assert.ok(orcid,'CITATION.cff missing author ORCID');
   eq(zj.creators.length,1);eq(zj.creators[0].orcid,orcid);eq(zj.creators[0].name,'Wilson, Nayte');
   assert.ok(zj.description.includes('not independently replicated')||zj.description.includes('have not been independently replicated'));
+});
+check('Versioned records: index, files, review package hash, INCLUDE verdict, replication labels', () => {
+  if(!INDEX){ assert.ok(!fs.existsSync('records'),'records/ without records/index.json'); return; }
+  eq(INDEX.schema,'macbrains.dataset.records-index.v1');
+  eq(INDEX.conceptDoi, manifest.concept_doi);
+  eq(INDEX.baseline.version, manifest.release_tag); eq(INDEX.baseline.versionDoi, manifest.version_doi);
+  const tags=new Set(), versions=new Set();
+  for(const r of INDEX.records){
+    assert.match(r.tag,/^ane-record-[0-9a-f]{24}$/); assert.ok(!tags.has(r.tag)); tags.add(r.tag);
+    assert.ok(cmpVer(r.version, manifest.release_tag)>0); assert.ok(!versions.has(r.version)); versions.add(r.version);
+    eq(r.path,'records/'+r.tag+'/');
+    if(r.versionDoi!==undefined) assert.match(r.versionDoi,/^10\.5281\/zenodo\.\d+$/);
+    for(const f of ['finding.json','citations.json','preview.md','manifest.json','review-package.json','final-verdict.json'])
+      assert.ok(fs.existsSync(r.path+f),'missing '+r.path+f);
+    const rpRaw=fs.readFileSync(r.path+'review-package.json','utf8');
+    const rp=JSON.parse(rpRaw);
+    eq(rpRaw, canonicalJSON(rp)+'\n'); eq(sha256(canonicalJSON(rp)), r.reviewPackageHash);
+    eq(rp.publication.packageHash, r.packageHash); eq(rp.publication.releaseTag, r.tag);
+    for(const f of rp.publication.files) eq(sha256(fs.readFileSync(r.path+f.name)), f.sha256);
+    const v=JSON.parse(fs.readFileSync(r.path+'final-verdict.json','utf8'));
+    eq(v.reviewer,'macbrains-labs-reviewer'); eq(v.decision,'INCLUDE'); eq(v.reviewPackageHash, r.reviewPackageHash);
+    eq(v.verdictDigest, r.verdictDigest);
+    const rep=rp.replication;
+    eq(rep.runCount, rep.runs.length); eq(rep.runsLog.entryCount, rep.runCount);
+    eq(r.replication.runCount, rep.runCount); eq(r.replication.profileHash, rep.profileHash); eq(r.replication.claim, rep.claim);
+    if(rep.scope!=='cross-device') assert.ok(rep.claim.includes('not cross-device replication'));
+  }
+  const zj=JSON.parse(fs.readFileSync('.zenodo.json','utf8'));
+  eq(zj.version, LATEST.version);
+  assert.ok(zj.related_identifiers.some(x=>x.relation==='isDocumentedBy'&&x.identifier===LATEST.siteUrl));
 });
 check('License/citation/security metadata and workflow', () => {
   assert.ok(fs.readFileSync('LICENSE','utf8').includes('Attribution 4.0 International'));
