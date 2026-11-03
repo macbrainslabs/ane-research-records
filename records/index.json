@@ -1,0 +1,34 @@
+{
+  "schema": "macbrains.dataset.records-index.v1",
+  "series": "MacBrains Labs ANE Research Records",
+  "conceptDoi": "10.5281/zenodo.23798036",
+  "baseline": {
+    "version": "v0.1.0",
+    "tag": "v0.1.0",
+    "versionDoi": "10.5281/zenodo.23798037"
+  },
+  "records": [
+    {
+      "kind": "diagnostic",
+      "tag": "ane-record-c188def1e88a0d94018dfe99",
+      "version": "v0.2.0",
+      "title": "LFM3-1.7B layer-14 diagnostic under Core ML cpuAndNeuralEngine (same chip, single device)",
+      "findingId": "finding:50500988ae81348790c044aff2ef85720d148bf1",
+      "path": "records/ane-record-c188def1e88a0d94018dfe99/",
+      "releasedOn": "2026-11-03",
+      "bundleSha256": "0d2b3f787cf0f98e6d12ed9cebd614d028b0f39e9e210e55fb93cc14ca6f49b3",
+      "reviewedPackageSha256": "c188def1e88a0d94018dfe99f63aed795f58848871841d1c089d079a28aebff1",
+      "attestationSha256": "cbd11b6c5226a90a36fb22d7e12ebcc4f3290508a4574a8033745d368c002741",
+      "replication": {
+        "scope": "same-chip",
+        "claim": "same-chip, byte-reproducible on Apple A18 Pro (Mac17,5), macOS 27.2 (build 26B123), CoreML 3600.25.2; ANE execution INFERRED from Core ML compute-plan placement; no novelty claim",
+        "profileHash": "2f0cc0c9371123c7ea4055e755ff9d0ef714ed07e5092ca477581bad14be4042",
+        "logged": 8,
+        "counted": 5,
+        "preFreeze": 3,
+        "deleted": 1
+      },
+      "siteUrl": "https://macbrainslabs.org/research/records/ane-record-c188def1e88a0d94018dfe99/"
+    }
+  ]
+}

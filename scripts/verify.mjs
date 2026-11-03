@@ -122,6 +122,49 @@ check('Zenodo deposit metadata agrees with CITATION.cff', () => {
   eq(zj.creators.length,1);eq(zj.creators[0].orcid,orcid);eq(zj.creators[0].name,'Wilson, Nayte');
   assert.ok(zj.description.includes('not independently replicated')||zj.description.includes('have not been independently replicated'));
 });
+// Diagnostic-tier records republish the reviewed bundle and evidence files byte for byte.
+// The reviewed hand-off manifest is bound by its SHA-256; attestation.json carries the
+// review attestations and run accounting, and every claim field is checked against the bundle.
+function verifyDiagnosticRecord(r){
+  const dir=r.path;
+  for(const f of ['bundle.json','attestation.json','execution-log.jsonl','deletion-disclosure.md','preview.md'])
+    assert.ok(fs.existsSync(dir+f),'missing '+dir+f);
+  const aRaw=fs.readFileSync(dir+'attestation.json','utf8'); const a=JSON.parse(aRaw);
+  eq(aRaw, canonicalJSON(a)+'\n'); eq(sha256(aRaw), r.attestationSha256);
+  eq(a.schema,'macbrains.dataset.diagnostic-attestation.v1'); eq(a.tag,r.tag); eq(a.version,r.version);
+  eq(a.findingId,r.findingId); eq(a.siteUrl,r.siteUrl); eq(a.conceptDoi, manifest.concept_doi);
+  eq(a.files.map(f=>f.name).join(','),'bundle.json,execution-log.jsonl,deletion-disclosure.md,preview.md');
+  for(const f of a.files){ const b=fs.readFileSync(dir+f.name); eq(sha256(b),f.sha256); eq(b.length,f.bytes); }
+  const bRaw=fs.readFileSync(dir+'bundle.json'); const b=JSON.parse(bRaw.toString('utf8'));
+  eq(sha256(bRaw), a.bundle.sha256); eq(a.bundle.sha256, r.bundleSha256);
+  eq(b.findingId,a.findingId); eq(b.claim,a.claim); eq(b.claimScope,a.claimScope); eq(b.policyDigest,a.policy.digest);
+  eq(canonicalJSON(b.limits),canonicalJSON(a.limits)); eq(canonicalJSON(b.device),canonicalJSON(a.device));
+  assert.match(a.policy.commit,/^[0-9a-f]{40}$/); assert.match(a.reviewedPackage.sha256,/^[0-9a-f]{64}$/);
+  eq(a.reviewedPackage.sha256, r.reviewedPackageSha256);
+  eq(a.finalReview.reviewer,'macbrains-labs-reviewer'); eq(a.finalReview.decision,'INCLUDE');
+  eq(a.finalReview.reviewedPackageSha256, r.reviewedPackageSha256); assert.match(a.finalReview.verdictReceiptSha256,/^[0-9a-f]{64}$/);
+  eq(a.pipelineReviews.map(x=>x.role).sort().join(','),'evidence_reviewer,skeptical_reviewer');
+  for(const x of a.pipelineReviews){ eq(x.verdict,'INCLUDE'); assert.ok(x.score>=0&&x.score<=1); assert.ok(x.sessionId); }
+  // Scope: same chip, single device, never cross-device; ANE execution inferred; no novelty claim.
+  const br=b.evidence.byteReproducibility;
+  eq(br.crossDeviceReplication,false); eq(a.replication.crossDeviceReplication,false); eq(a.replication.scope,'same-chip');
+  eq(r.replication.scope,'same-chip'); eq(r.replication.claim,a.claimScope);
+  assert.ok(a.claimScope.startsWith('same-chip')); assert.ok(a.claimScope.includes('ANE execution INFERRED'));
+  assert.ok(a.claimScope.includes('no novelty claim')); eq(a.noveltyClaim,'UNCLAIMED'); eq(b.evidence.priorArt.noveltyClaim,'UNCLAIMED');
+  assert.ok(a.claim.includes('not cross-device'));
+  // Every logged execution of the profile is disclosed and counted from the log itself.
+  const log=fs.readFileSync(dir+'execution-log.jsonl','utf8').trim().split('\n').map(l=>JSON.parse(l));
+  const ex=log.filter(x=>x.kind!=='log-header');
+  for(const x of ex) eq(x.profileHash, br.profileHash);
+  eq(a.replication.profileHash, br.profileHash); eq(r.replication.profileHash, br.profileHash);
+  const counts={logged:ex.length,counted:ex.filter(x=>x.counted===true).length,
+    preFreeze:ex.filter(x=>x.status==='pre-freeze').length,deleted:ex.filter(x=>x.present==='deleted').length};
+  for(const k of Object.keys(counts)){ eq(a.replication[k],counts[k]); eq(r.replication[k],counts[k]); }
+  eq(counts.logged, counts.counted+counts.preFreeze);
+  const preview=fs.readFileSync(dir+'preview.md','utf8');
+  assert.ok(preview.includes(a.claim)); assert.ok(preview.includes(a.claimScope));
+  for(const x of ex) assert.ok(preview.includes('| '+x.runId+' |'),'preview omits '+x.runId);
+}
 check('Versioned records: index, files, review package hash, INCLUDE verdict, replication labels', () => {
   if(!INDEX){ assert.ok(!fs.existsSync('records'),'records/ without records/index.json'); return; }
   eq(INDEX.schema,'macbrains.dataset.records-index.v1');
@@ -133,6 +176,7 @@ check('Versioned records: index, files, review package hash, INCLUDE verdict, re
     assert.ok(cmpVer(r.version, manifest.release_tag)>0); assert.ok(!versions.has(r.version)); versions.add(r.version);
     eq(r.path,'records/'+r.tag+'/');
     if(r.versionDoi!==undefined) assert.match(r.versionDoi,/^10\.5281\/zenodo\.\d+$/);
+    if(r.kind==='diagnostic'){ verifyDiagnosticRecord(r); continue; }
     for(const f of ['finding.json','citations.json','preview.md','manifest.json','review-package.json','final-verdict.json'])
       assert.ok(fs.existsSync(r.path+f),'missing '+r.path+f);
     const rpRaw=fs.readFileSync(r.path+'review-package.json','utf8');
