@@ -195,6 +195,9 @@ check('Versioned records: index, files, review package hash, INCLUDE verdict, re
   const zj=JSON.parse(fs.readFileSync('.zenodo.json','utf8'));
   eq(zj.version, LATEST.version);
   assert.ok(zj.related_identifiers.some(x=>x.relation==='isDocumentedBy'&&x.identifier===LATEST.siteUrl));
+  // Setting related_identifiers here replaces the tag-tree link Zenodo's GitHub
+  // integration would add, so the release's tree must be listed explicitly.
+  assert.ok(zj.related_identifiers.some(x=>x.relation==='isSupplementTo'&&x.identifier==='https://github.com/macbrainslabs/ane-research-records/tree/'+LATEST.tag),'.zenodo.json must link the latest record tag tree');
 });
 check('License/citation/security metadata and workflow', () => {
   assert.ok(fs.readFileSync('LICENSE','utf8').includes('Attribution 4.0 International'));
