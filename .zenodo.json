@@ -1,7 +1,7 @@
 {
-  "title": "MacBrains Labs ANE Research Records, 2026: Public Measurement Summaries",
+  "title": "MacBrains Labs ANE Research Records",
   "upload_type": "dataset",
-  "description": "<p>Source-pinned tables of already-public Core ML Apple Neural Engine placement, LFM S2 numerical parity, and Qwen2.5 batch decode throughput. Curated summaries; not raw measurements or full reproducibility artifacts. The reported measurements have not been independently replicated by this deposit.</p>",
+  "description": "<p>Versioned, source-bound public research records from MacBrains Labs. Each version is a cumulative snapshot of the archive repository; v0.1.0 holds the original public measurement summaries. Version v0.2.0 adds the diagnostic record LFM3-1.7B layer-14 diagnostic under Core ML cpuAndNeuralEngine (same chip, single device) in records/ane-record-c188def1e88a0d94018dfe99/.</p><p>Scope: same-chip, byte-reproducible on Apple A18 Pro (Mac17,5), macOS 27.2 (build 26B123), CoreML 3600.25.2; ANE execution INFERRED from Core ML compute-plan placement; no novelty claim. Single device, same chip; same-chip reruns are repeatability only, not cross-device replication. Setup profile 2f0cc0c9: 8 logged executions (5 counted and frozen, 3 pre-freeze), all disclosed; one counted run's output was deleted and its recovered record is disclosed.</p><p>Records are reviewed summaries, not peer-reviewed results. The reported measurements have not been independently replicated by this deposit. Reviewed bundle SHA-256 0d2b3f787cf0f98e6d12ed9cebd614d028b0f39e9e210e55fb93cc14ca6f49b3; reviewed package SHA-256 c188def1e88a0d94018dfe99f63aed795f58848871841d1c089d079a28aebff1.</p>",
   "creators": [
     {
       "name": "Wilson, Nayte",
@@ -11,9 +11,29 @@
   ],
   "license": "cc-by-4.0",
   "access_right": "open",
-  "keywords": ["Apple Neural Engine", "Core ML", "Qwen2.5", "LFM S2"],
+  "keywords": [
+    "Apple Neural Engine",
+    "Core ML",
+    "Qwen2.5",
+    "LFM S2",
+    "LFM3"
+  ],
   "related_identifiers": [
-    {"identifier": "https://macbrainslabs.org/research/", "relation": "isDocumentedBy", "resource_type": "publication-other"},
-    {"identifier": "https://github.com/macbrainslabs/ane-research-records", "relation": "isSupplementTo", "resource_type": "software"}
-  ]
+    {
+      "identifier": "https://macbrainslabs.org/research/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-other"
+    },
+    {
+      "identifier": "https://github.com/macbrainslabs/ane-research-records",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://macbrainslabs.org/research/records/ane-record-c188def1e88a0d94018dfe99/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-other"
+    }
+  ],
+  "version": "v0.2.0"
 }

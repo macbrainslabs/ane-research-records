@@ -1,22 +1,26 @@
 cff-version: 1.2.0
-message: "Please cite the registered Zenodo version DOI for this public ANE research-summary release."
+message: "Please cite the version DOI of the release you used; the all-versions DOI is 10.5281/zenodo.23798036. A version DOI is recorded here once Zenodo registers it."
 type: dataset
 keywords:
   - "Apple Neural Engine"
   - "Core ML"
   - "Qwen2.5"
   - "LFM S2"
-title: "MacBrains Labs ANE Research Records, 2026: Public Measurement Summaries"
+  - "LFM3"
+title: "MacBrains Labs ANE Research Records"
 authors:
   - family-names: Wilson
     given-names: Nayte
     orcid: "https://orcid.org/0009-0003-4026-8212"
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
-version: "0.1.0"
-doi: "10.5281/zenodo.23798037"
-date-released: "2026-10-30"
+version: "0.2.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23798036"
+    description: "All versions (concept DOI)"
+date-released: "2026-11-03"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"
 url: "https://macbrainslabs.org/research/"
-abstract: "Source-pinned tables of already-public Core ML ANE placement, LFM S2 parity, and Qwen batch throughput. Curated summaries; not raw measurements or full reproducibility artifacts."
+abstract: "Versioned, source-bound public research records. v0.2.0 adds: LFM3-1.7B layer-14 diagnostic under Core ML cpuAndNeuralEngine (same chip, single device)."
