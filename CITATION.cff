@@ -15,10 +15,14 @@ authors:
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
 version: "0.2.0"
+doi: "10.5281/zenodo.23905811"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23798036"
     description: "All versions (concept DOI)"
+  - type: doi
+    value: "10.5281/zenodo.23905811"
+    description: "Version v0.2.0"
 date-released: "2026-11-03"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"

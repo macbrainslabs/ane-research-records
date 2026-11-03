@@ -12,6 +12,7 @@
       "kind": "diagnostic",
       "tag": "ane-record-c188def1e88a0d94018dfe99",
       "version": "v0.2.0",
+      "versionDoi": "10.5281/zenodo.23905811",
       "title": "LFM3-1.7B layer-14 diagnostic under Core ML cpuAndNeuralEngine (same chip, single device)",
       "findingId": "finding:50500988ae81348790c044aff2ef85720d148bf1",
       "path": "records/ane-record-c188def1e88a0d94018dfe99/",
