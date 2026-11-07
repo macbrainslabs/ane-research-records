@@ -1,0 +1,208 @@
+{
+  "build" : {
+    "baselineRunnerSha256" : "7e59586e9be32f7c9dea5802f9c6c67d09193e30293f310f2bfcb75638d308c1",
+    "commit" : "f22c653ef4503d0cac9b8b0fd2d45f4f9a1bd473",
+    "rebuilt" : true,
+    "rebuiltMatchesBaselineBinary" : false,
+    "rebuiltRunnerSha256" : "ada83e33c8a564c2d3c8ac5bc0f99c25865cba1620c3a1fa5914092f83f9335f",
+    "repo" : "/Users/nayte/.local/share/anvil/anerecore-v030/inputs/fugu",
+    "sourceBlobSha256" : {
+      "Sources/ANERECore/BlobAudit.swift" : "5bf4d619da1d8eca197d91665a9336ff023a3c6a62de3512cf82a65e0aff57c1",
+      "Sources/ANERECore/MILGraph.swift" : "f254155b94b88bc3b69292ae6333262ea60a7bda014a9b5f194ca6c39c8b56bf",
+      "Sources/ANERECore/MILPrinter.swift" : "a7adc42ea4b46dc6234db29db99724729f514c4d4f62fcd1e726ba9ab8cae6cf",
+      "Sources/ANERECore/MILTextParser.swift" : "892e7db2005d6bf4c1c99bb4e8fc8e1b4822445161850272929167051424d0fd",
+      "Sources/ANERECore/RewriteTransaction.swift" : "4dd7f63575451ef63045785335176d8ae4e0a29c1f6a58e178bd6df6fbdd9f3b",
+      "Sources/ANERECore/WeightBin.swift" : "1b38642298adc790f129979a15d515d79300dbb7a8d902401dbbc6ac11b19f8c",
+      "Tests/ANERECoreCleanroom/main.swift" : "2c429cc4db3f9987cb49445fdc194a748b4e176e56ede494aaf5d0482ce1f64d"
+    },
+    "swiftcArgs" : [
+      "-O"
+    ]
+  },
+  "claimScope" : "Deterministic, source-rebuilt, same-chip / same-OS-build replication with recorded environment. NOT cross-device and NOT a hardware execution trace; ANE placement is Core ML compute-plan assignment.",
+  "comparison" : {
+    "baselineIndex" : "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/spi/cleanroom/profiles/anerecore-v030-baseline.index.json",
+    "byteIdentical" : true,
+    "differing" : 0,
+    "diffs" : [
+
+    ],
+    "identical" : 15,
+    "missing" : 0,
+    "scope" : "all runs of this set"
+  },
+  "criterion" : "deterministic-source-rebuilt-same-chip-replication",
+  "crossDeviceReplication" : false,
+  "device" : {
+    "chip" : "Apple A18 Pro",
+    "coreMLBundleVersion" : "3610.2.3",
+    "hwModel" : "Mac17,5",
+    "osBuild" : "26C5035r",
+    "osVersion" : "27.3"
+  },
+  "e5CacheStateBefore" : {
+    "fileCount" : 4,
+    "listingSha256" : "967ef8eb5fff32cb69204dcd0a08cc840e11a2ea1d342bd63f36e9793e2fad33",
+    "path" : "/Users/nayte/Library/Caches/com.apple.e5rt.e5bundlecache"
+  },
+  "executionLog" : {
+    "path" : "/Users/nayte/.local/state/anvil/execution-log/0959e19f8b1830426af347355b403f775cdac15c8f343f8d31778aa0cef7577c.jsonl",
+    "runCompleted" : 5,
+    "runStarted" : 5,
+    "sha256" : "3e259c9e2708c21e91b224cddf1a47608acdd604c20e1520e5f36fcc5de22575",
+    "startedWithoutCompletion" : 0,
+    "unparseableLines" : 0
+  },
+  "expected" : {
+    "outputFiles" : 3,
+    "runs" : 5,
+    "verdict" : "REPLICATED_SAME_CHIP_BYTE_IDENTICAL"
+  },
+  "freeze" : {
+    "committedProfileBlobSha256" : "0959e19f8b1830426af347355b403f775cdac15c8f343f8d31778aa0cef7577c",
+    "freezeManifestSha256" : "8eb37bdee273e5913f9d833043a4720788e0adf407f566944863e5e0f9e84e47",
+    "freezeTime" : "2026-11-07T05:56:07Z",
+    "headCommit" : "017df3d17461150bcfa417c40dff05043da2ec6a",
+    "profileCommit" : "017df3d17461150bcfa417c40dff05043da2ec6a",
+    "profileCommitTime" : "2026-11-07T00:55:50-05:00",
+    "toolCommit" : "d485ad2ebf96a710efc26309697b39ce37b83942",
+    "toolCommitTime" : "2026-11-03T15:12:33-05:00",
+    "toolSourceDeclared" : true
+  },
+  "frozen" : true,
+  "generatedAt" : "2026-11-07T05:56:06Z",
+  "memoryPressureBefore" : "System-wide memory free percentage: 41%",
+  "permittedModifications" : [
+
+  ],
+  "profileHash" : "0959e19f8b1830426af347355b403f775cdac15c8f343f8d31778aa0cef7577c",
+  "profileId" : "anerecore-v030-mil-parity-fugu-20261106",
+  "receiptSelfHash" : "5b71fbf88f6f957dbc27548fb5c3e5e743a611ea7a794c12e2f422a24ba26c98",
+  "receiptSha256" : "4b310bb07f049896a07142bf39983614aa4e59e55d14c73544b71c08791dd93c",
+  "run" : {
+    "computeUnits" : "cpuAndNeuralEngine",
+    "exitCode" : 0,
+    "fixture" : "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/tests/fixtures/qwen/model.mil",
+    "logTail" : "OP=steer FILE=steer.mil BYTES=2061794 SHA256=e8dea18c9249ee025f460c61b6cb918d9c865658e1743aa5b65ecb9c7e05c5af | OP=functionWide FILE=functionWide.mil BYTES=2061502 SHA256=6739a5dde650770bdbea27fc1f2ebd4fc69808039f095d5769aaad8fe3ff27c7 | WRITTEN=3/3",
+    "note" : "last run of the set; every run is in set.runs",
+    "planSummary" : "",
+    "runDir" : "/Users/nayte/.local/share/anvil/anerecore-v030/runs/fugu-set/run-005",
+    "runStartedAt" : "2026-11-07T05:57:57.169Z",
+    "sandbox" : false,
+    "tokens" : "270",
+    "tsv" : "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/spi/cleanroom/profiles/anerecore-v030-ops.tsv",
+    "wallSeconds" : 19
+  },
+  "runAccounting" : {
+    "countedRuns" : 5,
+    "preFreezeRunsNotCounted" : 0,
+    "thisRunCounted" : true,
+    "totalRuns" : 5
+  },
+  "runIndex" : 5,
+  "runs" : [
+    {
+      "counted" : true,
+      "index" : 1,
+      "passed" : true,
+      "runStartedAt" : "2026-11-07T05:56:30.476Z"
+    },
+    {
+      "counted" : true,
+      "index" : 2,
+      "passed" : true,
+      "runStartedAt" : "2026-11-07T05:56:52.293Z"
+    },
+    {
+      "counted" : true,
+      "index" : 3,
+      "passed" : true,
+      "runStartedAt" : "2026-11-07T05:57:13.723Z"
+    },
+    {
+      "counted" : true,
+      "index" : 4,
+      "passed" : true,
+      "runStartedAt" : "2026-11-07T05:57:36.606Z"
+    },
+    {
+      "counted" : true,
+      "index" : 5,
+      "passed" : true,
+      "runStartedAt" : "2026-11-07T05:57:57.169Z"
+    }
+  ],
+  "sameChipCleanRoom" : true,
+  "schema" : "macbrains.research.cleanroom-replication.v1",
+  "set" : {
+    "complete" : true,
+    "freezeReverifiedBeforeEachRun" : true,
+    "runnerSha256" : "ada83e33c8a564c2d3c8ac5bc0f99c25865cba1620c3a1fa5914092f83f9335f",
+    "runs" : [
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Users/nayte/.local/share/anvil/anerecore-v030/runs/fugu-set/run-001",
+        "runIndex" : 1,
+        "runStartedAt" : "2026-11-07T05:56:30.476Z",
+        "wallSeconds" : 20
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Users/nayte/.local/share/anvil/anerecore-v030/runs/fugu-set/run-002",
+        "runIndex" : 2,
+        "runStartedAt" : "2026-11-07T05:56:52.293Z",
+        "wallSeconds" : 19
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Users/nayte/.local/share/anvil/anerecore-v030/runs/fugu-set/run-003",
+        "runIndex" : 3,
+        "runStartedAt" : "2026-11-07T05:57:13.723Z",
+        "wallSeconds" : 21
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Users/nayte/.local/share/anvil/anerecore-v030/runs/fugu-set/run-004",
+        "runIndex" : 4,
+        "runStartedAt" : "2026-11-07T05:57:36.606Z",
+        "wallSeconds" : 18
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Users/nayte/.local/share/anvil/anerecore-v030/runs/fugu-set/run-005",
+        "runIndex" : 5,
+        "runStartedAt" : "2026-11-07T05:57:57.169Z",
+        "wallSeconds" : 19
+      }
+    ],
+    "runsExecuted" : 5,
+    "runsRequested" : 5,
+    "stopReason" : ""
+  },
+  "verdict" : "REPLICATED_SAME_CHIP_BYTE_IDENTICAL"
+}

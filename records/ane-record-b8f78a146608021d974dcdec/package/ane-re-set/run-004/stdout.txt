@@ -1,0 +1,2 @@
+CLEANROOM verdict=REPLICATED_SAME_CHIP_BYTE_IDENTICAL identical=3 differing=0 missing=0 extra=0 inputsUnchanged=true wall=8s runIndex=4 frozen=true counted=4/4
+receipt=/Users/nayte/.local/share/anvil/anerecore-v030/runs/ane-re-set/run-004/cleanroom-receipt.json sha256=78d09425e0903721c2bbfaddf3ad0c33073a8f4689099244d827509f582358e3

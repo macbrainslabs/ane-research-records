@@ -1,0 +1,13 @@
+  ok addReturn(a); renameVar(a): ["c", "a2"]
+  ok removeReturn(a); renameVar(a): ["c"]
+  ok order kept (a, c): ["a2", "c"]
+  ok order kept (b, a, c): ["b", "a2", "c"]
+  ok duplicate (a, c, a): ["a2", "c", "a2"]
+  ok spliceBody return line; renameVar(b): ["c", "b2"]
+  ok addReturn(a); renameVar(b) keeps order: ["c", "a"]
+  ok two renameVars (a, c): ["a2", "c2"]
+  ok two renameVars, reverse staging order: ["a2", "c2"]
+  ok renameVar(a); addReturn(a) -> reject: rejected (RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling r)
+  BAD insertOp consumer of b; renameVar(b) -> reject or rename: committed returns ["c", "d"], want rejection
+  ok insertOp after a; renameVar(a) returned: ["a2", "c"]
+FAIL pr263-B-03-renamevar-staged-interactions: 1

@@ -1,0 +1,7 @@
+  ok empty commit
+  ok functionWide in f
+  ok functionWide in fb
+  ok functionWide in f_b
+  ok same-function shadow rejected
+  corpus: 156 files, 137 parsed, shadow rejections 0, tap mis-locate/shadow 0
+PASS pr263-B-04-shadow-and-signature-no-false-reject

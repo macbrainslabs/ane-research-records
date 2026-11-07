@@ -1,0 +1,50 @@
+{
+  "id": "anerecore-v030-mil-parity-ane-re-20261107",
+  "criterion": "deterministic-source-rebuilt-same-chip-replication",
+  "frozen": true,
+  "claimScope": "MIL text byte equality of ANE-RE ANERECore output (tap, steer, functionWide on the Qwen fixture) with the pinned baseline produced by the Fugu arm. No claim about Core ML compilation, ANE execution, numerics or other fixtures.",
+  "replicationLabel": "same-chip",
+  "source": {
+    "rebuild": true,
+    "repo": "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re",
+    "commit": "7a8bce4714d6984b843851c39e3a20e747dab01e",
+    "commitNote": "merge of ANE-RE main c55e9e7d (PR #264 S2-g parser fix 5555c15e, PR #265 input-hash gate, PR #266 dump records) into the v0.3.0 clean-room branch 017df3d1; the driver spi/cleanroom/anerecore/main.swift is unchanged from 20c497e8",
+    "probeFiles": [
+      "spi/swift_emit/Sources/ANERECore/BlobAudit.swift",
+      "spi/swift_emit/Sources/ANERECore/MILGraph.swift",
+      "spi/swift_emit/Sources/ANERECore/MILPrinter.swift",
+      "spi/swift_emit/Sources/ANERECore/MILTextParser.swift",
+      "spi/swift_emit/Sources/ANERECore/RewriteTransaction.swift",
+      "spi/swift_emit/Sources/ANERECore/WeightBin.swift",
+      "spi/cleanroom/anerecore/main.swift"
+    ],
+    "mainFile": "main.swift",
+    "swiftcArgs": [
+      "-O"
+    ],
+    "baselineRunnerSha": "7e59586e9be32f7c9dea5802f9c6c67d09193e30293f310f2bfcb75638d308c1",
+    "baselineRunnerNote": "the baseline runner is the Fugu-built one, so rebuiltMatchesBaselineBinary is expected to be false for this arm; parity is judged on the three output files only"
+  },
+  "run": {
+    "argvMode": "fixture",
+    "fixture": "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/tests/fixtures/qwen/model.mil",
+    "fixtureSha256": "9c8dccb6900d2bf2be2be6a08cf78e38de3bb44aabddaaf7b53b0f3494d4c72f",
+    "tsv": "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/spi/cleanroom/profiles/anerecore-v030-ops.tsv",
+    "tokens": "270",
+    "tsvSha256": "3dd792d30f21978c57fee4615eb7bce00a58da557de9f39f8df139f5b820fa33",
+    "inputsNote": "fixture, ops.tsv and baseline index are committed in the v0.3.0 clean-room branch; the clean-room tool built from ANE-RE main c55e9e7d hashes the declared inputs before the build and again after every run, and refuses or fails the run on a mismatch"
+  },
+  "baseline": {
+    "indexJson": "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/spi/cleanroom/profiles/anerecore-v030-baseline.index.json"
+  },
+  "isolation": {
+    "sandboxExec": false,
+    "freshTmpdir": true
+  },
+  "permittedModifications": [],
+  "expected": {
+    "verdict": "REPLICATED_SAME_CHIP_BYTE_IDENTICAL",
+    "outputFiles": 3,
+    "runs": 5
+  }
+}

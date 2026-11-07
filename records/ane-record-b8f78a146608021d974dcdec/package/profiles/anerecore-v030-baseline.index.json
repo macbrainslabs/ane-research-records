@@ -1,0 +1,10 @@
+{
+  "schema": "macbrains.cleanroom-baseline-index.v1",
+  "id": "anerecore-v030-mil-parity-baseline-20261106",
+  "fixture": { "path": "tests/fixtures/qwen/model.mil", "sha256": "9c8dccb6900d2bf2be2be6a08cf78e38de3bb44aabddaaf7b53b0f3494d4c72f" },
+  "files": [
+    { "path": "tap.mil", "bytes": 2061448, "sha256": "295dd3b56f12505ba28e6a89e02fa4f8f8273ce3f5f3b2c0855b1f179957aad6", "pinSource": "attempt 0 (2026-11-05): Fugu and ANE-RE outputs byte-identical" },
+    { "path": "steer.mil", "bytes": 2061794, "sha256": "e8dea18c9249ee025f460c61b6cb918d9c865658e1743aa5b65ecb9c7e05c5af", "pinSource": "attempt 0 (2026-11-05): Fugu and ANE-RE outputs byte-identical" },
+    { "path": "functionWide.mil", "bytes": 2061502, "sha256": "6739a5dde650770bdbea27fc1f2ebd4fc69808039f095d5769aaad8fe3ff27c7", "pinSource": "Fugu-referenced: Fugu's own output in attempt 2 (2026-11-05); not an independent reference" }
+  ]
+}
