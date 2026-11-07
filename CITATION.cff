@@ -7,6 +7,8 @@ keywords:
   - "Qwen2.5"
   - "LFM S2"
   - "LFM3"
+  - "ANERECore"
+  - "Model Intermediate Language"
 title: "MacBrains Labs ANE Research Records"
 authors:
   - family-names: Wilson
@@ -14,17 +16,19 @@ authors:
     orcid: "https://orcid.org/0009-0003-4026-8212"
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
-version: "0.2.0"
-doi: "10.5281/zenodo.23905811"
+version: "0.3.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23798036"
     description: "All versions (concept DOI)"
   - type: doi
+    value: "10.5281/zenodo.23798037"
+    description: "Version v0.1.0"
+  - type: doi
     value: "10.5281/zenodo.23905811"
     description: "Version v0.2.0"
-date-released: "2026-11-03"
+date-released: "2026-11-07"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"
 url: "https://macbrainslabs.org/research/"
-abstract: "Versioned, source-bound public research records. v0.2.0 adds: LFM3-1.7B layer-14 diagnostic under Core ML cpuAndNeuralEngine (same chip, single device)."
+abstract: "Versioned, source-bound public research records. v0.3.0 adds: ANERECore cross-repo MIL parity: tap, steer and functionWide (same chip, single device)."

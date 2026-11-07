@@ -1,0 +1,49 @@
+{
+  "id": "anerecore-v030-mil-parity-fugu-20261106",
+  "criterion": "deterministic-source-rebuilt-same-chip-replication",
+  "frozen": true,
+  "claimScope": "MIL text byte equality of Fugu ANERECore output (tap, steer, functionWide on the Qwen fixture) with the pinned baseline. No claim about Core ML compilation, ANE execution, numerics or other fixtures.",
+  "replicationLabel": "same-chip",
+  "source": {
+    "rebuild": true,
+    "repo": "/Users/nayte/.local/share/anvil/anerecore-v030/inputs/fugu",
+    "commit": "f22c653ef4503d0cac9b8b0fd2d45f4f9a1bd473",
+    "commitNote": "fugu d9ea96bf plus the committed driver Tests/ANERECoreCleanroom/main.swift; Sources/ANERECore tree 79b19c1148f381f75f7e520470f203f4ea32acdc == fugu 5a435b21",
+    "probeFiles": [
+      "Sources/ANERECore/BlobAudit.swift",
+      "Sources/ANERECore/MILGraph.swift",
+      "Sources/ANERECore/MILPrinter.swift",
+      "Sources/ANERECore/MILTextParser.swift",
+      "Sources/ANERECore/RewriteTransaction.swift",
+      "Sources/ANERECore/WeightBin.swift",
+      "Tests/ANERECoreCleanroom/main.swift"
+    ],
+    "mainFile": "main.swift",
+    "swiftcArgs": [
+      "-O"
+    ],
+    "baselineRunnerSha": "7e59586e9be32f7c9dea5802f9c6c67d09193e30293f310f2bfcb75638d308c1"
+  },
+  "run": {
+    "argvMode": "fixture",
+    "fixture": "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/tests/fixtures/qwen/model.mil",
+    "fixtureSha256": "9c8dccb6900d2bf2be2be6a08cf78e38de3bb44aabddaaf7b53b0f3494d4c72f",
+    "tsv": "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/spi/cleanroom/profiles/anerecore-v030-ops.tsv",
+    "tokens": "270",
+    "tsvSha256": "3dd792d30f21978c57fee4615eb7bce00a58da557de9f39f8df139f5b820fa33",
+    "inputsNote": "fixture, ops.tsv and baseline index are committed in the same ane-re commit as this profile; the clean-room tool d485ad2e checks only that they exist, so their sha256 are re-checked and recorded before and after the counted set"
+  },
+  "baseline": {
+    "indexJson": "/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/spi/cleanroom/profiles/anerecore-v030-baseline.index.json"
+  },
+  "isolation": {
+    "sandboxExec": false,
+    "freshTmpdir": true
+  },
+  "permittedModifications": [],
+  "expected": {
+    "verdict": "REPLICATED_SAME_CHIP_BYTE_IDENTICAL",
+    "outputFiles": 3,
+    "runs": 5
+  }
+}

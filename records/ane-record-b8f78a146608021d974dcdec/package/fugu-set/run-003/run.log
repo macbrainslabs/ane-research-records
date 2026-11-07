@@ -1,0 +1,5 @@
+FIXTURE=/Users/nayte/.local/share/anvil/anerecore-v030/ane-re/tests/fixtures/qwen/model.mil SHA256=9c8dccb6900d2bf2be2be6a08cf78e38de3bb44aabddaaf7b53b0f3494d4c72f BYTES=2061429
+OP=tap FILE=tap.mil BYTES=2061448 SHA256=295dd3b56f12505ba28e6a89e02fa4f8f8273ce3f5f3b2c0855b1f179957aad6
+OP=steer FILE=steer.mil BYTES=2061794 SHA256=e8dea18c9249ee025f460c61b6cb918d9c865658e1743aa5b65ecb9c7e05c5af
+OP=functionWide FILE=functionWide.mil BYTES=2061502 SHA256=6739a5dde650770bdbea27fc1f2ebd4fc69808039f095d5769aaad8fe3ff27c7
+WRITTEN=3/3

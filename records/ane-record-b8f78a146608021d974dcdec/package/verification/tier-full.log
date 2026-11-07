@@ -1,0 +1,93 @@
+TIER src=/Users/nayte/.local/share/anvil/anerecore-v030/verify/r2-final/src probes=/Users/nayte/.local/share/anvil/anerecore-v030/verify/tier-inputs/tier-probes started=2026-11-07T10:50:32Z
+PASS pr262-A-01-functionwide-multifn-scoping: PASS pr262-A-01: functionWide rewires only the target function's return tuple (hinted and unhinted) sha256=9d9b6fd132a59c9c345ea33f19d5c8a3be5fa63e0c66f115492d5e5f12010582
+PASS pr262-A-02-functionwide-return-word-boundary: PASS pr262-A-02: return tuple rewired word-boundary exact, order preserved sha256=7405b47b50a0e478aaf52704918350bd7beb2c4818f474084baf45702b539b09
+PASS pr262-A-03-no-dangling-return-any-path: PASS pr262-A-03: no commit path returned a dangling return; rejections name the var (6 cases) sha256=61d3b9c2ce0efe23be9c15e67438244f8abbf53ac5ed59fadde4a80697487f93
+PASS pr262-A-04-validator-no-false-reject: PASS pr262-A-04: validator accepted all 5 valid shapes + fixture (zero-edit and tap) sha256=3cd8c5344deae6237eb148f5e0b27f3bc26570836d730dd988a04d18af84a5dd
+PASS pr262-A-05-qwen-counterexample-vs-fugu: PASS pr262-A-05: counterexample output equals Fugu artifact bytes (2061502 B); prefill unchanged sha256=b05f147057be1f36a1242c1251e3def049633f94e58fc6b4d3de3214b5984c26
+PASS pr262-A-06-scopes-after-addreturn: PASS pr262-A-06: all three scopes rewire a just-added return sha256=4c8bda7c95e3040a61d461f253d594448a3ba0f36926cbeb21837a69e2ac81fa
+PASS pr262-B-01-return-prefix-boundary: PASS pr262-B-01-return-prefix-boundary sha256=9f8248fd727388d1516b5a0eeaae711400baf54171a9c68dd5e4e7ea968ed266
+PASS pr262-B-02-duplicate-return: PASS pr262-B-02-duplicate-return sha256=41e2ff3ebd6995dc48d6def2d88b3103862e383483888d974ee672ad9b089f26
+PASS pr262-B-03-order-addreturn-functionwide: PASS pr262-B-03-order-addreturn-functionwide sha256=18875fc4df932e3e2560d1f58ee0d3233f646106ad2f7ea1a5214d5cbbbb60e1
+PASS pr262-B-04-deleteop-returned-var: PASS pr262-B-04-deleteop-returned-var sha256=9ed362f0a00ad2555033f493542a0d96cea668d27fa09e217bc611f85cd15b31
+PASS pr262-B-05-rename-after-addreturn-no-dangling: PASS pr262-B-05-rename-after-addreturn-no-dangling sha256=a43efe17d6c0447c7c64cdbf0426cd960352fe1c24d4e2d58d177280083fe5b4
+PASS pr262-B-06-multifn-scoping: PASS pr262-B-06-multifn-scoping sha256=ee775874ee3552cb74baa2d4e6873162510688996a5254c86fb6120c5c2b0756
+PASS pr262-B-07-insert-splice-then-functionwide: PASS pr262-B-07-insert-splice-then-functionwide sha256=3453772d6addb048d45c6336b53330941a2c315458ccb068b514e73a8236f645
+PASS pr262-B-08-no-false-reject-fixtures: PASS pr262-B-08-no-false-reject-fixtures sha256=008a29e950732c8e460de60c923d8e2880abea526102536fd7e35cd0cebe46bb
+PASS pr262-B-09-qwen-counterexample-bytes: PASS pr262-B-09-qwen-counterexample-bytes sha256=bad96e3cc2aef4165c221259574b54c69b91e5a8e46329dac127903b9ac2af40
+PASS pr262-B-10-pairwise-edit-invariant: PASS pr262-B-10-pairwise-edit-invariant sha256=6333b20ed2d5bd436ef4ec1bd3daba82ecc477be29c6faa706007565ddad3969
+PASS pr263-A-01-optype-token-not-renamed: PASS pr263-A-01: op type tokens are never renamed sha256=fc35c7f4fd209edaeccacd3a29a1906f217a9e87fe6fa62d7865347938b03928
+PASS pr263-A-02-multiline-op-key-not-renamed: PASS pr263-A-02: keys on continuation lines are kept sha256=b841f65cbd6e8889bfbc8f165a57ee593928d9d331e4150ab73470d97e6bd1d0
+PASS pr263-A-03-rename-then-removereturn-not-dropped: PASS pr263-A-03: removeReturn after a rename is applied or refused sha256=1721eb80d429f0763153d525bbb0eb8529485bb4f88ffcd44156c784a39132a4
+PASS pr263-A-04-renamevar-return-tuple-controls: PASS pr263-A-04: renameVar return-tuple controls (6 cases) sha256=5f0918fe06153bbc55031fab457fad26fd1abbc5083fe6b15b9bb387ed906000
+PASS pr263-A-05-corpus-rename-isomorphic: PASS pr263-A-05: 373 renames on 134 real MIL files are structurally isomorphic sha256=3bf95111d51fd394f850bf19823f8abe1633e440ff2fd7a4f44371b211eee3b3
+PASS pr263-A-06-corpus-optype-rename: PASS pr263-A-06: 37 renames on 134 real MIL files are structurally isomorphic sha256=bca0f9226467d4dacd6e8bb062e325d8bbfa035aa44730f1b802d9557fd4a024
+PASS pr263-A-r2-07-scanner-and-stale-name-attacks: pr263-A-r2-07: 0 fail sha256=cc59279a0c3721a09d6045a1b27755011c3859a2c953e823ab3210e0b7038cb7
+PASS pr263-A-r3-08-regression-batch-confirm: pr263-A-r3-08: 0 fail sha256=e067de83ff2a32363c69dbe762b1fdf46b5965148b5c9566c76e4a9eff362f55
+PASS pr263-B-01-multiline-op-arg-keys: PASS pr263-B-01-multiline-op-arg-keys sha256=6e5a9fe1fc0d9ed142aef11e634370dfcc24e957e4b29bfab4c79440c970e7d5
+PASS pr263-B-02-attr-and-blob-keys-all-paths: PASS pr263-B-02-attr-and-blob-keys-all-paths sha256=131351775e8dfccf679027fb811b9f3f734be19963d81401f8de14278a2488ef
+SUPERSEDED pr263-B-03-renamevar-staged-interactions rc=1 (a later probe file declares it superseded; never counted) sha256=93cecb70d1020c1449f55505eab95507e194ae8573a5681e1222d4675f183ba3
+PASS pr263-B-04-shadow-and-signature-no-false-reject: PASS pr263-B-04-shadow-and-signature-no-false-reject sha256=ab26b67355d70c2aedc461f62359753e90acf7176e3db7c68730df4c29dfa28e
+INFO pr263-B-I1-silent-noop-staged-edits rc=0 (informational per reviewer B, never counted): PASS pr263-B-I1-silent-noop-staged-edits sha256=3c84d553d0303e44cead20a8f72b688f21fcd583eeb0095e1e944ccce5a7f9e2
+SUPERSEDED pr263-B-I2-optype-token-renamed rc=1 (a later probe file declares it superseded; never counted) sha256=e0fe5b9955e3e90bb912feb896909b7c32c1b95a3d511894e0310095d52e92f3
+PASS pr263-B-r2-03-renamevar-staged-interactions: PASS pr263-B-r2-03-renamevar-staged-interactions sha256=ccb3ae4bbcc89329a4949551a30be9e20b97c4c0ca2a03b455a4bb4b49fae623
+PASS pr263-B-r2-05-lexer-and-notes: PASS pr263-B-r2-05-lexer-and-notes sha256=c8a2bc4a6ce5ff32da7cc4b1781d4cb724617ec9fdd7054744128e0f9524f273
+INFO pr263-B-r2-I2-optype-token-renamed rc=0 (informational per reviewer B, never counted): PASS pr263-B-r2-I2-optype-token-renamed sha256=b9e12b62994ac3628b49914e0ab39c6156dc1e66dd5bff9e1672dc161d97575d
+INFO pr263-B-r2-I3-splice-then-removereturn rc=0 (informational per reviewer B, never counted): PASS pr263-B-r2-I3-splice-then-removereturn sha256=39596f2ee72a15ab3a81f49d265d1e2b8fece6bdd4aa15e7c3d642d0d9963eb9
+TOOL pr263-B-r2-tool-classify-okdiff (analysis tool, not run by any runner) sha256=4280e3461dd239042cd9bfb989d4088ca62ee2651640fd3e41e72aea6537110e
+TOOL pr263-B-tool-classify (analysis tool, not run by any runner) sha256=8805df9f461d0fc1d8903b219fd1765500da2e1becd63a0e491b3988d934d467
+TOOL pr263-B-tool-corpus-diff (analysis tool, not run by any runner) sha256=cde82645a10d49e25b46276155e8771faef23530cb37997e73912030d7a8e6e7
+PASS pr264-A-01-multioutput-graph-index: PASS pr264-A-01-multioutput-graph-index sha256=003a1574c06fad306777fc7133998a8cc46dc61039aacccdca076301e712989e
+PASS pr264-A-02-multioutput-rename-scopes: PASS pr264-A-02-multioutput-rename-scopes sha256=ea3a250d9baf9efa3e1e8e644650433832a0292a534d04474e2beabf8b7f1ec4
+PASS pr264-A-03-deleteop-multioutput: PASS pr264-A-03-deleteop-multioutput sha256=1fb077d85eb50e865bce3d3545cc174ce753dfa6e7b18898f4aa07e160f08eb5
+PASS pr264-A-04-insertop-outputs: PASS pr264-A-04-insertop-outputs sha256=3d1867e48aa411067ce7bff5117caf37adb849939d1a845afc62ce9783d4686d
+PASS pr264-A-05-opset-suffix: PASS pr264-A-05-opset-suffix sha256=6b84ff8899ad49bbab8848f80f9862acd95df40b81101c7eb5b779ada895a7c2
+PASS pr264-A-06-output-types-verbatim: PASS pr264-A-06-output-types-verbatim sha256=5342195115e02200c5eb8a4c378ac51147ca889ada843bd4806e87036c34ccaa
+PASS pr264-A-07-scalar-dtypes-lhs: PASS pr264-A-07-scalar-dtypes-lhs sha256=62b428d33996883e744701b5c9b8443b28c657a48eca4bb59e8e771ec98bce7f
+PASS pr264-A-08-wrapped-signatures: PASS pr264-A-08-wrapped-signatures sha256=f87d97fe01b9b4886e168ac8923876275ee94b1434da8c3603776a4a3c25fedb
+PASS pr264-A-09-n1-programwide-nonvar: PASS pr264-A-09-n1-programwide-nonvar sha256=2314191e7b2c3ff7540753c17886c0e494525f74ef28baa4393441f9d9c925df
+PASS pr264-A-10-corpus-real-artifacts: PASS pr264-A-10-corpus-real-artifacts sha256=1bb3cd97a38b4fb73a5e17f297d20a5eb5d04083c2b42a5eec693839ff9a3bc4
+PASS pr264-A-r2-01-statement-split-columns: PASS pr264-A-r2-01-statement-split-columns sha256=1bf28feabd123e14cca4f87c0b3d66e234115655580a6e3a6d874e545eb6fd12
+PASS pr264-A-r2-02-shared-line-edit-differential: PASS pr264-A-r2-02-shared-line-edit-differential sha256=3f840ecf94ddbc37955494c255925caab210967ccd3ca231834fd7173215a3b0
+PASS pr264-A-r2-03-programwide-literals-scope: PASS pr264-A-r2-03-programwide-literals-scope sha256=742165d4e6aa364eee0ddafa0fdb2a21cfd57a8d0dd130127d40f784cd68856c
+PASS pr264-A-r2-04-new-refusals-edges: PASS pr264-A-r2-04-new-refusals-edges sha256=2fa1c7f1ef234f0673086390871ffb5fccf91b8dc5b474876e79d98340a017b5
+PASS pr264-A-r2-05-real-mil-no-false-reject: PASS pr264-A-r2-05-real-mil-no-false-reject: 243 distinct files sha256=5a07ab86f8006d2040105b19bcc3b600877ba68af9e2292685d5233a37d1274e
+PASS pr264-A-r2-06-typed-scalar-blobfile-form: PASS pr264-A-r2-06-typed-scalar-blobfile-form sha256=26023fdec72572626baa0b1dbb5c23d779fbe12b5d0a2afe754a130c95dae6cd
+PASS pr264-B-01-multioutput-parse-graph PASS pr264-B-01 sha256=2e1b22905e967d6516dd3a2465cfcf117a5a07f115f39a35ea5b33d216c08707
+PASS pr264-B-02-multioutput-edit-paths PASS pr264-B-02 sha256=c4e66ca69137809c3a5af109ce9ef12cd588b8da2c90b27dd29189dc2a067693
+PASS pr264-B-03-parser-forms-and-negatives PASS pr264-B-03 sha256=20b769ba80129f94f88f3efad50e4ebe8d9f22f6f121387fdb58584da25175e5
+PASS pr264-B-04-wrapped-signature-differential PASS pr264-B-04 sha256=3db65950feed1e0d950b28fb952e324f1547428524732265e116af4025e3317b
+PASS pr264-B-05-programwide-commit-check PASS pr264-B-05 sha256=5657bab7f5d6dc128598b14766b4873fde76412d6e03929da6f6dd0eb541f531
+PASS pr264-B-06-corpus-differential (corpus checks 16 pass) sha256=cea3d494ed6ff28c42f6b9e729fd262c6540c5b37438b8bada9afcb284aba97a
+PASS pr264-B-07-parity-pins PASS pr264-B-07 sha256=71a48831aa009de20f8542063917dfd4a82b161af556908a8abb37d31867bbec
+PASS pr264-B-08-programwide-splice-bypass-literals PASS pr264-B-08 sha256=3ccb1209307bb008e54715431993a00a27fa2c209f51b27166e7576989167270
+PASS pr264-B-r2-01-corpus-line-edits (corpus-line-edits-identical-to-ref differing lines=0 of 1254) sha256=88a583c76ed272d3a5f9552a485dbfbe4e97a16acd5fd35313ad3e858a6de854
+PASS pr264-B-r2-02-fix-checks-and-real-forms (28 cases pass) sha256=ab4b3d30798f0c0f5d3a4ac81ebb02d53a1d51c7835769ec2718e8eb37842eb4
+TOOL pr264-B-shim-base (linked by run-pr264-B.sh only into the corpus driver of a pre-#264 tree) sha256=849b18328dabd5899332c5581a49cad9879bd05bcbc52f7672e97bba8abfa710
+PASS run-pr264-B-r2.sh shared-line product checks (9 pass)
+PASS run-pr264-B.sh CLI/differential checks (6 pass)
+    pr264-B INFO pr264-B-02-multioutput-edit-paths: INFO: wrapped LHS parses as 4 ops; renameVar(a) -> exact
+    pr264-B INFO pr264-B-02-multioutput-edit-paths: INFO: split named "b": renameVar(b,bb) name attr -> follows b
+    pr264-B INFO pr264-B-03-parser-forms-and-negatives: INFO: wrapped signature input sourceLine x,z = [3, 4] (physical lines 3,4)
+    pr264-B INFO corpus driver rc 0 shim=
+    pr264-B INFO multi-output files: m052.mil m100.mil m128.mil m134.mil 
+    pr264-B INFO edits run: 1822; OK 1466; ERR 356
+    pr264-B INFO status changes (ref -> this):
+    pr264-B INFO   m021.mil PARSE_FAIL -> OK
+    pr264-B INFO   m052.mil PARSE_FAIL -> OK
+    pr264-B INFO   m100.mil PARSE_FAIL -> OK
+    pr264-B INFO   m105.mil PARSE_FAIL -> OK
+    pr264-B INFO   m128.mil PARSE_FAIL -> OK
+    pr264-B INFO   m134.mil PARSE_FAIL -> OK
+    pr264-B INFO   cli m021 list: ref=[1 cb8db526794c04e30effeb533a5d17a3a00462f1628f2921fcc305fa5b085c90] this=[0 7557fc2d645fc6ac3c64dbbb8b1a3f5b6b3ebbd5767a7edf248ac0e3cf6c9acf]
+    pr264-B INFO   cli m052 list: ref=[1 931c03585fd1d0b3babcf8188faae7a66fbf98a02a68592d7827372f18dca347] this=[0 adc3de41ec62f3875f6c6bbb3b6b91009b17ef574b3d4771640b8728c06df229]
+    pr264-B INFO   cli m052 tap:split_axis: ref=[] this=[0 694498b06909291bad143704ce21775246e4504ed6b3538489aa4ba12e58c235]
+    pr264-B INFO   cli m100 list: ref=[1 a761a36806862601f2b202fa98eb6244a35ddc7054e10864b31502953d526aac] this=[0 baaa25b6650d6ace1c871a34ee9a1e88ae21f1b3bb3d0168f0ec12dfe16fbc8b]
+    pr264-B INFO   cli m100 tap:topk_k: ref=[] this=[0 3dc0d880f07cbeda8a3674b477f68fcd880e2d99a439e8324c73f118a3933c5a]
+    pr264-B INFO   cli m105 list: ref=[1 898df49b4aa722ba4cf91897db553dec3f52fa908b4ed5ee92b502dde0db55ea] this=[0 7b044fa318e271afa361ca06394fd50aa3607fb005c3769de9869beba3bdaedf]
+    pr264-B INFO   cli m105 tap:transpose_16: ref=[] this=[0 17cc44357cc2a47fd310d7bbf3bb22a24453cc7e0224296bcd4df5fc04a2d342]
+    pr264-B INFO   cli m128 list: ref=[1 2f2afb37efa45f8f3a662c6d433a017b7100dad337d5fb3125f23eeef9a207e2] this=[0 92687b444a18f3bb26321271ce8e887c80f2fe135be67b535cab60e0ac81264e]
+    pr264-B INFO   cli m128 tap:const_v: ref=[] this=[0 192618c8a129d9bea5ff35be8f943a785ceb19c12ef312b056573e34aac37f45]
+    pr264-B INFO   cli m134 list: ref=[1 be9e32ee9da11b2c0dea226621418ab2386c356f6fe1d3dc0e2ef34b6f171d03] this=[0 b133317d9c160d98344c9933d108f1087d4f7c2a1990cd49351a17667a4cdbee]
+    pr264-B INFO   cli m134 tap:const_v: ref=[] this=[0 88b07f973ad5aeed4301194408a805b442e13692c41ede32d2c997d2c90143d0]
+    pr264-B INFO cli lines differing from ref: 11 (expected only for files the ref cannot parse)
+TIER TOTAL: pass=57 fail=0 info=3 tool=4 superseded=2 probe-files=64 src=/Users/nayte/.local/share/anvil/anerecore-v030/verify/r2-final/src finished=2026-11-07T11:02:41Z

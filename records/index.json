@@ -30,6 +30,30 @@
         "deleted": 1
       },
       "siteUrl": "https://macbrainslabs.org/research/records/ane-record-c188def1e88a0d94018dfe99/"
+    },
+    {
+      "kind": "package",
+      "tag": "ane-record-b8f78a146608021d974dcdec",
+      "version": "v0.3.0",
+      "title": "ANERECore cross-repo MIL parity: tap, steer and functionWide (same chip, single device)",
+      "path": "records/ane-record-b8f78a146608021d974dcdec/",
+      "releasedOn": "2026-11-07",
+      "reviewedPackageSha256": "b8f78a146608021d974dcdec34ced0407a2c8449d23eab3e416649dec221cc2e",
+      "recordSha256": "dbd33eb410dfb624158f1bcb8ff0458b72a6c8601a6dd6ad93fb349ff73081e0",
+      "filesListSha256": "f81ff1837688ac91c656dd6a0bbf45a2d5f7e594909830760458831be2337043",
+      "attestationSha256": "374ac82186331b3e1e4384abb9fdd64e4e76034a3bed4bad4453b7a40d6d35ef",
+      "replication": {
+        "scope": "same-chip",
+        "claim": "same-chip, single device (Mac17,5, macOS build 26C5035r); MIL text byte equality only, one Qwen fixture, operations tap, steer and functionWide; functionWide pin is Fugu-referenced; no Core ML compile, ANE execution or numerics; no novelty claim",
+        "profileHashes": [
+          "0959e19f8b1830426af347355b403f775cdac15c8f343f8d31778aa0cef7577c",
+          "84c276441ec23b090bc5db708d952ff70dc16dcfb77bfdd8c1d01e8a5305df97"
+        ],
+        "counted": 10,
+        "passed": 10,
+        "failed": 0
+      },
+      "siteUrl": "https://macbrainslabs.org/research/records/ane-record-b8f78a146608021d974dcdec/"
     }
   ]
 }

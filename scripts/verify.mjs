@@ -165,6 +165,53 @@ function verifyDiagnosticRecord(r){
   assert.ok(preview.includes(a.claim)); assert.ok(preview.includes(a.claimScope));
   for(const x of ex) assert.ok(preview.includes('| '+x.runId+' |'),'preview omits '+x.runId);
 }
+// Package records republish a reviewed experiment package byte for byte under package/.
+// The reviewed hand-off manifest is bound by its SHA-256 in attestation.json; every listed
+// file is re-hashed, and run counts are recounted from each arm's device-wide execution log.
+function verifyPackageRecord(r){
+  const dir=r.path, pkg=dir+'package/';
+  for(const f of ['attestation.json','preview.md','package/FILES.sha256']) assert.ok(fs.existsSync(dir+f),'missing '+dir+f);
+  const aRaw=fs.readFileSync(dir+'attestation.json','utf8'); const a=JSON.parse(aRaw);
+  eq(aRaw, canonicalJSON(a)+'\n'); eq(sha256(aRaw), r.attestationSha256);
+  eq(a.schema,'macbrains.dataset.package-attestation.v1'); eq(a.tag,r.tag); eq(a.version,r.version); eq(a.title,r.title);
+  eq(a.siteUrl,r.siteUrl); eq(a.conceptDoi, manifest.concept_doi); eq(a.tier,'diagnostic');
+  assert.match(a.reviewedPackage.sha256,/^[0-9a-f]{64}$/); eq(a.reviewedPackage.sha256, r.reviewedPackageSha256);
+  eq(a.finalReview.reviewer,'macbrains-labs-reviewer'); eq(a.finalReview.decision,'INCLUDE');
+  eq(a.finalReview.reviewedPackageSha256, r.reviewedPackageSha256); assert.match(a.finalReview.verdictReceiptSha256,/^[0-9a-f]{64}$/);
+  // Every file FILES.sha256 lists is present with that hash, and nothing else is in package/.
+  const listRaw=fs.readFileSync(pkg+'FILES.sha256'); eq(sha256(listRaw), a.package.filesListSha256); eq(a.package.filesListSha256, r.filesListSha256);
+  const listed=listRaw.toString('utf8').trim().split('\n').map(l=>{ const m=/^([0-9a-f]{64})  \.\/(.+)$/.exec(l); assert.ok(m,'bad FILES.sha256 line'); return {sha:m[1],rel:m[2]}; });
+  eq(listed.length, a.package.filesListed); eq(a.package.fileCount, listed.length+1);
+  for(const {sha,rel} of listed){ assert.ok(!rel.split('/').includes('..')); eq(sha256(fs.readFileSync(pkg+rel)), sha); }
+  const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+e.name+'/'):[d+e.name]);
+  eq(JSON.stringify(walk(pkg).map(p=>p.slice(pkg.length)).sort()), JSON.stringify([...listed.map(x=>x.rel),'FILES.sha256'].sort()));
+  const recRaw=fs.readFileSync(pkg+a.package.recordFile); eq(sha256(recRaw), a.package.recordSha256); eq(a.package.recordSha256, r.recordSha256);
+  // Scope: same chip, single device, never cross-device; no novelty claim.
+  eq(a.replication.scope,'same-chip'); eq(a.replication.crossDeviceReplication,false); eq(r.replication.scope,'same-chip');
+  eq(r.replication.claim, a.claimScope); assert.ok(a.claimScope.startsWith('same-chip')); assert.ok(a.claimScope.includes('no novelty claim'));
+  eq(a.noveltyClaim,'UNCLAIMED');
+  // Recount every arm from its own log; one pass criterion for both arms.
+  const passed=x=>x.exitCode===0&&x.byteIdentical===true&&(x.passed===undefined||x.passed===true);
+  let tot={counted:0,passed:0};
+  eq(a.replication.arms.map(x=>x.profileHash).join(','), r.replication.profileHashes.join(','));
+  for(const arm of a.replication.arms){
+    const b=fs.readFileSync(dir+arm.executionLog); eq(sha256(b), arm.executionLogSha256);
+    assert.ok(arm.executionLog.startsWith('package/execution-log/'));
+    const log=b.toString('utf8').trim().split('\n').map(l=>JSON.parse(l));
+    for(const x of log){ eq(x.profileHash, arm.profileHash); eq(x.counted,true); assert.ok(x.kind==='run_started'||x.kind==='run_completed'); }
+    const st=log.filter(x=>x.kind==='run_started'), done=log.filter(x=>x.kind==='run_completed');
+    for(const x of st){ eq(x.profileCommit, arm.profileCommit); eq(x.toolCommit, arm.toolCommit); }
+    eq(arm.started, st.length); eq(arm.completed, done.length); eq(arm.passed, done.filter(passed).length);
+    tot.counted+=done.length; tot.passed+=done.filter(passed).length;
+  }
+  eq(r.replication.counted, tot.counted); eq(r.replication.passed, tot.passed); eq(r.replication.failed, tot.counted-tot.passed);
+  eq(a.replication.runsTotal, tot.counted); eq(a.replication.runsPass, tot.passed); eq(a.replication.runsFail, tot.counted-tot.passed);
+  const preview=fs.readFileSync(dir+'preview.md','utf8');
+  assert.ok(preview.includes(a.claimScope)); for(const d of a.disclosures) assert.ok(preview.includes(d),'preview omits a disclosure');
+  for(const nt of a.notes) assert.ok(preview.includes(nt.text),'preview omits note '+nt.id);
+  eq(sha256(preview), a.releaseAssets.find(x=>x.name==='preview.md').sha256);
+  eq(sha256(recRaw), a.releaseAssets.find(x=>x.name===a.package.recordFile).sha256);
+}
 check('Versioned records: index, files, review package hash, INCLUDE verdict, replication labels', () => {
   if(!INDEX){ assert.ok(!fs.existsSync('records'),'records/ without records/index.json'); return; }
   eq(INDEX.schema,'macbrains.dataset.records-index.v1');
@@ -177,6 +224,7 @@ check('Versioned records: index, files, review package hash, INCLUDE verdict, re
     eq(r.path,'records/'+r.tag+'/');
     if(r.versionDoi!==undefined) assert.match(r.versionDoi,/^10\.5281\/zenodo\.\d+$/);
     if(r.kind==='diagnostic'){ verifyDiagnosticRecord(r); continue; }
+    if(r.kind==='package'){ verifyPackageRecord(r); continue; }
     for(const f of ['finding.json','citations.json','preview.md','manifest.json','review-package.json','final-verdict.json'])
       assert.ok(fs.existsSync(r.path+f),'missing '+r.path+f);
     const rpRaw=fs.readFileSync(r.path+'review-package.json','utf8');

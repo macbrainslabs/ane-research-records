@@ -1,0 +1,49 @@
+  ok renameVar mul->m2
+  ok functionWide mul->m2
+  ok programWide mul->m2
+  ok downstream mul->input0
+  BAD deleteOp mul rewire input0: committed with op types changed
+  ok m024.mil main renameVar identity
+  ok m049.mil main renameVar greater
+  ok m062.mil main renameVar cast
+  ok m068.mil main renameVar fill
+  ok m081.mil main renameVar expand_dims
+  ok m084.mil main renameVar floor
+  ok m084.mil main renameVar less
+  ok m086.mil main renameVar floor
+  ok m086.mil main renameVar greater
+  ok m087.mil main renameVar argsort
+  ok m088.mil main renameVar floor
+  ok m088.mil main renameVar not_equal
+  ok m089.mil main renameVar floor
+  ok m089.mil main renameVar less_equal
+  ok m091.mil main renameVar floor
+  ok m091.mil main renameVar greater_equal
+  ok m096.mil main renameVar reduce_argmax
+  ok m099.mil main renameVar quantize
+  ok m104.mil main renameVar range_1d
+  ok m104.mil main renameVar cast
+  ok m106.mil main renameVar greater
+  ok m106.mil main renameVar logical_or
+  ok m107.mil main renameVar greater
+  ok m107.mil main renameVar logical_and
+  ok m109.mil main renameVar mul
+  ok m109.mil main renameVar random_normal
+  ok m110.mil main renameVar mul
+  ok m110.mil main renameVar random_uniform
+  ok m116.mil main renameVar mul
+  ok m116.mil main renameVar shape
+  ok m116.mil main renameVar reduce_sum
+  ok m116.mil main renameVar cast
+  ok m132.mil main renameVar one_hot
+  ok m132.mil main renameVar reshape
+  ok m132.mil main renameVar mul
+  ok m140.mil main renameVar less
+  ok m140.mil main renameVar mul
+  ok m140.mil main renameVar select
+  ok m140.mil main renameVar abs
+  ok m140.mil main renameVar sub
+  ok m140.mil main renameVar add
+  ok m140.mil main renameVar floor
+  ok m140.mil main renameVar greater_equal
+FAIL pr263-B-I2-optype-token-renamed: 1 (informational, pre-existing)

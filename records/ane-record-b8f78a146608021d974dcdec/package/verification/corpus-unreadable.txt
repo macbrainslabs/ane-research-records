@@ -1,0 +1,15 @@
+# corpus files whose link target is an iCloud dataless (evicted) file; reading them from this shell fails with EDEADLK, so they are not in this copy and every corpus probe lists them as UNKNOWN
+m097.mil  compressed,dataless 888 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/fp16/program.source.mil
+m114.mil  compressed,dataless 1178 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/per-row/program.source.mil
+m115.mil  compressed,dataless 1180 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/group128/program.source.mil
+m138.mil  compressed,dataless 7402 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-fp16_m1-mil.mil
+m139.mil  compressed,dataless 7499 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-fp16_m1-mil.mil
+m141.mil  compressed,dataless 10581 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-w8_m1-mil.mil
+m142.mil  compressed,dataless 10678 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-w8_m1-mil.mil
+m143.mil  compressed,dataless 18994 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-head-mil.mil
+m146.mil  compressed,dataless 266024 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8a-mil.mil
+m147.mil  compressed,dataless 311298 Oct -> /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8b-mil.mil
+m148.mil  compressed,dataless 536874 Oct -> /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-ab0146d8b84a973fb60b.mil
+m149.mil  compressed,dataless 714828 Oct -> /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-bf948bda1b01d57cf33c.mil
+m150.mil  compressed,dataless 727645 Oct -> /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-87d826f2897c3a3b873a.mil
+m151.mil  compressed,dataless 727832 Oct -> /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-957906559c5ec40abbba.mil

@@ -1,0 +1,2 @@
+CLEANROOM verdict=REPLICATED_SAME_CHIP_BYTE_IDENTICAL identical=15 differing=0 missing=0 wall=19s runIndex=5 frozen=true counted=5/5 set=5/5
+receipt=/Users/nayte/.local/share/anvil/anerecore-v030/runs/fugu-set/cleanroom-receipt.json sha256=5b71fbf88f6f957dbc27548fb5c3e5e743a611ea7a794c12e2f422a24ba26c98

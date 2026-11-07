@@ -1,0 +1,19 @@
+COMMIT=87cb836094c2c5c3d356ffefbe6bef369ff2249e
+SWIFT=Apple Swift version 6.4 (swift-6.4-RELEASE)
+SWIFTC=xcrun swiftc swift-driver version: 1.168.6 Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)
+STARTED_UTC=2026-11-07T09:02:35Z
+PASS WeightBinTests ok_lines=2
+PASS RewriteTransactionTests ok_lines=30
+PASS ANEShapeCalculusTests ok_lines=0
+PASS SwiftMIL --test-blob
+PASS test_mil_ir_core
+PASS package product MilTap
+PASS package product SteeringInject
+  ok: F56-16
+  ok: F56-17
+  ok: F56-18
+  ok: F56-19
+  ok: F56-20
+ALL TESTS PASS
+FINISHED_UTC=2026-11-07T09:05:10Z
+SUITE_RC=0
