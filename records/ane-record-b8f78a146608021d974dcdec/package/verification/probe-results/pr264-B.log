@@ -1,0 +1,55 @@
+PASS pr264-B-01-multioutput-parse-graph PASS pr264-B-01
+INFO pr264-B-02-multioutput-edit-paths: INFO: wrapped LHS parses as 4 ops; renameVar(a) -> exact
+INFO pr264-B-02-multioutput-edit-paths: INFO: split named "b": renameVar(b,bb) name attr -> follows b
+PASS pr264-B-02-multioutput-edit-paths PASS pr264-B-02
+INFO pr264-B-03-parser-forms-and-negatives: INFO: wrapped signature input sourceLine x,z = [3, 4] (physical lines 3,4)
+PASS pr264-B-03-parser-forms-and-negatives PASS pr264-B-03
+PASS pr264-B-04-wrapped-signature-differential PASS pr264-B-04
+PASS pr264-B-05-programwide-commit-check PASS pr264-B-05
+PASS pr264-B-07-parity-pins PASS pr264-B-07
+PASS pr264-B-08-programwide-splice-bypass-literals PASS pr264-B-08
+INFO corpus driver rc 0 shim=
+PASS corpus-counts COMMIT_FAIL=3 OK=134 PARSE_FAIL=5 UNREADABLE=14
+PASS corpus-ok-commits-byte-identical non-identical=0 of 134
+PASS corpus-m021-ok OK	-
+PASS corpus-m052-ok OK	-
+PASS corpus-m100-ok OK	-
+PASS corpus-m105-ok OK	-
+PASS corpus-m128-ok OK	-
+PASS corpus-m134-ok OK	-
+PASS corpus-m001-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m002-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m004-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m005-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m007-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m144-duplicate COMMIT_FAIL	RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: duplicate producer for var `
+PASS corpus-m145-duplicate COMMIT_FAIL	RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: duplicate producer for var `
+PASS corpus-m154-dangling-return COMMIT_FAIL	RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling return: function `i
+INFO multi-output files: m052.mil m100.mil m128.mil m134.mil 
+INFO edits run: 1822; OK 1466; ERR 356
+PASS cli-mil_tap-qwen-pin 295dd3b56f12505ba28e6a89e02fa4f8f8273ce3f5f3b2c0855b1f179957aad6
+PASS cli-steering_inject-qwen-equals-ref this=8ab13cb5434311841016cfde4ecb16107a7b9d8543f60c7a93bb6c4e74219ba2 ref=8ab13cb5434311841016cfde4ecb16107a7b9d8543f60c7a93bb6c4e74219ba2
+PASS cli-list-m052-both-split-outputs 
+PASS cli-tap-third-output-lstm_2 rc=0
+PASS cli-steer-second-output-gru_1 rc=0
+PASS differential-ok-on-both-commit-and-edits-identical files OK on both=128, files with any differing line=0, lines compared=1976
+INFO status changes (ref -> this):
+INFO   m021.mil PARSE_FAIL -> OK
+INFO   m052.mil PARSE_FAIL -> OK
+INFO   m100.mil PARSE_FAIL -> OK
+INFO   m105.mil PARSE_FAIL -> OK
+INFO   m128.mil PARSE_FAIL -> OK
+INFO   m134.mil PARSE_FAIL -> OK
+INFO   cli m021 list: ref=[1 cb8db526794c04e30effeb533a5d17a3a00462f1628f2921fcc305fa5b085c90] this=[0 7557fc2d645fc6ac3c64dbbb8b1a3f5b6b3ebbd5767a7edf248ac0e3cf6c9acf]
+INFO   cli m052 list: ref=[1 931c03585fd1d0b3babcf8188faae7a66fbf98a02a68592d7827372f18dca347] this=[0 adc3de41ec62f3875f6c6bbb3b6b91009b17ef574b3d4771640b8728c06df229]
+INFO   cli m052 tap:split_axis: ref=[] this=[0 694498b06909291bad143704ce21775246e4504ed6b3538489aa4ba12e58c235]
+INFO   cli m100 list: ref=[1 a761a36806862601f2b202fa98eb6244a35ddc7054e10864b31502953d526aac] this=[0 baaa25b6650d6ace1c871a34ee9a1e88ae21f1b3bb3d0168f0ec12dfe16fbc8b]
+INFO   cli m100 tap:topk_k: ref=[] this=[0 3dc0d880f07cbeda8a3674b477f68fcd880e2d99a439e8324c73f118a3933c5a]
+INFO   cli m105 list: ref=[1 898df49b4aa722ba4cf91897db553dec3f52fa908b4ed5ee92b502dde0db55ea] this=[0 7b044fa318e271afa361ca06394fd50aa3607fb005c3769de9869beba3bdaedf]
+INFO   cli m105 tap:transpose_16: ref=[] this=[0 17cc44357cc2a47fd310d7bbf3bb22a24453cc7e0224296bcd4df5fc04a2d342]
+INFO   cli m128 list: ref=[1 2f2afb37efa45f8f3a662c6d433a017b7100dad337d5fb3125f23eeef9a207e2] this=[0 92687b444a18f3bb26321271ce8e887c80f2fe135be67b535cab60e0ac81264e]
+INFO   cli m128 tap:const_v: ref=[] this=[0 192618c8a129d9bea5ff35be8f943a785ceb19c12ef312b056573e34aac37f45]
+INFO   cli m134 list: ref=[1 be9e32ee9da11b2c0dea226621418ab2386c356f6fe1d3dc0e2ef34b6f171d03] this=[0 b133317d9c160d98344c9933d108f1087d4f7c2a1990cd49351a17667a4cdbee]
+INFO   cli m134 tap:const_v: ref=[] this=[0 88b07f973ad5aeed4301194408a805b442e13692c41ede32d2c997d2c90143d0]
+INFO cli lines differing from ref: 11 (expected only for files the ref cannot parse)
+pr264-B: gating passed=29 failed=0
