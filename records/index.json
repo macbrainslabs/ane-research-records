@@ -35,6 +35,7 @@
       "kind": "package",
       "tag": "ane-record-b8f78a146608021d974dcdec",
       "version": "v0.3.0",
+      "versionDoi": "10.5281/zenodo.24034510",
       "title": "ANERECore cross-repo MIL parity: tap, steer and functionWide (same chip, single device)",
       "path": "records/ane-record-b8f78a146608021d974dcdec/",
       "releasedOn": "2026-11-07",
