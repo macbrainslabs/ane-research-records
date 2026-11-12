@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: R2-B-2 control: a rerun finding whose priorArt is the request priorArt passes
+ok 1 - R2-B-2 control: a rerun finding whose priorArt is the request priorArt passes
+  ---
+  duration_ms: 5.31726
+  type: 'test'
+  ...
+# Subtest: R2-B-2a a priorArt other than the one the request pinned is held
+ok 2 - R2-B-2a a priorArt other than the one the request pinned is held
+  ---
+  duration_ms: 0.774416
+  type: 'test'
+  ...
+# Subtest: R2-B-2b a priorArt the request never named is held
+ok 3 - R2-B-2b a priorArt the request never named is held
+  ---
+  duration_ms: 0.755644
+  type: 'test'
+  ...
+# Subtest: R2-B-2c a claim other than the request claim is held
+ok 4 - R2-B-2c a claim other than the request claim is held
+  ---
+  duration_ms: 0.707559
+  type: 'test'
+  ...
+# Subtest: R2-B-2d a title without the set verdict suffix, or limits without the set line, is held
+ok 5 - R2-B-2d a title without the set verdict suffix, or limits without the set line, is held
+  ---
+  duration_ms: 1.042696
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 82.553356

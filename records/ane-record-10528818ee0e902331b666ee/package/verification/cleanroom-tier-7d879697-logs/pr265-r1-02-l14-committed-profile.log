@@ -1,0 +1,6 @@
+FAIL a-build-only-rc0 rc=2 REFUSING to build or run: tsv: run.tsv is missing or unreadable
+FAIL b-fixture-listing-equals-recipe tool=e8ac5faa282ce13c3e2ce13b17f45f19d627c2a5aac688ea58ad3eba8041a0e3 recipe=1e7dbb661c4099d387d46b76c958746c5f846a236c11fad1cde51fd0950705cf
+PASS c-fixture-recorded e8ac5faa282ce13c3e2ce13b17f45f19d627c2a5aac688ea58ad3eba8041a0e3
+PASS c-tsv-recorded unreadable
+PASS c-baselineIndex-recorded 149f747321e3fe2619c18c415a7347d02d0b3687b0896320ec69784dbefa0500
+SUMMARY bin=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-7d879697 profile=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/src-7d879697/spi/cleanroom/profiles/l14-minimal.profile.json pass=3 fail=2

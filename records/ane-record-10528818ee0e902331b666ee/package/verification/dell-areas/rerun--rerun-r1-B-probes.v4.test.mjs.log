@@ -1,0 +1,120 @@
+TAP version 13
+# Subtest: control: a conformant frozen 2-run set passes every evidence check
+ok 1 - control: a conformant frozen 2-run set passes every evidence check
+  ---
+  duration_ms: 4.495966
+  type: 'test'
+  ...
+# Subtest: control: an incomplete set (SET_INCOMPLETE) is held by policy on its verdict
+ok 2 - control: an incomplete set (SET_INCOMPLETE) is held by policy on its verdict
+  ---
+  duration_ms: 1.366915
+  type: 'test'
+  ...
+# Subtest: B2 probe: a counted run made under ANOTHER freeze manifest is not a run of this frozen set
+ok 3 - B2 probe: a counted run made under ANOTHER freeze manifest is not a run of this frozen set
+  ---
+  duration_ms: 0.761614
+  type: 'test'
+  ...
+# Subtest: B4 probe: a profile ledger outside the device ledger dir (rerun-finding config.ledgerDir) is not profile accounting
+ok 4 - B4 probe: a profile ledger outside the device ledger dir (rerun-finding config.ledgerDir) is not profile accounting
+  ---
+  duration_ms: 0.874281
+  type: 'test'
+  ...
+# Subtest: B1 probe: a set run with no declared tool source (tool freeze unasserted) is accepted
+ok 5 - B1 probe: a set run with no declared tool source (tool freeze unasserted) is accepted
+  ---
+  duration_ms: 1.222699
+  type: 'test'
+  ...
+# Subtest: B1 probe: the freeze manifest tool commit disagrees with the receipt and nobody checks git for it
+ok 6 - B1 probe: the freeze manifest tool commit disagrees with the receipt and nobody checks git for it
+  ---
+  duration_ms: 0.614599
+  type: 'test'
+  ...
+# Subtest: B1 probe (v4): a staged rerun whose cleanroom binary sha is not the pinned one is recorded once, marked as not pinned in both ledgers, never as a clean staged set
+not ok 7 - B1 probe (v4): a staged rerun whose cleanroom binary sha is not the pinned one is recorded once, marked as not pinned in both ledgers, never as a clean staged set
+  ---
+  duration_ms: 1.444165
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-B-probes.v4.test.mjs:150:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    a terminal status must not be a lane error (it could never clear)
+    + actual - expected
+    
+    + [
+    +   {
+    +     error: 'rerun_installed_tool_pin_config_invalid: toolPaths',
+    +     lane: 'dry',
+    +     requestSha256: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    +     stage: 'rerun'
+    +   }
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0:
+      lane: 'dry'
+      stage: 'rerun'
+      requestSha256: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+      error: 'rerun_installed_tool_pin_config_invalid: toolPaths'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-B-probes.v4.test.mjs:156:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: real legacy status 5f40edc9 under the shipped pins: recorded once, marked in both ledgers, no lane error
+ok 8 - real legacy status 5f40edc9 under the shipped pins: recorded once, marked in both ledgers, no lane error # SKIP
+  ---
+  duration_ms: 0.074605
+  type: 'test'
+  ...
+# Subtest: NB probe: one request Neo refuses holds every later request in the lane forever
+not ok 9 - NB probe: one request Neo refuses holds every later request in the lane forever
+  ---
+  duration_ms: 0.34942
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-B-probes.v4.test.mjs:187:1'
+  failureType: 'testCodeFailure'
+  error: 'request B never started after 3 scans; calls=[]'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-B-probes.v4.test.mjs:193:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: NB probe: a config with rerun + local transport (same-host use) must not crash the whole scan
+ok 10 - NB probe: a config with rerun + local transport (same-host use) must not crash the whole scan
+  ---
+  duration_ms: 5.828562
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 7
+# fail 2
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 92.343391

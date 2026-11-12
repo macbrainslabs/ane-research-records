@@ -1,0 +1,134 @@
+{
+  "checkCount" : 18,
+  "checks" : [
+    {
+      "exact" : true,
+      "field" : "prefill.positions.count",
+      "recomputed" : "28",
+      "recorded" : "28"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.logitsSha256",
+      "recomputed" : "8aa9f6c8d5d1b5c46bc5969dcf915ab6e5b01db2dd69c31af99cd20166ca61f7",
+      "recorded" : "8aa9f6c8d5d1b5c46bc5969dcf915ab6e5b01db2dd69c31af99cd20166ca61f7"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.winner",
+      "recomputed" : "9707",
+      "recorded" : "9707"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.nanCount",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.imEndLogit",
+      "recomputed" : "-2.7793",
+      "recorded" : "-2.7793"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.imEndRank",
+      "recomputed" : "66187",
+      "recorded" : "66187"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.winnerLogit",
+      "recomputed" : "22.7188",
+      "recorded" : "22.7188"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.imEndMarginToWinner",
+      "recomputed" : "25.4980",
+      "recorded" : "25.4980"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.top5.ids",
+      "recomputed" : "9707,40,13048,2121,13936",
+      "recorded" : "9707,40,13048,2121,13936"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.promptIds",
+      "recomputed" : "151644,8948,198,2610,525,264,10950,17847,13,151645,198,151644,872,198,13048,11,1128,646,498,1492,752,448,30,151645,198,151644,77091,198",
+      "recorded" : "151644,8948,198,2610,525,264,10950,17847,13,151645,198,151644,872,198,13048,11,1128,646,498,1492,752,448,30,151645,198,151644,77091,198"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.promptCount",
+      "recomputed" : "28",
+      "recorded" : "28"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.count",
+      "recomputed" : "228",
+      "recorded" : "228"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.winnerMismatches",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.nanChunkMismatches",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.tokenInMismatches",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.generatedWinners",
+      "recomputed" : "9707,0,358,2776,1588,311,1492,448,894,4755,498,614,13,4599,1077,752,1414,1128,498,1184,12994,448,11,323,358,3278,653,847,1850,311,7789,498,13,151645,198,151643,33975,25,220,14880,98237,30534,109432,100007,103963,107165,106800,9370,99674,100164,104602,1773,220,16,13,65727,228,56278,102974,100643,5122,220,17,13,19468,114,19403,105652,5122,220,18,13,97161,102195,5122,220,14880,99553,46944,105896,103963,99674,100164,104602,9370,105866,3837,100630,102974,100643,5373,103963,105652,33108,108043,1773,220,19,13,220,14880,103944,102349,43815,100873,90395,111400,37029,71134,22243,3407,71703,25,84897,60894,73670,6313,114566,103963,107165,106800,9370,99674,100164,104602,9370,100700,105866,48443,14374,46750,222,58362,100643,28311,12,98313,241,99872,104602,9909,77557,57566,28330,104602,7552,5122,16,12,17,6552,9909,94237,18,15,117033,23083,12,64388,249,99968,57191,99968,100454,5122,16,20,15,117033,9909,106477,57191,99968,100454,23083,12,10236,254,224,100443,57191,100443,99742,9909,100345,99605,107102,101921,23083,12,8908,121,119,106433,118509,9909,30440,30767,3837,100751,104296",
+      "recorded" : "9707,0,358,2776,1588,311,1492,448,894,4755,498,614,13,4599,1077,752,1414,1128,498,1184,12994,448,11,323,358,3278,653,847,1850,311,7789,498,13,151645,198,151643,33975,25,220,14880,98237,30534,109432,100007,103963,107165,106800,9370,99674,100164,104602,1773,220,16,13,65727,228,56278,102974,100643,5122,220,17,13,19468,114,19403,105652,5122,220,18,13,97161,102195,5122,220,14880,99553,46944,105896,103963,99674,100164,104602,9370,105866,3837,100630,102974,100643,5373,103963,105652,33108,108043,1773,220,19,13,220,14880,103944,102349,43815,100873,90395,111400,37029,71134,22243,3407,71703,25,84897,60894,73670,6313,114566,103963,107165,106800,9370,99674,100164,104602,9370,100700,105866,48443,14374,46750,222,58362,100643,28311,12,98313,241,99872,104602,9909,77557,57566,28330,104602,7552,5122,16,12,17,6552,9909,94237,18,15,117033,23083,12,64388,249,99968,57191,99968,100454,5122,16,20,15,117033,9909,106477,57191,99968,100454,23083,12,10236,254,224,100443,57191,100443,99742,9909,100345,99605,107102,101921,23083,12,8908,121,119,106433,118509,9909,30440,30767,3837,100751,104296"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.firstImEndGeneratedIndex",
+      "recomputed" : "33",
+      "recorded" : "33"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.stepsWithAnyNaN",
+      "recomputed" : "0",
+      "recorded" : "0"
+    }
+  ],
+  "computeUnits" : "cpuAndGPU",
+  "dumpDir" : "\/Users\/nayte\/.local\/share\/anvil\/qwen-dispatch-v040\/analysis\/negtest\/gpu\/good",
+  "exactCount" : 18,
+  "facts" : {
+    "firstImEndGeneratedIndex" : 33,
+    "generatedWinners" : 201,
+    "inferStepsWithAnyNaN" : 0,
+    "prefillLastAgreesWithInferAtLastPromptStep" : true,
+    "prefillLastNaN" : 0,
+    "prefillLastWinner" : 9707
+  },
+  "inputs" : {
+    "chain.json" : "89691bed06326e82266b865cc734f11f7aac251dba1527cc34f290267b982b68",
+    "logits-prefill-last.f16" : "8aa9f6c8d5d1b5c46bc5969dcf915ab6e5b01db2dd69c31af99cd20166ca61f7",
+    "prefill.json" : "e496dc60626908cbce023f9792f117487a1005114295f6ec34aa692bda8fa7ab",
+    "prompt" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+  },
+  "method" : "independent recompute from raw fp16 bytes and recorded chunk maxima; definitions in the file header",
+  "receiptSelfHash" : "781fa296d0f034447b371e91aa64898d2766c0921f88d7021d88d5f681ab24b5",
+  "schema" : "macbrains.research.qwen-dispatch-recompute.v1",
+  "status" : "EXACT"
+}

@@ -1,0 +1,109 @@
+== sanity
+FAIL r00-all-correct :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r00-build-ran :: no runner_copied
+== B1 missing inputs refuse before build in every mode
+FAIL r01-control-missing-fixture :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+PASS r01-no-build-dir
+FAIL r02-control-missing-tsv :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+PASS r02-no-build-dir
+FAIL r03-replication-missing-index :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+PASS r03-no-build-dir
+FAIL r04-tsv-not-a-string :: rc=127 want=2 msg~'must be a path string' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+PASS r04-no-build-dir
+FAIL r05-unreadable-fixture-undeclared :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+PASS r05-no-build-dir
+FAIL r05c-control-unreadable-fixture :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r06-control-index-not-required :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r07-control-fixture-key-absent :: rc=127 want=2 msg~'is required' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r08-missing-index-allow-unfrozen :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+== B2 declared value must be a 64-hex string; missing actual never matches
+FAIL r10-declared-bool :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r11-declared-array :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r12-declared-object :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r13-declared-63hex :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r14-declared-65hex :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r15-declared-empty :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r16-declared-trailing-space :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r17-declared-non-hex-char :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r18-tsv-mismatch :: rc=127 want=2 msg~'does not match' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r19-declared-index-missing :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r20-missing-never-matches-any-hex :: rc=127 want=2 msg~'does not match actual unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r21-control-declared-index-without-path :: rc=127 want=2 msg~'input path is absent' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+== B4 directory listing: recipe v1, symlinks followed, no silent omission
+FAIL r30-dir-with-links-ok :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+mktemp: mkstemp failed on cleanroom-tier-full/pr265-r2-01-fix-check/lines.MZYn6o: No such file or directory
+probes/cleanroom/pr265-r2-01-fix-check.sh: line 23: : No such file or directory
+probes/cleanroom/pr265-r2-01-fix-check.sh: line 14: : No such file or directory
+FAIL r30-tool-equals-independent-recipe-v1 :: tool=(absent) recipe=a7a748dfb8adb8ed7758282bfe8c8ae77db8bddfdfd2d809205ff0583d6823e3
+FAIL r31-change-behind-dir-link-detected :: rc=127 want=2 msg~'does not match' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r31b-link-retarget-same-content-detected :: rc=127 want=2 msg~'does not match' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r31c-restored-matches :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r32-unreadable-file-in-dir :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r33-fifo-in-dir-refused :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r34-link-to-fifo-refused :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r35-ancestor-cycle-refused :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r36-unreadable-subdir-behind-link :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r37-unreadable-file-behind-link :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r37b-restored-matches :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r38-intermediate-symlink-path-same-hash :: rc=127 (absent) err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r39-private-prefixed-dir-hashes-consistently :: rc=127/127 (absent) vs (absent) kind=(absent) err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+== N6 a file whose bytes start with the listing header is refused (any required input)
+FAIL r40-header-only-file :: rc=127 want=2 msg~'directory-listing header' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+mktemp: mkstemp failed on cleanroom-tier-full/pr265-r2-01-fix-check/lines.s1Bg3b: No such file or directory
+probes/cleanroom/pr265-r2-01-fix-check.sh: line 23: : No such file or directory
+probes/cleanroom/pr265-r2-01-fix-check.sh: line 14: : No such file or directory
+PASS r40-precondition-equals-empty-dir-hash
+FAIL r41-tsv-with-header :: rc=127 want=2 msg~'directory-listing header' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r42-prefix-shorter-than-header-is-a-file :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r43-empty-dir-matches-its-recipe :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r44-empty-regular-file-accepted :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+INFO r44 empty tsv kind=(absent) sha=(absent)
+== N7 hash keys outside the known set
+FAIL r50-baseline-fixtureSha256 :: rc=127 want=2 msg~'not a recognised' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r51-run-indexSha256 :: rc=127 want=2 msg~'not a recognised' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r52-run-unknown-Sha256 :: rc=127 want=2 msg~'not a recognised' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+INFO r53 run.fixtureSHA256 (other case) rc=127
+INFO r54 top-level fixtureSha256 rc=127
+== P1 prebuilt
+FAIL r60-prebuilt-dangling :: rc=127 want=2 msg~'source.prebuilt' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r61-prebuilt-link-to-dir :: rc=127 want=2 msg~'regular file' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r62-prebuilt-link-chain :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r62-copied-bytes-and-sha-recorded :: ls: cleanroom-tier-full/pr265-r2-01-fix-check/out/r62-49/build/runner_copied: No such file or directory
+== P2/P3 control arms and env validated before the build
+FAIL r70-empty-name :: rc=127 want=2 msg~'needs a non-empty name' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+PASS r70-no-build-dir
+FAIL r71-dotdot-name :: rc=127 want=2 msg~'needs a non-empty name' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r72-arms-not-array :: rc=127 want=2 msg~'non-empty profile.control.arms' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r73-numeric-name :: rc=127 want=2 msg~'needs a non-empty name' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r74-no-control-section :: rc=127 want=2 msg~'non-empty profile.control.arms' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r75-env-bool :: rc=127 want=2 msg~'string values' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+PASS r75-no-build-dir
+FAIL r76-env-null :: rc=127 want=2 msg~'string values' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r77-env-array :: rc=127 want=2 msg~'string values' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r78-env-nested :: rc=127 want=2 msg~'string values' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r79-env-valid :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+== P4 baseline index entries
+FAIL r80-entry-non-hex :: rc=127 want=2 msg~'files\[0\]' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r81-entry-absolute :: rc=127 want=2 msg~'files\[0\]' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r82-entry-empty-component :: rc=127 want=2 msg~'files\[0\]' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r83-entry-dot :: rc=127 want=2 msg~'files\[0\]' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r84-entry-trailing-slash :: rc=127 want=2 msg~'files\[0\]' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r85-entry-no-sha :: rc=127 want=2 msg~'files\[0\]' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r86-files-not-array :: rc=127 want=2 msg~'non-empty files' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r87-index-not-json :: rc=127 want=2 msg~'non-empty files' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+FAIL r88-second-entry-escape :: rc=127 want=2 msg~'files\[1\]' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+INFO r89 duplicate baseline entry rc=127
+FAIL r8a-index-is-directory :: rc=127 want=2 msg~'is a directory' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 26: cleanroom-7d879697: command not found
+== P7 --out required; nothing created before the profile parses
+probes/cleanroom/pr265-r2-01-fix-check.sh: line 147: cleanroom-tier-full/pr265-r2-01-fix-check/p90.err: No such file or directory
+cat: cleanroom-tier-full/pr265-r2-01-fix-check/p90.err: No such file or directory
+FAIL r90-out-without-value :: rc=1 want=2 msg~'--out DIR is required' err=
+FAIL r91-out-empty :: rc=127 want=2 msg~'--out DIR is required' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 148: cleanroom-7d879697: command not found
+FAIL r92-profile-array :: rc=127 want=2 msg~'cannot read profile' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 149: cleanroom-7d879697: command not found
+PASS r92-no-out-dir
+FAIL r93-profile-missing :: rc=127 want=2 msg~'cannot read profile' err=probes/cleanroom/pr265-r2-01-fix-check.sh: line 151: cleanroom-7d879697: command not found
+PASS r93-no-out-dir
+== INFO top-level special files (not a round-1 finding; recorded for the report)
+INFO r95 fixture=/dev/null rc=127 kind=(absent)
+INFO r96 fixture=FIFO rc=127 probes/cleanroom/pr265-r2-01-fix-check.sh: line 158: cleanroom-7d879697: command not found
+SUMMARY bin=cleanroom-7d879697 pass=10 fail=73

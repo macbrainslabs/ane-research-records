@@ -1,0 +1,21 @@
+2026-11-12T14:16:47Z start ane-vs-gpu run-1
+2026-11-12T14:27:29Z end ane-vs-gpu run-1 exit=0
+2026-11-12T14:27:29Z start ane-vs-gpu run-2
+2026-11-12T14:35:02Z end ane-vs-gpu run-2 exit=0
+2026-11-12T14:35:02Z start ane-vs-gpu run-3
+2026-11-12T14:37:20Z end ane-vs-gpu run-3 exit=0
+2026-11-12T14:37:20Z start ane-vs-gpu run-4
+2026-11-12T14:39:39Z end ane-vs-gpu run-4 exit=0
+2026-11-12T14:39:39Z start ane-vs-gpu run-5
+2026-11-12T14:42:02Z end ane-vs-gpu run-5 exit=0
+2026-11-12T14:42:02Z start cpuonly run-1
+2026-11-12T14:48:24Z end cpuonly run-1 exit=0
+2026-11-12T14:48:24Z start cpuonly run-2
+2026-11-12T14:53:18Z end cpuonly run-2 exit=0
+2026-11-12T14:53:18Z start cpuonly run-3
+2026-11-12T14:58:06Z end cpuonly run-3 exit=0
+2026-11-12T14:58:06Z start cpuonly run-4
+2026-11-12T15:02:49Z end cpuonly run-4 exit=0
+2026-11-12T15:02:49Z start cpuonly run-5
+2026-11-12T15:07:36Z end cpuonly run-5 exit=0
+2026-11-12T15:07:36Z ALL_DONE

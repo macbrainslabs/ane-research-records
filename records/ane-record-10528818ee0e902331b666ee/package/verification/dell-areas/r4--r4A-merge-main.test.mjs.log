@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: r4A-merge: the reviewed commit contains main (no merge needed beyond fast-forward)
+ok 1 - r4A-merge: the reviewed commit contains main (no merge needed beyond fast-forward)
+  ---
+  duration_ms: 229.282649
+  type: 'test'
+  ...
+# Subtest: r4A-merge: merging the reviewed commit onto main has no conflict
+ok 2 - r4A-merge: merging the reviewed commit onto main has no conflict
+  ---
+  duration_ms: 8.271934
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 287.286781

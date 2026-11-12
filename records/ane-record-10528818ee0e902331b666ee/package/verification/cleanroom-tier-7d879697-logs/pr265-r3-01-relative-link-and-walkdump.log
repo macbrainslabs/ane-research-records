@@ -1,0 +1,12 @@
+INFO a1 absolute regular rc=0
+INFO a2 relative regular rc=0 
+INFO a3 relative symlink to regular rc=0 
+INFO a4 absolute symlink to regular rc=0 
+PASS a1-absolute-regular-accepted
+PASS a4-absolute-symlink-same-as-regular
+PASS a3-relative-symlink-same-as-relative-regular
+INFO b1 walkDump(TMPDIR) => E ok;E ok/f;E sub;E top;U sub;
+PASS b1-unreadable-subdir-reported
+PASS b2-entries-relative
+PASS b3-symlinked-root-same-result
+SUMMARY bin=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-7d879697 pass=6 fail=0

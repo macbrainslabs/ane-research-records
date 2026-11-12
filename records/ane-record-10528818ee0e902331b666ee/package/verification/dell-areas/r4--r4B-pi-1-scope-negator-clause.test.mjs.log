@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: PI-1 control: honest negated limits are accepted
+ok 1 - PI-1 control: honest negated limits are accepted
+  ---
+  duration_ms: 4.516985
+  type: 'test'
+  ...
+# Subtest: PI-1 RULE: a negation in an earlier comma or dash clause does not exempt a positive overclaim
+ok 2 - PI-1 RULE: a negation in an earlier comma or dash clause does not exempt a positive overclaim
+  ---
+  duration_ms: 0.322866
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 54.005364

@@ -1,0 +1,7 @@
+  ok functionWide y->yr
+  ok downstream y->input0
+  ok programWide y->yr
+  ok renameVar y->yr
+  ok renameVar x->xr
+  ok deleteOp y rewire x
+PASS pr263-B-01-multiline-op-arg-keys

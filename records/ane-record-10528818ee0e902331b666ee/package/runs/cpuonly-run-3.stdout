@@ -1,0 +1,2 @@
+CONTROL verdict=CONTROL_OK_SAME_BINARY_FROZEN_COUNTED arms=1 sameBinary=true counted=3/3
+receipt=/Users/nayte/ane-hot/runs/qwen-dispatch-v040-20261112/cpuonly/run-3/cleanroom-control-receipt.json sha256=f01589e3f6f683499761d18ac852e2cafcd67ed8914cda5b3a8f5bcfb1fcabe6

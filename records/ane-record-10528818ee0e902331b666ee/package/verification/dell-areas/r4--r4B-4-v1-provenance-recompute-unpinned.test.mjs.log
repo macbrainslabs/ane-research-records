@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: R4B-4 control: v1 provenance without any recompute evidence still passes the evidence checks
+ok 1 - R4B-4 control: v1 provenance without any recompute evidence still passes the evidence checks
+  ---
+  duration_ms: 6.118914
+  type: 'test'
+  ...
+# Subtest: R4B-4 RULE: with rerun.recomputePin configured, a v1 rerun finding carrying an unpinned independentRecompute is held
+ok 2 - R4B-4 RULE: with rerun.recomputePin configured, a v1 rerun finding carrying an unpinned independentRecompute is held
+  ---
+  duration_ms: 1.434708
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 77.721916

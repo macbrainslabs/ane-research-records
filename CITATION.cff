@@ -9,6 +9,8 @@ keywords:
   - "LFM3"
   - "ANERECore"
   - "Model Intermediate Language"
+  - "Hugging Face"
+  - "compute units"
 title: "MacBrains Labs ANE Research Records"
 authors:
   - family-names: Wilson
@@ -16,8 +18,7 @@ authors:
     orcid: "https://orcid.org/0009-0003-4026-8212"
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
-version: "0.3.0"
-doi: "10.5281/zenodo.24034510"
+version: "0.4.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23798036"
@@ -31,8 +32,8 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24034510"
     description: "Version v0.3.0"
-date-released: "2026-11-07"
+date-released: "2026-11-12"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"
 url: "https://macbrainslabs.org/research/"
-abstract: "Versioned, source-bound public research records. v0.3.0 adds: ANERECore cross-repo MIL parity: tap, steer and functionWide (same chip, single device)."
+abstract: "Versioned, source-bound public research records. v0.4.0 adds: Published Qwen2.5-1.5B Core ML package: greedy output depends on the compute unit, and cpuOnly returns NaN."

@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: control: a conformant frozen 2-run set passes every evidence check
+ok 1 - control: a conformant frozen 2-run set passes every evidence check
+  ---
+  duration_ms: 4.479965
+  type: 'test'
+  ...
+# Subtest: control: an incomplete set (SET_INCOMPLETE) is held by policy on its verdict
+ok 2 - control: an incomplete set (SET_INCOMPLETE) is held by policy on its verdict
+  ---
+  duration_ms: 1.405452
+  type: 'test'
+  ...
+# Subtest: B2 probe: a counted run made under ANOTHER freeze manifest is not a run of this frozen set
+ok 3 - B2 probe: a counted run made under ANOTHER freeze manifest is not a run of this frozen set
+  ---
+  duration_ms: 0.794919
+  type: 'test'
+  ...
+# Subtest: B4 probe: a profile ledger outside the device ledger dir (rerun-finding config.ledgerDir) is not profile accounting
+ok 4 - B4 probe: a profile ledger outside the device ledger dir (rerun-finding config.ledgerDir) is not profile accounting
+  ---
+  duration_ms: 0.885848
+  type: 'test'
+  ...
+# Subtest: B1 probe: a set run with no declared tool source (tool freeze unasserted) is accepted
+ok 5 - B1 probe: a set run with no declared tool source (tool freeze unasserted) is accepted
+  ---
+  duration_ms: 1.237861
+  type: 'test'
+  ...
+# Subtest: B1 probe: the freeze manifest tool commit disagrees with the receipt and nobody checks git for it
+ok 6 - B1 probe: the freeze manifest tool commit disagrees with the receipt and nobody checks git for it
+  ---
+  duration_ms: 0.610848
+  type: 'test'
+  ...
+# Subtest: B1 probe (v4): a staged rerun whose cleanroom binary sha is not the pinned one is recorded once, marked as not pinned in both ledgers, never as a clean staged set
+ok 7 - B1 probe (v4): a staged rerun whose cleanroom binary sha is not the pinned one is recorded once, marked as not pinned in both ledgers, never as a clean staged set
+  ---
+  duration_ms: 1.430583
+  type: 'test'
+  ...
+# Subtest: real legacy status 5f40edc9 under the shipped pins: recorded once, marked in both ledgers, no lane error
+ok 8 - real legacy status 5f40edc9 under the shipped pins: recorded once, marked in both ledgers, no lane error # SKIP
+  ---
+  duration_ms: 0.068746
+  type: 'test'
+  ...
+# Subtest: NB probe: one request Neo refuses holds every later request in the lane forever
+ok 9 - NB probe: one request Neo refuses holds every later request in the lane forever
+  ---
+  duration_ms: 0.703344
+  type: 'test'
+  ...
+# Subtest: NB probe: a config with rerun + local transport (same-host use) must not crash the whole scan
+ok 10 - NB probe: a config with rerun + local transport (same-host use) must not crash the whole scan
+  ---
+  duration_ms: 6.114796
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 82.461084

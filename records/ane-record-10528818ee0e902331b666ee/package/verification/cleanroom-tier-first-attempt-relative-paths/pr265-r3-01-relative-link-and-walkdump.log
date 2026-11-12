@@ -1,0 +1,20 @@
+probes/cleanroom/pr265-r3-01-relative-link-and-walkdump.sh: line 18: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a1.stdout: No such file or directory
+INFO a1 absolute regular rc=1
+probes/cleanroom/pr265-r3-01-relative-link-and-walkdump.sh: line 18: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a2.stdout: No such file or directory
+head: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a2.stderr: No such file or directory
+INFO a2 relative regular rc=1 
+probes/cleanroom/pr265-r3-01-relative-link-and-walkdump.sh: line 18: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a3.stdout: No such file or directory
+head: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a3.stderr: No such file or directory
+INFO a3 relative symlink to regular rc=1 
+probes/cleanroom/pr265-r3-01-relative-link-and-walkdump.sh: line 18: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a4.stdout: No such file or directory
+head: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a4.stderr: No such file or directory
+INFO a4 absolute symlink to regular rc=1 
+head: cleanroom-tier-full/pr265-r3-01-relative-link-and-walkdump/a1.stderr: No such file or directory
+FAIL a1-absolute-regular-accepted :: rc=1 
+PASS a4-absolute-symlink-same-as-regular
+PASS a3-relative-symlink-same-as-relative-regular
+INFO b1 walkDump(TMPDIR) => E ok;E ok/f;E sub;E top;U sub;
+PASS b1-unreadable-subdir-reported
+PASS b2-entries-relative
+PASS b3-symlinked-root-same-result
+SUMMARY bin=cleanroom-7d879697 pass=5 fail=1

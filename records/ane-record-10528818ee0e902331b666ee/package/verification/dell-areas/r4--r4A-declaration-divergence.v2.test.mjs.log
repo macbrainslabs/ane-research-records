@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: r4A-div BOM: the bytes Neo listed as new (c0f9e659) are rejected by the Dell
+ok 1 - r4A-div BOM: the bytes Neo listed as new (c0f9e659) are rejected by the Dell
+  ---
+  duration_ms: 3.674652
+  type: 'test'
+  ...
+# Subtest: r4A-div duplicate key: the bytes Neo listed with title FIRST (7814e107) read as LAST on the Dell
+ok 2 - r4A-div duplicate key: the bytes Neo listed with title FIRST (7814e107) read as LAST on the Dell
+  ---
+  duration_ms: 0.535153
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 113.279352

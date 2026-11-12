@@ -1,0 +1,405 @@
+{
+  "batch" : 64,
+  "computeUnits" : "cpuOnly",
+  "function" : "prefill",
+  "imEndTokenId" : 151645,
+  "positions" : [
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 0,
+      "tokenIn" : 151644,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 1,
+      "tokenIn" : 8948,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 2,
+      "tokenIn" : 198,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 3,
+      "tokenIn" : 2610,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 4,
+      "tokenIn" : 525,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 5,
+      "tokenIn" : 264,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 6,
+      "tokenIn" : 10950,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 7,
+      "tokenIn" : 17847,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 8,
+      "tokenIn" : 13,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 9,
+      "tokenIn" : 151645,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 10,
+      "tokenIn" : 198,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 11,
+      "tokenIn" : 151644,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 12,
+      "tokenIn" : 872,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 13,
+      "tokenIn" : 198,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 14,
+      "tokenIn" : 13048,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 15,
+      "tokenIn" : 11,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 16,
+      "tokenIn" : 1128,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 17,
+      "tokenIn" : 646,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 18,
+      "tokenIn" : 498,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 19,
+      "tokenIn" : 1492,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 20,
+      "tokenIn" : 752,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 21,
+      "tokenIn" : 448,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 22,
+      "tokenIn" : 30,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 23,
+      "tokenIn" : 151645,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 24,
+      "tokenIn" : 198,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 25,
+      "tokenIn" : 151644,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 26,
+      "tokenIn" : 77091,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    },
+    {
+      "imEndLogit" : "nan",
+      "imEndLogitF16Bits" : 32256,
+      "imEndRank" : null,
+      "logitsSha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad",
+      "nanCount" : 151936,
+      "position" : 27,
+      "tokenIn" : 198,
+      "top5" : [
+
+      ],
+      "winner" : -1
+    }
+  ],
+  "positionsWithAnyNaN" : 28,
+  "promptIds" : [
+    151644,
+    8948,
+    198,
+    2610,
+    525,
+    264,
+    10950,
+    17847,
+    13,
+    151645,
+    198,
+    151644,
+    872,
+    198,
+    13048,
+    11,
+    1128,
+    646,
+    498,
+    1492,
+    752,
+    448,
+    30,
+    151645,
+    198,
+    151644,
+    77091,
+    198
+  ],
+  "schema" : "macbrains.research.qwen-dispatch-prefill.v1",
+  "winnerRule" : "argmax over non-NaN logits across 16 chunks, lowest index on ties; all-NaN -> winner -1"
+}

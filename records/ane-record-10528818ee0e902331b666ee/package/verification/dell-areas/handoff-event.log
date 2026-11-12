@@ -1,0 +1,40 @@
+ok   p01-receiver-cursor-never-consumed.mjs
+ok   p02-acked-never-fires.mjs
+ok   p03-cap-ok-fires.mjs
+ok   p04-failed-fires-bounded.mjs
+ok   p05-failed-fire-retried-on-next-trigger.mjs
+ok   p06-no-idle-receiver-run.mjs
+ok   p07-example-config-exact.mjs
+ok   p08-adapter-short-error-reaches-stderr.mjs
+ok   p09-adapter-isolated-toolset.mjs
+ok   p10-adapter-success-needs-tool-evidence.mjs
+ok   p11-adapter-input-safety.mjs
+ok   p12-service-workdir-exists.mjs
+ok   p13-service-start-limit.mjs
+ok   p14-never-edits-package.mjs
+ok   p15-loop-bounded.mjs
+ok   p16-refusal-does-not-consume-cursor.mjs
+ok   p17-no-fire-check-mode.mjs
+ok   p18-exit-codes.mjs
+ok   p19-cli-intake-argv-compat.mjs
+ok   p20-runbook-gates.mjs
+ok   p21-log-tails-bounded.mjs
+ok   p22-r2-prefire-throw-restores-cursor.mjs
+ok   p23-r2-unlogged-ok-fire-counts.mjs
+ok   p24-r2-restore-leaves-newer-stamp.mjs
+ok   p25-r2-check-writes-nothing.mjs
+ok   p26-r2-adapter-evidence-strict.mjs
+ok   p27-r2-config-renotify-margin.mjs
+ok   p28-r2-timeout-counts-and-restores.mjs
+FAIL p29-r3-real-cli-persisted-run-fires.mjs  -- AssertionError [ERR_ASSERTION]: real persisted-output run result refused: fire failed: no successful RemoteTrigger run result for trig_01Bx9We5581VerFQXJ47nmy9 (tool calls: 1)
+FAIL p30-r3-evidence-decides-over-exit-code.mjs  -- AssertionError [ERR_ASSERTION]: good run result then exit 1 refused: fire failed: claude exited 1
+FAIL p31-r3-persisted-wrapper-adversarial.mjs  -- AssertionError [ERR_ASSERTION]: 900B: fire failed: no successful RemoteTrigger run result for trig_01Bx9We5581VerFQXJ47nmy9 (tool calls: 1)
+FAIL p32-r3-rollback-fresh-shell.mjs  -- AssertionError [ERR_ASSERTION]: backup line: install: cannot stat '/handoff-drop.mjs': No such file or directory
+ok   p33-r4-pending-index-equivalence.mjs
+ok   p34-r4-pending-nonstring-sha-same-as-verify.mjs
+FAIL p35-r4-adapter-own-deadline.mjs  -- AssertionError [ERR_ASSERTION]: The input did not match the regular expression /claude exited 137 after the run call succeeded/. Input:
+FAIL p36-r4-adapter-deadline-absolute.mjs  -- AssertionError [ERR_ASSERTION]: setsid descendant holds stdout: adapter returned after 40020 ms, deadline 2 s + 5 s kill-after
+FAIL p37-r4-adapter-cleanup-only-named-file.mjs  -- AssertionError [ERR_ASSERTION]: fire failed: no successful RemoteTrigger run result for trig_01Bx9We5581VerFQXJ47nmy9 (tool calls: 6)
+FAIL p38-r4-rollback-refuses-post-event-backup.mjs  -- AssertionError [ERR_ASSERTION]: The input did not match the regular expression /reset-failed anvil-handoff-event\.service anvil-handoff-event\.path anvil-handoff-event\.timer/. Input:
+ok   p39-r6-test-cleanup-kills-own-pid.mjs
+8 probe(s) failing

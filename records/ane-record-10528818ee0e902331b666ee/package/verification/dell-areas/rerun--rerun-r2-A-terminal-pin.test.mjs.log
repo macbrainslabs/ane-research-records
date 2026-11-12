@@ -1,0 +1,134 @@
+TAP version 13
+# Subtest: R2A-1 RULE: run-time pin mismatch (terminal failed, tools show the mismatched sha) ends the request once
+not ok 1 - R2A-1 RULE: run-time pin mismatch (terminal failed, tools show the mismatched sha) ends the request once
+  ---
+  duration_ms: 2.161167
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    never recorded terminal; lane errors over 3 scans: ["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:33:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: R2A-2 RULE: run-time unreadable tool (terminal failed, sha "unreadable") ends the request once
+not ok 2 - R2A-2 RULE: run-time unreadable tool (terminal failed, sha "unreadable") ends the request once
+  ---
+  duration_ms: 0.42877
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:36:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    never recorded terminal; lane errors over 3 scans: ["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:39:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: R2A-3 control: staged under the pinned tools is recorded once, no error
+not ok 3 - R2A-3 control: staged under the pinned tools is recorded once, no error
+  ---
+  duration_ms: 0.517125
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:42:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:45:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: R2A-4 control: staged under a NON-pinned tool is still never recorded (fail closed, lane error)
+not ok 4 - R2A-4 control: staged under a NON-pinned tool is still never recorded (fail closed, lane error)
+  ---
+  duration_ms: 17.329878
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:48:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(r.errs.every(e=>/rerun_tool_pin_mismatch:cleanroomBin/.test(e.error))&&r.errs.length===3)
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:51:43)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: R2A-5 RULE (real Neo output): the run-time pin-failure status ends the request once under the shipped pins
+not ok 5 - R2A-5 RULE (real Neo output): the run-time pin-failure status ends the request once under the shipped pins
+  ---
+  duration_ms: 5.086524
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:60:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    never recorded terminal; lane errors over 3 scans: ["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.test.mjs:69:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 0
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 103.773778

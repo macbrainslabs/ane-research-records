@@ -1,0 +1,137 @@
+{
+  "armCount" : 1,
+  "arms" : [
+    {
+      "dumpDir" : "/Users/nayte/ane-hot/runs/qwen-dispatch-v040-20261112/cpuonly/run-5/dump_cpu",
+      "dumpFileCount" : 3,
+      "dumpFiles" : [
+        {
+          "path" : "chain.json",
+          "sha256" : "d6ffd826c1638e391195cd8d1819be3f3cc657418241a7f243432b269edd62d8"
+        },
+        {
+          "path" : "logits-prefill-last.f16",
+          "sha256" : "e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad"
+        },
+        {
+          "path" : "prefill.json",
+          "sha256" : "59a141a66c399fff36f46c5fa4bf490da7ffd4a19451e07f8c6b5cb13c6c3f65"
+        }
+      ],
+      "envDelta" : {
+        "LFM3_COMPUTE_UNITS" : "cpuOnly"
+      },
+      "exitCode" : 0,
+      "inputsUnchanged" : true,
+      "name" : "cpu",
+      "passed" : true,
+      "runnerSha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+      "runStartedAt" : "2026-11-12T15:03:00Z",
+      "wallSeconds" : 274
+    }
+  ],
+  "binarySha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+  "build" : {
+    "baselineRunnerSha256" : "",
+    "commit" : "543c3df3126b8adb973e0ae026d528624e3161ef",
+    "rebuilt" : true,
+    "rebuiltMatchesBaselineBinary" : false,
+    "rebuiltRunnerSha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+    "repo" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re",
+    "sourceBlobSha256" : {
+      "spi/cleanroom/runners/qwen_dispatch_runner.swift" : "3c28c0b068908ac595bf196003f49d859472f90350cd56b6c3feed52f2308a05"
+    },
+    "swiftcArgs" : [
+      "-O",
+      "-parse-as-library"
+    ]
+  },
+  "claimScope" : "Same-chip, same-binary CPU-vs-ANE layer-14 control under a frozen, committed profile and runner. ANE placement is Core ML compute-plan assignment (INFERRED), not a hardware execution trace.",
+  "criterion" : "Published Qwen2.5-1.5B-Instruct-ANE LUT4 package (HF NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE @7f9ab466, zip sha256 194b8f10...): prefill logits and infer decode outputs under Core ML cpuOnly; same source-rebuilt runner and inputs as the ane-vs-gpu profile, with 4 decode steps because the cpuOnly path takes about 10 s per call",
+  "crossDeviceReplication" : false,
+  "device" : {
+    "chip" : "Apple A18 Pro",
+    "coreMLBundleVersion" : "3610.2.3",
+    "hwModel" : "Mac17,5",
+    "osBuild" : "26C5035r",
+    "osVersion" : "27.3"
+  },
+  "e5CacheStateBefore" : {
+    "fileCount" : 0,
+    "listingSha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path" : "/Users/nayte/Library/Caches/com.apple.e5rt.e5bundlecache"
+  },
+  "executionLog" : {
+    "path" : "/Users/nayte/.local/state/anvil/execution-log/3de33b648fff4b94ccdb2db407ececbf4b1f043f7ef72c544656bddef4716da1.jsonl",
+    "runCompleted" : 5,
+    "runStarted" : 5,
+    "sha256" : "7659769c7e83a1992e829bfe51a17d67746ca3a5943a060afd2469e25d7e873e",
+    "startedWithoutCompletion" : 0,
+    "unparseableLines" : 0
+  },
+  "expected" : {
+    "armsFrozenAndCounted" : true,
+    "hypothesis" : "Prior campaign receipts (Nov 7-8, not frozen) and one pre-freeze 16-step dev smoke run (Nov 12, not counted, disclosed): under cpuOnly the prefill logits are NaN at every prompt position and the infer path returns NaN from its third call; the result is byte-identical across fresh-process runs",
+    "placement" : "Core ML compute-plan preferred device per op is recorded per arm in result_<arm>.json; ANE execution is INFERRED from placement, not traced",
+    "sameBinaryAllArms" : true
+  },
+  "freeze" : {
+    "committedProfileBlobSha256" : "3de33b648fff4b94ccdb2db407ececbf4b1f043f7ef72c544656bddef4716da1",
+    "freezeManifestSha256" : "dc3c092cb0351852eb3ba5e788f120e756e7a2e86ab4fc4805bfbfb6569afff0",
+    "freezeTime" : "2026-11-12T15:02:52Z",
+    "profileCommit" : "8186ad8f4a75d18bdf74705b57f852a70bae01ce",
+    "profileCommitTime" : "2026-11-12T09:16:32-05:00",
+    "toolCommit" : "246504e8df8d7ee957855e56f6936a46a9c39cee",
+    "toolCommitTime" : "2026-11-07T04:52:45-05:00",
+    "toolSourceDeclared" : true
+  },
+  "frozen" : true,
+  "generatedAt" : "2026-11-12T15:07:36Z",
+  "inputs" : {
+    "afterEachArm" : {
+      "cpu" : {
+        "fixture" : {
+          "kind" : "directory",
+          "path" : "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+          "sha256" : "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461"
+        },
+        "tsv" : {
+          "kind" : "file",
+          "path" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+          "sha256" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+        }
+      }
+    },
+    "before" : {
+      "fixture" : {
+        "kind" : "directory",
+        "path" : "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+        "sha256" : "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461"
+      },
+      "tsv" : {
+        "kind" : "file",
+        "path" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+        "sha256" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+      }
+    },
+    "unchanged" : true
+  },
+  "memoryPressureBefore" : "System-wide memory free percentage: 29%",
+  "mode" : "control",
+  "profileHash" : "3de33b648fff4b94ccdb2db407ececbf4b1f043f7ef72c544656bddef4716da1",
+  "profileId" : "qwen25-1.5b-ane-dispatch-cpuonly-20261112",
+  "receiptSelfHash" : "52d8ae886564533bfee5d7bd7f8477cf0afa987ff21576be808f271953fb8398",
+  "receiptSha256" : "b1a494739d2fd0e3d898aeecca00d26bcabf21869c67dbef4fd88129079b77fc",
+  "runAccounting" : {
+    "countedRuns" : 5,
+    "ledgerPath" : "/Users/nayte/.local/share/anvil/cleanroom-ledger/cleanroom-ledger-3de33b648fff4b94ccdb2db407ececbf4b1f043f7ef72c544656bddef4716da1.json",
+    "ledgerProfileScoped" : true,
+    "preFreezeRunsNotCounted" : 0,
+    "totalRuns" : 5
+  },
+  "sameBinary" : true,
+  "sameChipCleanRoom" : true,
+  "schema" : "macbrains.research.cleanroom-control.v1",
+  "toolStartedAt" : "2026-11-12T15:02:49Z",
+  "verdict" : "CONTROL_OK_SAME_BINARY_FROZEN_COUNTED"
+}

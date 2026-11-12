@@ -1,0 +1,5 @@
+checked_at=2026-11-12T16:21:00Z
+request=POST https://huggingface.co/api/models/NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE/paths-info/7f9ab466b2265a96941670119670638ea22b65dc body paths=qwen25_monolithic_full_lut4.mlmodelc.zip (no token)
+response=[{"type":"file","oid":"e850c8aa0e9cb80524040b588321e2fd4a7f2ac1","size":828554544,"lfs":{"oid":"194b8f1088030eb2f27ac68fb1ccfa240776f73cb8c1d090978c7e3bd7f51c70","size":828554544,"pointerSize":134},"xetHash":"00253f2f4efe6a79625b2719836e283fb020b7ccb10b1e1281dd7bf0dbf53b99","path":"qwen25_monolithic_full_lut4.mlmodelc.zip"}]
+expected_lfs_sha256=194b8f1088030eb2f27ac68fb1ccfa240776f73cb8c1d090978c7e3bd7f51c70 expected_size=828554544 (profile criterion prefix 194b8f10)
+note=the downloaded zip is not kept on this machine; the compiled model the runs used is the fixture hashed in the profiles

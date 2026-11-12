@@ -1,0 +1,63 @@
+TAP version 13
+# Subtest: R2-B-2 control: a rerun finding whose priorArt is the request priorArt passes
+not ok 1 - R2-B-2 control: a rerun finding whose priorArt is the request priorArt passes
+  ---
+  duration_ms: 6.266707
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-B-provenance-binding.test.mjs:84:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + [
+    +   'rerun_finding_limits_not_request_limits'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: 'rerun_finding_limits_not_request_limits'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-B-provenance-binding.test.mjs:86:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: R2-B-2a a priorArt other than the one the request pinned is held
+ok 2 - R2-B-2a a priorArt other than the one the request pinned is held
+  ---
+  duration_ms: 0.838988
+  type: 'test'
+  ...
+# Subtest: R2-B-2b a priorArt the request never named is held
+ok 3 - R2-B-2b a priorArt the request never named is held
+  ---
+  duration_ms: 0.691305
+  type: 'test'
+  ...
+# Subtest: R2-B-2c a claim other than the request claim is held
+ok 4 - R2-B-2c a claim other than the request claim is held
+  ---
+  duration_ms: 0.717545
+  type: 'test'
+  ...
+# Subtest: R2-B-2d a title without the set verdict suffix, or limits without the set line, is held
+ok 5 - R2-B-2d a title without the set verdict suffix, or limits without the set line, is held
+  ---
+  duration_ms: 1.077205
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 4
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74.148901

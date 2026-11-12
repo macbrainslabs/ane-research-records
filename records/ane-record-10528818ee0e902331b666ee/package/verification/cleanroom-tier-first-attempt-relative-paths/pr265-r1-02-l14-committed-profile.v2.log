@@ -1,0 +1,9 @@
+INFO committed profile has missing inputs: run.tsv
+FAIL a-committed-missing-input-refused :: rc=127 probes/cleanroom/pr265-r1-02-l14-committed-profile.v2.sh: line 23: cleanroom-7d879697: command not found
+FAIL a-manifest-records-refusal-reason :: cleanroom-tier-full/pr265-r1-02-l14-committed-profile.v2/out/freeze-manifest.json: (The file “freeze-manifest.json” couldn’t be opened because there is no such file.)
+FAIL b-build-only-rc0 :: rc=127 probes/cleanroom/pr265-r1-02-l14-committed-profile.v2.sh: line 33: cleanroom-7d879697: command not found
+FAIL c-fixture-hash-equals-recipe-v1 :: tool=(absent) recipe=e8ac5faa282ce13c3e2ce13b17f45f19d627c2a5aac688ea58ad3eba8041a0e3
+FAIL d-fixture-recorded :: value=(absent)
+FAIL d-tsv-recorded :: value=(absent)
+FAIL d-baselineIndex-recorded :: value=(absent)
+SUMMARY bin=cleanroom-7d879697 profile=src-7d879697/spi/cleanroom/profiles/l14-minimal.profile.json pass=0 fail=7

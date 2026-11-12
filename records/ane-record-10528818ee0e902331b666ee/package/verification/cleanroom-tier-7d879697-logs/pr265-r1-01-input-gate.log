@@ -1,0 +1,28 @@
+FAIL c01-all-declared-correct rc=2 want=0 stderr=REFUSING to build or run: baselineIndex: /Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-tier-full-2/pr265-r1-01-input-gate/in/index.json is not JSON with a non-empty files array
+PASS c02-fixture-hash-wrong rc=2
+FAIL c03-uppercase-declared-accepted rc=2 want=0 stderr=REFUSING to build or run: baselineIndex: /Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-tier-full-2/pr265-r1-01-input-gate/in/index.json is not JSON with a non-empty files array
+FAIL c04-declared-missing-file rc=2 want=2 msg~'actual missing' stderr=REFUSING to build or run: fixture: run.fixture is missing or unreadable; fixture: declared eb3a5fb11d4b50febbbb25d373c55fe6bdcc760640a18ce3c01e3f92ab4ef7be does not match actual unreadable; baselineIn
+PASS c05-undeclared-missing-tsv-refuses rc=2
+INFO c05 manifest inputs.tsv.sha256=unreadable
+PASS c06-declared-number-refuses rc=2
+PASS c07-declared-null-refuses rc=2
+PASS c08-declared-sentinel-missing-refuses rc=2
+FAIL c09-declared-key-without-path rc=2 want=2 msg~'actual missing' stderr=REFUSING to build or run: fixture: run.fixture is required and must be a path string; fixture: fixtureSha256 is declared but the input path is absent; baselineIndex: /Users/nayte/.local/share/anvil/qw
+FAIL c10-unreadable-file-declared rc=2 want=2 msg~'actual missing' stderr=REFUSING to build or run: fixture: run.fixture is missing or unreadable; fixture: declared eb3a5fb11d4b50febbbb25d373c55fe6bdcc760640a18ce3c01e3f92ab4ef7be does not match actual unreadable; baselineIn
+PASS c22-index-hash-wrong rc=2
+PASS c23-prefixed-declared-refuses rc=2
+PASS c19-wrong-hash-allow-unfrozen rc=2
+PASS c20-wrong-hash-control-flag rc=2
+FAIL c11-dir-listing-matches-readme-recipe tool=a1540ae11c603b273a7168c8a5fb3e972a4210ee9c3a82e5d0553db842fadf0d recipe=70b5dd2ebaa58b4fbf0bc00d1a067ba10843ed3a3f20ebe2c9521243519f636b
+PASS c12-hidden-file-change-detected rc=2
+PASS c13-nested-file-change-detected rc=2
+PASS c14-symlinked-dir-content-change-detected rc=2
+INFO c16 empty dir added: hash changed
+INFO c17 fixture path is a symlink to the dir: rc=2 hash=a1540ae11c603b273a7168c8a5fb3e972a4210ee9c3a82e5d0553db842fadf0d differs-from-real-dir
+FAIL c18-dangling-symlink-in-dir rc=2 want=2 msg~'actual missing' stderr=REFUSING to build or run: fixture: run.fixture is missing or unreadable; fixture: declared 70b5dd2ebaa58b4fbf0bc00d1a067ba10843ed3a3f20ebe2c9521243519f636b does not match actual unreadable; baselineIn
+PASS c25-unreadable-subdir-refuses rc=2
+INFO c25 recorded hash=unreadable (sha of listing with the locked dir's files omitted=70b5dd2ebaa58b4fbf0bc00d1a067ba10843ed3a3f20ebe2c9521243519f636b)
+PASS c15-file-posing-as-dir-refuses rc=2
+FAIL c21-prebuilt-symlink-copied-as-file rc=2 runner_copied: ls: /Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-tier-full-2/pr265-r1-01-input-gate/out/c21/build/runner_copied: No such file or director
+INFO c24 run.indexSha256 (wrong section) rc=2
+SUMMARY bin=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-7d879697 cases=26 pass=14 fail=8

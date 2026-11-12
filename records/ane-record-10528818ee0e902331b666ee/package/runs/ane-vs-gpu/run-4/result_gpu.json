@@ -1,0 +1,28 @@
+{
+  "computePlanInfer" : {
+    "cpu" : 12,
+    "function" : "infer",
+    "gpu" : 2217,
+    "neuralEngine" : 0,
+    "noDeviceUsage" : 4022,
+    "note" : "Core ML compute-plan preferred device per op; placement, not a hardware execution trace",
+    "unknownDevice" : 0
+  },
+  "computePlanPrefill" : {
+    "cpu" : 1,
+    "function" : "prefill",
+    "gpu" : 2372,
+    "neuralEngine" : 0,
+    "noDeviceUsage" : 4735,
+    "note" : "Core ML compute-plan preferred device per op; placement, not a hardware execution trace",
+    "unknownDevice" : 0
+  },
+  "computeUnits" : "cpuAndGPU",
+  "firstImEndGeneratedIndex" : 33,
+  "inferChainSeconds" : 85.343639016151428,
+  "inferLoadSeconds" : 4.7255970239639282,
+  "inferStepsWithAnyNaN" : 0,
+  "prefillLoadSeconds" : 5.6565200090408325,
+  "prefillPositionsWithAnyNaN" : 0,
+  "prefillSeconds" : 5.018779993057251
+}

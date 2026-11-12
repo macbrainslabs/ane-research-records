@@ -1,0 +1,2 @@
+CONTROL verdict=CONTROL_OK_SAME_BINARY_FROZEN_COUNTED arms=2 sameBinary=true counted=8/8
+receipt=/Users/nayte/ane-hot/runs/qwen-dispatch-v040-20261112/ane-vs-gpu/run-4/cleanroom-control-receipt.json sha256=ddc9bd8cbf6bf84d92f7ee2f89bb39b9a505849baf181be8b90c915b658f2c12

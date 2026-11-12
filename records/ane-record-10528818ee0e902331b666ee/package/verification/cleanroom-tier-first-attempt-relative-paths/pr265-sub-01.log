@@ -1,0 +1,51 @@
+== A: build-only gate
+FAIL a01-all-declared-correct :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a01-manifest-records-fixture :: (absent)
+FAIL a02-mismatch :: rc=127 want=2 msg~'does not match' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a03-uppercase-ok :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a04-missing-fixture-undeclared :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a05-missing-tsv-undeclared :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a06-declared-number :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a07-declared-null :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a08-declared-MISSING :: rc=127 want=2 msg~'not a 64-hex' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a09-key-in-wrong-section :: rc=127 want=2 msg~'not a recognised' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a10-empty-index :: rc=127 want=2 msg~'non-empty files' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a11-index-path-escape :: rc=127 want=2 msg~'inside the dump dir' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a12-replication-needs-index :: rc=127 want=2 msg~'baseline.indexJson is required' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a13-dir-input :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a13-listing-matches-readme-recipe :: tool=(absent) shell=bf28eff5291a0393ec73c86a6969426eb790dc9639b2beb8576021ac77b17580
+FAIL a14-hidden-change-detected :: rc=127 want=2 msg~'does not match' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a14b-empty-dir-removal-detected :: rc=127 want=2 msg~'does not match' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a14c-restored-matches :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a15-symlinked-dir :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a15-symlinked-dir-content-change-changes-hash :: (absent)
+FAIL a15b-link-cycle-refused :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a16-dangling-link-refused :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a17-unreadable-subdir-refused :: rc=127 want=2 msg~'missing or unreadable' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a18-symlinked-root-equals-real-dir :: rc=127 (absent) vs (absent)
+FAIL a19-prebuilt-link :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a19-copied-as-regular-file :: ls: cleanroom-tier-full/pr265-sub-01/out/a19-24/build/runner_copied: No such file or directory
+FAIL a20-control-empty-arms :: rc=127 want=2 msg~'non-empty profile.control.arms' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a21-control-nameless-arm :: rc=127 want=2 msg~'needs a non-empty name' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a22-control-numeric-env :: rc=127 want=2 msg~'string values' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a23-control-dup-name :: rc=127 want=2 msg~'repeats the name' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a24-control-unsafe-name :: rc=127 want=2 msg~'without '/'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+FAIL a25-control-ok-no-index :: rc=127 want=0 msg~'' err=probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+probes/cleanroom/pr265-sub-01.sh: line 75: cleanroom-tier-full/pr265-sub-01/noout.err: No such file or directory
+cat: cleanroom-tier-full/pr265-sub-01/noout.err: No such file or directory
+FAIL a26-out-required :: rc=1 want=2 msg~'--out DIR is required' err=
+PASS a26-no-default-dir
+PASS a27-bad-profile-leaves-nothing
+== B: real NOT-counted runs (scratch profiles)
+FAIL b1-fixture-changed-during-run-exit1 :: rc=127 
+grep: /Users/nayte/.local/state/anvil/execution-log/.jsonl: No such file or directory
+tail: /Users/nayte/.local/state/anvil/execution-log/.jsonl: No such file or directory
+FAIL b1-run_completed-records-inputs :: 
+cleanroom-tier-full/pr265-sub-01/ledger/cleanroom-ledger-.json: (The file “cleanroom-ledger-.json” couldn’t be opened because there is no such file.)
+head: cleanroom-tier-full/pr265-sub-01/ledger/cleanroom-ledger-.json: No such file or directory
+FAIL b1-ledger-record :: 
+cleanroom-tier-full/pr265-sub-01/out/b1-31/cleanroom-receipt.json: (The file “cleanroom-receipt.json” couldn’t be opened because there is no such file.)
+FAIL b1-receipt-runs-passed-false :: cleanroom-tier-full/pr265-sub-01/out/b1-31/cleanroom-receipt.json: (The file “cleanroom-receipt.json” couldn’t be opened because there is no such file.)
+FAIL b2-extra-dump-file-fails-compare :: rc=127 
+FAIL b3-control-arm-input-change :: rc=127  probes/cleanroom/pr265-sub-01.sh: line 20: cleanroom-7d879697: command not found
+SUMMARY bin=cleanroom-7d879697 pass=2 fail=39

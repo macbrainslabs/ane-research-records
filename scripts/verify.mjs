@@ -168,6 +168,15 @@ function verifyDiagnosticRecord(r){
 // Package records republish a reviewed experiment package byte for byte under package/.
 // The reviewed hand-off manifest is bound by its SHA-256 in attestation.json; every listed
 // file is re-hashed, and run counts are recounted from each arm's device-wide execution log.
+// Pass criteria a package arm may name. The older Fugu tool build logs no passed field (v0.3.0);
+// the clean-room tool at 246504e8 logs passed but no byte comparison (v0.4.0), whose byte identity
+// across runs is shown by the packaged recompute.
+const PKG_PASS_CRITERIA={
+  'run_completed with exitCode 0 and byteIdentical true (and passed true where the log records it)':
+    x=>x.exitCode===0&&x.byteIdentical===true&&(x.passed===undefined||x.passed===true),
+  'run_completed with exitCode 0 and passed true; byte identity across runs is checked by the packaged recompute, not by the log':
+    x=>x.exitCode===0&&x.passed===true
+};
 function verifyPackageRecord(r){
   const dir=r.path, pkg=dir+'package/';
   for(const f of ['attestation.json','preview.md','package/FILES.sha256']) assert.ok(fs.existsSync(dir+f),'missing '+dir+f);
@@ -190,11 +199,12 @@ function verifyPackageRecord(r){
   eq(a.replication.scope,'same-chip'); eq(a.replication.crossDeviceReplication,false); eq(r.replication.scope,'same-chip');
   eq(r.replication.claim, a.claimScope); assert.ok(a.claimScope.startsWith('same-chip')); assert.ok(a.claimScope.includes('no novelty claim'));
   eq(a.noveltyClaim,'UNCLAIMED');
-  // Recount every arm from its own log; one pass criterion for both arms.
-  const passed=x=>x.exitCode===0&&x.byteIdentical===true&&(x.passed===undefined||x.passed===true);
+  // Recount every arm from its own log under the pass criterion the arm names.
   let tot={counted:0,passed:0};
   eq(a.replication.arms.map(x=>x.profileHash).join(','), r.replication.profileHashes.join(','));
   for(const arm of a.replication.arms){
+    const passed=Object.hasOwn(PKG_PASS_CRITERIA,arm.passCriterion)?PKG_PASS_CRITERIA[arm.passCriterion]:null;
+    assert.ok(passed,'arm '+arm.arm+': unknown pass criterion');
     const b=fs.readFileSync(dir+arm.executionLog); eq(sha256(b), arm.executionLogSha256);
     assert.ok(arm.executionLog.startsWith('package/execution-log/'));
     const log=b.toString('utf8').trim().split('\n').map(l=>JSON.parse(l));

@@ -1,0 +1,177 @@
+{
+  "armCount" : 2,
+  "arms" : [
+    {
+      "dumpDir" : "/Users/nayte/ane-hot/runs/qwen-dispatch-v040-20261112/ane-vs-gpu/run-1/dump_ane",
+      "dumpFileCount" : 3,
+      "dumpFiles" : [
+        {
+          "path" : "chain.json",
+          "sha256" : "62be04bdd4c4295c7514dba5d7e099601248d4f04c2430bf7e7f0d85c0294983"
+        },
+        {
+          "path" : "logits-prefill-last.f16",
+          "sha256" : "fe3824dc54e0da4364f731ee06cc40a4bc086acb1c7a68d67a4c59ff55b17955"
+        },
+        {
+          "path" : "prefill.json",
+          "sha256" : "de7131f3303bc08e5f39ba704c0b2d3b8ceab47764a8681bbec4ccbbe8269687"
+        }
+      ],
+      "envDelta" : {
+        "LFM3_COMPUTE_UNITS" : "cpuAndNeuralEngine"
+      },
+      "exitCode" : 0,
+      "inputsUnchanged" : true,
+      "name" : "ane",
+      "passed" : true,
+      "runnerSha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+      "runStartedAt" : "2026-11-12T14:17:01Z",
+      "wallSeconds" : 272
+    },
+    {
+      "dumpDir" : "/Users/nayte/ane-hot/runs/qwen-dispatch-v040-20261112/ane-vs-gpu/run-1/dump_gpu",
+      "dumpFileCount" : 3,
+      "dumpFiles" : [
+        {
+          "path" : "chain.json",
+          "sha256" : "89691bed06326e82266b865cc734f11f7aac251dba1527cc34f290267b982b68"
+        },
+        {
+          "path" : "logits-prefill-last.f16",
+          "sha256" : "8aa9f6c8d5d1b5c46bc5969dcf915ab6e5b01db2dd69c31af99cd20166ca61f7"
+        },
+        {
+          "path" : "prefill.json",
+          "sha256" : "e496dc60626908cbce023f9792f117487a1005114295f6ec34aa692bda8fa7ab"
+        }
+      ],
+      "envDelta" : {
+        "LFM3_COMPUTE_UNITS" : "cpuAndGPU"
+      },
+      "exitCode" : 0,
+      "inputsUnchanged" : true,
+      "name" : "gpu",
+      "passed" : true,
+      "runnerSha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+      "runStartedAt" : "2026-11-12T14:21:34Z",
+      "wallSeconds" : 354
+    }
+  ],
+  "binarySha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+  "build" : {
+    "baselineRunnerSha256" : "",
+    "commit" : "543c3df3126b8adb973e0ae026d528624e3161ef",
+    "rebuilt" : true,
+    "rebuiltMatchesBaselineBinary" : false,
+    "rebuiltRunnerSha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+    "repo" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re",
+    "sourceBlobSha256" : {
+      "spi/cleanroom/runners/qwen_dispatch_runner.swift" : "3c28c0b068908ac595bf196003f49d859472f90350cd56b6c3feed52f2308a05"
+    },
+    "swiftcArgs" : [
+      "-O",
+      "-parse-as-library"
+    ]
+  },
+  "claimScope" : "Same-chip, same-binary CPU-vs-ANE layer-14 control under a frozen, committed profile and runner. ANE placement is Core ML compute-plan assignment (INFERRED), not a hardware execution trace.",
+  "criterion" : "Published Qwen2.5-1.5B-Instruct-ANE LUT4 package (HF NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE @7f9ab466, zip sha256 194b8f10...): greedy output and prefill logits under Core ML cpuAndNeuralEngine vs cpuAndGPU; same source-rebuilt binary, model, prompt and step count; arms differ only in LFM3_COMPUTE_UNITS",
+  "crossDeviceReplication" : false,
+  "device" : {
+    "chip" : "Apple A18 Pro",
+    "coreMLBundleVersion" : "3610.2.3",
+    "hwModel" : "Mac17,5",
+    "osBuild" : "26C5035r",
+    "osVersion" : "27.3"
+  },
+  "e5CacheStateBefore" : {
+    "fileCount" : 4,
+    "listingSha256" : "967ef8eb5fff32cb69204dcd0a08cc840e11a2ea1d342bd63f36e9793e2fad33",
+    "path" : "/Users/nayte/Library/Caches/com.apple.e5rt.e5bundlecache"
+  },
+  "executionLog" : {
+    "path" : "/Users/nayte/.local/state/anvil/execution-log/9f2bd532c9beb961fb815639139503f5cbefed57bdca9a59111648ee2420604f.jsonl",
+    "runCompleted" : 2,
+    "runStarted" : 2,
+    "sha256" : "bec169a850a99862aedaabf0d187be352d48ea84eaa7fcd3a48edc7efa3bb233",
+    "startedWithoutCompletion" : 0,
+    "unparseableLines" : 0
+  },
+  "expected" : {
+    "armsFrozenAndCounted" : true,
+    "hypothesis" : "Prior campaign receipts (Nov 7-8, not frozen) and one pre-freeze 16-step dev smoke run per arm (Nov 12, not counted, disclosed): the cpuAndNeuralEngine arm does not generate <|im_end|> within 200 greedy tokens, while the cpuAndGPU arm's output differs from it; each arm is byte-identical across fresh-process runs",
+    "placement" : "Core ML compute-plan preferred device per op is recorded per arm in result_<arm>.json; ANE execution is INFERRED from placement, not traced",
+    "sameBinaryAllArms" : true
+  },
+  "freeze" : {
+    "committedProfileBlobSha256" : "9f2bd532c9beb961fb815639139503f5cbefed57bdca9a59111648ee2420604f",
+    "freezeManifestSha256" : "0b36e81d1cefd96e34b4442fdf34db2ff3b084c6be85bd8afa789d305dca34bc",
+    "freezeTime" : "2026-11-12T14:16:49Z",
+    "profileCommit" : "8186ad8f4a75d18bdf74705b57f852a70bae01ce",
+    "profileCommitTime" : "2026-11-12T09:16:32-05:00",
+    "toolCommit" : "246504e8df8d7ee957855e56f6936a46a9c39cee",
+    "toolCommitTime" : "2026-11-07T04:52:45-05:00",
+    "toolSourceDeclared" : true
+  },
+  "frozen" : true,
+  "generatedAt" : "2026-11-12T14:27:29Z",
+  "inputs" : {
+    "afterEachArm" : {
+      "ane" : {
+        "fixture" : {
+          "kind" : "directory",
+          "path" : "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+          "sha256" : "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461"
+        },
+        "tsv" : {
+          "kind" : "file",
+          "path" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+          "sha256" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+        }
+      },
+      "gpu" : {
+        "fixture" : {
+          "kind" : "directory",
+          "path" : "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+          "sha256" : "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461"
+        },
+        "tsv" : {
+          "kind" : "file",
+          "path" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+          "sha256" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+        }
+      }
+    },
+    "before" : {
+      "fixture" : {
+        "kind" : "directory",
+        "path" : "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+        "sha256" : "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461"
+      },
+      "tsv" : {
+        "kind" : "file",
+        "path" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+        "sha256" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+      }
+    },
+    "unchanged" : true
+  },
+  "memoryPressureBefore" : "System-wide memory free percentage: 28%",
+  "mode" : "control",
+  "profileHash" : "9f2bd532c9beb961fb815639139503f5cbefed57bdca9a59111648ee2420604f",
+  "profileId" : "qwen25-1.5b-ane-dispatch-ane-vs-gpu-20261112",
+  "receiptSelfHash" : "4b9b65e9f3c17523d58d4134241884be2e8f4bc6ca8a1caa00b1af76cc8a7acd",
+  "receiptSha256" : "f998578c4fc7d04c0e6d71928a40d8f48a3a63ac906d4a1dc18cd356b4076a1b",
+  "runAccounting" : {
+    "countedRuns" : 2,
+    "ledgerPath" : "/Users/nayte/.local/share/anvil/cleanroom-ledger/cleanroom-ledger-9f2bd532c9beb961fb815639139503f5cbefed57bdca9a59111648ee2420604f.json",
+    "ledgerProfileScoped" : true,
+    "preFreezeRunsNotCounted" : 0,
+    "totalRuns" : 2
+  },
+  "sameBinary" : true,
+  "sameChipCleanRoom" : true,
+  "schema" : "macbrains.research.cleanroom-control.v1",
+  "toolStartedAt" : "2026-11-12T14:16:47Z",
+  "verdict" : "CONTROL_OK_SAME_BINARY_FROZEN_COUNTED"
+}

@@ -1,0 +1,134 @@
+{
+  "checkCount" : 18,
+  "checks" : [
+    {
+      "exact" : true,
+      "field" : "prefill.positions.count",
+      "recomputed" : "28",
+      "recorded" : "28"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.logitsSha256",
+      "recomputed" : "fe3824dc54e0da4364f731ee06cc40a4bc086acb1c7a68d67a4c59ff55b17955",
+      "recorded" : "fe3824dc54e0da4364f731ee06cc40a4bc086acb1c7a68d67a4c59ff55b17955"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.winner",
+      "recomputed" : "40",
+      "recorded" : "40"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.nanCount",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.imEndLogit",
+      "recomputed" : "-1.2656",
+      "recorded" : "-1.2656"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.imEndRank",
+      "recomputed" : "56325",
+      "recorded" : "56325"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.winnerLogit",
+      "recomputed" : "21.7031",
+      "recorded" : "21.7031"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.imEndMarginToWinner",
+      "recomputed" : "22.9688",
+      "recorded" : "22.9688"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.last.top5.ids",
+      "recomputed" : "40,9707,11,13048,9454",
+      "recorded" : "40,9707,11,13048,9454"
+    },
+    {
+      "exact" : true,
+      "field" : "prefill.promptIds",
+      "recomputed" : "151644,8948,198,2610,525,264,10950,17847,13,151645,198,151644,872,198,13048,11,1128,646,498,1492,752,448,30,151645,198,151644,77091,198",
+      "recorded" : "151644,8948,198,2610,525,264,10950,17847,13,151645,198,151644,872,198,13048,11,1128,646,498,1492,752,448,30,151645,198,151644,77091,198"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.promptCount",
+      "recomputed" : "28",
+      "recorded" : "28"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.count",
+      "recomputed" : "228",
+      "recorded" : "228"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.winnerMismatches",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.nanChunkMismatches",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.steps.tokenInMismatches",
+      "recomputed" : "0",
+      "recorded" : "0"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.generatedWinners",
+      "recomputed" : "40,2776,1588,311,1492,0,2585,646,358,7789,498,30,320,40,2776,14589,11,714,498,3207,944,13837,1128,498,4362,1492,448,13,5209,3410,803,1995,476,264,3151,3405,773,429,358,646,7789,498,2664,13,358,646,1492,448,264,6884,2088,315,13347,11,504,8038,323,5440,311,17206,11,3840,11,323,803,13,358,646,1083,3410,1995,389,264,8045,315,14878,11,4226,4755,389,7298,2272,11,323,1753,803,13,5209,3410,803,1995,773,429,358,646,7789,498,2664,13,873,320,40,2776,14589,11,714,498,3207,944,13837,1128,498,4362,1492,448,13,5209,3410,803,1995,476,264,3151,3405,773,429,358,646,7789,498,2664,13,358,646,1492,448,264,6884,2088,315,13347,11,504,8038,323,5440,311,17206,11,3840,11,323,803,13,358,646,1083,3410,1995,389,264,8045,315,14878,11,4226,4755,389,7298,2272,11,323,1753,803,13,5209,3410,803,1995,773,429,358,646,7789,498,2664,13,873,320,40,2776,14589,11,714,498,3207,944,13837,1128,498,4362",
+      "recorded" : "40,2776,1588,311,1492,0,2585,646,358,7789,498,30,320,40,2776,14589,11,714,498,3207,944,13837,1128,498,4362,1492,448,13,5209,3410,803,1995,476,264,3151,3405,773,429,358,646,7789,498,2664,13,358,646,1492,448,264,6884,2088,315,13347,11,504,8038,323,5440,311,17206,11,3840,11,323,803,13,358,646,1083,3410,1995,389,264,8045,315,14878,11,4226,4755,389,7298,2272,11,323,1753,803,13,5209,3410,803,1995,773,429,358,646,7789,498,2664,13,873,320,40,2776,14589,11,714,498,3207,944,13837,1128,498,4362,1492,448,13,5209,3410,803,1995,476,264,3151,3405,773,429,358,646,7789,498,2664,13,358,646,1492,448,264,6884,2088,315,13347,11,504,8038,323,5440,311,17206,11,3840,11,323,803,13,358,646,1083,3410,1995,389,264,8045,315,14878,11,4226,4755,389,7298,2272,11,323,1753,803,13,5209,3410,803,1995,773,429,358,646,7789,498,2664,13,873,320,40,2776,14589,11,714,498,3207,944,13837,1128,498,4362"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.firstImEndGeneratedIndex",
+      "recomputed" : "null",
+      "recorded" : "null"
+    },
+    {
+      "exact" : true,
+      "field" : "chain.stepsWithAnyNaN",
+      "recomputed" : "0",
+      "recorded" : "0"
+    }
+  ],
+  "computeUnits" : "cpuAndNeuralEngine",
+  "dumpDir" : "\/Users\/nayte\/ane-hot\/runs\/qwen-dispatch-v040-20261112\/ane-vs-gpu\/run-2\/dump_ane",
+  "exactCount" : 18,
+  "facts" : {
+    "firstImEndGeneratedIndex" : "null",
+    "generatedWinners" : 201,
+    "inferStepsWithAnyNaN" : 0,
+    "prefillLastAgreesWithInferAtLastPromptStep" : true,
+    "prefillLastNaN" : 0,
+    "prefillLastWinner" : 40
+  },
+  "inputs" : {
+    "chain.json" : "62be04bdd4c4295c7514dba5d7e099601248d4f04c2430bf7e7f0d85c0294983",
+    "logits-prefill-last.f16" : "fe3824dc54e0da4364f731ee06cc40a4bc086acb1c7a68d67a4c59ff55b17955",
+    "prefill.json" : "de7131f3303bc08e5f39ba704c0b2d3b8ceab47764a8681bbec4ccbbe8269687",
+    "prompt" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+  },
+  "method" : "independent recompute from raw fp16 bytes and recorded chunk maxima; definitions in the file header",
+  "receiptSelfHash" : "99c0923a2cfcb8e6482ea270d50a9298e4d0f4139cf49911be3a4188b0a96ba9",
+  "schema" : "macbrains.research.qwen-dispatch-recompute.v1",
+  "status" : "EXACT"
+}

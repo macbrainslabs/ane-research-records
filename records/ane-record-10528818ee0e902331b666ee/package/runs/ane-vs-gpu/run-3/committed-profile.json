@@ -1,0 +1,36 @@
+{
+  "id": "qwen25-1.5b-ane-dispatch-ane-vs-gpu-20261112",
+  "criterion": "Published Qwen2.5-1.5B-Instruct-ANE LUT4 package (HF NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE @7f9ab466, zip sha256 194b8f10...): greedy output and prefill logits under Core ML cpuAndNeuralEngine vs cpuAndGPU; same source-rebuilt binary, model, prompt and step count; arms differ only in LFM3_COMPUTE_UNITS",
+  "mode": "control",
+  "source": {
+    "rebuild": true,
+    "repo": "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re",
+    "commit": "543c3df3126b8adb973e0ae026d528624e3161ef",
+    "probeFiles": ["spi/cleanroom/runners/qwen_dispatch_runner.swift"],
+    "mainFile": "qwen_dispatch_runner.swift",
+    "swiftcArgs": ["-O", "-parse-as-library"]
+  },
+  "run": {
+    "argvMode": "infer-chain",
+    "fixture": "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+    "tsv": "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+    "tokens": "200",
+    "fixtureSha256": "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461",
+    "tsvSha256": "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+  },
+  "control": {
+    "arms": [
+      { "name": "ane", "env": { "LFM3_COMPUTE_UNITS": "cpuAndNeuralEngine" } },
+      { "name": "gpu", "env": { "LFM3_COMPUTE_UNITS": "cpuAndGPU" } }
+    ]
+  },
+  "expected": {
+    "sameBinaryAllArms": true,
+    "armsFrozenAndCounted": true,
+    "hypothesis": "Prior campaign receipts (Nov 7-8, not frozen) and one pre-freeze 16-step dev smoke run per arm (Nov 12, not counted, disclosed): the cpuAndNeuralEngine arm does not generate <|im_end|> within 200 greedy tokens, while the cpuAndGPU arm's output differs from it; each arm is byte-identical across fresh-process runs",
+    "placement": "Core ML compute-plan preferred device per op is recorded per arm in result_<arm>.json; ANE execution is INFERRED from placement, not traced"
+  },
+  "permittedModifications": [
+    "Only LFM3_COMPUTE_UNITS differs between arms; binary, model, prompt, decode steps and all other env are identical."
+  ]
+}

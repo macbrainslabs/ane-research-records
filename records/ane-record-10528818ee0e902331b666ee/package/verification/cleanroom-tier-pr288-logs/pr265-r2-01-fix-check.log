@@ -1,0 +1,101 @@
+== sanity
+PASS r00-all-correct
+PASS r00-build-ran
+== B1 missing inputs refuse before build in every mode
+PASS r01-control-missing-fixture
+PASS r01-no-build-dir
+PASS r02-control-missing-tsv
+PASS r02-no-build-dir
+PASS r03-replication-missing-index
+PASS r03-no-build-dir
+PASS r04-tsv-not-a-string
+PASS r04-no-build-dir
+PASS r05-unreadable-fixture-undeclared
+PASS r05-no-build-dir
+PASS r05c-control-unreadable-fixture
+PASS r06-control-index-not-required
+PASS r07-control-fixture-key-absent
+PASS r08-missing-index-allow-unfrozen
+== B2 declared value must be a 64-hex string; missing actual never matches
+PASS r10-declared-bool
+PASS r11-declared-array
+PASS r12-declared-object
+PASS r13-declared-63hex
+PASS r14-declared-65hex
+PASS r15-declared-empty
+PASS r16-declared-trailing-space
+PASS r17-declared-non-hex-char
+PASS r18-tsv-mismatch
+PASS r19-declared-index-missing
+PASS r20-missing-never-matches-any-hex
+PASS r21-control-declared-index-without-path
+== B4 directory listing: recipe v1, symlinks followed, no silent omission
+PASS r30-dir-with-links-ok
+PASS r30-tool-equals-independent-recipe-v1 26b67c0bec56363a0ee9378de32fab8755b66b28623f13c7f9ad373dbbe2aea6
+PASS r31-change-behind-dir-link-detected
+PASS r31b-link-retarget-same-content-detected
+PASS r31c-restored-matches
+PASS r32-unreadable-file-in-dir
+PASS r33-fifo-in-dir-refused
+PASS r34-link-to-fifo-refused
+PASS r35-ancestor-cycle-refused
+PASS r36-unreadable-subdir-behind-link
+PASS r37-unreadable-file-behind-link
+PASS r37b-restored-matches
+PASS r38-intermediate-symlink-path-same-hash
+PASS r39-private-prefixed-dir-hashes-consistently
+== N6 a file whose bytes start with the listing header is refused (any required input)
+PASS r40-header-only-file
+PASS r40-precondition-equals-empty-dir-hash
+PASS r41-tsv-with-header
+PASS r42-prefix-shorter-than-header-is-a-file
+PASS r43-empty-dir-matches-its-recipe
+PASS r44-empty-regular-file-accepted
+INFO r44 empty tsv kind=file sha=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+== N7 hash keys outside the known set
+PASS r50-baseline-fixtureSha256
+PASS r51-run-indexSha256
+PASS r52-run-unknown-Sha256
+INFO r53 run.fixtureSHA256 (other case) rc=2
+INFO r54 top-level fixtureSha256 rc=2
+== P1 prebuilt
+PASS r60-prebuilt-dangling
+PASS r61-prebuilt-link-to-dir
+PASS r62-prebuilt-link-chain
+PASS r62-copied-bytes-and-sha-recorded
+== P2/P3 control arms and env validated before the build
+PASS r70-empty-name
+PASS r70-no-build-dir
+PASS r71-dotdot-name
+PASS r72-arms-not-array
+PASS r73-numeric-name
+PASS r74-no-control-section
+PASS r75-env-bool
+PASS r75-no-build-dir
+PASS r76-env-null
+PASS r77-env-array
+PASS r78-env-nested
+PASS r79-env-valid
+== P4 baseline index entries
+PASS r80-entry-non-hex
+PASS r81-entry-absolute
+PASS r82-entry-empty-component
+PASS r83-entry-dot
+PASS r84-entry-trailing-slash
+PASS r85-entry-no-sha
+PASS r86-files-not-array
+PASS r87-index-not-json
+PASS r88-second-entry-escape
+INFO r89 duplicate baseline entry rc=2
+PASS r8a-index-is-directory
+== P7 --out required; nothing created before the profile parses
+PASS r90-out-without-value
+PASS r91-out-empty
+PASS r92-profile-array
+PASS r92-no-out-dir
+PASS r93-profile-missing
+PASS r93-no-out-dir
+== INFO top-level special files (not a round-1 finding; recorded for the report)
+INFO r95 fixture=/dev/null rc=2 kind=unreadable
+INFO r96 fixture=FIFO rc=2 REFUSING to build or run: fixture: run.fixture is missing or unreadable
+SUMMARY bin=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-5e98f68b pass=83 fail=0

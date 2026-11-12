@@ -1,0 +1,4 @@
+  ok renameVar(a,a2); removeReturn(a): rejected
+  ok renameVar(a,a2); renameVar(a,a3): rejected
+  ok deleteOp(b->a); renameVar(b,b2): rejected
+PASS pr263-B-I1-silent-noop-staged-edits

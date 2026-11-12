@@ -1,0 +1,687 @@
+TAP version 13
+# Subtest: live eligible finding becomes one verified package; second scan is a no-op
+not ok 1 - live eligible finding becomes one verified package; second scan is a no-op
+  ---
+  duration_ms: 28.118643
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:144:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:33.967Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"1e64d1b0d3119f37368880d66d1c44428d4263d7d761012bc595f74ec43ac9b8","event":"intake_held","findingId":"finding:4a91a51d04303b53b394346f6de308595104eba3","stage":"assessment","bundle":"081baf1b5de1c246570f702d50b55df273ee674a86da521b0b0b97286fe7ad91","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":1,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:150:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: package files are write-once 0444, complete, and a conflict is a transient error
+ok 2 - package files are write-once 0444, complete, and a conflict is a transient error
+  ---
+  duration_ms: 1.20525
+  type: 'test'
+  ...
+# Subtest: dry-run lane drops a DRY-RUN package, even with a held assessment (probe P5)
+ok 3 - dry-run lane drops a DRY-RUN package, even with a held assessment (probe P5)
+  ---
+  duration_ms: 28.865025
+  type: 'test'
+  ...
+# Subtest: lane labels must match the outbox; rejected findings are never retried; stray files ignored
+ok 4 - lane labels must match the outbox; rejected findings are never retried; stray files ignored
+  ---
+  duration_ms: 15.344251
+  type: 'test'
+  ...
+# Subtest: probe P8: a finding whose bytes do not yet hash to its name is retried, then processed
+not ok 5 - probe P8: a finding whose bytes do not yet hash to its name is retried, then processed
+  ---
+  duration_ms: 20.603776
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:219:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:34.034Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"1e64d1b0d3119f37368880d66d1c44428d4263d7d761012bc595f74ec43ac9b8","event":"intake_held","findingId":"finding:4a91a51d04303b53b394346f6de308595104eba3","stage":"assessment","bundle":"081baf1b5de1c246570f702d50b55df273ee674a86da521b0b0b97286fe7ad91","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":1,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:228:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: finding receipt parser: required roles, strict recompute, text rules
+ok 6 - finding receipt parser: required roles, strict recompute, text rules
+  ---
+  duration_ms: 1.434802
+  type: 'test'
+  ...
+# Subtest: probe P1: a failed run in the device log that the receipt omits holds the live finding
+ok 7 - probe P1: a failed run in the device log that the receipt omits holds the live finding
+  ---
+  duration_ms: 20.893002
+  type: 'test'
+  ...
+# Subtest: run reconciliation: both directions, counted flags, and pre-commit runs
+ok 8 - run reconciliation: both directions, counted flags, and pre-commit runs
+  ---
+  duration_ms: 0.518005
+  type: 'test'
+  ...
+# Subtest: an uncounted run before the profile commit is reported, not blocking
+not ok 9 - an uncounted run before the profile commit is reported, not blocking
+  ---
+  duration_ms: 21.427323
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:285:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:34.079Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"2e6d8ba2d6742abff9d4c6733723d08bba59cef01cc20212df1683470de15498","event":"intake_held","findingId":"finding:1c13353ba5d6ee9110b3d34f280cdc645df006b5","stage":"assessment","bundle":"9d9c9194f3e4d06f977c31d49ec7318b1c38939804e7a2b277723921401992fd","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":1,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:290:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: a deleted run dir is accepted only when the log itself discloses it with a recovery source
+not ok 10 - a deleted run dir is accepted only when the log itself discloses it with a recovery source
+  ---
+  duration_ms: 48.709326
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:294:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:34.128Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"320ea140edfcd581ef6a33832865c644555745d00920f4b4454434facb08a508","event":"intake_held","findingId":"finding:3b4f1ff8bbb0d868d6384aac48a91b994d3ea30f","stage":"assessment","bundle":"abe8496436d076eabbc2458e1b6127e323db9708a9a4f77b1969c1a1abb5cc98","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":1,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:303:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: probe P2: a counted run before the freeze manifest holds (profile ledger is required)
+ok 11 - probe P2: a counted run before the freeze manifest holds (profile ledger is required)
+  ---
+  duration_ms: 40.959256
+  type: 'test'
+  ...
+# Subtest: freeze provenance: committed profile must be the git bytes at the declared commit and time
+ok 12 - freeze provenance: committed profile must be the git bytes at the declared commit and time
+  ---
+  duration_ms: 86.679854
+  type: 'test'
+  ...
+# Subtest: probe P7: a gate that ran another commit than the package names is a failure, never a drop
+not ok 13 - probe P7: a gate that ran another commit than the package names is a failure, never a drop
+  ---
+  duration_ms: 24.432392
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:347:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:351:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: the release moving during a scan refuses to write the manifest
+not ok 14 - the release moving during a scan refuses to write the manifest
+  ---
+  duration_ms: 25.519508
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:356:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:361:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: without an injected commit the manifest names the release worktree HEAD
+not ok 15 - without an injected commit the manifest names the release worktree HEAD
+  ---
+  duration_ms: 38.899198
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:365:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:34.345Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"1e64d1b0d3119f37368880d66d1c44428d4263d7d761012bc595f74ec43ac9b8","event":"intake_held","findingId":"finding:4a91a51d04303b53b394346f6de308595104eba3","stage":"assessment","bundle":"081baf1b5de1c246570f702d50b55df273ee674a86da521b0b0b97286fe7ad91","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":1,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:372:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: a drop whose sha is not the manifest sha is a failure
+not ok 16 - a drop whose sha is not the manifest sha is a failure
+  ---
+  duration_ms: 21.036958
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:378:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:381:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: Neo changing between the evidence check and the drop is a failure
+not ok 17 - Neo changing between the evidence check and the drop is a failure
+  ---
+  duration_ms: 17.123324
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:385:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:390:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: probe P3 and binding: the recompute must be EXACT, bound to the profile and the run OS build
+ok 18 - probe P3 and binding: the recompute must be EXACT, bound to the profile and the run OS build
+  ---
+  duration_ms: 236.98482
+  type: 'test'
+  ...
+# Subtest: reviews resume: a retried gate never re-invokes a model
+not ok 19 - reviews resume: a retried gate never re-invokes a model
+  ---
+  duration_ms: 30.241683
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:418:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:421:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: an incomplete review is retried in a fresh attempt, not held; the other role is reused
+not ok 20 - an incomplete review is retried in a fresh attempt, not held; the other role is reused
+  ---
+  duration_ms: 42.064961
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:428:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:34.692Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"1e64d1b0d3119f37368880d66d1c44428d4263d7d761012bc595f74ec43ac9b8","event":"intake_held","findingId":"finding:4a91a51d04303b53b394346f6de308595104eba3","stage":"assessment","bundle":"081baf1b5de1c246570f702d50b55df273ee674a86da521b0b0b97286fe7ad91","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":2,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:435:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: a review killed mid-run (dir without receipt) is never reused
+not ok 21 - a review killed mid-run (dir without receipt) is never reused
+  ---
+  duration_ms: 117.494061
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:442:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:34.810Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"1e64d1b0d3119f37368880d66d1c44428d4263d7d761012bc595f74ec43ac9b8","event":"intake_held","findingId":"finding:4a91a51d04303b53b394346f6de308595104eba3","stage":"assessment","bundle":"081baf1b5de1c246570f702d50b55df273ee674a86da521b0b0b97286fe7ad91","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":2,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:446:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: one reviewer failing still waits for the other before reporting
+ok 22 - one reviewer failing still waits for the other before reporting
+  ---
+  duration_ms: 47.343512
+  type: 'test'
+  ...
+# Subtest: independence and attestation: same session, same model, unattested model or missing usage hold (probe P4)
+ok 23 - independence and attestation: same session, same model, unattested model or missing usage hold (probe P4)
+  ---
+  duration_ms: 75.079614
+  type: 'test'
+  ...
+# Subtest: a reviewer hold keeps a live finding out of the drop and records its bundle
+ok 24 - a reviewer hold keeps a live finding out of the drop and records its bundle
+  ---
+  duration_ms: 19.054313
+  type: 'test'
+  ...
+# Subtest: re-staging identical content is a duplicate; changed content is a new finding
+not ok 25 - re-staging identical content is a duplicate; changed content is a new finding
+  ---
+  duration_ms: 17.998273
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:491:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:499:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: a finding still in flight (failed, not final) makes a re-staging a duplicate
+not ok 26 - a finding still in flight (failed, not final) makes a re-staging a duplicate
+  ---
+  duration_ms: 16.103914
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:506:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:510:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: findingIdTaken: retryable holds, rejections and final failures free the id
+ok 27 - findingIdTaken: retryable holds, rejections and final failures free the id
+  ---
+  duration_ms: 0.25433
+  type: 'test'
+  ...
+# Subtest: evidence that changes between attempts holds with a retryable reason
+not ok 28 - evidence that changes between attempts holds with a retryable reason
+  ---
+  duration_ms: 15.78532
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:531:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:533:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: a refused gate is retried, then failed for good after 3 attempts; nothing dropped
+not ok 29 - a refused gate is retried, then failed for good after 3 attempts; nothing dropped
+  ---
+  duration_ms: 21.396612
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:540:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:543:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: evidence negatives: every rule holds the live finding before any review
+ok 30 - evidence negatives: every rule holds the live finding before any review
+  ---
+  duration_ms: 100.068424
+  type: 'test'
+  ...
+# Subtest: the device log missing on Neo holds; other transport errors are retried
+ok 31 - the device log missing on Neo holds; other transport errors are retried
+  ---
+  duration_ms: 26.198706
+  type: 'test'
+  ...
+# Subtest: malformed evidence JSON is rejected for good, not retried
+ok 32 - malformed evidence JSON is rejected for good, not retried
+  ---
+  duration_ms: 37.701512
+  type: 'test'
+  ...
+# Subtest: a bundle too large for the reviewer transport holds
+ok 33 - a bundle too large for the reviewer transport holds
+  ---
+  duration_ms: 40.475796
+  type: 'test'
+  ...
+# Subtest: scans never overlap; a dead holder or a stale lock is reclaimed
+ok 34 - scans never overlap; a dead holder or a stale lock is reclaimed
+  ---
+  duration_ms: 64.584685
+  type: 'test'
+  ...
+# Subtest: a scan starts at most maxFindingsPerScan findings and stops at its time budget
+ok 35 - a scan starts at most maxFindingsPerScan findings and stops at its time budget
+  ---
+  duration_ms: 47.268982
+  type: 'test'
+  ...
+# Subtest: one lane failing to list does not stop the other lane
+ok 36 - one lane failing to list does not stop the other lane
+  ---
+  duration_ms: 24.342169
+  type: 'test'
+  ...
+# Subtest: roles config: per-role model and effort, independent, known adapter; adapter refuses a mismatch
+ok 37 - roles config: per-role model and effort, independent, known adapter; adapter refuses a mismatch
+  ---
+  duration_ms: 0.919092
+  type: 'test'
+  ...
+# Subtest: ssh transport (through a local fake ssh): list, read, missing file, dir presence, git provenance
+ok 38 - ssh transport (through a local fake ssh): list, read, missing file, dir presence, git provenance
+  ---
+  duration_ms: 45.765546
+  type: 'test'
+  ...
+# Subtest: transport never quotes an unsafe remote path
+ok 39 - transport never quotes an unsafe remote path
+  ---
+  duration_ms: 0.239134
+  type: 'test'
+  ...
+# Subtest: the hand-off CLI is called with the intake workflow ledger
+not ok 40 - the hand-off CLI is called with the intake workflow ledger
+  ---
+  duration_ms: 18.084256
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:692:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_failed'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_failed'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:700:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: real cleanroom log vocabulary (outDir, exitCode, no status) is read, not ignored
+not ok 41 - real cleanroom log vocabulary (outDir, exitCode, no status) is read, not ignored
+  ---
+  duration_ms: 16.500038
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:713:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:35.446Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"4640d6299fe491f4c2e0c179bf733c8569cdb5a01516502d52191cd47635b0c5","event":"intake_held","findingId":"finding:2dc3ffe0b2cfde77d8198458dd5e93a2d274d94d","stage":"assessment","bundle":"90f7e8f7a112565824c0fd645fd1568b8781dd162817e68f87f9f736079768d4","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":1,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:717:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: outDir runs are checked: a killed run, a failed exit, a mismatch and a missing dir all hold
+ok 42 - outDir runs are checked: a killed run, a failed exit, a mismatch and a missing dir all hold
+  ---
+  duration_ms: 80.803072
+  type: 'test'
+  ...
+# Subtest: the device log fails closed: unknown status, unknown kind, no dir, relative dir, dir/outDir conflict, counted pre-freeze
+ok 43 - the device log fails closed: unknown status, unknown kind, no dir, relative dir, dir/outDir conflict, counted pre-freeze
+  ---
+  duration_ms: 106.650478
+  type: 'test'
+  ...
+# Subtest: control arms sharing one outDir are two executions, not a start-time conflict
+ok 44 - control arms sharing one outDir are two executions, not a start-time conflict
+  ---
+  duration_ms: 0.312753
+  type: 'test'
+  ...
+# Subtest: cross-tool executions (checklist v1.2) are disclosed, not counted, not blocking; in-set ones still reconcile
+ok 45 - cross-tool executions (checklist v1.2) are disclosed, not counted, not blocking; in-set ones still reconcile
+  ---
+  duration_ms: 0.256581
+  type: 'test'
+  ...
+# Subtest: in-set executions must record a pass; uncounted pre-commit failures are reported, not blocking
+ok 46 - in-set executions must record a pass; uncounted pre-commit failures are reported, not blocking
+  ---
+  duration_ms: 0.145247
+  type: 'test'
+  ...
+# Subtest: append-only corrections: a matching runStartedAt correction is applied; anything else blocks
+not ok 47 - append-only corrections: a matching runStartedAt correction is applied; anything else blocks
+  ---
+  duration_ms: 17.166218
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:788:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {"ts":"2026-11-12T15:18:35.651Z","schema":"anvil.ane-intake-ledger.v1","lane":"live","findingReceiptSha256":"9fd8f61230161dd67cbf8c9556ae7e989ecb0536c004700e4e9a0ba2b466a5fd","event":"intake_held","findingId":"finding:6c0d915ceaabc2bbc681f199a866dbb12d160cbf","stage":"assessment","bundle":"e2728669dd0f53d5a026b9e03755f0a65b55bb5e302c4b6ab70285ac41a7b4b2","reasons":["independent_recompute_not_exact","recompute:recompute_status_not_exact"],"reviews":[{"role":"evidence_reviewer","attempt":1,"model":"opencode-go/deepseek-v4.1-flash","sessionId":"ses_evidence_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"},{"role":"skeptical_reviewer","attempt":1,"model":"opencode-go/glm-5.3","sessionId":"ses_skeptical_reviewer","verdict":"include","score":0.8,"usage":{"input":10,"output":5},"status":"completed"}]}
+    + actual - expected
+    
+    + 'intake_held'
+    - 'intake_dropped'
+              ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'intake_dropped'
+  actual: 'intake_held'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:801:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: probe R2-7: a recompute not tied to this receipt, or whose pinned field is not an EXACT comparison, is not EXACT
+not ok 48 - probe R2-7: a recompute not tied to this receipt, or whose pinned field is not an EXACT comparison, is not EXACT
+  ---
+  duration_ms: 0.661426
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:804:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + [
+    +   'recompute_status_not_exact'
+    + ]
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    0: 'recompute_status_not_exact'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/intake-probes.v2.test.mjs:808:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: probe R2-9: a failed review the runtime can recover is handed back on the same attempt; others get a fresh one
+ok 49 - probe R2-9: a failed review the runtime can recover is handed back on the same attempt; others get a fresh one
+  ---
+  duration_ms: 1.598983
+  type: 'test'
+  ...
+1..49
+# tests 49
+# suites 0
+# pass 29
+# fail 20
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1789.467352

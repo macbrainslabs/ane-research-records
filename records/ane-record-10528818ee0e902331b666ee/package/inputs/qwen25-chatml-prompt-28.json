@@ -1,0 +1,4 @@
+{
+  "ids": [151644, 8948, 198, 2610, 525, 264, 10950, 17847, 13, 151645, 198, 151644, 872, 198, 13048, 11, 1128, 646, 498, 1492, 752, 448, 30, 151645, 198, 151644, 77091, 198],
+  "source": "Qwen2.5 ChatML prompt: system \"You are a helpful assistant.\", user \"Hi, what can you help me with?\", assistant turn open; ids from the pinned tokenizer (tokdump, Nov 7 campaign)"
+}
