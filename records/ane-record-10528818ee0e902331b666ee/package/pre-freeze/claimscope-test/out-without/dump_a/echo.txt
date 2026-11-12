@@ -1,0 +1,1 @@
+echo infer-chain /Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/fx.txt /Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/in.txt 1

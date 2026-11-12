@@ -191,9 +191,14 @@ function verifyPackageRecord(r){
   const listRaw=fs.readFileSync(pkg+'FILES.sha256'); eq(sha256(listRaw), a.package.filesListSha256); eq(a.package.filesListSha256, r.filesListSha256);
   const listed=listRaw.toString('utf8').trim().split('\n').map(l=>{ const m=/^([0-9a-f]{64})  \.\/(.+)$/.exec(l); assert.ok(m,'bad FILES.sha256 line'); return {sha:m[1],rel:m[2]}; });
   eq(listed.length, a.package.filesListed); eq(a.package.fileCount, listed.length+1);
-  for(const {sha,rel} of listed){ assert.ok(!rel.split('/').includes('..')); eq(sha256(fs.readFileSync(pkg+rel)), sha); }
+  // A git repository cannot hold a path with a .git component: such listed files are in the release tar only.
+  const inGit=rel=>rel.split('/').includes('.git'), repub=listed.filter(x=>!inGit(x.rel));
+  for(const {rel} of listed) assert.ok(!rel.split('/').includes('..'));
+  eq(a.package.filesRepublished===undefined?listed.length:a.package.filesRepublished, repub.length);
+  eq(a.package.notRepublished===undefined?0:a.package.notRepublished.files, listed.length-repub.length);
+  for(const {sha,rel} of repub) eq(sha256(fs.readFileSync(pkg+rel)), sha);
   const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+e.name+'/'):[d+e.name]);
-  eq(JSON.stringify(walk(pkg).map(p=>p.slice(pkg.length)).sort()), JSON.stringify([...listed.map(x=>x.rel),'FILES.sha256'].sort()));
+  eq(JSON.stringify(walk(pkg).map(p=>p.slice(pkg.length)).sort()), JSON.stringify([...repub.map(x=>x.rel),'FILES.sha256'].sort()));
   const recRaw=fs.readFileSync(pkg+a.package.recordFile); eq(sha256(recRaw), a.package.recordSha256); eq(a.package.recordSha256, r.recordSha256);
   // Scope: same chip, single device, never cross-device; no novelty claim.
   eq(a.replication.scope,'same-chip'); eq(a.replication.crossDeviceReplication,false); eq(r.replication.scope,'same-chip');

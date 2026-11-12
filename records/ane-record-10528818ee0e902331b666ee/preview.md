@@ -4,7 +4,7 @@ MacBrains Labs research record v0.4.0 (`ane-record-10528818ee0e902331b666ee`). D
 
 ## Claim
 
-Scope as recorded: same-chip, single device (Mac17,5, macOS 27.3 26C5035r, Core ML 3610.2.3); Hugging Face package NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE at 7f9ab466, one prompt, greedy; ANE and GPU differ from the first token, cpuOnly prefill all NaN; no reference output; ANE execution inferred; no novelty claim.
+Scope as recorded: same-chip, single device (Mac17,5, macOS 27.3 26C5035r,Core ML 3610.2.3); Hugging Face package NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE at 7f9ab466, one prompt, greedy; ANE and GPU differ from the first token, cpuOnly prefill all NaN; no reference output; ANE execution inferred; no novelty claim.
 
 Reviewed claim scope: One Mac (Mac17,5, Apple A18 Pro, macOS 27.3 26C5035r, Core ML 3610.2.3); NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE at Hugging Face commit 7f9ab466; one 28-token prompt; greedy decode. cpuAndNeuralEngine and cpuAndGPU differ from the first generated token (40 vs 9707); cpuOnly prefill logits all NaN at all 28 prompt positions (4 decode steps run; the other arms ran 200). Same-chip only. ANE execution INFERRED from compute-plan placement.
 
@@ -34,6 +34,7 @@ Recompute: EXACT 15/15; negative test EXACT on unaltered copies, NOT_EXACT on a 
 - The reviewed package directory holds five symbolic links under package/verification/cleanroom-tier-first-attempt-relative-paths/ (fixtures of a clean-room path probe; one points to /usr/bin/true). They are not files, FILES.sha256 does not list them, and they are not republished in package/. They remain in the reviewed package tar package-v040-20261112.tar, whose hash is unchanged.
 - The clean-room tool at 246504e8 logs exitCode and passed for each completed run but no byte comparison. A run counts as passed here when its run_completed line has exitCode 0 and passed true. Byte identity of each compute unit's three dump files across its five runs is shown by the packaged recompute (EXACT 15/15), not by the log.
 - The reviewed record has three compute-unit arms (cpuAndNeuralEngine, cpuAndGPU, cpuOnly) under two setup profiles. The runs are counted here per setup profile, as the device logs record them: ane-and-gpu (cpuAndNeuralEngine and cpuAndGPU, 10 runs) and cpu-only (5 runs).
+- FILES.sha256 lists 57 files inside two .git directories: package/pre-freeze/claimscope-test/.git/ and package/verification/cleanroom-tier-first-attempt-relative-paths/pr265-sub-01/gitsrc/.git/, the internals of two small fixture repositories used by clean-room probes. A git repository cannot hold a path with a .git component, so these 57 files are not republished in package/; package/ holds FILES.sha256, unchanged, and the other 780 files it lists. All 837 listed files, these 57 included, are in the reviewed package tar package-v040-20261112.tar, whose hash is unchanged.
 
 ## Disclosures (verbatim from the reviewed hand-off)
 
@@ -61,7 +62,7 @@ Recompute: EXACT 15/15; negative test EXACT on unaltered copies, NOT_EXACT on a 
 
 ## Files
 
-- `package/`: the reviewed package, byte for byte: `FILES.sha256` (SHA-256 `d3628555fe2e01975cd386fd1ec2cbdcbad027da97ba27d2d21ea8df14c2b3d9`) and the 837 files it lists.
+- `package/`: the reviewed package, byte for byte: `FILES.sha256` (SHA-256 `d3628555fe2e01975cd386fd1ec2cbdcbad027da97ba27d2d21ea8df14c2b3d9`) and the 780 of the 837 files it lists that sit outside `.git` directories (note N5).
 - `attestation.json`: hashes, the final review, the recounted runs and the notes above in machine-readable form.
 - Release assets: this preview, the attestation, the reviewed record, the reviewed package tar `package-v040-20261112.tar` (SHA-256 `8a42b1faa4e44033061d1f311178b59631fe040d4fc2ada73fa931722aa46109`, the same 838 files plus the five symbolic links in note N2) and SHA256SUMS.
 

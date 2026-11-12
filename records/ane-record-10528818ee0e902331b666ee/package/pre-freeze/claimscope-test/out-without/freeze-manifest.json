@@ -1,0 +1,44 @@
+{
+  "freezeManifestSha256" : "d66a39003d429a6c2d597d18a1cf6229a9221bdf22098409f85d4a9b8f3581cc",
+  "freezeTime" : "2026-11-12T14:29:51Z",
+  "frozen" : true,
+  "inputMismatches" : [
+
+  ],
+  "inputs" : {
+    "fixture" : {
+      "kind" : "file",
+      "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/fx.txt",
+      "sha256" : "e80b71cd14d3cbd65f4173abcbfcf01a545dbca32a72d575108b553a648cc96f"
+    },
+    "tsv" : {
+      "kind" : "file",
+      "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/in.txt",
+      "sha256" : "a20700d7260cb316211f7a2a09177323f91e029ff63d3ec8e5bd053a354b1d84"
+    }
+  },
+  "profileGit" : {
+    "clean" : true,
+    "commit" : "93ed805e8c1e75a3ccd4f8e7d270bb31de85f936",
+    "commitTime" : "2026-11-12T09:29:32-05:00",
+    "headCommit" : "93ed805e8c1e75a3ccd4f8e7d270bb31de85f936",
+    "repoRoot" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test",
+    "status" : "",
+    "tracked" : true
+  },
+  "profileHash" : "ae6fde7b2380fae6047f78f0ba9efb098fb590d62c5ac286362cffeb5a43d397",
+  "profilePath" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/p-without.json",
+  "schema" : "macbrains.research.cleanroom-freeze.v1",
+  "toolGit" : {
+    "clean" : true,
+    "commit" : "f6ea786a407ca39c7b04a26e2af6e59cfb7abf33",
+    "commitTime" : "2026-11-12T09:29:21-05:00",
+    "headCommit" : "f6ea786a407ca39c7b04a26e2af6e59cfb7abf33",
+    "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re-claimscope/spi/cleanroom/cleanroom.swift",
+    "provided" : true,
+    "repoRoot" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re-claimscope",
+    "status" : "",
+    "tracked" : true
+  },
+  "toolSourceDeclared" : true
+}
