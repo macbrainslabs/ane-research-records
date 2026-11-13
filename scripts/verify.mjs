@@ -257,6 +257,9 @@ check('Versioned records: index, files, review package hash, INCLUDE verdict, re
   }
   const zj=JSON.parse(fs.readFileSync('.zenodo.json','utf8'));
   eq(zj.version, LATEST.version);
+  // A publication_date here overrides Zenodo's own date on the next release, so
+  // it must be the latest version's release day, never a stale one.
+  if(zj.publication_date!==undefined){ eq(zj.publication_date, LATEST.releasedOn); assert.ok(fs.readFileSync('CITATION.cff','utf8').includes('date-released: "'+LATEST.releasedOn+'"'),'CITATION.cff date-released must match .zenodo.json publication_date'); }
   assert.ok(zj.related_identifiers.some(x=>x.relation==='isDocumentedBy'&&x.identifier===LATEST.siteUrl));
   // Setting related_identifiers here replaces the tag-tree link Zenodo's GitHub
   // integration would add, so the release's tree must be listed explicitly.
