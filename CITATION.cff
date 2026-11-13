@@ -19,6 +19,7 @@ authors:
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
 version: "0.4.0"
+doi: "10.5281/zenodo.24183178"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23798036"
@@ -32,7 +33,10 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24034510"
     description: "Version v0.3.0"
-date-released: "2026-11-12"
+  - type: doi
+    value: "10.5281/zenodo.24183178"
+    description: "Version v0.4.0"
+date-released: "2026-11-13"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"
 url: "https://macbrainslabs.org/research/"
