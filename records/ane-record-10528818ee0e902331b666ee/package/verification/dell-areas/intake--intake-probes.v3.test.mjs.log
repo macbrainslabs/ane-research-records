@@ -1,0 +1,304 @@
+TAP version 13
+# Subtest: live eligible finding becomes one verified package; second scan is a no-op
+ok 1 - live eligible finding becomes one verified package; second scan is a no-op
+  ---
+  duration_ms: 36.433709
+  type: 'test'
+  ...
+# Subtest: package files are write-once 0444, complete, and a conflict is a transient error
+ok 2 - package files are write-once 0444, complete, and a conflict is a transient error
+  ---
+  duration_ms: 0.727888
+  type: 'test'
+  ...
+# Subtest: dry-run lane drops a DRY-RUN package, even with a held assessment (probe P5)
+ok 3 - dry-run lane drops a DRY-RUN package, even with a held assessment (probe P5)
+  ---
+  duration_ms: 25.962809
+  type: 'test'
+  ...
+# Subtest: lane labels must match the outbox; rejected findings are never retried; stray files ignored
+ok 4 - lane labels must match the outbox; rejected findings are never retried; stray files ignored
+  ---
+  duration_ms: 11.193341
+  type: 'test'
+  ...
+# Subtest: probe P8: a finding whose bytes do not yet hash to its name is retried, then processed
+ok 5 - probe P8: a finding whose bytes do not yet hash to its name is retried, then processed
+  ---
+  duration_ms: 24.365202
+  type: 'test'
+  ...
+# Subtest: finding receipt parser: required roles, strict recompute, text rules
+ok 6 - finding receipt parser: required roles, strict recompute, text rules
+  ---
+  duration_ms: 1.445736
+  type: 'test'
+  ...
+# Subtest: probe P1: a failed run in the device log that the receipt omits holds the live finding
+ok 7 - probe P1: a failed run in the device log that the receipt omits holds the live finding
+  ---
+  duration_ms: 18.432403
+  type: 'test'
+  ...
+# Subtest: run reconciliation: both directions, counted flags, and pre-commit runs
+ok 8 - run reconciliation: both directions, counted flags, and pre-commit runs
+  ---
+  duration_ms: 0.406412
+  type: 'test'
+  ...
+# Subtest: an uncounted run before the profile commit is reported, not blocking
+ok 9 - an uncounted run before the profile commit is reported, not blocking
+  ---
+  duration_ms: 26.007307
+  type: 'test'
+  ...
+# Subtest: a deleted run dir is accepted only when the log itself discloses it with a recovery source
+ok 10 - a deleted run dir is accepted only when the log itself discloses it with a recovery source
+  ---
+  duration_ms: 40.707868
+  type: 'test'
+  ...
+# Subtest: probe P2: a counted run before the freeze manifest holds (profile ledger is required)
+ok 11 - probe P2: a counted run before the freeze manifest holds (profile ledger is required)
+  ---
+  duration_ms: 26.063709
+  type: 'test'
+  ...
+# Subtest: freeze provenance: committed profile must be the git bytes at the declared commit and time
+ok 12 - freeze provenance: committed profile must be the git bytes at the declared commit and time
+  ---
+  duration_ms: 67.054411
+  type: 'test'
+  ...
+# Subtest: probe P7: a gate that ran another commit than the package names is a failure, never a drop
+ok 13 - probe P7: a gate that ran another commit than the package names is a failure, never a drop
+  ---
+  duration_ms: 25.162492
+  type: 'test'
+  ...
+# Subtest: the release moving during a scan refuses to write the manifest
+ok 14 - the release moving during a scan refuses to write the manifest
+  ---
+  duration_ms: 16.711899
+  type: 'test'
+  ...
+# Subtest: without an injected commit the manifest names the release worktree HEAD
+ok 15 - without an injected commit the manifest names the release worktree HEAD
+  ---
+  duration_ms: 40.392231
+  type: 'test'
+  ...
+# Subtest: a drop whose sha is not the manifest sha is a failure
+ok 16 - a drop whose sha is not the manifest sha is a failure
+  ---
+  duration_ms: 25.570459
+  type: 'test'
+  ...
+# Subtest: Neo changing between the evidence check and the drop is a failure
+ok 17 - Neo changing between the evidence check and the drop is a failure
+  ---
+  duration_ms: 28.327511
+  type: 'test'
+  ...
+# Subtest: probe P3 and binding: the recompute must be EXACT, bound to the profile and the run OS build
+ok 18 - probe P3 and binding: the recompute must be EXACT, bound to the profile and the run OS build
+  ---
+  duration_ms: 159.728733
+  type: 'test'
+  ...
+# Subtest: reviews resume: a retried gate never re-invokes a model
+ok 19 - reviews resume: a retried gate never re-invokes a model
+  ---
+  duration_ms: 33.800365
+  type: 'test'
+  ...
+# Subtest: an incomplete review is retried in a fresh attempt, not held; the other role is reused
+ok 20 - an incomplete review is retried in a fresh attempt, not held; the other role is reused
+  ---
+  duration_ms: 30.889658
+  type: 'test'
+  ...
+# Subtest: a review killed mid-run (dir without receipt) is never reused
+ok 21 - a review killed mid-run (dir without receipt) is never reused
+  ---
+  duration_ms: 24.234565
+  type: 'test'
+  ...
+# Subtest: one reviewer failing still waits for the other before reporting
+ok 22 - one reviewer failing still waits for the other before reporting
+  ---
+  duration_ms: 45.923899
+  type: 'test'
+  ...
+# Subtest: independence and attestation: same session, same model, unattested model or missing usage hold (probe P4)
+ok 23 - independence and attestation: same session, same model, unattested model or missing usage hold (probe P4)
+  ---
+  duration_ms: 75.541829
+  type: 'test'
+  ...
+# Subtest: a reviewer hold keeps a live finding out of the drop and records its bundle
+ok 24 - a reviewer hold keeps a live finding out of the drop and records its bundle
+  ---
+  duration_ms: 18.0807
+  type: 'test'
+  ...
+# Subtest: re-staging identical content is a duplicate; changed content is a new finding
+ok 25 - re-staging identical content is a duplicate; changed content is a new finding
+  ---
+  duration_ms: 44.438544
+  type: 'test'
+  ...
+# Subtest: a finding still in flight (failed, not final) makes a re-staging a duplicate
+ok 26 - a finding still in flight (failed, not final) makes a re-staging a duplicate
+  ---
+  duration_ms: 44.303818
+  type: 'test'
+  ...
+# Subtest: findingIdTaken: retryable holds, rejections and final failures free the id
+ok 27 - findingIdTaken: retryable holds, rejections and final failures free the id
+  ---
+  duration_ms: 0.260417
+  type: 'test'
+  ...
+# Subtest: evidence that changes between attempts holds with a retryable reason
+ok 28 - evidence that changes between attempts holds with a retryable reason
+  ---
+  duration_ms: 39.834165
+  type: 'test'
+  ...
+# Subtest: a refused gate is retried, then failed for good after 3 attempts; nothing dropped
+ok 29 - a refused gate is retried, then failed for good after 3 attempts; nothing dropped
+  ---
+  duration_ms: 49.716631
+  type: 'test'
+  ...
+# Subtest: evidence negatives: every rule holds the live finding before any review
+ok 30 - evidence negatives: every rule holds the live finding before any review
+  ---
+  duration_ms: 91.860168
+  type: 'test'
+  ...
+# Subtest: the device log missing on Neo holds; other transport errors are retried
+ok 31 - the device log missing on Neo holds; other transport errors are retried
+  ---
+  duration_ms: 23.48839
+  type: 'test'
+  ...
+# Subtest: malformed evidence JSON is rejected for good, not retried
+ok 32 - malformed evidence JSON is rejected for good, not retried
+  ---
+  duration_ms: 38.993221
+  type: 'test'
+  ...
+# Subtest: a bundle too large for the reviewer transport holds
+ok 33 - a bundle too large for the reviewer transport holds
+  ---
+  duration_ms: 36.967991
+  type: 'test'
+  ...
+# Subtest: scans never overlap; a dead holder or a stale lock is reclaimed
+ok 34 - scans never overlap; a dead holder or a stale lock is reclaimed
+  ---
+  duration_ms: 82.076781
+  type: 'test'
+  ...
+# Subtest: a scan starts at most maxFindingsPerScan findings and stops at its time budget
+ok 35 - a scan starts at most maxFindingsPerScan findings and stops at its time budget
+  ---
+  duration_ms: 62.997523
+  type: 'test'
+  ...
+# Subtest: one lane failing to list does not stop the other lane
+ok 36 - one lane failing to list does not stop the other lane
+  ---
+  duration_ms: 23.712502
+  type: 'test'
+  ...
+# Subtest: roles config: per-role model and effort, independent, known adapter; adapter refuses a mismatch
+ok 37 - roles config: per-role model and effort, independent, known adapter; adapter refuses a mismatch
+  ---
+  duration_ms: 0.949967
+  type: 'test'
+  ...
+# Subtest: ssh transport (through a local fake ssh): list, read, missing file, dir presence, git provenance
+ok 38 - ssh transport (through a local fake ssh): list, read, missing file, dir presence, git provenance
+  ---
+  duration_ms: 50.719172
+  type: 'test'
+  ...
+# Subtest: transport never quotes an unsafe remote path
+ok 39 - transport never quotes an unsafe remote path
+  ---
+  duration_ms: 0.236159
+  type: 'test'
+  ...
+# Subtest: the hand-off CLI is called with the intake workflow ledger
+ok 40 - the hand-off CLI is called with the intake workflow ledger
+  ---
+  duration_ms: 45.705282
+  type: 'test'
+  ...
+# Subtest: real cleanroom log vocabulary (outDir, exitCode, no status) is read, not ignored
+ok 41 - real cleanroom log vocabulary (outDir, exitCode, no status) is read, not ignored
+  ---
+  duration_ms: 21.914521
+  type: 'test'
+  ...
+# Subtest: outDir runs are checked: a killed run, a failed exit, a mismatch and a missing dir all hold
+ok 42 - outDir runs are checked: a killed run, a failed exit, a mismatch and a missing dir all hold
+  ---
+  duration_ms: 84.450457
+  type: 'test'
+  ...
+# Subtest: the device log fails closed: unknown status, unknown kind, no dir, relative dir, dir/outDir conflict, counted pre-freeze
+ok 43 - the device log fails closed: unknown status, unknown kind, no dir, relative dir, dir/outDir conflict, counted pre-freeze
+  ---
+  duration_ms: 119.60022
+  type: 'test'
+  ...
+# Subtest: control arms sharing one outDir are two executions, not a start-time conflict
+ok 44 - control arms sharing one outDir are two executions, not a start-time conflict
+  ---
+  duration_ms: 0.253866
+  type: 'test'
+  ...
+# Subtest: cross-tool executions (checklist v1.2) are disclosed, not counted, not blocking; in-set ones still reconcile
+ok 45 - cross-tool executions (checklist v1.2) are disclosed, not counted, not blocking; in-set ones still reconcile
+  ---
+  duration_ms: 0.246704
+  type: 'test'
+  ...
+# Subtest: in-set executions must record a pass; uncounted pre-commit failures are reported, not blocking
+ok 46 - in-set executions must record a pass; uncounted pre-commit failures are reported, not blocking
+  ---
+  duration_ms: 0.142198
+  type: 'test'
+  ...
+# Subtest: append-only corrections: a matching runStartedAt correction is applied; anything else blocks
+ok 47 - append-only corrections: a matching runStartedAt correction is applied; anything else blocks
+  ---
+  duration_ms: 23.448241
+  type: 'test'
+  ...
+# Subtest: probe R2-7: a recompute not tied to this receipt, or whose pinned field is not an EXACT comparison, is not EXACT (v3: R4B-3 ruling)
+ok 48 - probe R2-7: a recompute not tied to this receipt, or whose pinned field is not an EXACT comparison, is not EXACT (v3: R4B-3 ruling)
+  ---
+  duration_ms: 0.235175
+  type: 'test'
+  ...
+# Subtest: probe R2-9: a failed review the runtime can recover is handed back on the same attempt; others get a fresh one
+ok 49 - probe R2-9: a failed review the runtime can recover is handed back on the same attempt; others get a fresh one
+  ---
+  duration_ms: 1.412926
+  type: 'test'
+  ...
+1..49
+# tests 49
+# suites 0
+# pass 49
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1771.807767

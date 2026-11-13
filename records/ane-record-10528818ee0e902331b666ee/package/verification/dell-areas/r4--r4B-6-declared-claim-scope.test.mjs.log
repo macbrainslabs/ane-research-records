@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: R4B-6 control: a neutral declared claim passes
+ok 1 - R4B-6 control: a neutral declared claim passes
+  ---
+  duration_ms: 10.105409
+  type: 'test'
+  ...
+# Subtest: R4B-6 RULE: a declared claim asserting cross-device replication or proven ANE execution is held
+ok 2 - R4B-6 RULE: a declared claim asserting cross-device replication or proven ANE execution is held
+  ---
+  duration_ms: 1.58704
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 73.78692

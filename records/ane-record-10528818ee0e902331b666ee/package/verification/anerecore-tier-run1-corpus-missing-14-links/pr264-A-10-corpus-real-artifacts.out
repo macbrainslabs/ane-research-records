@@ -1,0 +1,12 @@
+  corpus /Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/anerecore-corpus: 142 files, 0 unreadable (UNKNOWN), 142 readable
+  OK 134 (exact 129, input+newline 5), parse fail 5, commit fail 3
+  edits committed 22 over 4 multi-output, 1 opset-suffixed, 1 type-attributed ops
+  parse fail m001.mil: MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+  parse fail m002.mil: MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+  parse fail m004.mil: MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+  parse fail m005.mil: MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+  parse fail m007.mil: MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+  commit fail m144.mil: RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: duplicate producer for var `slice_squeeze_mask`
+  commit fail m145.mil: RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: duplicate producer for var `slice_squeeze_mask`
+  commit fail m154.mil: RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling return: function `infer` returns `hidden_states_21`
+PASS pr264-A-10-corpus-real-artifacts

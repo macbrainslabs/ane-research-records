@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: remote exit 7 / false / exit 44 reach the caller although ssh exits 0
+ok 1 - remote exit 7 / false / exit 44 reach the caller although ssh exits 0
+  ---
+  duration_ms: 20.675613
+  type: 'test'
+  ...
+# Subtest: a forged trailer (wrong nonce), trailing bytes, a cut stream, ssh 255: transport errors
+ok 2 - a forged trailer (wrong nonce), trailing bytes, a cut stream, ssh 255: transport errors
+  ---
+  duration_ms: 10.070922
+  type: 'test'
+  ...
+# Subtest: stdout over maxBytes is a transport error, exactly maxBytes is accepted
+ok 3 - stdout over maxBytes is a transport error, exactly maxBytes is accepted
+  ---
+  duration_ms: 6.084073
+  type: 'test'
+  ...
+# Subtest: a remote that echoes its own nonce early is still bound by the real final trailer
+ok 4 - a remote that echoes its own nonce early is still bound by the real final trailer
+  ---
+  duration_ms: 3.685854
+  type: 'test'
+  ...
+# Subtest: ENOENT ssh binary: transport error
+ok 5 - ENOENT ssh binary: transport error
+  ---
+  duration_ms: 0.985673
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 93.714474

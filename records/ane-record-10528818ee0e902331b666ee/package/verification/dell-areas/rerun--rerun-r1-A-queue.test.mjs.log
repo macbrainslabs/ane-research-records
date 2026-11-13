@@ -1,0 +1,105 @@
+TAP version 13
+# Subtest: QUEUE-1 RULE: one request that Neo refuses forever must not stop every later request in the lane
+not ok 1 - QUEUE-1 RULE: one request that Neo refuses forever must not stop every later request in the lane
+  ---
+  duration_ms: 2.175319
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-A-queue.test.mjs:26:1'
+  failureType: 'testCodeFailure'
+  error: 'request B was never started in 5 scans: calls=[]'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-A-queue.test.mjs:32:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: QUEUE-1 control: a busy device still holds the lane (no second start in the scan)
+not ok 2 - QUEUE-1 control: a busy device still holds the lane (no second start in the scan)
+  ---
+  duration_ms: 1.681942
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-A-queue.test.mjs:35:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + []
+    - [
+    -   'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+    - ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+  actual:
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-A-queue.test.mjs:39:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: QUEUE-2 (note): a failed workflow-ledger append is not lost for good
+not ok 3 - QUEUE-2 (note): a failed workflow-ledger append is not lost for good
+  ---
+  duration_ms: 0.515656
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-A-queue.test.mjs:45:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    terminal rerun state never reached the workflow ledger
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r1-A-queue.test.mjs:52:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: QUEUE-3 (note): an unusable rerun config does not throw out of scan()
+ok 4 - QUEUE-3 (note): an unusable rerun config does not throw out of scan()
+  ---
+  duration_ms: 1.986113
+  type: 'test'
+  ...
+# Subtest: QUEUE-4 (note): an ssh host that starts with "-" is refused
+ok 5 - QUEUE-4 (note): an ssh host that starts with "-" is refused
+  ---
+  duration_ms: 0.384693
+  type: 'test'
+  ...
+# Subtest: QUEUE-4 control: a normal host is accepted
+ok 6 - QUEUE-4 control: a normal host is accepted
+  ---
+  duration_ms: 0.147222
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 3
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 112.050511

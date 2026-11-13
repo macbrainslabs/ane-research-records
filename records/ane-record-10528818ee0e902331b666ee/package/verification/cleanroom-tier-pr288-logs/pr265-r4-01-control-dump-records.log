@@ -1,0 +1,19 @@
+PASS extract-sha256File
+PASS extract-walkDump
+PASS extract-isRegularFileResolved
+PASS extract-dumpRecords
+PASS build
+PASS driver-rc
+PASS record a.bin
+PASS record link-ok
+PASS record sub/b.bin
+PASS record dangling
+PASS record dirlink
+PASS record fifo
+PASS record locked
+PASS link-ok marked symlink
+PASS a.bin not marked symlink
+PASS record-count-7 (sub skipped, locked/c.bin not reachable)
+PASS real-dir-skipped
+PASS clean-dump
+RESULT pass=18 fail=0

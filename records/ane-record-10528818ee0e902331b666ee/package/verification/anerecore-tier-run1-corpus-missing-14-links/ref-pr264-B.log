@@ -1,0 +1,35 @@
+PASS pr264-B-01-multioutput-parse-graph PASS pr264-B-01
+INFO pr264-B-02-multioutput-edit-paths: INFO: wrapped LHS parses as 4 ops; renameVar(a) -> exact
+INFO pr264-B-02-multioutput-edit-paths: INFO: split named "b": renameVar(b,bb) name attr -> follows b
+PASS pr264-B-02-multioutput-edit-paths PASS pr264-B-02
+INFO pr264-B-03-parser-forms-and-negatives: INFO: wrapped signature input sourceLine x,z = [3, 3] (physical lines 3,4)
+PASS pr264-B-03-parser-forms-and-negatives PASS pr264-B-03
+PASS pr264-B-04-wrapped-signature-differential PASS pr264-B-04
+PASS pr264-B-05-programwide-commit-check PASS pr264-B-05
+PASS pr264-B-07-parity-pins PASS pr264-B-07
+FAIL pr264-B-08-programwide-splice-bypass-literals FAIL pr264-B-08 (4)
+INFO corpus driver rc 0 shim=
+FAIL corpus-counts COMMIT_FAIL=3 OK=134 PARSE_FAIL=5
+PASS corpus-ok-commits-byte-identical non-identical=0 of 134
+PASS corpus-m021-ok OK	-
+PASS corpus-m052-ok OK	-
+PASS corpus-m100-ok OK	-
+PASS corpus-m105-ok OK	-
+PASS corpus-m128-ok OK	-
+PASS corpus-m134-ok OK	-
+PASS corpus-m001-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m002-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m004-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m005-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m007-functionWithoutBody PARSE_FAIL	MILParseError.functionWithoutBody at line 3: `func infer` declares a signature with no `{` body after its input list
+PASS corpus-m144-duplicate COMMIT_FAIL	RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: duplicate producer for var `
+PASS corpus-m145-duplicate COMMIT_FAIL	RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: duplicate producer for var `
+PASS corpus-m154-dangling-return COMMIT_FAIL	RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling return: function `i
+INFO multi-output files: m052.mil m100.mil m128.mil m134.mil 
+INFO edits run: 1822; OK 1466; ERR 356
+PASS cli-mil_tap-qwen-pin 295dd3b56f12505ba28e6a89e02fa4f8f8273ce3f5f3b2c0855b1f179957aad6
+INFO qwen steer sha 8ab13cb5434311841016cfde4ecb16107a7b9d8543f60c7a93bb6c4e74219ba2 (no ref given)
+PASS cli-list-m052-both-split-outputs 
+PASS cli-tap-third-output-lstm_2 rc=0
+PASS cli-steer-second-output-gru_1 rc=0
+pr264-B: gating passed=25 failed=2

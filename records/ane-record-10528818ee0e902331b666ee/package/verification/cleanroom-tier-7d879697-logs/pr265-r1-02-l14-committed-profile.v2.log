@@ -1,0 +1,9 @@
+INFO committed profile has missing inputs: run.tsv
+PASS a-committed-missing-input-refused
+PASS a-manifest-records-refusal-reason
+PASS b-build-only-rc0
+PASS c-fixture-hash-equals-recipe-v1 e8ac5faa282ce13c3e2ce13b17f45f19d627c2a5aac688ea58ad3eba8041a0e3
+PASS d-fixture-recorded e8ac5faa282ce13c3e2ce13b17f45f19d627c2a5aac688ea58ad3eba8041a0e3
+PASS d-tsv-recorded 89a7a0c52f52ae4364e87718cea127c32aea9ee9ee2b42c8ced3b5acd6a945e0
+PASS d-baselineIndex-recorded 149f747321e3fe2619c18c415a7347d02d0b3687b0896320ec69784dbefa0500
+SUMMARY bin=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-7d879697 profile=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/src-7d879697/spi/cleanroom/profiles/l14-minimal.profile.json pass=7 fail=0

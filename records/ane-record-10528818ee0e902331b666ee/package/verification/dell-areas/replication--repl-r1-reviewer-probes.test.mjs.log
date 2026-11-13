@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: CONTROL: a conformant record passes
+ok 1 - CONTROL: a conformant record passes
+  ---
+  duration_ms: 53.27138
+  type: 'test'
+  ...
+# Subtest: R1-1 transport bins from config are refused and the run host log is never modified
+ok 2 - R1-1 transport bins from config are refused and the run host log is never modified
+  ---
+  duration_ms: 10.384912
+  type: 'test'
+  ...
+# Subtest: R1-2 a profileHash/profileSha256 value that is not a hash is refused, never skipped
+ok 3 - R1-2 a profileHash/profileSha256 value that is not a hash is refused, never skipped
+  ---
+  duration_ms: 13.809259
+  type: 'test'
+  ...
+# Subtest: R1-3 a run start time without an explicit zone, or not ISO 8601, is malformed
+ok 4 - R1-3 a run start time without an explicit zone, or not ISO 8601, is malformed
+  ---
+  duration_ms: 53.543961
+  type: 'test'
+  ...
+# Subtest: R1-4 commit time equal to (same second as) the first counted run is refused
+ok 5 - R1-4 commit time equal to (same second as) the first counted run is refused
+  ---
+  duration_ms: 59.836696
+  type: 'test'
+  ...
+# Subtest: R1-5 a counted, failed execution in the log that the record omits is refused (cross-set allowed)
+ok 6 - R1-5 a counted, failed execution in the log that the record omits is refused (cross-set allowed)
+  ---
+  duration_ms: 38.040468
+  type: 'test'
+  ...
+# Subtest: CONTROL ssh exit 0 with a missing or forged trailer fails closed
+ok 7 - CONTROL ssh exit 0 with a missing or forged trailer fails closed
+  ---
+  duration_ms: 15.268877
+  type: 'test'
+  ...
+# Subtest: R1-6 the runbook rollback restores every file the install replaced and removes the ones it added
+ok 8 - R1-6 the runbook rollback restores every file the install replaced and removes the ones it added
+  ---
+  duration_ms: 37.586454
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 336.740349

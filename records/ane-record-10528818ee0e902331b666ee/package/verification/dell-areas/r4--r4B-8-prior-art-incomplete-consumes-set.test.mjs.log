@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: R4B-8 RULE: an incomplete prior-art record is never handed to accept (the set would be spent on a finding that can only be held)
+ok 1 - R4B-8 RULE: an incomplete prior-art record is never handed to accept (the set would be spent on a finding that can only be held)
+  ---
+  duration_ms: 2.653423
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 65.327799

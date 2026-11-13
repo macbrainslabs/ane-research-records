@@ -1,0 +1,156 @@
+TAP version 13
+# Subtest: R2A-1 RULE: run-time pin mismatch (terminal failed, tools show the mismatched sha) ends the request once
+not ok 1 - R2A-1 RULE: run-time pin mismatch (terminal failed, tools show the mismatched sha) ends the request once
+  ---
+  duration_ms: 2.261624
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:31:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    never recorded terminal; lane errors over 3 scans: ["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:34:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: R2A-2 RULE: run-time unreadable tool (terminal failed, sha "unreadable") ends the request once
+not ok 2 - R2A-2 RULE: run-time unreadable tool (terminal failed, sha "unreadable") ends the request once
+  ---
+  duration_ms: 0.449472
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:37:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    never recorded terminal; lane errors over 3 scans: ["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:40:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: R2A-3 control: staged under the pinned tools is recorded once, no error
+not ok 3 - R2A-3 control: staged under the pinned tools is recorded once, no error
+  ---
+  duration_ms: 0.517819
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:43:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:46:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: R2A-4 v2 control: terminal staged under a NON-pinned tool is recorded once, marked, never a lane error, never re-asked
+not ok 4 - R2A-4 v2 control: terminal staged under a NON-pinned tool is recorded once, marked, never a lane error, never re-asked
+  ---
+  duration_ms: 0.433218
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:49:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    lane errors: ["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]
+    
+    3 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 3
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:52:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: R2A-5 RULE (real Neo output): the run-time pin-failure status ends the request once under the shipped pins
+not ok 5 - R2A-5 RULE (real Neo output): the run-time pin-failure status ends the request once under the shipped pins
+  ---
+  duration_ms: 1.931193
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:66:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    never recorded terminal; lane errors over 3 scans: ["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]
+    
+    0 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:75:9)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: R2A-6 RULE: a RUNNING status under a non-pinned tool stays a lane error each scan and is never recorded
+not ok 6 - R2A-6 RULE: a RUNNING status under a non-pinned tool stays a lane error each scan and is never recorded
+  ---
+  duration_ms: 0.380273
+  type: 'test'
+  location: '/home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:78:1'
+  failureType: 'testCodeFailure'
+  error: '["rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths","rerun_installed_tool_pin_config_invalid: toolPaths"]'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///home/nayte/.local/state/anvil/handoffs/v040-tier-scratch/areas-f042b51/ra/tests/rerun-r2-A-terminal-pin.v2.test.mjs:82:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 0
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 116.028642

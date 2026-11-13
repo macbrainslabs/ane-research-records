@@ -1,0 +1,44 @@
+{
+  "freezeManifestSha256" : "14a5669e2d9996b0497b3ea88a96320f408f1b6301181f1d9dccb79308d5502f",
+  "freezeTime" : "2026-11-12T14:53:21Z",
+  "frozen" : true,
+  "inputMismatches" : [
+
+  ],
+  "inputs" : {
+    "fixture" : {
+      "kind" : "directory",
+      "path" : "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+      "sha256" : "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461"
+    },
+    "tsv" : {
+      "kind" : "file",
+      "path" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+      "sha256" : "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+    }
+  },
+  "profileGit" : {
+    "clean" : true,
+    "commit" : "8186ad8f4a75d18bdf74705b57f852a70bae01ce",
+    "commitTime" : "2026-11-12T09:16:32-05:00",
+    "headCommit" : "8186ad8f4a75d18bdf74705b57f852a70bae01ce",
+    "repoRoot" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re",
+    "status" : "",
+    "tracked" : true
+  },
+  "profileHash" : "3de33b648fff4b94ccdb2db407ececbf4b1f043f7ef72c544656bddef4716da1",
+  "profilePath" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re/spi/cleanroom/profiles/qwen25-dispatch-cpuonly-20261112.json",
+  "schema" : "macbrains.research.cleanroom-freeze.v1",
+  "toolGit" : {
+    "clean" : true,
+    "commit" : "246504e8df8d7ee957855e56f6936a46a9c39cee",
+    "commitTime" : "2026-11-07T04:52:45-05:00",
+    "headCommit" : "8186ad8f4a75d18bdf74705b57f852a70bae01ce",
+    "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re/spi/cleanroom/cleanroom.swift",
+    "provided" : true,
+    "repoRoot" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re",
+    "status" : "",
+    "tracked" : true
+  },
+  "toolSourceDeclared" : true
+}

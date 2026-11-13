@@ -1,0 +1,35 @@
+{
+  "id": "qwen25-1.5b-ane-dispatch-cpuonly-20261112",
+  "criterion": "Published Qwen2.5-1.5B-Instruct-ANE LUT4 package (HF NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE @7f9ab466, zip sha256 194b8f10...): prefill logits and infer decode outputs under Core ML cpuOnly; same source-rebuilt runner and inputs as the ane-vs-gpu profile, with 4 decode steps because the cpuOnly path takes about 10 s per call",
+  "mode": "control",
+  "source": {
+    "rebuild": true,
+    "repo": "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/ane-re",
+    "commit": "543c3df3126b8adb973e0ae026d528624e3161ef",
+    "probeFiles": ["spi/cleanroom/runners/qwen_dispatch_runner.swift"],
+    "mainFile": "qwen_dispatch_runner.swift",
+    "swiftcArgs": ["-O", "-parse-as-library"]
+  },
+  "run": {
+    "argvMode": "infer-chain",
+    "fixture": "/Users/nayte/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+    "tsv": "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+    "tokens": "4",
+    "fixtureSha256": "0322a5e996e36f78ced043404ff4001dfab237314d94fe482e22e7807bff4461",
+    "tsvSha256": "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+  },
+  "control": {
+    "arms": [
+      { "name": "cpu", "env": { "LFM3_COMPUTE_UNITS": "cpuOnly" } }
+    ]
+  },
+  "expected": {
+    "sameBinaryAllArms": true,
+    "armsFrozenAndCounted": true,
+    "hypothesis": "Prior campaign receipts (Nov 7-8, not frozen) and one pre-freeze 16-step dev smoke run (Nov 12, not counted, disclosed): under cpuOnly the prefill logits are NaN at every prompt position and the infer path returns NaN from its third call; the result is byte-identical across fresh-process runs",
+    "placement": "Core ML compute-plan preferred device per op is recorded per arm in result_<arm>.json; ANE execution is INFERRED from placement, not traced"
+  },
+  "permittedModifications": [
+    "Single arm (cpuOnly). Binary, model and prompt are identical to the ane-vs-gpu profile; only decode steps (4 vs 200) and the compute unit differ."
+  ]
+}

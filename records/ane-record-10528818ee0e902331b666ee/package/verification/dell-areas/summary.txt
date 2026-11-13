@@ -1,0 +1,53 @@
+COMMIT=f042b510cae4f04b1efb229d381424aab336a717 STARTED=2026-11-12T15:18:32Z
+diagnostic-tier reviewer-probes.v1.test.mjs rc=0 tests=24 pass=24 fail=0 skipped=0 sha256=61b87bb5316e53d7642cffea9cb8c287ba9f768b91cf1bc358c1d9d674aaa3e9
+replication repl-r1-reviewer-probes.test.mjs rc=0 tests=8 pass=8 fail=0 skipped=0 sha256=d959bcd10835e09748578fef48c7d98b1b1eb4cfdba8698ab04157f6da373c40
+intake intake-probes.v1.test.mjs rc=1 tests=40 pass=17 fail=23 skipped=0 sha256=7b12d6fdc1161d6ca969c0ec52c758ec0e7bda68788aa94f29032082790796aa
+intake intake-probes.v2.test.mjs rc=1 tests=49 pass=29 fail=20 skipped=0 sha256=524658710742543a378fee18e5f5be0c8a04d90bb0ba8a3abb1359fe798b52bb
+intake intake-probes.v3.test.mjs rc=0 tests=49 pass=49 fail=0 skipped=0 sha256=05ca24fbeef752c70433dd46e54bde05e9ffe0f36a68fb51a34de33638a21031
+intake intake-r2-reviewerA-probes.test.mjs rc=0 tests=10 pass=10 fail=0 skipped=0 sha256=68f9f98637cde92b1970eff213219e1d2064a3b864e5d8ab739f507f21cb68b0
+intake intake-r2-reviewerB-probes.test.mjs rc=0 tests=9 pass=9 fail=0 skipped=0 sha256=f1b665fbb6741f0a75af93e5c6e4ddf425bc81e3aa4363ac4836cf7ffd12de4b
+rerun rerun-r1-A-queue.test.mjs rc=1 tests=6 pass=3 fail=3 skipped=0 sha256=5fdfae3c1898746ba94aa79fc1e45dbbfcaafecd1dd14f1554e3cd335ad0a264
+rerun rerun-r1-A-queue.v2.test.mjs rc=0 tests=6 pass=6 fail=0 skipped=0 sha256=717cfa502f998e9d1468ad472e6cb3478fad018202c87d12a77b6272bdbb361a
+rerun rerun-r1-A-real-artifact.test.mjs rc=0 tests=3 pass=3 fail=0 skipped=0 sha256=a62d29b7960621235bd24c4972184183d127ee335b3294da639e6ee4e131e897
+rerun rerun-r1-B-probes.test.mjs rc=1 tests=9 pass=6 fail=3 skipped=0 sha256=2ecad2b1eb7233cdb2bf9ad28f77e89d19e87ea0a4f4151a353e3049ffb6d6b3
+rerun rerun-r1-B-probes.v2.test.mjs rc=1 tests=9 pass=6 fail=3 skipped=0 sha256=906a2bf922f27e5a135b53febf6a8eb178a38242f6576e6ba5121d41c0797aa2
+rerun rerun-r1-B-probes.v3.test.mjs rc=1 tests=9 pass=7 fail=2 skipped=0 sha256=8dae7f0e096d9738514cbf27f6bea2f18b64fb41246dcddf1268870200437fba
+rerun rerun-r1-B-probes.v4.test.mjs rc=1 tests=10 pass=7 fail=2 skipped=1 sha256=b4b6b2a5e18df51717a11f8f44c6806447f0b6654caf01d1179ac6a1a58d6671
+rerun rerun-r1-B-probes.v5.test.mjs rc=0 tests=10 pass=9 fail=0 skipped=1 sha256=5b7f3d6cfb252a25de017f189554ddeefa63868cbf87158f4e81c194deaf0e83
+rerun rerun-r2-A-terminal-pin.test.mjs rc=1 tests=5 pass=0 fail=5 skipped=0 sha256=28b7e4186f59370a54d14cf1ee0235287ccc4718148ac2d455fc76c2c22fdaa5
+rerun rerun-r2-A-terminal-pin.v2.test.mjs rc=1 tests=6 pass=0 fail=6 skipped=0 sha256=1822f918babf6377b3889dab0b7cddbabe84ac7d5d60426c9a29297c833f7e2e
+rerun rerun-r2-A-terminal-pin.v3.test.mjs rc=0 tests=6 pass=6 fail=0 skipped=0 sha256=16560cd9ebd299896b65eca05f01696ee5ea256d286733d30dc3c651c3ad29fa
+rerun rerun-r2-B-probes.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=fee815704582922f6c730bd6a9035eab8b6d0ed8eefb27b98aec651479220f02
+rerun rerun-r2-B-provenance-binding.test.mjs rc=1 tests=5 pass=4 fail=1 skipped=0 sha256=8196e529da12d4720960d5732f56e270976161824d9cebd6f342ebc2025291a5
+rerun rerun-r2-B-provenance-binding.v2.test.mjs rc=0 tests=5 pass=5 fail=0 skipped=0 sha256=322771b6fdb5320a5ffc39d5a4f79020d42dce4a74276e0a364163edca668b9f
+r4 r4A-declaration-divergence.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=d21c1fb74c2d915671d9561f3a3fead9df12f0f318950d402739cd4158d0030a
+r4 r4A-declaration-divergence.v2.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=6c891a4684c0dc30facc9e688d42403d2df040e39a3c0144036fbf82a30de183
+r4 r4A-merge-main.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=75a6f7f0e6c2667dfdaa73f0213f5a1ee1db832495938da8d189b8c82ca67742
+r4 r4A-pi-intake-doc-unmatched.test.mjs rc=0 tests=1 pass=1 fail=0 skipped=0 sha256=b9b5e4670f8487488818e65e7b3b26871cbffc38629ffe1293dca96e9e2852c7
+r4 r4A-r2-toolpaths-optional.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=49935a1dbb7dc8ce782eacbe5701a4637c78b5e8d55349db699345676914cc06
+r4 r4A-real-receipt-intake-output.test.mjs rc=0 tests=3 pass=3 fail=0 skipped=0 sha256=8b8d89f5bea64d527920cc7552abd6caf8d3b9c9bd9f35ec51bff6dac903f8c9
+r4 r4A-real-receipt-intake-output.v2.test.mjs rc=0 tests=3 pass=3 fail=0 skipped=0 sha256=0eca84123483838ddbcabc24101c170d933b662520497ee25f7e8a23dbd19e3b
+r4 r4A-rerun-start-pin.test.mjs rc=1 tests=2 pass=1 fail=1 skipped=0 sha256=6b081681fbdbe91a8eca7d668671ad5aa20d6f440e2bb241f265b9bbddd3d8d0
+r4 r4A-rerun-start-pin.v2.test.mjs rc=1 tests=2 pass=1 fail=1 skipped=0 sha256=97c8f73a8d444086cb5da58213d17aea6db0efb0d135cf4e84fc34f7ea460b22
+r4 r4A-rerun-start-pin.v3.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=fbd45f5c7c06a73061fde0cf362be0589894d2643cfef0f743a71cded8a7031e
+r4 r4A-ssh-trailer-controls.test.mjs rc=0 tests=5 pass=5 fail=0 skipped=0 sha256=b4db1aca43e0be0cab26c0bc803c141be0f3e9ad1d1bd777790bc99aea55a15a
+r4 r4A-ssh-trailer-controls.v2.test.mjs rc=1 tests=1 pass=0 fail=1 skipped=0 sha256=12d4a83076359312b9a72a3e2ab4062bb0a6d6808dc96ce8e210772cc3acac84
+r4 r4A-ssh-trailer-controls.v3.test.mjs rc=0 tests=5 pass=5 fail=0 skipped=0 sha256=7449343c025164a8a28a8bf2463702f72348f1e24045d76403215481b07f2423
+r4 r4A-timeout-block-control.test.mjs rc=0 tests=4 pass=4 fail=0 skipped=0 sha256=c979213852d50bc2ccb2d2f9c2bf101eaa6361737b37b94454251d5c3e842e23
+r4 r4A-timeout-block-control.v2.test.mjs rc=0 tests=4 pass=4 fail=0 skipped=0 sha256=85016e063857e955a4f7be948df9a40a2f625c64a89cd0bd31618bd676c12094
+r4 r4A-v1-recompute-unpinned.test.mjs rc=1 tests=1 pass=0 fail=1 skipped=0 sha256=3f881faee0d2c9f93fe7cd2356789e35303f5402d51c3238c6e45a604d5d3e0a
+r4 r4A-v1-recompute-unpinned.v2.test.mjs rc=0 tests=1 pass=1 fail=0 skipped=0 sha256=e2afdbf946a8ff6c440d374b08d79d512541ec8d9ec3cccbb30a7265d71c3cc8
+r4 r4B-1-merge-onto-current-main.test.mjs rc=1 tests=1 pass=0 fail=1 skipped=0 sha256=58a0cb7781e88e741ac291931cc8102ef11f43c011a30b7df34f5401141ecd4c
+r4 r4B-1.v2-merge-onto-current-main.test.mjs rc=0 tests=1 pass=1 fail=0 skipped=0 sha256=754e26eb2b49318de97424c151049d5043d59cd32f093a41925a1d320386f982
+r4 r4B-2-prior-art-provenance.test.mjs rc=0 tests=3 pass=3 fail=0 skipped=0 sha256=45a1ccfaf54b3d38d3885293e5ea8e99d7e1ec3528b394d897e6915e8bf51f83
+r4 r4B-3-recompute-status-absent.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=1ef168c2b66fbc8667985d7be1f7b6edda89f81e97e3b22befefbcfd1125f233
+r4 r4B-4-v1-provenance-recompute-unpinned.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=d917e6a0f6b553d056adc18c6df9b6b1a36d0cf1629debad29f85e9e2a7fd053
+r4 r4B-5-recompute-block-reason.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=2f1200acf4eed10f94d2351585159e193db2517fed44964ff333936f9871d655
+r4 r4B-6-declared-claim-scope.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=3b996c38878e49d43daa9e927e46d1c7327c338f2222becebc80cc0e4c64e409
+r4 r4B-8-prior-art-incomplete-consumes-set.test.mjs rc=0 tests=1 pass=1 fail=0 skipped=0 sha256=865663e0b02df98acace586b340bae857bd5c2f79c81a9a5b1743560d4988128
+r4 r4B-pi-1-scope-negator-clause.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=a67d61a5387e637bc44bc099437b35a3334f820c0098c25065b766ce61848878
+r4 r4B-r2-1-recompute-hash-without-toolpaths.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=2674f8d7634f7a6cb666b6962cc984ed441df36781cb9fddf60b8c044a8cd6a9
+r4 r4B-r2-2-scope-lint-negated-limits.test.mjs rc=0 tests=2 pass=2 fail=0 skipped=0 sha256=a853c0833dd371ca4a1a9c44f5f2064186c2f824b7b241046c3e3af00db868ba
+handoff-event run-all rc=1
+FINISHED=2026-11-12T15:21:28Z
+DELL_AREAS_DONE

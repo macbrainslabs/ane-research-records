@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: R4B-5 control: ran, exit 0, output, reason null passes
+ok 1 - R4B-5 control: ran, exit 0, output, reason null passes
+  ---
+  duration_ms: 10.559982
+  type: 'test'
+  ...
+# Subtest: R4B-5 RULE: a recompute block with an output AND a timeout/failure reason is rerun_provenance_schema
+ok 2 - R4B-5 RULE: a recompute block with an output AND a timeout/failure reason is rerun_provenance_schema
+  ---
+  duration_ms: 3.79853
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 78.699535

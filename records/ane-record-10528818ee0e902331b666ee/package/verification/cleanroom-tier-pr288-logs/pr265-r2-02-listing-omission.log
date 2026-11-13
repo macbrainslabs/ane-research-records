@@ -1,0 +1,10 @@
+PASS c0-no-links-change-detected
+PASS c1-file-link-nested-change-detected
+PASS c2-file-link-z-change-detected
+PASS c3-hidden-nested-change-detected
+PASS c4-deep-nested-change-detected
+PASS c5-add-nested-file-change-detected
+PASS c6-add-nested-link-change-detected
+PASS c7-dir-link-nested-change-detected
+PASS c8-link-in-subdir-change-detected
+SUMMARY bin=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-5e98f68b pass=9 fail=0

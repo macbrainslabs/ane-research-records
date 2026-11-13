@@ -1,0 +1,28 @@
+TAP version 13
+# Subtest: R4B-2a RULE: a declaration accepted on Neo that the Dell never searched is not recorded as a clean accept
+ok 1 - R4B-2a RULE: a declaration accepted on Neo that the Dell never searched is not recorded as a clean accept
+  ---
+  duration_ms: 2.364168
+  type: 'test'
+  ...
+# Subtest: R4B-2b RULE: a finding whose prior-art sha is not one the Dell produced for that declaration is held
+ok 2 - R4B-2b RULE: a finding whose prior-art sha is not one the Dell produced for that declaration is held
+  ---
+  duration_ms: 12.199432
+  type: 'test'
+  ...
+# Subtest: R4B-2c RULE (MINOR): every responseSha256 in the evidence has its raw bytes kept for re-verification
+ok 3 - R4B-2c RULE (MINOR): every responseSha256 in the evidence has its raw bytes kept for re-verification
+  ---
+  duration_ms: 1.888078
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 111.42407

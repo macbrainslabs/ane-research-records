@@ -1,0 +1,10 @@
+  skip (does not parse): degenerate.mil
+  skip (does not parse): no_prefill.mil
+  ok: tests/fixtures/afm_harvest/afm_extend_512_64_fragment.mil (1 fn)
+  ok: tests/fixtures/afm_harvest/afm_load_embeddings_fragment.mil (1 fn)
+  skip (does not parse): tests/fixtures/gate_harness/b1_bug/model.mil
+  skip (does not parse): tests/fixtures/gate_harness/b4_correct/model.mil
+  skip (does not parse): tests/fixtures/gate_harness/b4_l1_correct/model.mil
+  skip (does not parse): tests/fixtures/gate_harness/partial_batch/model.mil
+  ok: tests/fixtures/qwen/model.mil (2 fn)
+PASS pr262-B-08-no-false-reject-fixtures

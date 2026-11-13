@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: R2-1 (B1 confirm): an omitted post-commit failed run blocks
+ok 1 - R2-1 (B1 confirm): an omitted post-commit failed run blocks
+  ---
+  duration_ms: 1.295328
+  type: 'test'
+  ...
+# Subtest: R2-2 (B1 confirm): a receipt run absent from the device log blocks
+ok 2 - R2-2 (B1 confirm): a receipt run absent from the device log blocks
+  ---
+  duration_ms: 0.248437
+  type: 'test'
+  ...
+# Subtest: R2-3 (B1 residual): a counted run the log does not record as passed blocks
+ok 3 - R2-3 (B1 residual): a counted run the log does not record as passed blocks
+  ---
+  duration_ms: 0.379657
+  type: 'test'
+  ...
+# Subtest: R2-4 (regression): a counted run under an earlier tool commit is disclosed, not blocking (checklist v1.2)
+ok 4 - R2-4 (regression): a counted run under an earlier tool commit is disclosed, not blocking (checklist v1.2)
+  ---
+  duration_ms: 0.24024
+  type: 'test'
+  ...
+# Subtest: R2-5 (regression, real L14 log + receipt): only cross-tool runs separate the log from the receipt
+ok 5 - R2-5 (regression, real L14 log + receipt): only cross-tool runs separate the log from the receipt
+  ---
+  duration_ms: 1.098665
+  type: 'test'
+  ...
+# Subtest: R2-6 (regression, minor): an uncounted failed run before the profile commit is reported, not blocking
+ok 6 - R2-6 (regression, minor): an uncounted failed run before the profile commit is reported, not blocking
+  ---
+  duration_ms: 0.197202
+  type: 'test'
+  ...
+# Subtest: R2-7 (M5 residual): a recompute not tied to this receipt and its published fields is not EXACT
+ok 7 - R2-7 (M5 residual): a recompute not tied to this receipt and its published fields is not EXACT
+  ---
+  duration_ms: 0.473017
+  type: 'test'
+  ...
+# Subtest: R2-8 (M2 confirm): an in-flight staging takes the id; a final failure frees it
+ok 8 - R2-8 (M2 confirm): an in-flight staging takes the id; a final failure frees it
+  ---
+  duration_ms: 0.310917
+  type: 'test'
+  ...
+# Subtest: R2-9 (regression, minor): a failed attempt the runtime can recover without a new model call is not re-paid
+ok 9 - R2-9 (regression, minor): a failed attempt the runtime can recover without a new model call is not re-paid
+  ---
+  duration_ms: 1.416877
+  type: 'test'
+  ...
+# Subtest: R2-10 (regression, minor): a just-created, not-yet-written lock is not broken
+ok 10 - R2-10 (regression, minor): a just-created, not-yet-written lock is not broken
+  ---
+  duration_ms: 0.774341
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 93.787165

@@ -1,0 +1,1 @@
+PASS pr262-A-03: no commit path returned a dangling return; rejections name the var (6 cases)

@@ -1,0 +1,6 @@
+FAIL a-build-only-rc0 rc=127 probes/cleanroom/pr265-r1-02-l14-committed-profile.sh: line 12: cleanroom-7d879697: command not found
+FAIL b-fixture-listing-equals-recipe tool=(absent) recipe=1e7dbb661c4099d387d46b76c958746c5f846a236c11fad1cde51fd0950705cf
+PASS c-fixture-missing-and-refused rc=127
+PASS c-tsv-missing-and-refused rc=127
+PASS c-baselineIndex-missing-and-refused rc=127
+SUMMARY bin=cleanroom-7d879697 profile=src-7d879697/spi/cleanroom/profiles/l14-minimal.profile.json pass=3 fail=2

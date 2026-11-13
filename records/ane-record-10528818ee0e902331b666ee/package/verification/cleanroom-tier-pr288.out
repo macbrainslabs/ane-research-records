@@ -1,0 +1,10 @@
+SUPERSEDED pr265-r1-01-input-gate exit=8 pass=14 fail=8 (equals the recorded pass=14 fail=8; superseded by pr265-r1-01-input-gate.v2 (WORKFLOW-LEDGER PR #265: originals r1-01 14/8 and r1-02 3/2, superseded contract); not counted) sha256=17f3fc4a3919cc49767cbeb1adbde22b4a05d527418f2de735a06ab48557c916
+PASS pr265-r1-01-input-gate.v2 pass=23 fail=0 sha256=4ceb6eaa7e538d5c2f16220d8e403d34b6ef5d89ade6efdf47f41bd2055c8271
+SUPERSEDED pr265-r1-02-l14-committed-profile exit=2 pass=3 fail=2 (equals the recorded pass=3 fail=2; superseded by pr265-r1-02-l14-committed-profile.v2 (WORKFLOW-LEDGER PR #265: originals r1-01 14/8 and r1-02 3/2, superseded contract); not counted) sha256=95a8607b90ef32a55ffbbed7aedce8cfb4d5e63418b6667903980b8d5f318117
+PASS pr265-r1-02-l14-committed-profile.v2 pass=7 fail=0 sha256=64eb5d52dc7afa5732a5c1c3285f466bae5032eb5449f176a4ec714e22699e57
+PASS pr265-r2-01-fix-check pass=83 fail=0 sha256=99cd354fc7e587fa920b45d84d621961c7d3f895221756fb0e227d0c60f529c4
+PASS pr265-r2-02-listing-omission pass=9 fail=0 sha256=b98404faca8c70b1e8456be4be7d5e875e0f54bb950e8e2a0dd6177e4e732715
+PASS pr265-r3-01-relative-link-and-walkdump pass=6 fail=0 sha256=6457192df8d195bcca970d5a948bf6c34cb67c76fa586bc54b8ad2ed887f9377
+PASS pr265-r4-01-control-dump-records pass=18 fail=0 sha256=65ad9e73b342e7afccd6905e4b5091c2ab287c11b8bf1cb485b72ee4af9703ca
+PASS pr265-sub-01 pass=41 fail=0 sha256=2eda8778f4bb1ad20fb4d29d92408634fe941aac31add0fe72979f5821e463d3
+TOTAL pass=7 fail=0 superseded=2 skipped=0 probe-files=9 bin=ece72b23b4d30d14199830e5efdc00a5dbe5ec4576659f7e9f009b0bc0363513 src=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/src-5e98f68b

@@ -1,0 +1,35 @@
+INFO line-edit driver rc 0 LCOUNTS	files=134 edits=1254 ok=1121
+INFO pr264-B-r2-02-fix-checks-and-real-forms rc 17
+INFO-qwen-commit-sha256 d15a47950cf576cbeecbab0a1e595ba2b3f6e6c6d8d76ac195c30e3a563a263c
+INFO-escaped-quote refused: MILParseError.unmatchedBrace at line 3: brace depth = 1 (never reached 0)
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-program1 ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-program13-brace ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-literals ops=5
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-string-with-semicolon-paren ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-multiline-op-semicolon-in-string ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-scalar-lhs ops=2
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-qwen-fixture sha=9c8dccb6900d2bf2 bytes=2061429 serialize-exact=true commit-equals-text-plus-final-LF=true
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-crlf PASS (unfixed tree) MILParseError.invalidOpLine at line 4: cannot parse op `tensor<fp16, [1, 4]> y = relu(x = x)[name = string("y"
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-header-version FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-header-trailing FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-header-empty-part FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-text-after-body-brace FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-return-two-words FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-return-trailing-text FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-return-digit-start FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-empty-opset FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-var-in-tensor-literal FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-text-after-literal-arg FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-text-after-literal-attr FAIL (unfixed tree) parsed
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-two-ops-one-line FAIL (unfixed tree) ["q"]
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-64 FAIL (unfixed tree) committed: header=program(1.3)
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-1 FAIL (unfixed tree) committed: header=program(q.3)
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-true PASS (unfixed tree) RewriteTransactionError.varNotFound: var `true` not found in function `<program>`
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-1.3 PASS (unfixed tree) RewriteTransactionError.varNotFound: var `1.3` not found in function `<program>`
+INFO pr264-B-r2-02-fix-checks-and-real-forms:FIX-N1-splice-var-programWide PASS (unfixed tree) ["y", "ax", "bl", "z2"]
+INFO pr264-B-r2-02-fix-checks-and-real-forms:EDIT-three-delete-middle FAIL (unfixed tree) RewriteTransactionError.varNotFound: var `b` not found in function `<program>`
+INFO pr264-B-r2-02-fix-checks-and-real-forms:EDIT-three-steer-first-multiline-insert FAIL (unfixed tree) RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling return: function `main` returns `y`, which is neith
+INFO pr264-B-r2-02-fix-checks-and-real-forms:EDIT-three-splice-third FAIL (unfixed tree) RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling reference: var `b` consumed by op 5981FDE5-1BFF-4DC
+INFO rc list=0 tapc=1 tapb=1 steer=1; list: function 'main' <ios18>: 2 ops, 1 outputs| ax const int32 scalar| d relu fp16 [1, 2] [output]|
+INFO tree without the S2-g fix: product checks recorded only
+pr264-B-r2: gating passed=7 failed=0

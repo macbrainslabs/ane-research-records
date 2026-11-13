@@ -168,6 +168,15 @@ function verifyDiagnosticRecord(r){
 // Package records republish a reviewed experiment package byte for byte under package/.
 // The reviewed hand-off manifest is bound by its SHA-256 in attestation.json; every listed
 // file is re-hashed, and run counts are recounted from each arm's device-wide execution log.
+// Pass criteria a package arm may name. The older Fugu tool build logs no passed field (v0.3.0);
+// the clean-room tool at 246504e8 logs passed but no byte comparison (v0.4.0), whose byte identity
+// across runs is shown by the packaged recompute.
+const PKG_PASS_CRITERIA={
+  'run_completed with exitCode 0 and byteIdentical true (and passed true where the log records it)':
+    x=>x.exitCode===0&&x.byteIdentical===true&&(x.passed===undefined||x.passed===true),
+  'run_completed with exitCode 0 and passed true; byte identity across runs is checked by the packaged recompute, not by the log':
+    x=>x.exitCode===0&&x.passed===true
+};
 function verifyPackageRecord(r){
   const dir=r.path, pkg=dir+'package/';
   for(const f of ['attestation.json','preview.md','package/FILES.sha256']) assert.ok(fs.existsSync(dir+f),'missing '+dir+f);
@@ -182,19 +191,25 @@ function verifyPackageRecord(r){
   const listRaw=fs.readFileSync(pkg+'FILES.sha256'); eq(sha256(listRaw), a.package.filesListSha256); eq(a.package.filesListSha256, r.filesListSha256);
   const listed=listRaw.toString('utf8').trim().split('\n').map(l=>{ const m=/^([0-9a-f]{64})  \.\/(.+)$/.exec(l); assert.ok(m,'bad FILES.sha256 line'); return {sha:m[1],rel:m[2]}; });
   eq(listed.length, a.package.filesListed); eq(a.package.fileCount, listed.length+1);
-  for(const {sha,rel} of listed){ assert.ok(!rel.split('/').includes('..')); eq(sha256(fs.readFileSync(pkg+rel)), sha); }
+  // A git repository cannot hold a path with a .git component: such listed files are in the release tar only.
+  const inGit=rel=>rel.split('/').includes('.git'), repub=listed.filter(x=>!inGit(x.rel));
+  for(const {rel} of listed) assert.ok(!rel.split('/').includes('..'));
+  eq(a.package.filesRepublished===undefined?listed.length:a.package.filesRepublished, repub.length);
+  eq(a.package.notRepublished===undefined?0:a.package.notRepublished.files, listed.length-repub.length);
+  for(const {sha,rel} of repub) eq(sha256(fs.readFileSync(pkg+rel)), sha);
   const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(d+e.name+'/'):[d+e.name]);
-  eq(JSON.stringify(walk(pkg).map(p=>p.slice(pkg.length)).sort()), JSON.stringify([...listed.map(x=>x.rel),'FILES.sha256'].sort()));
+  eq(JSON.stringify(walk(pkg).map(p=>p.slice(pkg.length)).sort()), JSON.stringify([...repub.map(x=>x.rel),'FILES.sha256'].sort()));
   const recRaw=fs.readFileSync(pkg+a.package.recordFile); eq(sha256(recRaw), a.package.recordSha256); eq(a.package.recordSha256, r.recordSha256);
   // Scope: same chip, single device, never cross-device; no novelty claim.
   eq(a.replication.scope,'same-chip'); eq(a.replication.crossDeviceReplication,false); eq(r.replication.scope,'same-chip');
   eq(r.replication.claim, a.claimScope); assert.ok(a.claimScope.startsWith('same-chip')); assert.ok(a.claimScope.includes('no novelty claim'));
   eq(a.noveltyClaim,'UNCLAIMED');
-  // Recount every arm from its own log; one pass criterion for both arms.
-  const passed=x=>x.exitCode===0&&x.byteIdentical===true&&(x.passed===undefined||x.passed===true);
+  // Recount every arm from its own log under the pass criterion the arm names.
   let tot={counted:0,passed:0};
   eq(a.replication.arms.map(x=>x.profileHash).join(','), r.replication.profileHashes.join(','));
   for(const arm of a.replication.arms){
+    const passed=Object.hasOwn(PKG_PASS_CRITERIA,arm.passCriterion)?PKG_PASS_CRITERIA[arm.passCriterion]:null;
+    assert.ok(passed,'arm '+arm.arm+': unknown pass criterion');
     const b=fs.readFileSync(dir+arm.executionLog); eq(sha256(b), arm.executionLogSha256);
     assert.ok(arm.executionLog.startsWith('package/execution-log/'));
     const log=b.toString('utf8').trim().split('\n').map(l=>JSON.parse(l));

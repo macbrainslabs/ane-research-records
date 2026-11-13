@@ -1,0 +1,5 @@
+{ "id": "test-claimscope-with-20261112", "criterion": "test of claimScope source only", "mode": "control",
+  "source": { "rebuild": true, "repo": "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test", "commit": "HEAD", "probeFiles": ["r/echo_runner.swift"], "mainFile": "echo_runner.swift", "swiftcArgs": ["-O","-parse-as-library"] },
+  "run": { "argvMode": "infer-chain", "fixture": "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/fx.txt", "tsv": "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/in.txt", "tokens": "1", "fixtureSha256": "e80b71cd14d3cbd65f4173abcbfcf01a545dbca32a72d575108b553a648cc96f", "tsvSha256": "a20700d7260cb316211f7a2a09177323f91e029ff63d3ec8e5bd053a354b1d84" },
+  "control": { "arms": [ { "name": "a", "env": { "X": "1" } } ] },
+  "expected": { "note": "test" , "claimScope": "TEST claimScope taken from the profile" } }

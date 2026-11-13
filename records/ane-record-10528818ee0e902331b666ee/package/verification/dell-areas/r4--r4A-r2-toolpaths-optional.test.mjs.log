@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: control: with toolPaths, all three installed tools are hashed
+ok 1 - control: with toolPaths, all three installed tools are hashed
+  ---
+  duration_ms: 2.622506
+  type: 'test'
+  ...
+# Subtest: recomputePin configured and no toolPaths: refused (not a silent rerun-finding-only check)
+ok 2 - recomputePin configured and no toolPaths: refused (not a silent rerun-finding-only check)
+  ---
+  duration_ms: 1.096087
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 289.310619

@@ -1,0 +1,44 @@
+== A: build-only gate
+PASS a01-all-declared-correct
+PASS a01-manifest-records-fixture
+PASS a02-mismatch
+PASS a03-uppercase-ok
+PASS a04-missing-fixture-undeclared
+PASS a05-missing-tsv-undeclared
+PASS a06-declared-number
+PASS a07-declared-null
+PASS a08-declared-MISSING
+PASS a09-key-in-wrong-section
+PASS a10-empty-index
+PASS a11-index-path-escape
+PASS a12-replication-needs-index
+PASS a13-dir-input
+PASS a13-listing-matches-readme-recipe
+PASS a14-hidden-change-detected
+PASS a14b-empty-dir-removal-detected
+PASS a14c-restored-matches
+PASS a15-symlinked-dir
+PASS a15-symlinked-dir-content-change-changes-hash
+PASS a15b-link-cycle-refused
+PASS a16-dangling-link-refused
+PASS a17-unreadable-subdir-refused
+PASS a18-symlinked-root-equals-real-dir
+PASS a19-prebuilt-link
+PASS a19-copied-as-regular-file
+PASS a20-control-empty-arms
+PASS a21-control-nameless-arm
+PASS a22-control-numeric-env
+PASS a23-control-dup-name
+PASS a24-control-unsafe-name
+PASS a25-control-ok-no-index
+PASS a26-out-required
+PASS a26-no-default-dir
+PASS a27-bad-profile-leaves-nothing
+== B: real NOT-counted runs (scratch profiles)
+PASS b1-fixture-changed-during-run-exit1
+PASS b1-run_completed-records-inputs
+PASS b1-ledger-record
+PASS b1-receipt-runs-passed-false
+PASS b2-extra-dump-file-fails-compare
+PASS b3-control-arm-input-change
+SUMMARY bin=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/cleanroom-7d879697 pass=41 fail=0

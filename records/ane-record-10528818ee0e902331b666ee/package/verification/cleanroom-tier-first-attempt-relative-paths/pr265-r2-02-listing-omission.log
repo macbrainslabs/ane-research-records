@@ -1,0 +1,10 @@
+FAIL c0-no-links-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c1-file-link-nested-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c2-file-link-z-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c3-hidden-nested-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c4-deep-nested-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c5-add-nested-file-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c6-add-nested-link-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c7-dir-link-nested-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+FAIL c8-link-in-subdir-baseline :: rc=127 probes/cleanroom/pr265-r2-02-listing-omission.sh: line 16: cleanroom-7d879697: command not found
+SUMMARY bin=cleanroom-7d879697 pass=0 fail=9

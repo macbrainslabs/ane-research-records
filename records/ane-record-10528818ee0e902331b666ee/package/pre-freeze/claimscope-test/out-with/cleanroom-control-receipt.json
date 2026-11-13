@@ -1,0 +1,128 @@
+{
+  "armCount" : 1,
+  "arms" : [
+    {
+      "dumpDir" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/out-with/dump_a",
+      "dumpFileCount" : 1,
+      "dumpFiles" : [
+        {
+          "path" : "echo.txt",
+          "sha256" : "8bd6acf1efa9e0660fe380e8ac290d66786b48383c2bb180ce7bb9c761eb5ab9"
+        }
+      ],
+      "envDelta" : {
+        "X" : "1"
+      },
+      "exitCode" : 0,
+      "inputsUnchanged" : true,
+      "name" : "a",
+      "passed" : true,
+      "runnerSha256" : "c404080c5d885d2194fca99831cbed6252bcf293c548cf8c5b7ff14ea8870a53",
+      "runStartedAt" : "2026-11-12T14:29:48Z",
+      "wallSeconds" : 0
+    }
+  ],
+  "binarySha256" : "c404080c5d885d2194fca99831cbed6252bcf293c548cf8c5b7ff14ea8870a53",
+  "build" : {
+    "baselineRunnerSha256" : "",
+    "commit" : "HEAD",
+    "rebuilt" : true,
+    "rebuiltMatchesBaselineBinary" : false,
+    "rebuiltRunnerSha256" : "c404080c5d885d2194fca99831cbed6252bcf293c548cf8c5b7ff14ea8870a53",
+    "repo" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test",
+    "sourceBlobSha256" : {
+      "r/echo_runner.swift" : "036a5a7e30b202f08073dc4bc556e68a7dbff920e00422c12ae4d791c5c778cb"
+    },
+    "swiftcArgs" : [
+      "-O",
+      "-parse-as-library"
+    ]
+  },
+  "claimScope" : "TEST claimScope taken from the profile",
+  "claimScopeSource" : "profile.expected.claimScope",
+  "criterion" : "test of claimScope source only",
+  "crossDeviceReplication" : false,
+  "device" : {
+    "chip" : "Apple A18 Pro",
+    "coreMLBundleVersion" : "3610.2.3",
+    "hwModel" : "Mac17,5",
+    "osBuild" : "26C5035r",
+    "osVersion" : "27.3"
+  },
+  "e5CacheStateBefore" : {
+    "fileCount" : 0,
+    "listingSha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "path" : "/Users/nayte/Library/Caches/com.apple.e5rt.e5bundlecache"
+  },
+  "executionLog" : {
+    "path" : "/Users/nayte/.local/state/anvil/execution-log/a77be2f6819ec3c16e185f87a0c76bd822d37597f1c3eede8d4fb980b0c0e7cf.jsonl",
+    "runCompleted" : 1,
+    "runStarted" : 1,
+    "sha256" : "bc8febc3016f44b825c6a2e82771d22c3267fe0d5efbcf9283f0e2a3801ed6d1",
+    "startedWithoutCompletion" : 0,
+    "unparseableLines" : 0
+  },
+  "expected" : {
+    "claimScope" : "TEST claimScope taken from the profile",
+    "note" : "test"
+  },
+  "freeze" : {
+    "committedProfileBlobSha256" : "a77be2f6819ec3c16e185f87a0c76bd822d37597f1c3eede8d4fb980b0c0e7cf",
+    "freezeManifestSha256" : "2cbae002fa4221e824d128127ba56bbc8fe951710c6d828ab55fbfc623536709",
+    "freezeTime" : "2026-11-12T14:29:42Z",
+    "profileCommit" : "93ed805e8c1e75a3ccd4f8e7d270bb31de85f936",
+    "profileCommitTime" : "2026-11-12T09:29:32-05:00",
+    "toolCommit" : "f6ea786a407ca39c7b04a26e2af6e59cfb7abf33",
+    "toolCommitTime" : "2026-11-12T09:29:21-05:00",
+    "toolSourceDeclared" : true
+  },
+  "frozen" : true,
+  "generatedAt" : "2026-11-12T14:29:48Z",
+  "inputs" : {
+    "afterEachArm" : {
+      "a" : {
+        "fixture" : {
+          "kind" : "file",
+          "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/fx.txt",
+          "sha256" : "e80b71cd14d3cbd65f4173abcbfcf01a545dbca32a72d575108b553a648cc96f"
+        },
+        "tsv" : {
+          "kind" : "file",
+          "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/in.txt",
+          "sha256" : "a20700d7260cb316211f7a2a09177323f91e029ff63d3ec8e5bd053a354b1d84"
+        }
+      }
+    },
+    "before" : {
+      "fixture" : {
+        "kind" : "file",
+        "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/fx.txt",
+        "sha256" : "e80b71cd14d3cbd65f4173abcbfcf01a545dbca32a72d575108b553a648cc96f"
+      },
+      "tsv" : {
+        "kind" : "file",
+        "path" : "/Users/nayte/.local/share/anvil/qwen-dispatch-v040/claimscope-test/in.txt",
+        "sha256" : "a20700d7260cb316211f7a2a09177323f91e029ff63d3ec8e5bd053a354b1d84"
+      }
+    },
+    "unchanged" : true
+  },
+  "memoryPressureBefore" : "System-wide memory free percentage: 27%",
+  "mode" : "control",
+  "profileHash" : "a77be2f6819ec3c16e185f87a0c76bd822d37597f1c3eede8d4fb980b0c0e7cf",
+  "profileId" : "test-claimscope-with-20261112",
+  "receiptSelfHash" : "a2f501e2a35ba1c86ead529b68ae9c132f2ac020c66ff055b6517effbf8913be",
+  "receiptSha256" : "930756f9dd769568fe41aa5b883147919f3da8d732f8e4ac8e16049834421da3",
+  "runAccounting" : {
+    "countedRuns" : 1,
+    "ledgerPath" : "/Users/nayte/.local/share/anvil/cleanroom-ledger/cleanroom-ledger-a77be2f6819ec3c16e185f87a0c76bd822d37597f1c3eede8d4fb980b0c0e7cf.json",
+    "ledgerProfileScoped" : true,
+    "preFreezeRunsNotCounted" : 0,
+    "totalRuns" : 1
+  },
+  "sameBinary" : true,
+  "sameChipCleanRoom" : true,
+  "schema" : "macbrains.research.cleanroom-control.v1",
+  "toolStartedAt" : "2026-11-12T14:29:39Z",
+  "verdict" : "CONTROL_OK_SAME_BINARY_FROZEN_COUNTED"
+}

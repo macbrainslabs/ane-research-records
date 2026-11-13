@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: R4B-3 control: the conformant automated recompute is EXACT
+ok 1 - R4B-3 control: the conformant automated recompute is EXACT
+  ---
+  duration_ms: 11.022886
+  type: 'test'
+  ...
+# Subtest: R4B-3 RULE: an independent recompute with no status field is never EXACT
+ok 2 - R4B-3 RULE: an independent recompute with no status field is never EXACT
+  ---
+  duration_ms: 2.10483
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 76.119284

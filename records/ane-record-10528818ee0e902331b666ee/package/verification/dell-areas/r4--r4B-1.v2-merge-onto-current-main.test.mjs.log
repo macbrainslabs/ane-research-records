@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: R4B-1 RULE (v2): the reviewed head contains current main and merges into it cleanly
+ok 1 - R4B-1 RULE (v2): the reviewed head contains current main and merges into it cleanly
+  ---
+  duration_ms: 1903.062377
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2759.728848
