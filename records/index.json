@@ -63,7 +63,7 @@
       "versionDoi": "10.5281/zenodo.24183178",
       "title": "Published Qwen2.5-1.5B Core ML package: greedy output depends on the compute unit, and cpuOnly returns NaN",
       "path": "records/ane-record-10528818ee0e902331b666ee/",
-      "releasedOn": "2026-11-13",
+      "releasedOn": "2026-11-12",
       "reviewedPackageSha256": "10528818ee0e902331b666eeab96c42217b8bfbe71ce870b61dba9125986e780",
       "recordSha256": "363f37782e0fa515319f6cdc7c1cd490a65e912d1a9411c46e7455c3428361a8",
       "filesListSha256": "d3628555fe2e01975cd386fd1ec2cbdcbad027da97ba27d2d21ea8df14c2b3d9",
