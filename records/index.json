@@ -85,6 +85,7 @@
       "kind": "package",
       "tag": "ane-record-e6d3d80e1ff7d9eb4614f6ad",
       "version": "v0.5.0",
+      "versionDoi": "10.5281/zenodo.24449434",
       "title": "Published Qwen2.5-1.5B Core ML package against an fp32 reference of its original weights: the GPU output follows the reference for 7 tokens, the ANE output differs from the first token, and cpuOnly returns NaN",
       "path": "records/ane-record-e6d3d80e1ff7d9eb4614f6ad/",
       "releasedOn": "2026-11-22",
