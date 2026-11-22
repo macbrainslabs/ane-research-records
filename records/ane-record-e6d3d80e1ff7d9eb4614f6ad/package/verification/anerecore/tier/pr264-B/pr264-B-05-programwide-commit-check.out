@@ -1,0 +1,15 @@
+  pass: N1 spliced var replaced exactly
+  pass: chained programWide after splice
+  pass: replace of a name already replaced away throws
+  pass: splice staged, unknown var `nope` throws varNotFound
+  pass: splice staged, arg key only `y` throws varNotFound
+  pass: splice staged, string attr only `foo` throws varNotFound
+  pass: splice staged, dtype word `fp16` throws varNotFound
+  pass: splice staged, op type `relu` throws varNotFound
+  pass: splice staged, function name `pre` throws varNotFound
+  pass: splice elsewhere, real var replaced
+  pass: splice staged, function input replaced in both functions
+  pass: no splice, unknown var refused
+  pass: no splice, programWide exact
+  pass: splice removed producer, programWide refused
+PASS pr264-B-05

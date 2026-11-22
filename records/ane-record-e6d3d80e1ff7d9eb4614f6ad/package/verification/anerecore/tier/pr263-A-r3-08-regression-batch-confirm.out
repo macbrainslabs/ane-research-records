@@ -1,0 +1,32 @@
+PASS R1-a renameVar then programWide(old) refused at staging: RewriteTransactionError.varNotFound: var `intermediate` not found in function `<program>`
+PASS R1-b deleteOp then programWide(old) refused at staging: RewriteTransactionError.varNotFound: var `out` not found in function `<program>`
+PASS R1-c programWide of a function input
+PASS R1-d programWide of a var produced only in prefill
+PASS R1-e renameVar(a,b) then programWide(b,c)
+PASS R1-f insertOp s then programWide(s,s2)
+INFO R1-g programWide of a spliced-in var commits; returns ["out", "ex2"]
+PASS I1-a insert s, downstream intermediate->s, insert t after s, delete s->intermediate
+PASS I1-b ... then insert u after t, renameVar(t,t2), addReturn(t2)
+PASS I1-c insert s, insert t before it (after intermediate), delete s, insert u after t, delete original out
+PASS I1-d insert s after out (last op), delete s, insert v after out
+PASS I1-e insert s, delete s, addReturn(s) refused at commit: RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling return: function `main` returns `s`, which is neither produced by an op nor a function input
+PASS I1-f insert s, delete s twice refused at commit: RewriteTransactionError.varNotFound: var `s` not found in function `main`
+PASS I1-g insert s, delete s, insert w after s refused at commit: RewriteTransactionError.varNotFound: var `s` not found in function `main`
+PASS I1-h multi-line original: insert s after it, delete s, insert t after it, addReturn(t)
+PASS S2-a key with `=` on the next line
+PASS S2-b keys followed by blank line / `=` alone / name key split
+INFO S2-c layout does not parse (multi-line return tuple)
+PASS S2-c2 refs at line end followed by `,` / `)` lines
+PASS S2-d value on the next line after `y =`
+PASS S2-e LHS with `=` on the next line, renameVar(out,o2)
+PASS S2-f multi-line string with `=` line, renameVar(intermediate,m)
+PASS S2-g two ops on a line, second LHS split
+PASS I3-a splice adds extra output, removeReturn(out)
+PASS I3-b splice, removeReturn(var not in working tuple) refused at commit: RewriteTransactionError.varNotReturned: var `intermediate` is not in function `main`'s return tuple
+PASS I3-c splice on an op line, removeReturn(last output) refused at commit: RewriteTransactionError.cannotRemoveLastReturn: removing `out` would leave function `main` with no outputs
+PASS I3-d renameVar(out,o2), splice, removeReturn(out) refused at commit: RewriteTransactionError.varNotReturned: var `out` is not in function `main`'s return tuple
+PASS I3-e splice adds extra, removeReturn(extra), removeReturn(out) refused at staging: RewriteTransactionError.varNotFound: var `extra` not found in function `<program>`
+PASS I3-f splice adds extra, removeReturn(out) twice refused at commit: RewriteTransactionError.varNotReturned: var `out` is not in function `main`'s return tuple
+PASS I3-g splice in prefill does not relax infer
+PASS I3-h splice, then renameVar(out,o2), removeReturn(o2) after adding extra
+pr263-A-r3-08: 0 fail

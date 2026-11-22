@@ -1,0 +1,21 @@
+{
+  "schema": "macbrains.research.prior-art-evidence.v1",
+  "record": "ANE research record v0.5.0 (Qwen2.5-1.5B Core ML dispatch vs fp32 reference)",
+  "generatedAt": "2026-11-22T09:05:00Z",
+  "method": "manual literature search (WebSearch, standard mode), 6 distinct queries across the claim space; results recorded by title and URL as the search returned them. Not an automated reproducible searcher; a manual first-pass prior-art pass. Pages were not read in full.",
+  "searchesPlanned": 6,
+  "searchesCompleted": 6,
+  "queries": [
+    {"q": "Qwen2.5 Core ML Apple Neural Engine output differs from GPU fp16 greedy decoding", "key": ["developer.apple.com/forums/thread/689135 Differing outputs on CPU, GPU and ANE for the same MLModel", "developer.apple.com/forums/thread/831370 Silent FP16 Overflow in coremltools: 5 Numerical Failures Affecting ANE Inference", "arxiv.org/pdf/2606.22283 Apple Neural Engine: Architecture, Programming, and Performance", "arxiv.org/pdf/2603.06728 Orion: Characterizing and Programming Apple's Neural Engine for LLM Training and Inference"]},
+    {"q": "Core ML LUT4 palettized LLM cpuOnly NaN output", "key": ["developer.apple.com/forums/thread/814557 CoreML GPU NaN bug with fused QKV attention on macOS Tahoe", "developer.apple.com/forums/thread/689135", "developer.apple.com/forums/thread/849702 Core AI on iOS/macOS 27: seven issues found while porting an SDXL pipeline"]},
+    {"q": "Apple Neural Engine fp16 accuracy LLM logits compared to fp32 reference divergence", "key": ["developer.apple.com/forums/thread/831370", "arxiv.org/pdf/2608.22110 How Weight Encoding Affects Language Model Placement and Performance on the Apple Neural Engine", "ane-guide.readthedocs.io numerics chapter"]},
+    {"q": "quantized on-device LLM first token differs from full-precision reference compute unit", "key": ["arxiv.org/pdf/2505.15030", "arxiv.org/pdf/2408.13933"]},
+    {"q": "ANEMLL Qwen ANE accuracy versus PyTorch reference", "key": ["github.com/anemll", "huggingface.co/anemll model cards (Qwen3 LUT builds)"]},
+    {"q": "coremltools 4-bit lookup table quantization numerical difference Neural Engine GPU", "key": ["apple.github.io/coremltools quantization overview and OPT optimization guides", "ane-guide.readthedocs.io weights and compression chapter", "developer.apple.com/forums/thread/689135"]}
+  ],
+  "conclusion": "Device-dependent Core ML outputs and fp16 overflow on the ANE are reported in prior work and forum threads, so the general phenomenon is known. No result found measures this published package against an fp32 reference of its original weights; that is not a novelty claim. Novelty UNCLAIMED.",
+  "completed": 6,
+  "planned": 6,
+  "noveltyClaim": false,
+  "noveltyStatus": "UNCLAIMED"
+}

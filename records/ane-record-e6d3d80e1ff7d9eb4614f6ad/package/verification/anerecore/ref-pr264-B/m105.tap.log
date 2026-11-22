@@ -1,0 +1,3 @@
+tapped: transpose_16
+new returns (2): gather_nd_6_e5_minimal_cpu, transpose_16
+✓ wrote /Users/nayte/.local/share/anvil/v050/verify/anerecore/ref-pr264-B/m105.tap.mil

@@ -1,0 +1,18 @@
+  pass: none
+  pass: renameVar y
+  pass: functionWide y
+  pass: downstream y->z
+  pass: programWide x (first sig line)
+  pass: programWide x (first sig line) commits
+  pass: programWide z (middle sig line)
+  pass: programWide z (middle sig line) commits
+  pass: programWide w (last sig line)
+  pass: programWide w (last sig line) commits
+  pass: functionWide input z->w
+  pass: insertOp after y
+  pass: addReturn input z
+  pass: removeReturn y + deleteOp y
+  pass: spliceBody at return
+  pass: edit other function
+  pass: renameVar of an input (refused)
+PASS pr264-B-04

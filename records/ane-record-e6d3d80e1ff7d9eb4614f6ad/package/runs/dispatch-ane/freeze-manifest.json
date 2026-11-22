@@ -1,0 +1,29 @@
+{
+  "freezeManifestSha256" : "9609ef942460d65bb4e232d7daed5b0f7658d4135fe3447c8cd67882e48786c5",
+  "freezeTime" : "2026-11-22T08:08:37Z",
+  "frozen" : true,
+  "profileGit" : {
+    "clean" : true,
+    "commit" : "728f4c220023a9507929a42aee0f59208ad2dfd7",
+    "commitTime" : "2026-11-22T03:08:26-05:00",
+    "headCommit" : "728f4c220023a9507929a42aee0f59208ad2dfd7",
+    "repoRoot" : "/Users/nayte/.local/share/anvil/v050/ane-re",
+    "status" : "",
+    "tracked" : true
+  },
+  "profileHash" : "be83f5a03df95fd85761dd8e076a756aef6d50ea9297351042b1072e09a5f5af",
+  "profilePath" : "/Users/nayte/.local/share/anvil/v050/ane-re/spi/cleanroom/profiles/qwen25-v050-dispatch-ane-20261122.json",
+  "schema" : "macbrains.research.cleanroom-freeze.v1",
+  "toolGit" : {
+    "clean" : true,
+    "commit" : "d58fb354c6496a06ba37f4fc689ac27a19a20bc4",
+    "commitTime" : "2026-11-17T07:31:10-05:00",
+    "headCommit" : "d58fb354c6496a06ba37f4fc689ac27a19a20bc4",
+    "path" : "/Users/nayte/.local/share/anvil/cleanroom/release-d58fb354/spi/cleanroom/cleanroom.swift",
+    "provided" : true,
+    "repoRoot" : "/Users/nayte/.local/share/anvil/cleanroom/release-d58fb354",
+    "status" : "",
+    "tracked" : true
+  },
+  "toolSourceDeclared" : true
+}

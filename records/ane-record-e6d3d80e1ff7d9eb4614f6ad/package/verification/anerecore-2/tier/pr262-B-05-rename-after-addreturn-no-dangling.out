@@ -1,0 +1,2 @@
+note: renameVar rewired the staged return
+PASS pr262-B-05-rename-after-addreturn-no-dangling

@@ -1,0 +1,3 @@
+tapped: model_model_layers_0_self_attn_q_proj_bias
+new returns (3): argmax_idx, argmax_val, model_model_layers_0_self_attn_q_proj_bias
+✓ wrote /Users/nayte/.local/share/anvil/v050/verify/anerecore-2/tier/pr264-B/m152.tap.mil

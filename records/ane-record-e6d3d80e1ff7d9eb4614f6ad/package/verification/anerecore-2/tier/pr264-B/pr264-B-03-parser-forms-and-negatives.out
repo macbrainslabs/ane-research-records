@@ -1,0 +1,26 @@
+  pass: opset suffix with nested args
+  pass: no opset suffix -> nil
+  pass: type attributes with strings and nesting
+  pass: scalar dtype uint64
+  pass: scalar dtype int8
+  pass: scalar dtype int16
+  pass: scalar dtype fp64
+  pass: scalar dtype uint1
+  pass: scalar dtype bf16
+  pass: scalar dtype int4
+  pass: state<...> output
+  pass: list<...> style IDENT<> output
+  pass: three-line wrapped signature
+  pass: two functions, second wrapped
+  pass: body-less declaration
+  pass: unclosed opset suffix
+  pass: empty name in output list
+  pass: two names without comma
+  pass: type attribute without brackets
+  pass: unclosed IDENT<
+  pass: unclosed wrapped signature
+  pass: no-LHS op type read whole
+  pass: parseOpText multi-line multi-output
+  pass: parseOpText no output
+  INFO: wrapped signature input sourceLine x,z = [3, 4] (physical lines 3,4)
+PASS pr264-B-03

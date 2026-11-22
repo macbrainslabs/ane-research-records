@@ -1,0 +1,203 @@
+{
+  "build" : {
+    "baselineRunnerSha256" : "54ee4d1f0cb51bfb282020f4832aa4501e0e0d3f533bd459953cd183adb83473",
+    "commit" : "8271bb68c0ac86afdd652e28b96e6ce71c8c3731",
+    "rebuilt" : true,
+    "rebuiltMatchesBaselineBinary" : false,
+    "rebuiltRunnerSha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+    "repo" : "/Users/nayte/.local/share/anvil/v050/ane-re",
+    "sourceBlobSha256" : {
+      "spi/cleanroom/runners/qwen_dispatch_runner.swift" : "3c28c0b068908ac595bf196003f49d859472f90350cd56b6c3feed52f2308a05"
+    },
+    "swiftcArgs" : [
+      "-O",
+      "-parse-as-library"
+    ]
+  },
+  "claimScope" : "Deterministic, source-rebuilt, same-chip / same-OS-build replication with recorded environment. NOT cross-device and NOT a hardware execution trace; ANE placement is Core ML compute-plan assignment.",
+  "comparison" : {
+    "baselineIndex" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen25-ref-v050-20261122/baseline-gpu/index.json",
+    "byteIdentical" : true,
+    "differing" : 0,
+    "diffs" : [
+
+    ],
+    "identical" : 15,
+    "missing" : 0,
+    "scope" : "all runs of this set"
+  },
+  "criterion" : "Published Qwen2.5-1.5B-Instruct-ANE LUT4 package (HF NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE @7f9ab466), qwen_dispatch_runner under Core ML cpuAndGPU, 200 greedy steps: every counted fresh-process run byte-identical to the pre-freeze baseline",
+  "crossDeviceReplication" : false,
+  "device" : {
+    "chip" : "Apple A18 Pro",
+    "coreMLBundleVersion" : "3610.2.3",
+    "hwModel" : "Mac17,5",
+    "osBuild" : "26C5047e",
+    "osVersion" : "27.3"
+  },
+  "e5CacheStateBefore" : {
+    "fileCount" : 4,
+    "listingSha256" : "775b6e4650b20c8711be68b817b7520bc7b6b42a3c877667ec7f75c8e747093a",
+    "path" : "/Users/nayte/Library/Caches/com.apple.e5rt.e5bundlecache"
+  },
+  "executionLog" : {
+    "path" : "/Users/nayte/.local/state/anvil/execution-log/501d5de7a5e3a64635fed8a194ec95bd4345e6f89d1c94375ea23c108b6617fc.jsonl",
+    "runCompleted" : 5,
+    "runStarted" : 5,
+    "sha256" : "6d1b238a1bbefad2da2ceac08323416b74e17eb65fd4c0e1f6ee8e20c8848ff8",
+    "startedWithoutCompletion" : 0,
+    "unparseableLines" : 0
+  },
+  "expected" : {
+    "byteIdenticalToBaseline" : true,
+    "hypothesis" : "Pre-freeze baseline (not counted) and the v0.4.0 record: first generated token 9707, which equals the fp32 reference's first token",
+    "placement" : "Core ML compute-plan preferred device per op is recorded in result.json for Core ML arms; ANE execution is INFERRED from placement, not traced"
+  },
+  "freeze" : {
+    "committedProfileBlobSha256" : "501d5de7a5e3a64635fed8a194ec95bd4345e6f89d1c94375ea23c108b6617fc",
+    "freezeManifestSha256" : "8a2a4f606a216b92e5b37d61a64c15e453ff3a2ecabcc5d39102d1775a194efd",
+    "freezeTime" : "2026-11-22T08:22:26Z",
+    "headCommit" : "728f4c220023a9507929a42aee0f59208ad2dfd7",
+    "profileCommit" : "728f4c220023a9507929a42aee0f59208ad2dfd7",
+    "profileCommitTime" : "2026-11-22T03:08:26-05:00",
+    "toolCommit" : "d58fb354c6496a06ba37f4fc689ac27a19a20bc4",
+    "toolCommitTime" : "2026-11-17T07:31:10-05:00",
+    "toolSourceDeclared" : true
+  },
+  "frozen" : true,
+  "generatedAt" : "2026-11-22T08:22:23Z",
+  "memoryPressureBefore" : "System-wide memory free percentage: 43%",
+  "permittedModifications" : [
+    "None: binary, fixture, prompt, decode steps and compute units are fixed by this profile; each counted run must be byte-identical to the baseline."
+  ],
+  "profileHash" : "501d5de7a5e3a64635fed8a194ec95bd4345e6f89d1c94375ea23c108b6617fc",
+  "profileId" : "qwen25-v050-dispatch-gpu-20261122",
+  "receiptSelfHash" : "48630668213eda7132117e32a11122bfdd0d5967cc7208c64b4cee1f99534f2b",
+  "receiptSha256" : "263af679b7efdca5468bd15f5de49285f73d5babebdefbf15e23f77d53975a2c",
+  "run" : {
+    "computeUnits" : "cpuAndGPU",
+    "exitCode" : 0,
+    "fixture" : "/Volumes/ANVIL-SSD/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+    "logTail" : "ok units=cpuAndGPU firstImEnd=33 inferNaNSteps=0 prefillNaNPositions=0",
+    "note" : "last run of the set; every run is in set.runs",
+    "planSummary" : "",
+    "runDir" : "/Volumes/ANVIL-SSD/ane-hot/runs/qwen25-v050-20261122/dispatch-gpu/run-005",
+    "runStartedAt" : "2026-11-22T08:35:03.361Z",
+    "sandbox" : false,
+    "tokens" : "200",
+    "tsv" : "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+    "wallSeconds" : 108
+  },
+  "runAccounting" : {
+    "countedRuns" : 5,
+    "preFreezeRunsNotCounted" : 0,
+    "thisRunCounted" : true,
+    "totalRuns" : 5
+  },
+  "runIndex" : 5,
+  "runs" : [
+    {
+      "counted" : true,
+      "index" : 1,
+      "passed" : true,
+      "runStartedAt" : "2026-11-22T08:22:52.665Z"
+    },
+    {
+      "counted" : true,
+      "index" : 2,
+      "passed" : true,
+      "runStartedAt" : "2026-11-22T08:28:56.977Z"
+    },
+    {
+      "counted" : true,
+      "index" : 3,
+      "passed" : true,
+      "runStartedAt" : "2026-11-22T08:31:01.738Z"
+    },
+    {
+      "counted" : true,
+      "index" : 4,
+      "passed" : true,
+      "runStartedAt" : "2026-11-22T08:33:00.160Z"
+    },
+    {
+      "counted" : true,
+      "index" : 5,
+      "passed" : true,
+      "runStartedAt" : "2026-11-22T08:35:03.361Z"
+    }
+  ],
+  "sameChipCleanRoom" : true,
+  "schema" : "macbrains.research.cleanroom-replication.v1",
+  "set" : {
+    "complete" : true,
+    "freezeReverifiedBeforeEachRun" : true,
+    "runnerSha256" : "b4f4a296a09873fbbd2f04f3461cee760b32d419f35de4ceda2c3b1e58e7143f",
+    "runs" : [
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Volumes/ANVIL-SSD/ane-hot/runs/qwen25-v050-20261122/dispatch-gpu/run-001",
+        "runIndex" : 1,
+        "runStartedAt" : "2026-11-22T08:22:52.665Z",
+        "wallSeconds" : 361
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Volumes/ANVIL-SSD/ane-hot/runs/qwen25-v050-20261122/dispatch-gpu/run-002",
+        "runIndex" : 2,
+        "runStartedAt" : "2026-11-22T08:28:56.977Z",
+        "wallSeconds" : 122
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Volumes/ANVIL-SSD/ane-hot/runs/qwen25-v050-20261122/dispatch-gpu/run-003",
+        "runIndex" : 3,
+        "runStartedAt" : "2026-11-22T08:31:01.738Z",
+        "wallSeconds" : 115
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Volumes/ANVIL-SSD/ane-hot/runs/qwen25-v050-20261122/dispatch-gpu/run-004",
+        "runIndex" : 4,
+        "runStartedAt" : "2026-11-22T08:33:00.160Z",
+        "wallSeconds" : 120
+      },
+      {
+        "byteIdentical" : true,
+        "differing" : 0,
+        "exitCode" : 0,
+        "identical" : 3,
+        "missing" : 0,
+        "planSummary" : "",
+        "runDir" : "/Volumes/ANVIL-SSD/ane-hot/runs/qwen25-v050-20261122/dispatch-gpu/run-005",
+        "runIndex" : 5,
+        "runStartedAt" : "2026-11-22T08:35:03.361Z",
+        "wallSeconds" : 108
+      }
+    ],
+    "runsExecuted" : 5,
+    "runsRequested" : 5,
+    "stopReason" : ""
+  },
+  "verdict" : "REPLICATED_SAME_CHIP_BYTE_IDENTICAL"
+}

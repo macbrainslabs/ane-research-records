@@ -1,0 +1,3 @@
+tapped: const_v
+new returns (2): out000_y1, const_v
+✓ wrote /Users/nayte/.local/share/anvil/v050/verify/anerecore/tier/pr264-B/m128.tap.mil

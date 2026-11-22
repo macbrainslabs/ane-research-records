@@ -1,0 +1,1009 @@
+{
+  "batch" : 28,
+  "config" : {
+    "activation" : "silu",
+    "headDim" : 128,
+    "heads" : 12,
+    "hidden" : 1536,
+    "intermediate" : 8960,
+    "kvHeads" : 2,
+    "layers" : 28,
+    "rmsNormEps" : "1e-6",
+    "ropeTheta" : "1000000",
+    "vocab" : 151936
+  },
+  "function" : "prefill",
+  "imEndTokenId" : 151645,
+  "logitsLayout" : "logits-prefill-all.f32: [promptCount][151936] little-endian fp32; logits-prefill-last.f32: last prompt position",
+  "positions" : [
+    {
+      "imEndLogit" : "-1.1318",
+      "imEndLogitF32Bits" : 3213942812,
+      "imEndMarginToWinner" : "17.1687",
+      "imEndRank" : 119806,
+      "logitsSha256" : "f80c7138241e09a81649791e0228cb642692ca4cc401583c649cf6d8b29acefe",
+      "nanCount" : 0,
+      "position" : 0,
+      "tokenIn" : 151644,
+      "top5" : [
+        {
+          "id" : 198,
+          "logit" : "16.0368"
+        },
+        {
+          "id" : 486,
+          "logit" : "14.0660"
+        },
+        {
+          "id" : 13,
+          "logit" : "13.5503"
+        },
+        {
+          "id" : 1699,
+          "logit" : "13.4986"
+        },
+        {
+          "id" : 16,
+          "logit" : "13.1930"
+        }
+      ],
+      "winner" : 198,
+      "winnerLogit" : "16.0368"
+    },
+    {
+      "imEndLogit" : "1.1732",
+      "imEndLogitF32Bits" : 1066806073,
+      "imEndMarginToWinner" : "12.4746",
+      "imEndRank" : 58632,
+      "logitsSha256" : "ecf54b149bce4e7cc38f8ea8a4179491409537fe6b44e5a32b69803ce096fb33",
+      "nanCount" : 0,
+      "position" : 1,
+      "tokenIn" : 8948,
+      "top5" : [
+        {
+          "id" : 14,
+          "logit" : "13.6478"
+        },
+        {
+          "id" : 12,
+          "logit" : "13.5789"
+        },
+        {
+          "id" : 271,
+          "logit" : "12.0390"
+        },
+        {
+          "id" : 25,
+          "logit" : "11.7871"
+        },
+        {
+          "id" : 198,
+          "logit" : "11.7327"
+        }
+      ],
+      "winner" : 14,
+      "winnerLogit" : "13.6478"
+    },
+    {
+      "imEndLogit" : "-1.8049",
+      "imEndLogitF32Bits" : 3219589076,
+      "imEndMarginToWinner" : "16.3840",
+      "imEndRank" : 116623,
+      "logitsSha256" : "ae5dda70b0c6e2095edb6a40de182cedfb75df4352734e220854e4c25aa96f0e",
+      "nanCount" : 0,
+      "position" : 2,
+      "tokenIn" : 198,
+      "top5" : [
+        {
+          "id" : 474,
+          "logit" : "14.5791"
+        },
+        {
+          "id" : 2,
+          "logit" : "13.9257"
+        },
+        {
+          "id" : 1067,
+          "logit" : "13.4824"
+        },
+        {
+          "id" : 1040,
+          "logit" : "13.2699"
+        },
+        {
+          "id" : 1499,
+          "logit" : "13.0891"
+        }
+      ],
+      "winner" : 474,
+      "winnerLogit" : "14.5791"
+    },
+    {
+      "imEndLogit" : "-4.7953",
+      "imEndLogitF32Bits" : 3231281993,
+      "imEndMarginToWinner" : "26.9754",
+      "imEndRank" : 148641,
+      "logitsSha256" : "48b845658284ad23bbe2037944367890b2162c3a3c0ddb42f20897c315cffb5c",
+      "nanCount" : 0,
+      "position" : 3,
+      "tokenIn" : 2610,
+      "top5" : [
+        {
+          "id" : 525,
+          "logit" : "22.1801"
+        },
+        {
+          "id" : 614,
+          "logit" : "20.1848"
+        },
+        {
+          "id" : 2299,
+          "logit" : "19.3317"
+        },
+        {
+          "id" : 4588,
+          "logit" : "19.2105"
+        },
+        {
+          "id" : 646,
+          "logit" : "18.9971"
+        }
+      ],
+      "winner" : 525,
+      "winnerLogit" : "22.1801"
+    },
+    {
+      "imEndLogit" : "-2.2299",
+      "imEndLogitF32Bits" : 3222189848,
+      "imEndMarginToWinner" : "24.8791",
+      "imEndRank" : 122481,
+      "logitsSha256" : "186b82888e6025d405bf713933cee8fdf2cac3750383bedd34d68c68f1243db6",
+      "nanCount" : 0,
+      "position" : 4,
+      "tokenIn" : 525,
+      "top5" : [
+        {
+          "id" : 458,
+          "logit" : "22.6492"
+        },
+        {
+          "id" : 2661,
+          "logit" : "22.4074"
+        },
+        {
+          "id" : 50820,
+          "logit" : "21.2137"
+        },
+        {
+          "id" : 264,
+          "logit" : "20.7236"
+        },
+        {
+          "id" : 3238,
+          "logit" : "19.5939"
+        }
+      ],
+      "winner" : 458,
+      "winnerLogit" : "22.6492"
+    },
+    {
+      "imEndLogit" : "-2.7516",
+      "imEndLogitF32Bits" : 3224378062,
+      "imEndMarginToWinner" : "23.2707",
+      "imEndRank" : 110669,
+      "logitsSha256" : "d4c03d1552fd427119332aed488dab83f98c85b64d2951af5bf0e267b9c8ea7e",
+      "nanCount" : 0,
+      "position" : 5,
+      "tokenIn" : 264,
+      "top5" : [
+        {
+          "id" : 4128,
+          "logit" : "20.5191"
+        },
+        {
+          "id" : 3460,
+          "logit" : "19.6316"
+        },
+        {
+          "id" : 8453,
+          "logit" : "19.6053"
+        },
+        {
+          "id" : 10769,
+          "logit" : "18.6064"
+        },
+        {
+          "id" : 10950,
+          "logit" : "18.1539"
+        }
+      ],
+      "winner" : 4128,
+      "winnerLogit" : "20.5191"
+    },
+    {
+      "imEndLogit" : "-3.8789",
+      "imEndLogitF32Bits" : 3229106026,
+      "imEndMarginToWinner" : "28.8693",
+      "imEndRank" : 103391,
+      "logitsSha256" : "dbc92af6149c8a0db3d5932a1907ca8bccf3c012a5166200fc1960a11c57cb5a",
+      "nanCount" : 0,
+      "position" : 6,
+      "tokenIn" : 10950,
+      "top5" : [
+        {
+          "id" : 17847,
+          "logit" : "24.9904"
+        },
+        {
+          "id" : 15235,
+          "logit" : "22.8287"
+        },
+        {
+          "id" : 323,
+          "logit" : "21.6693"
+        },
+        {
+          "id" : 4128,
+          "logit" : "20.4781"
+        },
+        {
+          "id" : 714,
+          "logit" : "19.9125"
+        }
+      ],
+      "winner" : 17847,
+      "winnerLogit" : "24.9904"
+    },
+    {
+      "imEndLogit" : "-1.6188",
+      "imEndLogitF32Bits" : 3218027696,
+      "imEndMarginToWinner" : "25.4142",
+      "imEndRank" : 45780,
+      "logitsSha256" : "a2f7fbed0efcbeab69dad2e274720b33c6d562234b4f4edf33bce05bc884a42c",
+      "nanCount" : 0,
+      "position" : 7,
+      "tokenIn" : 17847,
+      "top5" : [
+        {
+          "id" : 11,
+          "logit" : "23.7955"
+        },
+        {
+          "id" : 323,
+          "logit" : "22.0741"
+        },
+        {
+          "id" : 13,
+          "logit" : "21.4602"
+        },
+        {
+          "id" : 429,
+          "logit" : "21.2673"
+        },
+        {
+          "id" : 311,
+          "logit" : "20.4146"
+        }
+      ],
+      "winner" : 11,
+      "winnerLogit" : "23.7955"
+    },
+    {
+      "imEndLogit" : "5.0102",
+      "imEndLogitF32Bits" : 1084249075,
+      "imEndMarginToWinner" : "12.5952",
+      "imEndRank" : 3926,
+      "logitsSha256" : "ffaca5277398c3fa3d3ffa9e563ead569a92247fe7a8e4c3a422ab6a7a274321",
+      "nanCount" : 0,
+      "position" : 8,
+      "tokenIn" : 13,
+      "top5" : [
+        {
+          "id" : 21149,
+          "logit" : "17.6054"
+        },
+        {
+          "id" : 1446,
+          "logit" : "17.0431"
+        },
+        {
+          "id" : 5209,
+          "logit" : "16.6930"
+        },
+        {
+          "id" : 3555,
+          "logit" : "15.8489"
+        },
+        {
+          "id" : 14375,
+          "logit" : "15.3533"
+        }
+      ],
+      "winner" : 21149,
+      "winnerLogit" : "17.6054"
+    },
+    {
+      "imEndLogit" : "12.3613",
+      "imEndLogitF32Bits" : 1095092198,
+      "imEndMarginToWinner" : "2.6123",
+      "imEndRank" : 3,
+      "logitsSha256" : "5b4c5ea8bc76ec3ee2ec2da323ffd712514423153a830adbbcfabf04b912b23d",
+      "nanCount" : 0,
+      "position" : 9,
+      "tokenIn" : 151645,
+      "top5" : [
+        {
+          "id" : 198,
+          "logit" : "14.9736"
+        },
+        {
+          "id" : 7564,
+          "logit" : "14.0518"
+        },
+        {
+          "id" : 151645,
+          "logit" : "12.3613"
+        },
+        {
+          "id" : 96960,
+          "logit" : "11.5160"
+        },
+        {
+          "id" : 73033,
+          "logit" : "11.1533"
+        }
+      ],
+      "winner" : 198,
+      "winnerLogit" : "14.9736"
+    },
+    {
+      "imEndLogit" : "15.0197",
+      "imEndLogitF32Bits" : 1097879720,
+      "imEndMarginToWinner" : "0.0000",
+      "imEndRank" : 1,
+      "logitsSha256" : "e1d0ac846b7dead8f0a08b42730039f388580e5e017761548cc9553279eae3a4",
+      "nanCount" : 0,
+      "position" : 10,
+      "tokenIn" : 198,
+      "top5" : [
+        {
+          "id" : 151645,
+          "logit" : "15.0197"
+        },
+        {
+          "id" : 27,
+          "logit" : "12.7458"
+        },
+        {
+          "id" : 34528,
+          "logit" : "12.1403"
+        },
+        {
+          "id" : 33975,
+          "logit" : "11.4461"
+        },
+        {
+          "id" : 33177,
+          "logit" : "10.9175"
+        }
+      ],
+      "winner" : 151645,
+      "winnerLogit" : "15.0197"
+    },
+    {
+      "imEndLogit" : "9.1809",
+      "imEndLogitF32Bits" : 1091757306,
+      "imEndMarginToWinner" : "10.8698",
+      "imEndRank" : 63,
+      "logitsSha256" : "9f08bec6068503f3a4828dc5b0e826cc09b52de4858114a7d0636b0e6314f6ae",
+      "nanCount" : 0,
+      "position" : 11,
+      "tokenIn" : 151644,
+      "top5" : [
+        {
+          "id" : 198,
+          "logit" : "20.0507"
+        },
+        {
+          "id" : 271,
+          "logit" : "15.2218"
+        },
+        {
+          "id" : 79793,
+          "logit" : "13.3379"
+        },
+        {
+          "id" : 7564,
+          "logit" : "13.1454"
+        },
+        {
+          "id" : 33197,
+          "logit" : "13.0111"
+        }
+      ],
+      "winner" : 198,
+      "winnerLogit" : "20.0507"
+    },
+    {
+      "imEndLogit" : "-0.5915",
+      "imEndLogitF32Bits" : 3205983353,
+      "imEndMarginToWinner" : "20.9274",
+      "imEndRank" : 81225,
+      "logitsSha256" : "1ec6b9a407ea00647b6457156c436e5d8de1185ca9691377870aa21aa6397f60",
+      "nanCount" : 0,
+      "position" : 12,
+      "tokenIn" : 872,
+      "top5" : [
+        {
+          "id" : 198,
+          "logit" : "20.3359"
+        },
+        {
+          "id" : 40,
+          "logit" : "15.8625"
+        },
+        {
+          "id" : 4340,
+          "logit" : "14.6619"
+        },
+        {
+          "id" : 6713,
+          "logit" : "14.6288"
+        },
+        {
+          "id" : 271,
+          "logit" : "14.5793"
+        }
+      ],
+      "winner" : 198,
+      "winnerLogit" : "20.3359"
+    },
+    {
+      "imEndLogit" : "-5.3185",
+      "imEndLogitF32Bits" : 3232379174,
+      "imEndMarginToWinner" : "20.2945",
+      "imEndRank" : 149454,
+      "logitsSha256" : "fce9a55145f4d621fc9d47cdbe93e9ecd7282c71f8b1f336c85ec67f9b4c1fcc",
+      "nanCount" : 0,
+      "position" : 13,
+      "tokenIn" : 198,
+      "top5" : [
+        {
+          "id" : 40,
+          "logit" : "14.9760"
+        },
+        {
+          "id" : 4340,
+          "logit" : "14.4810"
+        },
+        {
+          "id" : 7985,
+          "logit" : "14.2132"
+        },
+        {
+          "id" : 3838,
+          "logit" : "14.1005"
+        },
+        {
+          "id" : 785,
+          "logit" : "13.9052"
+        }
+      ],
+      "winner" : 40,
+      "winnerLogit" : "14.9760"
+    },
+    {
+      "imEndLogit" : "1.1290",
+      "imEndLogitF32Bits" : 1066435001,
+      "imEndMarginToWinner" : "19.3829",
+      "imEndRank" : 68150,
+      "logitsSha256" : "2c2e29cc4ca179fe289f92ce48bb816419a5657e6fba4cc08fcdf4ef9f9ff9e3",
+      "nanCount" : 0,
+      "position" : 14,
+      "tokenIn" : 13048,
+      "top5" : [
+        {
+          "id" : 11,
+          "logit" : "20.5119"
+        },
+        {
+          "id" : 0,
+          "logit" : "19.6375"
+        },
+        {
+          "id" : 1052,
+          "logit" : "19.4714"
+        },
+        {
+          "id" : 13,
+          "logit" : "18.2948"
+        },
+        {
+          "id" : 358,
+          "logit" : "17.2843"
+        }
+      ],
+      "winner" : 11,
+      "winnerLogit" : "20.5119"
+    },
+    {
+      "imEndLogit" : "1.1860",
+      "imEndLogitF32Bits" : 1066913734,
+      "imEndMarginToWinner" : "19.7538",
+      "imEndRank" : 60689,
+      "logitsSha256" : "de5429f0d1ca2be65ed03e5ed2fb578d6fcb52f82ba7125d6b82b5cec9823957",
+      "nanCount" : 0,
+      "position" : 15,
+      "tokenIn" : 11,
+      "top5" : [
+        {
+          "id" : 358,
+          "logit" : "20.9399"
+        },
+        {
+          "id" : 1246,
+          "logit" : "19.7151"
+        },
+        {
+          "id" : 646,
+          "logit" : "19.3515"
+        },
+        {
+          "id" : 847,
+          "logit" : "18.8492"
+        },
+        {
+          "id" : 1410,
+          "logit" : "18.2955"
+        }
+      ],
+      "winner" : 358,
+      "winnerLogit" : "20.9399"
+    },
+    {
+      "imEndLogit" : "-1.2748",
+      "imEndLogitF32Bits" : 3215142315,
+      "imEndMarginToWinner" : "24.6957",
+      "imEndRank" : 141080,
+      "logitsSha256" : "b8f02d8de0b90e2f9050ba321772db4c24337844b93c8a77e9c4c39cc8557e9c",
+      "nanCount" : 0,
+      "position" : 16,
+      "tokenIn" : 1128,
+      "top5" : [
+        {
+          "id" : 374,
+          "logit" : "23.4209"
+        },
+        {
+          "id" : 594,
+          "logit" : "22.7530"
+        },
+        {
+          "id" : 525,
+          "logit" : "22.5869"
+        },
+        {
+          "id" : 646,
+          "logit" : "22.4585"
+        },
+        {
+          "id" : 653,
+          "logit" : "21.3034"
+        }
+      ],
+      "winner" : 374,
+      "winnerLogit" : "23.4209"
+    },
+    {
+      "imEndLogit" : "0.4237",
+      "imEndLogitF32Bits" : 1054404356,
+      "imEndMarginToWinner" : "23.0891",
+      "imEndRank" : 124682,
+      "logitsSha256" : "1c8791c49e9421780813ed84f1a36bd71f29194fda95767f2a9200b13118a489",
+      "nanCount" : 0,
+      "position" : 17,
+      "tokenIn" : 646,
+      "top5" : [
+        {
+          "id" : 358,
+          "logit" : "23.5128"
+        },
+        {
+          "id" : 498,
+          "logit" : "22.7783"
+        },
+        {
+          "id" : 582,
+          "logit" : "20.7160"
+        },
+        {
+          "id" : 600,
+          "logit" : "19.8053"
+        },
+        {
+          "id" : 387,
+          "logit" : "19.4299"
+        }
+      ],
+      "winner" : 358,
+      "winnerLogit" : "23.5128"
+    },
+    {
+      "imEndLogit" : "-2.1168",
+      "imEndLogitF32Bits" : 3221715506,
+      "imEndMarginToWinner" : "27.3195",
+      "imEndRank" : 135177,
+      "logitsSha256" : "77df5c53ef77652d3de115cd9a40ee7f4c5e49c9a89197b81e4c8c4a63acb622",
+      "nanCount" : 0,
+      "position" : 18,
+      "tokenIn" : 498,
+      "top5" : [
+        {
+          "id" : 3291,
+          "logit" : "25.2027"
+        },
+        {
+          "id" : 653,
+          "logit" : "24.5469"
+        },
+        {
+          "id" : 1977,
+          "logit" : "21.2770"
+        },
+        {
+          "id" : 3960,
+          "logit" : "21.0092"
+        },
+        {
+          "id" : 1492,
+          "logit" : "20.9530"
+        }
+      ],
+      "winner" : 3291,
+      "winnerLogit" : "25.2027"
+    },
+    {
+      "imEndLogit" : "1.0178",
+      "imEndLogitF32Bits" : 1065502897,
+      "imEndMarginToWinner" : "26.3198",
+      "imEndRank" : 83623,
+      "logitsSha256" : "26c9b024acfef648933fc3656817513f62e25bee1473f722f07b0646bb40f96b",
+      "nanCount" : 0,
+      "position" : 19,
+      "tokenIn" : 1492,
+      "top5" : [
+        {
+          "id" : 752,
+          "logit" : "27.3376"
+        },
+        {
+          "id" : 448,
+          "logit" : "23.9332"
+        },
+        {
+          "id" : 30,
+          "logit" : "20.1833"
+        },
+        {
+          "id" : 311,
+          "logit" : "20.0071"
+        },
+        {
+          "id" : 601,
+          "logit" : "18.7281"
+        }
+      ],
+      "winner" : 752,
+      "winnerLogit" : "27.3376"
+    },
+    {
+      "imEndLogit" : "-0.0844",
+      "imEndLogitF32Bits" : 3182226844,
+      "imEndMarginToWinner" : "27.0665",
+      "imEndRank" : 107312,
+      "logitsSha256" : "8c3421f250c3cd881105e914348ea37c8198e851c0070d232a5b9f1e7a772a67",
+      "nanCount" : 0,
+      "position" : 20,
+      "tokenIn" : 752,
+      "top5" : [
+        {
+          "id" : 448,
+          "logit" : "26.9820"
+        },
+        {
+          "id" : 653,
+          "logit" : "23.2899"
+        },
+        {
+          "id" : 1477,
+          "logit" : "21.9386"
+        },
+        {
+          "id" : 311,
+          "logit" : "21.7087"
+        },
+        {
+          "id" : 700,
+          "logit" : "21.5849"
+        }
+      ],
+      "winner" : 448,
+      "winnerLogit" : "26.9820"
+    },
+    {
+      "imEndLogit" : "4.9293",
+      "imEndLogitF32Bits" : 1084079387,
+      "imEndMarginToWinner" : "21.8231",
+      "imEndRank" : 29208,
+      "logitsSha256" : "ace3167f32939e9076b346c46ce195e8596661cc9be38adc6e6d26a104e6c5f5",
+      "nanCount" : 0,
+      "position" : 21,
+      "tokenIn" : 448,
+      "top5" : [
+        {
+          "id" : 3351,
+          "logit" : "26.7524"
+        },
+        {
+          "id" : 30,
+          "logit" : "26.3538"
+        },
+        {
+          "id" : 5267,
+          "logit" : "23.4057"
+        },
+        {
+          "id" : 1939,
+          "logit" : "21.5029"
+        },
+        {
+          "id" : 419,
+          "logit" : "20.9931"
+        }
+      ],
+      "winner" : 3351,
+      "winnerLogit" : "26.7524"
+    },
+    {
+      "imEndLogit" : "20.4720",
+      "imEndLogitF32Bits" : 1101252261,
+      "imEndMarginToWinner" : "0.0000",
+      "imEndRank" : 1,
+      "logitsSha256" : "debaf0300a468531ab663e1d4b2734d184aff892b2a6d2aefc3ecbfc0efd4c48",
+      "nanCount" : 0,
+      "position" : 22,
+      "tokenIn" : 30,
+      "top5" : [
+        {
+          "id" : 151645,
+          "logit" : "20.4720"
+        },
+        {
+          "id" : 358,
+          "logit" : "17.5774"
+        },
+        {
+          "id" : 2585,
+          "logit" : "15.6064"
+        },
+        {
+          "id" : 5209,
+          "logit" : "14.6133"
+        },
+        {
+          "id" : 2980,
+          "logit" : "14.5969"
+        }
+      ],
+      "winner" : 151645,
+      "winnerLogit" : "20.4720"
+    },
+    {
+      "imEndLogit" : "15.8887",
+      "imEndLogitF32Bits" : 1098790989,
+      "imEndMarginToWinner" : "15.6393",
+      "imEndRank" : 2,
+      "logitsSha256" : "ea0ab51eebc86c57d0d371ce5bd49390fd65ea9d39d9eba8ba7f53ccc632fa40",
+      "nanCount" : 0,
+      "position" : 23,
+      "tokenIn" : 151645,
+      "top5" : [
+        {
+          "id" : 198,
+          "logit" : "31.5280"
+        },
+        {
+          "id" : 151645,
+          "logit" : "15.8887"
+        },
+        {
+          "id" : 319,
+          "logit" : "14.8378"
+        },
+        {
+          "id" : 624,
+          "logit" : "13.9399"
+        },
+        {
+          "id" : 2303,
+          "logit" : "12.9250"
+        }
+      ],
+      "winner" : 198,
+      "winnerLogit" : "31.5280"
+    },
+    {
+      "imEndLogit" : "17.0530",
+      "imEndLogitF32Bits" : 1099459732,
+      "imEndMarginToWinner" : "9.8047",
+      "imEndRank" : 2,
+      "logitsSha256" : "befa50dd69cb49c613c706222e630b4d729b9acb00652b19a66077d0709123e3",
+      "nanCount" : 0,
+      "position" : 24,
+      "tokenIn" : 198,
+      "top5" : [
+        {
+          "id" : 151644,
+          "logit" : "26.8577"
+        },
+        {
+          "id" : 151645,
+          "logit" : "17.0530"
+        },
+        {
+          "id" : 151657,
+          "logit" : "15.5712"
+        },
+        {
+          "id" : 151658,
+          "logit" : "15.3331"
+        },
+        {
+          "id" : 34581,
+          "logit" : "12.4695"
+        }
+      ],
+      "winner" : 151644,
+      "winnerLogit" : "26.8577"
+    },
+    {
+      "imEndLogit" : "4.7914",
+      "imEndLogitF32Bits" : 1083790150,
+      "imEndMarginToWinner" : "13.4686",
+      "imEndRank" : 5826,
+      "logitsSha256" : "94512450897105f13c71bbf316da1dc37ad5c68d71cfb053311afab6317786b5",
+      "nanCount" : 0,
+      "position" : 25,
+      "tokenIn" : 151644,
+      "top5" : [
+        {
+          "id" : 8948,
+          "logit" : "18.2600"
+        },
+        {
+          "id" : 73033,
+          "logit" : "16.7593"
+        },
+        {
+          "id" : 11501,
+          "logit" : "16.4583"
+        },
+        {
+          "id" : 7564,
+          "logit" : "16.3618"
+        },
+        {
+          "id" : 67884,
+          "logit" : "16.0527"
+        }
+      ],
+      "winner" : 8948,
+      "winnerLogit" : "18.2600"
+    },
+    {
+      "imEndLogit" : "5.0505",
+      "imEndLogitF32Bits" : 1084333538,
+      "imEndMarginToWinner" : "16.6130",
+      "imEndRank" : 2054,
+      "logitsSha256" : "838a6bfe13c93aab00db3a59aaa88757da0a528a49588f5c38c3105f01826461",
+      "nanCount" : 0,
+      "position" : 26,
+      "tokenIn" : 77091,
+      "top5" : [
+        {
+          "id" : 21927,
+          "logit" : "21.6635"
+        },
+        {
+          "id" : 198,
+          "logit" : "21.5381"
+        },
+        {
+          "id" : 21018,
+          "logit" : "19.7216"
+        },
+        {
+          "id" : 479,
+          "logit" : "17.7382"
+        },
+        {
+          "id" : 108386,
+          "logit" : "17.3106"
+        }
+      ],
+      "winner" : 21927,
+      "winnerLogit" : "21.6635"
+    },
+    {
+      "imEndLogit" : "-4.1560",
+      "imEndLogitF32Bits" : 3229941236,
+      "imEndMarginToWinner" : "30.5489",
+      "imEndRank" : 82618,
+      "logitsSha256" : "58f68d594a506e4f1affcfcd6297a67a774a471e597d8fa3153d41052d8b79b3",
+      "nanCount" : 0,
+      "position" : 27,
+      "tokenIn" : 198,
+      "top5" : [
+        {
+          "id" : 9707,
+          "logit" : "26.3929"
+        },
+        {
+          "id" : 13048,
+          "logit" : "23.1264"
+        },
+        {
+          "id" : 40,
+          "logit" : "22.0829"
+        },
+        {
+          "id" : 18665,
+          "logit" : "19.3529"
+        },
+        {
+          "id" : 2121,
+          "logit" : "18.9232"
+        }
+      ],
+      "winner" : 9707,
+      "winnerLogit" : "26.3929"
+    }
+  ],
+  "positionsWithAnyNaN" : 0,
+  "precision" : "bf16 weights widened to fp32; fp32 activations, KV cache, logits",
+  "promptIds" : [
+    151644,
+    8948,
+    198,
+    2610,
+    525,
+    264,
+    10950,
+    17847,
+    13,
+    151645,
+    198,
+    151644,
+    872,
+    198,
+    13048,
+    11,
+    1128,
+    646,
+    498,
+    1492,
+    752,
+    448,
+    30,
+    151645,
+    198,
+    151644,
+    77091,
+    198
+  ],
+  "schema" : "macbrains.research.qwen25-fp32-reference-prefill.v1",
+  "tensorCount" : 338,
+  "tiedLmHead" : true,
+  "weightsSha256" : "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+  "winnerRule" : "argmax over non-NaN fp32 logits, lowest index on ties; all-NaN -> winner -1"
+}

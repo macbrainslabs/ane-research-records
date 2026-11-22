@@ -1,0 +1,3 @@
+tapped: topk_k
+new returns (3): out000_y1, out001_y2, topk_k
+✓ wrote /Users/nayte/.local/share/anvil/v050/verify/anerecore/ref-pr264-B/m100.tap.mil

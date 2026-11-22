@@ -1,0 +1,24 @@
+  pass: 4 ops
+  pass: split allOutputs a,b,c
+  pass: output=a, additional=b,c
+  pass: typeText of each output
+  pass: split not returned (none of a,b,c returned)
+  pass: d,e returned
+  pass: producer map has a,b,c
+  pass: consumers of c and b
+  pass: topological order is source order
+  pass: each op once in topo order
+  pass: serialize round-trip
+  pass: returning only b marks split isReturn
+  pass: returning only b commits (no dangling return)
+  pass: strict duplicate (same op a,a)
+  pass: commit refuses duplicate (same op a,a)
+  pass: strict duplicate (second output dup of earlier op)
+  pass: commit refuses duplicate (second output dup of earlier op)
+  pass: bare dtype multi-output
+  pass: mixed IDENT<> + attributed tensor outputs
+  pass: isReturn via second output
+  pass: mixed program commits
+  pass: no-output op with opset suffix
+  pass: no empty-name producer
+PASS pr264-B-01

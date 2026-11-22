@@ -1,0 +1,5 @@
+STARTED_UTC=2026-11-22T08:38:28Z
+build_rc=0
+cc6072a82724a0445e0ffbdb6300b64672a3d492c70ed381a6e5edfae5360e31  /Users/nayte/.local/share/anvil/v050/verify/cleanroom/cleanroom-7915d08f
+cleanroom_tier_rc=0
+CLEANROOM_FINISHED_UTC=2026-11-22T08:41:33Z

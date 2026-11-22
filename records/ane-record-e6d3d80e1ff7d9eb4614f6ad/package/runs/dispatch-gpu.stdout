@@ -1,0 +1,2 @@
+CLEANROOM verdict=REPLICATED_SAME_CHIP_BYTE_IDENTICAL identical=15 differing=0 missing=0 wall=108s runIndex=5 frozen=true counted=5/5 set=5/5
+receipt=/Volumes/ANVIL-SSD/ane-hot/runs/qwen25-v050-20261122/dispatch-gpu/cleanroom-receipt.json sha256=48630668213eda7132117e32a11122bfdd0d5967cc7208c64b4cee1f99534f2b

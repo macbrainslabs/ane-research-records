@@ -1,0 +1,4 @@
+steering shape: [1, 1, 1536]  dtype: fp16  scale: 1.0
+values preview: [1.000000, 1.062500, 1.125000, 1.187500, 1.250000, ... (1536 total)]
+✓ injected steering at hidden_states_5 → hidden_states_5_steered
+✓ wrote /Users/nayte/.local/share/anvil/v050/verify/anerecore-2/tier/pr264-B/qwen.steer.mil

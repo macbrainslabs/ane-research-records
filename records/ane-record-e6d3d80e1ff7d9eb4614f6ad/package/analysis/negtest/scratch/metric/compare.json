@@ -1,0 +1,508 @@
+{
+  "arms" : {
+    "ane" : {
+      "chain" : {
+        "armFirstImEnd" : null,
+        "armGenerated" : 201,
+        "armStepsWithAnyNaN" : 0,
+        "commonPrefixLength" : 0,
+        "compared" : 65,
+        "firstDivergenceIndex" : 0,
+        "referenceFirstImEnd" : 27,
+        "referenceGenerated" : 65
+      },
+      "dumpComputeUnits" : "cpuAndNeuralEngine",
+      "prefill" : {
+        "lastPosition" : {
+          "armNaNCount" : 0,
+          "armRankOfReferenceWinner" : 2,
+          "armWinner" : 40,
+          "comparedValues" : 151936,
+          "cosine" : "9.862787388",
+          "maxAbsDiff" : "1.122683e+01",
+          "meanAbsDiff" : "2.070772e+00",
+          "referenceRankOfArmWinner" : 3,
+          "referenceWinner" : 9707,
+          "top5Arm" : [
+            40,
+            9707,
+            11,
+            13048,
+            9454
+          ],
+          "top5Overlap" : 3,
+          "top5Reference" : [
+            9707,
+            13048,
+            40,
+            18665,
+            2121
+          ]
+        },
+        "positions" : 28,
+        "positionsDiffering" : [
+          {
+            "arm" : 101646,
+            "position" : 0,
+            "reference" : 198
+          },
+          {
+            "arm" : 198,
+            "position" : 2,
+            "reference" : 474
+          },
+          {
+            "arm" : 264,
+            "position" : 4,
+            "reference" : 458
+          },
+          {
+            "arm" : 1966,
+            "position" : 9,
+            "reference" : 198
+          },
+          {
+            "arm" : 33975,
+            "position" : 10,
+            "reference" : 151645
+          },
+          {
+            "arm" : 32,
+            "position" : 13,
+            "reference" : 40
+          },
+          {
+            "arm" : 594,
+            "position" : 16,
+            "reference" : 374
+          },
+          {
+            "arm" : 498,
+            "position" : 17,
+            "reference" : 358
+          },
+          {
+            "arm" : 30,
+            "position" : 21,
+            "reference" : 3351
+          },
+          {
+            "arm" : 358,
+            "position" : 22,
+            "reference" : 151645
+          },
+          {
+            "arm" : 26,
+            "position" : 24,
+            "reference" : 151644
+          },
+          {
+            "arm" : 198,
+            "position" : 26,
+            "reference" : 21927
+          },
+          {
+            "arm" : 40,
+            "position" : 27,
+            "reference" : 9707
+          }
+        ],
+        "winnerAgreement" : 15
+      }
+    },
+    "cpuonly" : {
+      "chain" : {
+        "armFirstImEnd" : null,
+        "armGenerated" : 5,
+        "armStepsWithAnyNaN" : 30,
+        "commonPrefixLength" : 0,
+        "compared" : 5,
+        "firstDivergenceIndex" : 0,
+        "referenceFirstImEnd" : 27,
+        "referenceGenerated" : 65
+      },
+      "dumpComputeUnits" : "cpuOnly",
+      "prefill" : {
+        "lastPosition" : {
+          "armNaNCount" : 151936,
+          "armRankOfReferenceWinner" : null,
+          "armWinner" : -1,
+          "comparedValues" : 0,
+          "referenceRankOfArmWinner" : null,
+          "referenceWinner" : 9707,
+          "top5Arm" : [
+
+          ],
+          "top5Overlap" : 0,
+          "top5Reference" : [
+            9707,
+            13048,
+            40,
+            18665,
+            2121
+          ]
+        },
+        "positions" : 28,
+        "positionsDiffering" : [
+          {
+            "arm" : -1,
+            "position" : 0,
+            "reference" : 198
+          },
+          {
+            "arm" : -1,
+            "position" : 1,
+            "reference" : 14
+          },
+          {
+            "arm" : -1,
+            "position" : 2,
+            "reference" : 474
+          },
+          {
+            "arm" : -1,
+            "position" : 3,
+            "reference" : 525
+          },
+          {
+            "arm" : -1,
+            "position" : 4,
+            "reference" : 458
+          },
+          {
+            "arm" : -1,
+            "position" : 5,
+            "reference" : 4128
+          },
+          {
+            "arm" : -1,
+            "position" : 6,
+            "reference" : 17847
+          },
+          {
+            "arm" : -1,
+            "position" : 7,
+            "reference" : 11
+          },
+          {
+            "arm" : -1,
+            "position" : 8,
+            "reference" : 21149
+          },
+          {
+            "arm" : -1,
+            "position" : 9,
+            "reference" : 198
+          },
+          {
+            "arm" : -1,
+            "position" : 10,
+            "reference" : 151645
+          },
+          {
+            "arm" : -1,
+            "position" : 11,
+            "reference" : 198
+          },
+          {
+            "arm" : -1,
+            "position" : 12,
+            "reference" : 198
+          },
+          {
+            "arm" : -1,
+            "position" : 13,
+            "reference" : 40
+          },
+          {
+            "arm" : -1,
+            "position" : 14,
+            "reference" : 11
+          },
+          {
+            "arm" : -1,
+            "position" : 15,
+            "reference" : 358
+          },
+          {
+            "arm" : -1,
+            "position" : 16,
+            "reference" : 374
+          },
+          {
+            "arm" : -1,
+            "position" : 17,
+            "reference" : 358
+          },
+          {
+            "arm" : -1,
+            "position" : 18,
+            "reference" : 3291
+          },
+          {
+            "arm" : -1,
+            "position" : 19,
+            "reference" : 752
+          },
+          {
+            "arm" : -1,
+            "position" : 20,
+            "reference" : 448
+          },
+          {
+            "arm" : -1,
+            "position" : 21,
+            "reference" : 3351
+          },
+          {
+            "arm" : -1,
+            "position" : 22,
+            "reference" : 151645
+          },
+          {
+            "arm" : -1,
+            "position" : 23,
+            "reference" : 198
+          },
+          {
+            "arm" : -1,
+            "position" : 24,
+            "reference" : 151644
+          },
+          {
+            "arm" : -1,
+            "position" : 25,
+            "reference" : 8948
+          },
+          {
+            "arm" : -1,
+            "position" : 26,
+            "reference" : 21927
+          },
+          {
+            "arm" : -1,
+            "position" : 27,
+            "reference" : 9707
+          }
+        ],
+        "winnerAgreement" : 0
+      }
+    },
+    "gpu" : {
+      "chain" : {
+        "armFirstImEnd" : 33,
+        "armGenerated" : 201,
+        "armStepsWithAnyNaN" : 0,
+        "commonPrefixLength" : 7,
+        "compared" : 65,
+        "firstDivergenceIndex" : 7,
+        "referenceFirstImEnd" : 27,
+        "referenceGenerated" : 65
+      },
+      "dumpComputeUnits" : "cpuAndGPU",
+      "prefill" : {
+        "lastPosition" : {
+          "armNaNCount" : 0,
+          "armRankOfReferenceWinner" : 1,
+          "armWinner" : 9707,
+          "comparedValues" : 151936,
+          "cosine" : "0.947366964",
+          "maxAbsDiff" : "8.911624e+00",
+          "meanAbsDiff" : "1.284449e+00",
+          "referenceRankOfArmWinner" : 1,
+          "referenceWinner" : 9707,
+          "top5Arm" : [
+            9707,
+            40,
+            13048,
+            2121,
+            13936
+          ],
+          "top5Overlap" : 4,
+          "top5Reference" : [
+            9707,
+            13048,
+            40,
+            18665,
+            2121
+          ]
+        },
+        "positions" : 28,
+        "positionsDiffering" : [
+          {
+            "arm" : 17396,
+            "position" : 0,
+            "reference" : 198
+          },
+          {
+            "arm" : 198,
+            "position" : 1,
+            "reference" : 14
+          },
+          {
+            "arm" : 785,
+            "position" : 2,
+            "reference" : 474
+          },
+          {
+            "arm" : 2661,
+            "position" : 4,
+            "reference" : 458
+          },
+          {
+            "arm" : 5209,
+            "position" : 8,
+            "reference" : 21149
+          },
+          {
+            "arm" : 33975,
+            "position" : 10,
+            "reference" : 151645
+          },
+          {
+            "arm" : 7985,
+            "position" : 13,
+            "reference" : 40
+          },
+          {
+            "arm" : 498,
+            "position" : 17,
+            "reference" : 358
+          },
+          {
+            "arm" : 30,
+            "position" : 21,
+            "reference" : 3351
+          },
+          {
+            "arm" : 358,
+            "position" : 22,
+            "reference" : 151645
+          },
+          {
+            "arm" : 47,
+            "position" : 25,
+            "reference" : 8948
+          },
+          {
+            "arm" : 198,
+            "position" : 26,
+            "reference" : 21927
+          }
+        ],
+        "winnerAgreement" : 16
+      }
+    }
+  },
+  "note" : "Arm logits are fp16 from a LUT4-palettized Core ML package; the reference is fp32 from the original bf16 weights, so non-zero differences are expected on every arm",
+  "rankRule" : "1 + number of non-NaN values strictly greater than the value at the id; null when that value is NaN",
+  "reference" : {
+    "firstImEndGeneratedIndex" : 27,
+    "generatedWinners" : [
+      9707,
+      0,
+      358,
+      2776,
+      1588,
+      311,
+      1492,
+      498,
+      448,
+      894,
+      4755,
+      476,
+      9079,
+      498,
+      1231,
+      614,
+      13,
+      5209,
+      1077,
+      752,
+      1414,
+      1246,
+      358,
+      646,
+      7789,
+      498,
+      13,
+      151645,
+      198,
+      151643,
+      33975,
+      25,
+      2980,
+      498,
+      3410,
+      752,
+      448,
+      264,
+      1140,
+      315,
+      279,
+      1909,
+      220,
+      16,
+      15,
+      1429,
+      5411,
+      15473,
+      15459,
+      304,
+      220,
+      17,
+      15,
+      17,
+      18,
+      1939,
+      71703,
+      25,
+      22555,
+      11,
+      1588,
+      525,
+      279,
+      1909,
+      220
+    ],
+    "prefillWinners" : [
+      198,
+      14,
+      474,
+      525,
+      458,
+      4128,
+      17847,
+      11,
+      21149,
+      198,
+      151645,
+      198,
+      198,
+      40,
+      11,
+      358,
+      374,
+      358,
+      3291,
+      752,
+      448,
+      3351,
+      151645,
+      198,
+      151644,
+      8948,
+      21927,
+      9707
+    ],
+    "selfCheck" : {
+      "bitIdentical" : true,
+      "comparedPosition" : 27,
+      "elementsWithDifferentBits" : 0,
+      "maxAbsDiff" : "0.000000e+00",
+      "what" : "single-token recompute of the last prompt position (KV cache of earlier positions from the batched prefill) vs the batched prefill logits at that position"
+    },
+    "weightsSha256" : "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+  },
+  "schema" : "macbrains.research.qwen25-ref-compare.v1"
+}

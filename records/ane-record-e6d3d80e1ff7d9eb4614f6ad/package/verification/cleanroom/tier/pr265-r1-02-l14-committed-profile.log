@@ -1,0 +1,7 @@
+FAIL a-build-only-rc0 rc=2 REFUSING to build or run: fixture: run.fixture is missing or unreadable; tsv: run.tsv is missing or unreadable
+/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/probes/cleanroom/pr265-r1-02-l14-committed-profile.sh: line 17: cd: /Users/nayte/ane-hot/runs/lfm3-campaign-10692/north-real-range-20261028/full-trajectory/neo-full-fixture-bundle: No such file or directory
+FAIL b-fixture-listing-equals-recipe tool=unreadable recipe=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+PASS c-fixture-recorded unreadable
+PASS c-tsv-recorded unreadable
+PASS c-baselineIndex-recorded 149f747321e3fe2619c18c415a7347d02d0b3687b0896320ec69784dbefa0500
+SUMMARY bin=/Users/nayte/.local/share/anvil/v050/verify/cleanroom/cleanroom-7915d08f profile=/Users/nayte/.local/share/anvil/v050/verify/archive/spi/cleanroom/profiles/l14-minimal.profile.json pass=3 fail=2
