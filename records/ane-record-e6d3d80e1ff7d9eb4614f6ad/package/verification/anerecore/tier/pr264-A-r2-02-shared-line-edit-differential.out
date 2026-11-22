@@ -1,0 +1,3 @@
+INFO marker across `; `: refused: RewriteTransactionError.markerNotFound: marker `]; tensor<fp16, [1, 4]> d` not in function `main` body
+INFO indent-led marker: refused: RewriteTransactionError.markerNotFound: marker `            tensor<fp16, [1, 4]> d` not in function `<program>` body
+PASS pr264-A-r2-02-shared-line-edit-differential

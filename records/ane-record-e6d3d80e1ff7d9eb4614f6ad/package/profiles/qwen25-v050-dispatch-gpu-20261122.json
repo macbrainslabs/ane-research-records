@@ -1,0 +1,39 @@
+{
+  "id": "qwen25-v050-dispatch-gpu-20261122",
+  "criterion": "Published Qwen2.5-1.5B-Instruct-ANE LUT4 package (HF NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE @7f9ab466), qwen_dispatch_runner under Core ML cpuAndGPU, 200 greedy steps: every counted fresh-process run byte-identical to the pre-freeze baseline",
+  "mode": "replication-set",
+  "source": {
+    "rebuild": true,
+    "repo": "/Users/nayte/.local/share/anvil/v050/ane-re",
+    "commit": "8271bb68c0ac86afdd652e28b96e6ce71c8c3731",
+    "probeFiles": ["spi/cleanroom/runners/qwen_dispatch_runner.swift"],
+    "mainFile": "qwen_dispatch_runner.swift",
+    "swiftcArgs": ["-O", "-parse-as-library"],
+    "baselineRunnerSha": "54ee4d1f0cb51bfb282020f4832aa4501e0e0d3f533bd459953cd183adb83473"
+  },
+  "run": {
+    "argvMode": "infer-chain",
+    "fixture": "/Volumes/ANVIL-SSD/ane-hot/models/published/qwen2.5-1.5b-instruct-ane/7f9ab466b2265a96941670119670638ea22b65dc/qwen25_monolithic_full_lut4.mlmodelc",
+    "tsv": "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+    "tokens": "200",
+    "computeUnits": "cpuAndGPU",
+    "fixtureSha256": "e3c5cfc43c60b2bac682aed846b6165cfe7600c286f5d8b47a018bd134ba9e28",
+    "fixtureShaMethod": "sha256 of the LC_ALL=C sorted 'shasum -a 256' listing of every file under the .mlmodelc (paths relative to it, ./ prefix); the package zip qwen25_monolithic_full_lut4.mlmodelc.zip at the same commit has sha256 194b8f1088030eb2f27ac68fb1ccfa240776f73cb8c1d090978c7e3bd7f51c70",
+    "tsvSha256": "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+  },
+  "baseline": {
+    "indexJson": "/Users/nayte/.local/share/anvil/frozen-inputs/qwen25-ref-v050-20261122/baseline-gpu/index.json",
+    "indexSha256": "10c937eb2b05d187aa98fea8a4cbb3423982023db2f065361d3fc5fd67385c26",
+    "note": "One uncounted pre-freeze run (2026-11-22) by a runner rebuilt from source.commit the way cleanroom rebuilds it; kept with its log next to index.json"
+  },
+  "isolation": {"sandboxExec": false},
+  "deviceScope": {"chip": "Apple A18 Pro", "hwModel": "Mac17,5", "osVersion": "27.3", "osBuild": "26C5047e", "coreMLBundleVersion": "3610.2.3"},
+  "expected": {
+    "byteIdenticalToBaseline": true,
+    "hypothesis": "Pre-freeze baseline (not counted) and the v0.4.0 record: first generated token 9707, which equals the fp32 reference's first token",
+    "placement": "Core ML compute-plan preferred device per op is recorded in result.json for Core ML arms; ANE execution is INFERRED from placement, not traced"
+  },
+  "permittedModifications": [
+    "None: binary, fixture, prompt, decode steps and compute units are fixed by this profile; each counted run must be byte-identical to the baseline."
+  ]
+}

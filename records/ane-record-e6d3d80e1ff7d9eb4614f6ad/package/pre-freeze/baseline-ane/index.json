@@ -1,0 +1,17 @@
+{
+  "schema": "macbrains.research.cleanroom-baseline-index.v1",
+  "name": "ane",
+  "runStartedAt": "2026-11-22T07:45:41Z",
+  "runEndedAt": "2026-11-22T07:50:34Z",
+  "exitCode": 0,
+  "counted": false,
+  "runnerSha256": "54ee4d1f0cb51bfb282020f4832aa4501e0e0d3f533bd459953cd183adb83473",
+  "sourceCommit": "8271bb68c0ac86afdd652e28b96e6ce71c8c3731",
+  "computeUnits": "cpuAndNeuralEngine",
+  "tokens": "200",
+  "files": [
+    {"path": "chain.json", "sha256": "62be04bdd4c4295c7514dba5d7e099601248d4f04c2430bf7e7f0d85c0294983"},
+    {"path": "logits-prefill-last.f16", "sha256": "fe3824dc54e0da4364f731ee06cc40a4bc086acb1c7a68d67a4c59ff55b17955"},
+    {"path": "prefill.json", "sha256": "de7131f3303bc08e5f39ba704c0b2d3b8ceab47764a8681bbec4ccbbe8269687"}
+  ]
+}

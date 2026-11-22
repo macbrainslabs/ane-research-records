@@ -1,0 +1,5 @@
+pr263-A-06: corpus=/Users/nayte/.local/share/anvil/qwen-dispatch-v040/verify/anerecore-corpus-v2 files=156 parsed=134 unreadable=14 unparsed=5 invalid-original=3 renames=37 failures=0
+  unreadable (UNKNOWN, not tested): m097.mil m114.mil m115.mil m138.mil m139.mil m141.mil m142.mil m143.mil m146.mil m147.mil m148.mil m149.mil m150.mil m151.mil
+  original does not parse (not tested): m001.mil m002.mil m004.mil m005.mil m007.mil
+  original rejected by an unedited commit (not tested): m144.mil m145.mil m154.mil
+PASS pr263-A-06: 37 renames on 134 real MIL files are structurally isomorphic

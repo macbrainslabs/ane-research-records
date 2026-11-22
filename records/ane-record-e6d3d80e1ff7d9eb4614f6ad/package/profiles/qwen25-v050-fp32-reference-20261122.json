@@ -1,0 +1,39 @@
+{
+  "id": "qwen25-v050-fp32-reference-20261122",
+  "criterion": "Independent fp32 CPU reference of the original Qwen/Qwen2.5-1.5B-Instruct bf16 weights (qwen25_ref_runner, no Core ML), same prompt, 64 greedy steps: every counted fresh-process run byte-identical to the pre-freeze baseline, self-check bit-identical",
+  "mode": "replication-set",
+  "source": {
+    "rebuild": true,
+    "repo": "/Users/nayte/.local/share/anvil/v050/ane-re",
+    "commit": "8271bb68c0ac86afdd652e28b96e6ce71c8c3731",
+    "probeFiles": ["spi/cleanroom/runners/qwen25_ref_runner.swift"],
+    "mainFile": "qwen25_ref_runner.swift",
+    "swiftcArgs": ["-O", "-parse-as-library"],
+    "baselineRunnerSha": "7ef666770ba46e4320a2ce9ca268eb56abb189608da30878348d93940aced2a9"
+  },
+  "run": {
+    "argvMode": "infer-chain",
+    "fixture": "/Volumes/ANVIL-SSD/ane-hot/models/reference/qwen2.5-1.5b-instruct/model.safetensors",
+    "tsv": "/Users/nayte/.local/share/anvil/frozen-inputs/qwen-dispatch-20261112/qwen25-chatml-prompt-28.json",
+    "tokens": "64",
+    "computeUnits": "cpuOnly",
+    "fixtureSha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "fixtureShaMethod": "sha256 of model.safetensors, Qwen/Qwen2.5-1.5B-Instruct at Hugging Face commit 989aa7980e4cf806f80c7fef2b1adb7bc71aa306 (equals the Hugging Face LFS sha256); the runner also hashes it into every dump",
+    "tsvSha256": "20736e77c3f98a81007e6962c97d513a3189cacd566878d4145723a29c11f737"
+  },
+  "baseline": {
+    "indexJson": "/Users/nayte/.local/share/anvil/frozen-inputs/qwen25-ref-v050-20261122/baseline-ref/index.json",
+    "indexSha256": "ae1ca534c8ca882122b2294d63ea32f80c83d606de1ee8a2af2940a77692fcfc",
+    "note": "One uncounted pre-freeze run (2026-11-22) by a runner rebuilt from source.commit the way cleanroom rebuilds it; kept with its log next to index.json"
+  },
+  "isolation": {"sandboxExec": false},
+  "deviceScope": {"chip": "Apple A18 Pro", "hwModel": "Mac17,5", "osVersion": "27.3", "osBuild": "26C5047e", "coreMLBundleVersion": "3610.2.3"},
+  "expected": {
+    "byteIdenticalToBaseline": true,
+    "hypothesis": "Pre-freeze dev and baseline runs (not counted): last-prompt-position winner 9707 (40 ranked third), self-check bit-identical",
+    "placement": "Core ML compute-plan preferred device per op is recorded in result.json for Core ML arms; ANE execution is INFERRED from placement, not traced"
+  },
+  "permittedModifications": [
+    "None: binary, fixture, prompt, decode steps and compute units are fixed by this profile; each counted run must be byte-identical to the baseline."
+  ]
+}

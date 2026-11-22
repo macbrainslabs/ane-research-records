@@ -1,0 +1,47 @@
+STARTED_UTC=2026-11-22T10:33:42Z
+# link flags before eviction
+- /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/fp16/program.source.mil
+- /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/per-row/program.source.mil
+- /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/group128/program.source.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-fp16_m1-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-fp16_m1-mil.mil
+- /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-w8_m1-mil.mil
+- /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-w8_m1-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-head-mil.mil
+- /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8a-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8b-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-ab0146d8b84a973fb60b.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-bf948bda1b01d57cf33c.mil
+- /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-87d826f2897c3a3b873a.mil
+- /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-957906559c5ec40abbba.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/fp16/program.source.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/fp16/program.source.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/per-row/program.source.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/per-row/program.source.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/group128/program.source.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/group128/program.source.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-w8_m1-mil.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-w8_m1-mil.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-w8_m1-mil.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-w8_m1-mil.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8a-mil.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8a-mil.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-87d826f2897c3a3b873a.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-87d826f2897c3a3b873a.mil
+evicted content of '/Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-957906559c5ec40abbba.mil'
+evict rc=0 /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-957906559c5ec40abbba.mil
+# link flags after eviction
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/fp16/program.source.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/per-row/program.source.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/canary-inspection/lfm-reasoning/weight-canary/production-canary-20261020/group128/program.source.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-fp16_m1-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-fp16_m1-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-original-w8_m1-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/b5-tapped-w8_m1-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-head-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8a-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-19/task-8/evidence/production-m8b-mil.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-ab0146d8b84a973fb60b.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-bf948bda1b01d57cf33c.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-87d826f2897c3a3b873a.mil
+compressed,dataless /Users/nayte/Documents/Codex/2026-10-06/task-2/evidence/raw/neo-957906559c5ec40abbba.mil

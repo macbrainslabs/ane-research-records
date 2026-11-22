@@ -1,0 +1,3 @@
+tapped: lstm_2
+new returns (2): out000_y1, lstm_2
+✓ wrote /Users/nayte/.local/share/anvil/v050/verify/anerecore/tier/pr264-B/m134.lstm2.mil

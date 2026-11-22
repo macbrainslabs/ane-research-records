@@ -1,0 +1,32 @@
+  pass: renameVar middle output b
+  pass: functionWide middle output b
+  pass: programWide middle output b
+  pass: renameVar first output a
+  pass: programWide first output a
+  pass: renameVar last output c
+  pass: functionWide last output c
+  pass: downstream b -> x
+  pass: renameVar a->t, c->a
+  pass: renameVar onto a sibling output
+  pass: renameVar onto the input (5c)
+  pass: deleteOp rewire onto sibling
+  pass: deleteOp with siblings still used
+  pass: delete whole op via middle output
+  pass: deletedVars b,a,c
+  pass: rename then delete via renamed output
+  pass: deletedVars b1,a,c
+  pass: delete then renameVar a sibling
+  pass: delete then programWide a sibling
+  pass: addReturn c
+  pass: removeReturn b
+  pass: insert multi-output, addReturn q, rename p
+  pass: newVars p,q
+  pass: insert then delete via second output restores input
+  pass: newVars empty after insert+delete
+  pass: insert duplicating a sibling name
+  pass: rename first output of a multi-line op
+  INFO: wrapped LHS parses as 4 ops; renameVar(a) -> exact
+  INFO: split named "b": renameVar(b,bb) name attr -> follows b
+  pass: no-output insert records no new var
+  pass: second insert after the same var lands directly after it (as on base)
+PASS pr264-B-02

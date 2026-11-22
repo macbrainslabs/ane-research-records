@@ -1,0 +1,213 @@
+{
+  "checks" : [
+    {
+      "detail" : "allBytes=17016832 expected=17016832 lastBytes=607744",
+      "name" : "prefill.files",
+      "ok" : true
+    },
+    {
+      "detail" : "promptIds vs prompt.json ids",
+      "name" : "prefill.promptIds",
+      "ok" : true
+    },
+    {
+      "detail" : "positions=28 expected=28",
+      "name" : "prefill.positions.count",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.0",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.1",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.2",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.3",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.4",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.5",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.6",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.7",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.8",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.9",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.10",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.11",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.12",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.13",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.14",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.15",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.16",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.17",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.18",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.19",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.20",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.21",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.22",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.23",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.24",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.25",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.26",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "prefill.position.27",
+      "ok" : true
+    },
+    {
+      "detail" : "differs: steps[1].tokenIn",
+      "name" : "chain.reference",
+      "ok" : false
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.ane.prefill",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.ane.lastPosition",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.ane.chain",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.gpu.prefill",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.gpu.lastPosition",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.gpu.chain",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.cpuonly.prefill",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.cpuonly.lastPosition",
+      "ok" : true
+    },
+    {
+      "detail" : "match",
+      "name" : "arm.cpuonly.chain",
+      "ok" : true
+    }
+  ],
+  "mismatches" : 1,
+  "receiptSelfHash" : "0157a89a33e0a5c23ea8364fd6cc172f19302fdec64437b37e286ce5571933c7",
+  "schema" : "macbrains.research.qwen25-ref-recompute.v1",
+  "status" : "MISMATCH"
+}

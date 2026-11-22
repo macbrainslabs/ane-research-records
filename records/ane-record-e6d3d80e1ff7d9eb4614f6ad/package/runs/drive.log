@@ -1,0 +1,10 @@
+2026-11-22T08:08:34Z start dispatch-ane
+2026-11-22T08:22:23Z end dispatch-ane exit=0
+2026-11-22T08:22:23Z start dispatch-gpu
+2026-11-22T08:36:09Z start dispatch-cpuonly
+2026-11-22T08:36:52Z end dispatch-gpu exit=0
+2026-11-22T08:36:52Z DONE dispatch-ane dispatch-gpu
+2026-11-22T09:06:30Z end dispatch-cpuonly exit=0
+2026-11-22T09:06:30Z start fp32-reference
+2026-11-22T10:30:09Z end fp32-reference exit=0
+2026-11-22T10:30:09Z DONE dispatch-cpuonly fp32-reference

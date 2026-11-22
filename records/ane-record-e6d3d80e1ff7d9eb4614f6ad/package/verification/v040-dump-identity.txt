@@ -1,0 +1,10 @@
+# v0.4.0 counted run-1 dumps (macOS 27.3 26C5035r) vs v0.5.0 counted run-001 dumps (26C5047e); shasum -a 256, same file names
+IDENTICAL 62be04bdd4c4295c7514dba5d7e099601248d4f04c2430bf7e7f0d85c0294983 ane-vs-gpu/run-1/dump_ane/chain.json dispatch-ane/run-001/dump/chain.json
+IDENTICAL fe3824dc54e0da4364f731ee06cc40a4bc086acb1c7a68d67a4c59ff55b17955 ane-vs-gpu/run-1/dump_ane/logits-prefill-last.f16 dispatch-ane/run-001/dump/logits-prefill-last.f16
+IDENTICAL de7131f3303bc08e5f39ba704c0b2d3b8ceab47764a8681bbec4ccbbe8269687 ane-vs-gpu/run-1/dump_ane/prefill.json dispatch-ane/run-001/dump/prefill.json
+IDENTICAL 89691bed06326e82266b865cc734f11f7aac251dba1527cc34f290267b982b68 ane-vs-gpu/run-1/dump_gpu/chain.json dispatch-gpu/run-001/dump/chain.json
+IDENTICAL 8aa9f6c8d5d1b5c46bc5969dcf915ab6e5b01db2dd69c31af99cd20166ca61f7 ane-vs-gpu/run-1/dump_gpu/logits-prefill-last.f16 dispatch-gpu/run-001/dump/logits-prefill-last.f16
+IDENTICAL e496dc60626908cbce023f9792f117487a1005114295f6ec34aa692bda8fa7ab ane-vs-gpu/run-1/dump_gpu/prefill.json dispatch-gpu/run-001/dump/prefill.json
+IDENTICAL d6ffd826c1638e391195cd8d1819be3f3cc657418241a7f243432b269edd62d8 cpuonly/run-1/dump_cpu/chain.json dispatch-cpuonly/run-001/dump/chain.json
+IDENTICAL e1c23c0b054d6a0118e06151cebc0d3568a7175c7fb01200662dfc008cfac7ad cpuonly/run-1/dump_cpu/logits-prefill-last.f16 dispatch-cpuonly/run-001/dump/logits-prefill-last.f16
+IDENTICAL 59a141a66c399fff36f46c5fa4bf490da7ffd4a19451e07f8c6b5cb13c6c3f65 cpuonly/run-1/dump_cpu/prefill.json dispatch-cpuonly/run-001/dump/prefill.json

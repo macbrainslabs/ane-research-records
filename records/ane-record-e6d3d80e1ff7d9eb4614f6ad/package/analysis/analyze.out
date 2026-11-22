@@ -1,0 +1,12 @@
+run-001 compare_exit=0 recompute_exit=0 "status" : "EXACT"
+run-002 compare_exit=0 recompute_exit=0 "status" : "EXACT"
+run-003 compare_exit=0 recompute_exit=0 "status" : "EXACT"
+run-004 compare_exit=0 recompute_exit=0 "status" : "EXACT"
+run-005 compare_exit=0 recompute_exit=0 "status" : "EXACT"
+negtest exit=0 SUMMARY pass=4 fail=0
+compare files distinct sha256: 1
+dispatch-ane distinct dump listings across 5 runs: 1
+dispatch-gpu distinct dump listings across 5 runs: 1
+dispatch-cpuonly distinct dump listings across 5 runs: 1
+fp32-reference distinct dump listings across 5 runs: 1
+ANALYSIS_DONE status=0

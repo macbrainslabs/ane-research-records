@@ -1,0 +1,20 @@
+PASS S1 op type before a line break kept
+PASS S2 key with `=` on next line kept
+PASS S3 keyword-named vars renamed, types and string() calls kept
+PASS S4 function name and other strings kept under programWide
+PASS S5 other function untouched
+PASS T1 renameVar then removeReturn(old) refused at staging: RewriteTransactionError.varNotReturned: var `intermediate` is not in function `main`'s return tuple
+PASS T2 functionWide then removeReturn(old) refused at staging: RewriteTransactionError.varNotReturned: var `intermediate` is not in function `main`'s return tuple
+PASS T3 renameVar twice on old refused at commit: RewriteTransactionError.varNotFound: var `intermediate` not found in function `main`
+PASS T4 renameVar then programWide(old) refused at staging: RewriteTransactionError.varNotFound: var `intermediate` not found in function `<program>`
+PASS T5 deleteOp then programWide(old) refused at staging: RewriteTransactionError.varNotFound: var `out` not found in function `<program>`
+PASS T6 renameVar then insertOp(afterVar: old) refused at commit: RewriteTransactionError.varNotFound: var `intermediate` not found in function `main`
+PASS T7 renameVar then deleteOp(old) refused at commit: RewriteTransactionError.varNotFound: var `out` not found in function `main`
+PASS T8 renameVar then downstream(old) refused at commit: RewriteTransactionError.varNotFound: var `intermediate` not found in function `main`
+PASS T9 renameVar then addReturn(old) refused at commit: RewriteTransactionError.commitValidationFailed: re-parse or graph check failed: dangling return: function `main` returns `out`, which is neither produced by an op nor a function input
+PASS C1 swap chain renameVar(intermediate,t); renameVar(out,intermediate)
+PASS C2 round trip renameVar(a,b); renameVar(b,a) is byte-identical
+PASS C3 insertOp s, renameVar(s,s2), addReturn(s2)
+PASS C4 renameVar then removeReturn(new)
+INFO I1 insert-then-delete commits; s present=false
+pr263-A-r2-07: 0 fail

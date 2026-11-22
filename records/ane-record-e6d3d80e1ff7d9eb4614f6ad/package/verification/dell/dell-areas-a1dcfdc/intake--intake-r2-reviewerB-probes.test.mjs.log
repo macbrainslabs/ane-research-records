@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: R2B-P9 counted run logged as killed must not drop as eligible
+ok 1 - R2B-P9 counted run logged as killed must not drop as eligible
+  ---
+  duration_ms: 23.422736
+  type: 'test'
+  ...
+# Subtest: R2B-P9 counted run logged as timeout must not drop as eligible
+ok 2 - R2B-P9 counted run logged as timeout must not drop as eligible
+  ---
+  duration_ms: 16.057253
+  type: 'test'
+  ...
+# Subtest: R2B-P9 counted run logged as interrupted must not drop as eligible
+ok 3 - R2B-P9 counted run logged as interrupted must not drop as eligible
+  ---
+  duration_ms: 14.876174
+  type: 'test'
+  ...
+# Subtest: R2B-P9 counted run logged as cancelled must not drop as eligible
+ok 4 - R2B-P9 counted run logged as cancelled must not drop as eligible
+  ---
+  duration_ms: 14.235218
+  type: 'test'
+  ...
+# Subtest: R2B-P10 counted run that never completed must not drop as eligible
+ok 5 - R2B-P10 counted run that never completed must not drop as eligible
+  ---
+  duration_ms: 16.733535
+  type: 'test'
+  ...
+# Subtest: R2B-P11 a failed execution line without a dir must not be ignored
+ok 6 - R2B-P11 a failed execution line without a dir must not be ignored
+  ---
+  duration_ms: 15.908038
+  type: 'test'
+  ...
+# Subtest: R2B-P12 an uncounted post-freeze run must not drop, nor be labelled before-freeze
+ok 7 - R2B-P12 an uncounted post-freeze run must not drop, nor be labelled before-freeze
+  ---
+  duration_ms: 14.800399
+  type: 'test'
+  ...
+# Subtest: R2B-P13 a complete but failing control leg holds before any review
+ok 8 - R2B-P13 a complete but failing control leg holds before any review
+  ---
+  duration_ms: 14.634544
+  type: 'test'
+  ...
+# Subtest: R2B-P14 same claim over changed evidence is a new finding
+ok 9 - R2B-P14 same claim over changed evidence is a new finding
+  ---
+  duration_ms: 33.968325
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 227.772157

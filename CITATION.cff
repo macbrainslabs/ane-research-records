@@ -11,6 +11,7 @@ keywords:
   - "Model Intermediate Language"
   - "Hugging Face"
   - "compute units"
+  - "fp32 reference"
 title: "MacBrains Labs ANE Research Records"
 authors:
   - family-names: Wilson
@@ -18,8 +19,7 @@ authors:
     orcid: "https://orcid.org/0009-0003-4026-8212"
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
-version: "0.4.0"
-doi: "10.5281/zenodo.24183178"
+version: "0.5.0"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23798036"
@@ -36,8 +36,8 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24183178"
     description: "Version v0.4.0"
-date-released: "2026-11-12"
+date-released: "2026-11-22"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"
 url: "https://macbrainslabs.org/research/"
-abstract: "Versioned, source-bound public research records. v0.4.0 adds: Published Qwen2.5-1.5B Core ML package: greedy output depends on the compute unit, and cpuOnly returns NaN. Scope: one Mac, one published package, one prompt. ANE execution is inferred from Core ML compute-plan placement. The cpuOnly NaN finding covers the prefill logits only. No reference output was run, so which of the cpuAndNeuralEngine and cpuAndGPU outputs, if either, is correct is unresolved. No novelty claim."
+abstract: "Versioned, source-bound public research records. v0.5.0 adds: Published Qwen2.5-1.5B Core ML package against an fp32 reference of its original weights: the GPU output follows the reference for 7 tokens, the ANE output differs from the first token, and cpuOnly returns NaN. Scope: one Mac, the same chip, one published package, one prompt, compared with an fp32 CPU reference of the original weights. ANE execution is inferred from Core ML compute-plan placement. The cause of the differences is unknown, and the reference is not checked against PyTorch or transformers. No novelty claim."

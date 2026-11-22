@@ -1,0 +1,17 @@
+{
+  "schema": "macbrains.research.cleanroom-baseline-index.v1",
+  "name": "gpu",
+  "runStartedAt": "2026-11-22T07:50:34Z",
+  "runEndedAt": "2026-11-22T07:58:24Z",
+  "exitCode": 0,
+  "counted": false,
+  "runnerSha256": "54ee4d1f0cb51bfb282020f4832aa4501e0e0d3f533bd459953cd183adb83473",
+  "sourceCommit": "8271bb68c0ac86afdd652e28b96e6ce71c8c3731",
+  "computeUnits": "cpuAndGPU",
+  "tokens": "200",
+  "files": [
+    {"path": "chain.json", "sha256": "89691bed06326e82266b865cc734f11f7aac251dba1527cc34f290267b982b68"},
+    {"path": "logits-prefill-last.f16", "sha256": "8aa9f6c8d5d1b5c46bc5969dcf915ab6e5b01db2dd69c31af99cd20166ca61f7"},
+    {"path": "prefill.json", "sha256": "e496dc60626908cbce023f9792f117487a1005114295f6ec34aa692bda8fa7ab"}
+  ]
+}

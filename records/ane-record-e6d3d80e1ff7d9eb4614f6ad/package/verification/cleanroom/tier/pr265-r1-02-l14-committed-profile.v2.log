@@ -1,0 +1,9 @@
+INFO committed profile has missing inputs: run.fixture run.tsv
+PASS a-committed-missing-input-refused
+PASS a-manifest-records-refusal-reason
+PASS b-build-only-rc0
+PASS c-fixture-hash-equals-recipe-v1 a5ef6d4039d629450abe4f4221baaa90771f025ac0e9671d4941d6e95d6929e6
+PASS d-fixture-recorded a5ef6d4039d629450abe4f4221baaa90771f025ac0e9671d4941d6e95d6929e6
+PASS d-tsv-recorded 89a7a0c52f52ae4364e87718cea127c32aea9ee9ee2b42c8ced3b5acd6a945e0
+PASS d-baselineIndex-recorded 149f747321e3fe2619c18c415a7347d02d0b3687b0896320ec69784dbefa0500
+SUMMARY bin=/Users/nayte/.local/share/anvil/v050/verify/cleanroom/cleanroom-7915d08f profile=/Users/nayte/.local/share/anvil/v050/verify/archive/spi/cleanroom/profiles/l14-minimal.profile.json pass=7 fail=0

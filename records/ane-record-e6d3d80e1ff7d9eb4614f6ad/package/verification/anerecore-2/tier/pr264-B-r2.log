@@ -1,0 +1,47 @@
+INFO line-edit driver rc 0 LCOUNTS	files=134 edits=1254 ok=1121
+PASS corpus-line-edits-identical-to-ref differing lines=0 of 1254
+INFO pr264-B-r2-02-fix-checks-and-real-forms rc 0
+INFO-qwen-commit-sha256 d15a47950cf576cbeecbab0a1e595ba2b3f6e6c6d8d76ac195c30e3a563a263c
+INFO-escaped-quote refused: MILParseError.unmatchedBrace at line 3: brace depth = 1 (never reached 0)
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-program1 ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-program13-brace ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-literals ops=5
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-string-with-semicolon-paren ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-multiline-op-semicolon-in-string ops=1
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-scalar-lhs ops=2
+PASS pr264-B-r2-02-fix-checks-and-real-forms:KEEP-qwen-fixture sha=9c8dccb6900d2bf2 bytes=2061429 serialize-exact=true commit-equals-text-plus-final-LF=true
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-crlf MILParseError.unsupportedLineEnding at line 1: carriage return found; MIL text must use LF line ends
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-header-version MILParseError.invalidProgramVersion at line 1: `program(zz.3)` is not `program(DIGITS[.DIGITS])` followed only
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-header-trailing MILParseError.unexpectedText at line 1: unexpected text `junk`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-header-empty-part MILParseError.invalidProgramVersion at line 1: `program(1.)` is not `program(DIGITS[.DIGITS])` followed only b
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-text-after-body-brace MILParseError.unexpectedText at line 3: unexpected text `tensor<fp16, [1, 4]> q = relu(x = x)[name = string("q
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-return-two-words MILParseError.invalidReturnTuple at line 5: cannot parse return tuple `y q`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-return-trailing-text MILParseError.invalidReturnTuple at line 5: cannot parse return tuple `} -> (y); foo(y)`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-return-digit-start MILParseError.invalidReturnTuple at line 5: cannot parse return tuple `1y`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-empty-opset MILParseError.invalidOpLine at line 4: cannot parse op `tensor<fp16, [1, 4]> y = relu<>(x = x)[name = string("
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-var-in-tensor-literal MILParseError.invalidLiteral at line 4: identifier inside literal `tensor<fp16, [2]>([x, x])`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-text-after-literal-arg MILParseError.invalidLiteral at line 4: identifier inside literal `string("a") + x`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-text-after-literal-attr MILParseError.invalidLiteral at line 4: identifier inside literal `string("y") x`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-two-ops-one-line ["q", "y"]
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-64 RewriteTransactionError.varNotFound: var `64` not found in function `<program>`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-1 RewriteTransactionError.varNotFound: var `1` not found in function `<program>`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-true RewriteTransactionError.varNotFound: var `true` not found in function `<program>`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-B1-1.3 RewriteTransactionError.varNotFound: var `1.3` not found in function `<program>`
+PASS pr264-B-r2-02-fix-checks-and-real-forms:FIX-N1-splice-var-programWide ["y", "ax", "bl", "z2"]
+PASS pr264-B-r2-02-fix-checks-and-real-forms:EDIT-three-delete-middle ["a", "y"] ["x": ["a"], "y": ["a"]]
+PASS pr264-B-r2-02-fix-checks-and-real-forms:EDIT-three-steer-first-multiline-insert ["a", "a_c", "a_s", "b", "y"]
+PASS pr264-B-r2-02-fix-checks-and-real-forms:EDIT-three-splice-third ["a", "b", "y", "z"]
+INFO rc list=0 tapc=0 tapb=0 steer=0; list: function 'main' <ios18>: 4 ops, 1 outputs| ax const int32 scalar| a split fp16 [1, 2]| b split fp16 [1, 2]| c add fp16 [1, 2]| d relu fp16 [1, 2] [output]|
+PASS shared-list-has-ax 
+PASS shared-list-has-a 
+PASS shared-list-has-b 
+PASS shared-list-has-c 
+PASS shared-list-has-d 
+PASS shared-tap-c rc=0
+PASS shared-tap-b-second-output rc=0
+PASS shared-steer-c rc=0
+INFO   shared.tapc.mil: ["ax", "a,b", "c", "d"] -> ["d", "c"]
+INFO   shared.tapb.mil: ["ax", "a,b", "c", "d"] -> ["d", "b"]
+INFO   shared.steer.mil: ["ax", "a,b", "c", "c_steer_const", "c_steered", "d"] -> ["d"]
+PASS shared-outputs-reparse rc=0
+pr264-B-r2: gating passed=38 failed=0

@@ -1,0 +1,17 @@
+  ok L1 renameVar string->s2
+  ok L2 renameVar name->n2
+  ok L3 renameVar main->m2 (signature kept)
+  ok L4 functionWide fp16->h (dtypes kept)
+  ok L5 programWide a->a2 (header kept)
+  ok L6 renameVar a->a2 (other strings kept)
+  ok L7 renameVar a->a2 in tuple arg
+  ok L8 renameVar a->a2 under two-line signature
+  ok L9 renameVar b->b2 in fb (string mentions fb signature)
+  ok L10 renameVar(a,t); renameVar(c,a)
+  ok L11a removeReturn last output: RewriteTransactionError.cannotRemoveLastReturn: removing `c` would leave function `main` with no out
+  ok L11b removeReturn duplicated entry
+  ok L11c removeReturn then addReturn same var
+  ok L11d addReturn keeps tuple padding bytes
+  ok L11e removeReturn of renamed-away var: RewriteTransactionError.varNotReturned: var `a` is not in function `main`'s return tuple
+  (n/a cases: 0)
+PASS pr263-B-r2-05-lexer-and-notes

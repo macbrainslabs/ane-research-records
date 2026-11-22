@@ -1,0 +1,5 @@
+PASS unmodified-copy-exact (exit 0)
+PASS flipped-logits-byte-mismatch (exit 1)
+PASS edited-chain-token-mismatch (exit 1)
+PASS edited-compare-metric-mismatch (exit 1)
+SUMMARY pass=4 fail=0

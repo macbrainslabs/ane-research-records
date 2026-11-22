@@ -1,0 +1,4 @@
+GAP return } -> (y, y);: parsed; ops [["ax", "y"]] returns [["y", "y"]]
+GAP bare arg x = x x: parsed; ops [["ax", "y"]] returns [["y"]]
+GAP bare arg x = x + x: parsed; ops [["ax", "y"]] returns [["y"]]
+PASS pr264-A-r2-04-new-refusals-edges

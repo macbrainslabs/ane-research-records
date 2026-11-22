@@ -80,6 +80,32 @@
         "failed": 0
       },
       "siteUrl": "https://macbrainslabs.org/research/records/ane-record-10528818ee0e902331b666ee/"
+    },
+    {
+      "kind": "package",
+      "tag": "ane-record-e6d3d80e1ff7d9eb4614f6ad",
+      "version": "v0.5.0",
+      "title": "Published Qwen2.5-1.5B Core ML package against an fp32 reference of its original weights: the GPU output follows the reference for 7 tokens, the ANE output differs from the first token, and cpuOnly returns NaN",
+      "path": "records/ane-record-e6d3d80e1ff7d9eb4614f6ad/",
+      "releasedOn": "2026-11-22",
+      "reviewedPackageSha256": "e6d3d80e1ff7d9eb4614f6ad693ea4121150c86d5ac9045f0b94dc4081731013",
+      "recordSha256": "0e4d88d1039eb946913ef1f36bd75144eb59f4f99bbeccfeecc5c385f550b02d",
+      "filesListSha256": "290be0157447bc891fd236a2b708d85daf30537f0c49f1328400692eed07909f",
+      "attestationSha256": "f38d27931f8be739670d5a5696d3a24062f023bb9f338e8e12c364f4682ba6f6",
+      "replication": {
+        "scope": "same-chip",
+        "claim": "same-chip, byte-reproducible on Apple A18 Pro (Mac17,5), macOS 27.3 (build 26C5047e), CoreML 3610.2.3; ANE execution INFERRED from Core ML compute-plan placement; no novelty claim",
+        "profileHashes": [
+          "be83f5a03df95fd85761dd8e076a756aef6d50ea9297351042b1072e09a5f5af",
+          "501d5de7a5e3a64635fed8a194ec95bd4345e6f89d1c94375ea23c108b6617fc",
+          "58d8e4773ce086c1edddfedbdd6db5355b08c3d1dd21a6464008e4de58a09afe",
+          "b9c6730f68f62e3ffd83690e7345c6eb4ceb3d92de4f17733cc0bde273088d19"
+        ],
+        "counted": 20,
+        "passed": 20,
+        "failed": 0
+      },
+      "siteUrl": "https://macbrainslabs.org/research/records/ane-record-e6d3d80e1ff7d9eb4614f6ad/"
     }
   ]
 }

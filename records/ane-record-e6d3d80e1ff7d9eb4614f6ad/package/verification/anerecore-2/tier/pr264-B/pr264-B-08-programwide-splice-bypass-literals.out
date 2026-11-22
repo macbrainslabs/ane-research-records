@@ -1,0 +1,9 @@
+  pass: programWide false->true splice=false refused: RewriteTransactionError.varNotFound: var `false` not found in function `<program>`
+  pass: programWide false->true splice=true refused: RewriteTransactionError.varNotFound: var `false` not found in function `<program>`
+  pass: programWide 1->ax splice=false refused: RewriteTransactionError.varNotFound: var `1` not found in function `<program>`
+  pass: programWide 1->ax splice=true refused: RewriteTransactionError.varNotFound: var `1` not found in function `<program>`
+  pass: programWide 2->ax splice=false refused: RewriteTransactionError.varNotFound: var `2` not found in function `<program>`
+  pass: programWide 2->ax splice=true refused: RewriteTransactionError.varNotFound: var `2` not found in function `<program>`
+  pass: programWide 0->tr splice=false refused: RewriteTransactionError.varNotFound: var `0` not found in function `<program>`
+  pass: programWide 0->tr splice=true refused: RewriteTransactionError.varNotFound: var `0` not found in function `<program>`
+PASS pr264-B-08
