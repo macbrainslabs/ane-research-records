@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "description": "Column contract for every CSV in data/. scripts/verify.mjs fails if a CSV is missing here, if its header differs, or if a value breaks its column type.",
+  "tables": {
+    "qwen-placement.csv": {
+      "record_class": "source-bound curated summary",
+      "columns": {"model": "string", "compiled_function": "string", "ane_assigned_ops": "integer", "cpu_assigned_ops": "integer",
+                  "total_assigned_ops": "integer", "cpu_tail_description": "string", "placement_evidence": "string", "source_note": "site_url"}
+    },
+    "qwen-state-primitives.csv": {
+      "record_class": "source-bound curated summary",
+      "columns": {"primitive": "string", "ane_assigned_ops": "integer", "cpu_assigned_ops": "integer", "source_note": "site_url"}
+    },
+    "lfm-s2-parity.csv": {
+      "record_class": "source-bound curated summary",
+      "columns": {"artifact": "string", "output": "string", "ane_cosine_against_fp16_fixture": "cosine",
+                  "ane_relative_l2_against_fp16_fixture": "nonnegative", "passes_declared_ane_gate": "boolean",
+                  "ane_assigned_compute_ops": "integer", "total_compute_ops": "integer", "source_note": "site_url"}
+    },
+    "lfm-s2-diagnostic.csv": {
+      "record_class": "source-bound curated summary",
+      "columns": {"artifact": "string", "output": "string", "ane_cosine_against_fp16_fixture": "cosine",
+                  "ane_relative_l2_against_fp16_fixture": "nonnegative", "source_note": "site_url"}
+    },
+    "qwen-batch-throughput.csv": {
+      "record_class": "source-bound curated summary",
+      "columns": {"model": "string", "device": "string", "batch_size": "integer", "aggregate_tokens_per_second": "nonnegative",
+                  "reported_relative_to_b1": "nonnegative", "measurement_type": "string", "source_note": "site_url"}
+    }
+  }
+}
