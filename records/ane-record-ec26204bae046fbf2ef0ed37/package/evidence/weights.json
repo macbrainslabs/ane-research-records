@@ -1,0 +1,27 @@
+{
+  "256": {
+    "sha256": "5351b1f460826bdffbedf6cd135deb05276d93b03f9be7d56157c0a76217a183",
+    "size": 831054208,
+    "match_expected": true
+  },
+  "512": {
+    "sha256": "5351b1f460826bdffbedf6cd135deb05276d93b03f9be7d56157c0a76217a183",
+    "size": 831054208,
+    "match_expected": true
+  },
+  "1024": {
+    "sha256": "5351b1f460826bdffbedf6cd135deb05276d93b03f9be7d56157c0a76217a183",
+    "size": 831054208,
+    "match_expected": true
+  },
+  "2048": {
+    "sha256": "5351b1f460826bdffbedf6cd135deb05276d93b03f9be7d56157c0a76217a183",
+    "size": 831054208,
+    "match_expected": true
+  },
+  "4096": {
+    "sha256": "5351b1f460826bdffbedf6cd135deb05276d93b03f9be7d56157c0a76217a183",
+    "size": 831054208,
+    "match_expected": true
+  }
+}

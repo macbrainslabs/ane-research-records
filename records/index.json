@@ -108,5 +108,29 @@
       },
       "siteUrl": "https://macbrainslabs.org/research/records/ane-record-e6d3d80e1ff7d9eb4614f6ad/"
     }
-  ]
+ ,
+   {
+      "kind": "package",
+      "tag": "ane-record-ec26204bae046fbf2ef0ed37",
+      "version": "v0.6.0",
+      "title": "LFM3-1.7B (pruned, strict-LUT4) single-segment Core ML build: 1756/1756 ops planned on the ANE, 256–4096 positions (same chip, single device)",
+      "path": "records/ane-record-ec26204bae046fbf2ef0ed37/",
+      "releasedOn": "2026-11-26",
+      "reviewedPackageSha256": "ec26204bae046fbf2ef0ed374871c69a871d1f0386fa85ebe045b27562afb2d3",
+      "recordSha256": "cc1edc7288bc821c4fecd8b10e004d979a53d0845cc39290830f571d1cd5847d",
+      "filesListSha256": "9dc586ad198455e148f17758f7577c35f59d32a616faf4d9292c7d09bb3a710d",
+      "attestationSha256": "2bfc2c525c0f6bed7ed5c89d0345b94cdec64d8b276aa61ece7694d536cfe9b6",
+      "replication": {
+         "scope": "same-chip",
+         "claim": "same-chip, single device (Apple A18 Pro (Mac17,5), macOS 27.3 (build 26C5047e)); MLComputePlan places 1756/1756 device-assigned ops on the ANE at 256, 512, 1024, 2048 and 4096 positions; ANE execution INFERRED from compute-plan placement; decode timing INDICATIVE (load gate failed); no novelty claim",
+         "profileHashes": [
+            "6d740b62fccb723617eeabde3eb917fc6a95e461078f3e978e30b1dba1548f1c"
+         ],
+         "counted": 25,
+         "passed": 25,
+         "failed": 0
+      },
+      "siteUrl": "https://macbrainslabs.org/research/records/ane-record-ec26204bae046fbf2ef0ed37/"
+   }
+ ]
 }

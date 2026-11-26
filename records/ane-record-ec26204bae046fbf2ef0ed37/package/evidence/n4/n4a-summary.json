@@ -1,0 +1,8 @@
+{
+  "rc": 1,
+  "wall_s": 34.58080792427063,
+  "stdout": "",
+  "stderr": "anec-run: error: the prompt is 5059 tokens and the context holds 4096\n",
+  "prompt_tokens_target": null,
+  "method": "fallback word approximation (tokenizers lib unavailable) \u2014 token count UNKNOWN"
+}

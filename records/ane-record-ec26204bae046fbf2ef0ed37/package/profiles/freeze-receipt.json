@@ -1,0 +1,10 @@
+{
+  "profileFile": "lfm3-v060-strict-lut4-20261126.json",
+  "profileHash": "6d740b62fccb723617eeabde3eb917fc6a95e461078f3e978e30b1dba1548f1c",
+  "profileCommit": "40b220df5db3318cc65f86a04ec516f9ea2729ed",
+  "profileRepo": "profile-repo (local git repo on the measurement device, created for this record)",
+  "firstCommit": "2dc9d12146ba10607683424c4b99476229e70fd9",
+  "correction": "The first freeze commit 2dc9d12146ba10607683424c4b99476229e70fd9 included the SHA256SUMS helper file as an eighth asset entry in the profile. It was corrected to commit 40b220df5db3318cc65f86a04ec516f9ea2729ed, whose profile lists exactly the 7 release assets, BEFORE any counted run. The corrected commit is the freeze of record; profileHash 6d740b62fccb723617eeabde3eb917fc6a95e461078f3e978e30b1dba1548f1c is sha256 of the canonical JSON of the corrected committed profile.",
+  "committedBeforeFirstCountedRun": true,
+  "firstCountedRunEndUtc": "2026-11-26T20:28:40Z"
+}

@@ -1,8 +1,8 @@
 {
   "title": "MacBrains Labs ANE Research Records",
   "upload_type": "dataset",
-  "publication_date": "2026-11-22",
-  "description": "<p>Versioned, source-bound public research records from MacBrains Labs. Each version is a cumulative snapshot of the archive repository; v0.1.0 holds the original public measurement summaries, v0.2.0 the LFM3-1.7B layer-14 diagnostic record, v0.3.0 the ANERECore MIL parity record and v0.4.0 the Qwen2.5-1.5B Core ML compute-unit dispatch record. Version v0.5.0 adds the diagnostic record Published Qwen2.5-1.5B Core ML package against an fp32 reference of its original weights: the GPU output follows the reference for 7 tokens, the ANE output differs from the first token, and cpuOnly returns NaN in records/ane-record-e6d3d80e1ff7d9eb4614f6ad/.</p><p>Scope: same-chip, byte-reproducible on Apple A18 Pro (Mac17,5), macOS 27.3 (build 26C5047e), CoreML 3610.2.3; ANE execution INFERRED from Core ML compute-plan placement; no novelty claim. Hugging Face package NayteThaGreat/Qwen2.5-1.5B-Instruct-ANE at 7f9ab466 against an fp32 CPU reference of Qwen/Qwen2.5-1.5B-Instruct at 989aa798, one prompt, greedy. The cause is unknown; the reference is not checked against PyTorch or transformers. Same-chip reruns are repeatability only, not cross-device replication. Four setup profiles, each committed before its first counted run: 20 runs logged device-wide, all counted, all passed, all disclosed. The record measures a model package that MacBrains Labs itself published on Hugging Face.</p><p>Records are reviewed summaries, not peer-reviewed results. The reported measurements have not been independently replicated by this deposit. Reviewed package SHA-256 e6d3d80e1ff7d9eb4614f6ad693ea4121150c86d5ac9045f0b94dc4081731013; reviewed record SHA-256 0e4d88d1039eb946913ef1f36bd75144eb59f4f99bbeccfeecc5c385f550b02d.</p>",
+  "publication_date": "2026-11-26",
+  "description": "<p>Version v0.6.0 adds a package record for the strict-LUT4 one-segment build of a width-pruned LFM3-1.7B (feed-forward 7680 to 7168, 1.65B parameters), released as lfm3-1.7b-ane v0.2.0. Every large weight is a 4-bit lookup table (143 LUT4 operations). Core ML's compute plan assigns all 1,756 device-assigned operations to the Apple Neural Engine at 256, 512, 1024, 2048 and 4096 positions (the remaining enumerated operations are constants and the lookup-table carriers, which carry no device assignment); the token-embedding lookup runs on the host. Same-chip decode: 39.9 tok/s median at 256 and 23.5 tok/s at 4096 positions (INDICATIVE — measured on a loaded machine; the pre-run load gate never passed — 25 polls, minimum 5.68 — and individual runs began at loads between about 4.3 and 10.3) on Apple A18 Pro (Mac17,5), macOS 27.3 (26C5047e). Scope: one device; ANE hardware activity during decode measured with powermetrics; per-operation execution INFERRED from compute-plan placement; output quality measured against the pruned checkpoint only (31–32/39 on the lab scorecard); a 3,939-token prompt run completed to position 3,970 of 4,096 but a literal full-cache run was not demonstrated; runtime binary-only; no novelty claim. Records are reviewed summaries, not peer-reviewed results.</p><p>Reviewed package SHA-256 ec26204bae046fbf2ef0ed374871c69a871d1f0386fa85ebe045b27562afb2d3; reviewed record SHA-256 cc1edc7288bc821c4fecd8b10e004d979a53d0845cc39290830f571d1cd5847d.</p><p>The reported measurements have not been independently replicated by this deposit.</p>",
   "creators": [
     {
       "name": "Wilson, Nayte",
@@ -22,7 +22,12 @@
     "Model Intermediate Language",
     "Hugging Face",
     "compute units",
-    "fp32 reference"
+    "fp32 reference",
+    "LFM3-1.7B",
+    "4-bit palettization",
+    "LUT4",
+    "long context",
+    "MLComputePlan"
   ],
   "related_identifiers": [
     {
@@ -36,15 +41,35 @@
       "resource_type": "software"
     },
     {
-      "identifier": "https://macbrainslabs.org/research/records/ane-record-e6d3d80e1ff7d9eb4614f6ad/",
+      "identifier": "https://macbrainslabs.org/research/records/ane-record-ec26204bae046fbf2ef0ed37/",
       "relation": "isDocumentedBy",
       "resource_type": "publication-other"
     },
     {
-      "identifier": "https://github.com/macbrainslabs/ane-research-records/tree/ane-record-e6d3d80e1ff7d9eb4614f6ad",
+      "identifier": "https://github.com/macbrainslabs/ane-research-records/tree/ane-record-ec26204bae046fbf2ef0ed37",
       "relation": "isSupplementTo",
       "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/naytewilson/lfm3-1.7b-ane/releases/tag/v0.2.0",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/naytewilson/lfm3-1.7b-ane",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://huggingface.co/LiquidAI/LFM3-1.7B/tree/40ebe0aa",
+      "relation": "isDerivedFrom",
+      "resource_type": "model"
+    },
+    {
+      "identifier": "10.5281/zenodo.24449434",
+      "relation": "isNewVersionOf",
+      "resource_type": "dataset"
     }
   ],
-  "version": "v0.5.0"
+  "version": "v0.6.0"
 }

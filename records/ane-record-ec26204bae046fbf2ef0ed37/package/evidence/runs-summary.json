@@ -1,0 +1,241 @@
+{
+  "timing_verdict": "INDICATIVE",
+  "minload_poll": 5.68,
+  "summary": {
+    "256": {
+      "runs": [
+        {
+          "n": 1,
+          "rc": 0,
+          "wall_s": 30.727468013763428,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 6.54
+        },
+        {
+          "n": 2,
+          "rc": 0,
+          "wall_s": 1.4584908485412598,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 5.31
+        },
+        {
+          "n": 3,
+          "rc": 0,
+          "wall_s": 1.4276058673858643,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 5.31
+        },
+        {
+          "n": 4,
+          "rc": 0,
+          "wall_s": 1.4073269367218018,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 5.31
+        },
+        {
+          "n": 5,
+          "rc": 0,
+          "wall_s": 1.3650710582733154,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 5.21
+        }
+      ],
+      "byte_identical": true,
+      "completed": 5,
+      "passed_rc0": 5
+    },
+    "512": {
+      "runs": [
+        {
+          "n": 1,
+          "rc": 0,
+          "wall_s": 32.189900159835815,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 5.21
+        },
+        {
+          "n": 2,
+          "rc": 0,
+          "wall_s": 1.6454319953918457,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 4.29
+        },
+        {
+          "n": 3,
+          "rc": 0,
+          "wall_s": 1.455402135848999,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 4.29
+        },
+        {
+          "n": 4,
+          "rc": 0,
+          "wall_s": 1.5296940803527832,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 4.29
+        },
+        {
+          "n": 5,
+          "rc": 0,
+          "wall_s": 1.4385390281677246,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 4.29
+        }
+      ],
+      "byte_identical": true,
+      "completed": 5,
+      "passed_rc0": 5
+    },
+    "1024": {
+      "runs": [
+        {
+          "n": 1,
+          "rc": 0,
+          "wall_s": 35.77776098251343,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 4.27
+        },
+        {
+          "n": 2,
+          "rc": 0,
+          "wall_s": 1.7960829734802246,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 8.86
+        },
+        {
+          "n": 3,
+          "rc": 0,
+          "wall_s": 1.646381139755249,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 8.47
+        },
+        {
+          "n": 4,
+          "rc": 0,
+          "wall_s": 1.7101969718933105,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 8.47
+        },
+        {
+          "n": 5,
+          "rc": 0,
+          "wall_s": 1.6375577449798584,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 8.47
+        }
+      ],
+      "byte_identical": true,
+      "completed": 5,
+      "passed_rc0": 5
+    },
+    "2048": {
+      "runs": [
+        {
+          "n": 1,
+          "rc": 0,
+          "wall_s": 38.62876009941101,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 8.11
+        },
+        {
+          "n": 2,
+          "rc": 0,
+          "wall_s": 2.1768229007720947,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 10.28
+        },
+        {
+          "n": 3,
+          "rc": 0,
+          "wall_s": 2.001007080078125,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 10.28
+        },
+        {
+          "n": 4,
+          "rc": 0,
+          "wall_s": 1.89546799659729,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 9.85
+        },
+        {
+          "n": 5,
+          "rc": 0,
+          "wall_s": 2.0916121006011963,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 9.85
+        }
+      ],
+      "byte_identical": true,
+      "completed": 5,
+      "passed_rc0": 5
+    },
+    "4096": {
+      "runs": [
+        {
+          "n": 1,
+          "rc": 0,
+          "wall_s": 39.35708808898926,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 9.22
+        },
+        {
+          "n": 2,
+          "rc": 0,
+          "wall_s": 2.92828106880188,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 7.14
+        },
+        {
+          "n": 3,
+          "rc": 0,
+          "wall_s": 2.827645778656006,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 7.14
+        },
+        {
+          "n": 4,
+          "rc": 0,
+          "wall_s": 2.8193578720092773,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 7.13
+        },
+        {
+          "n": 5,
+          "rc": 0,
+          "wall_s": 2.7947120666503906,
+          "stdout_sha256": "f2fa123a32ca6e7946be7524dab4b5bf7ba66d1f4a9c232bae6d9555fa1534f2",
+          "stdout": "The capital of France is Paris, which has been the capital for centuries.\n",
+          "load": 7.13
+        }
+      ],
+      "byte_identical": true,
+      "completed": 5,
+      "passed_rc0": 5
+    }
+  }
+}

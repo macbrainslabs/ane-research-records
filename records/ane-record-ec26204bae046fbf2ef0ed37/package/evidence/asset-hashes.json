@@ -1,0 +1,10 @@
+{
+  "SHA256SUMS": "c72825c8336718538adc0f7017b2414d6c7eea5edb46938b38e6b8e05ab13e1a",
+  "embed_tokens.bf16.bin": "5f1df3bbc564554f48a7fb542f96e745c92e2315c92279944d9e65d234bec4bc",
+  "lfm3-1.7b-pruned7168-strict-lut4-c1024.tar": "91d4bcb0a2234dd4a87880d730186b047b730da31973e5ec3bf451f220ef07ed",
+  "lfm3-1.7b-pruned7168-strict-lut4-c2048.tar": "9f869ebba7961e056813e54eeb80ef7af5ed6ce39cd93f250a6488615e235c2f",
+  "lfm3-1.7b-pruned7168-strict-lut4-c256.tar": "a9b3f866ee589bdeb02e1b25ea283dfabfcad93a01907e912caf9e3949cf366a",
+  "lfm3-1.7b-pruned7168-strict-lut4-c4096.tar": "b151274754fed55a163a3ca7151e9a2b07b6811297ab56bcf37057417b4f0505",
+  "lfm3-1.7b-pruned7168-strict-lut4-c512.tar": "e66da789940deb8933bfc90b7407377d9c18db30244e89aa8b763a920d22fbde",
+  "lfm3-ane-runner-r5-macos-arm64.tar": "0279b0ae76e87992fb66dcda6ac2e4c7063e6d8f572b99717aceb2e04d536da6"
+}

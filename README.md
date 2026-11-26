@@ -70,7 +70,7 @@ See [Public evidence audit and limitations](docs/PUBLIC_EVIDENCE_AUDIT.md) for p
 
 ## How to cite
 
-Cite the version you used. The current version is **v0.5.0**, DOI [10.5281/zenodo.24449434](https://doi.org/10.5281/zenodo.24449434); every version DOI is listed in [CITATION.cff](CITATION.cff) and [records/index.json](records/index.json).
+Cite the version you used. The current version is **v0.6.0** (publication pending — its version DOI will be recorded here and in CITATION.cff once Zenodo registers it); every version DOI is listed in [CITATION.cff](CITATION.cff) and [records/index.json](records/index.json).
 
 The **Zenodo DOI for v0.1.0** is [10.5281/zenodo.23798037](https://doi.org/10.5281/zenodo.23798037); the [all-versions DOI](https://doi.org/10.5281/zenodo.23798036) resolves to the release family. The version-specific [GitHub release](https://github.com/macbrainslabs/ane-research-records/releases/tag/v0.1.0) is pinned to commit `257e54868c26bbb407199fe042f55c82b14b9cc5`. Zenodo and DataCite independently confirmed the record on 2026-10-30. The immutable tag/archive retain the pre-assignment metadata; this default branch records the subsequently verified DOI. In v0.1.0, only public curated summaries, not private experimental evidence, were archived.
 

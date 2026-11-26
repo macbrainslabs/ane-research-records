@@ -12,6 +12,11 @@ keywords:
   - "Hugging Face"
   - "compute units"
   - "fp32 reference"
+  - "LFM3-1.7B"
+  - "4-bit palettization"
+  - "LUT4"
+  - "long context"
+  - "MLComputePlan"
 title: "MacBrains Labs ANE Research Records"
 authors:
   - family-names: Wilson
@@ -19,8 +24,8 @@ authors:
     orcid: "https://orcid.org/0009-0003-4026-8212"
     affiliation: "Independent researcher"
     website: "https://macbrainslabs.org"
-version: "0.5.0"
-doi: "10.5281/zenodo.24449434"
+version: "0.6.0"
+# doi: recorded here once Zenodo registers the v0.6.0 version DOI
 identifiers:
   - type: doi
     value: "10.5281/zenodo.23798036"
@@ -40,8 +45,8 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.24449434"
     description: "Version v0.5.0"
-date-released: "2026-11-22"
+date-released: "2026-11-26"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/macbrainslabs/ane-research-records"
 url: "https://macbrainslabs.org/research/"
-abstract: "Versioned, source-bound public research records. v0.5.0 adds: Published Qwen2.5-1.5B Core ML package against an fp32 reference of its original weights: the GPU output follows the reference for 7 tokens, the ANE output differs from the first token, and cpuOnly returns NaN. Scope: one Mac, the same chip, one published package, one prompt, compared with an fp32 CPU reference of the original weights. ANE execution is inferred from Core ML compute-plan placement. The cause of the differences is unknown, and the reference is not checked against PyTorch or transformers. No novelty claim."
+abstract: "Version v0.6.0 adds a package record for the strict-LUT4 one-segment build of a width-pruned LFM3-1.7B (feed-forward 7680 to 7168, 1.65B parameters), released as lfm3-1.7b-ane v0.2.0. Every large weight is a 4-bit lookup table (143 LUT4 operations). Core ML's compute plan assigns all 1,756 device-assigned operations to the Apple Neural Engine at 256, 512, 1024, 2048 and 4096 positions (the remaining enumerated operations are constants and the lookup-table carriers, which carry no device assignment); the token-embedding lookup runs on the host. Same-chip decode: 39.9 tok/s median at 256 and 23.5 tok/s at 4096 positions (INDICATIVE - measured on a loaded machine; the pre-run load gate never passed - 25 polls, minimum 5.68 - and individual runs began at loads between about 4.3 and 10.3) on Apple A18 Pro (Mac17,5), macOS 27.3 (26C5047e). Scope: one device; ANE hardware activity during decode measured with powermetrics; per-operation execution INFERRED from compute-plan placement; output quality measured against the pruned checkpoint only (31–32/39 on the lab scorecard); a 3,939-token prompt run completed to position 3,970 of 4,096 but a literal full-cache run was not demonstrated; runtime binary-only; no novelty claim. Records are reviewed summaries, not peer-reviewed results."

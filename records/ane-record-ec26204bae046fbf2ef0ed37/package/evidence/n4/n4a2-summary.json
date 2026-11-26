@@ -1,0 +1,8 @@
+{
+  "rc": 0,
+  "wall_s": 196.77297520637512,
+  "stdout": "The question is a mix of many sentences about \"The quick brown fox jumps over the lazy dog near the river bank\" and many variations of \"near the river\n",
+  "stderr": "[3939 prompt tokens | first token 158959 ms | 32 new tokens | 26.3 tok/s | position 3970 of 4096]\n> ",
+  "reps": 280,
+  "estimated_tokens": 3938.777777777778
+}
