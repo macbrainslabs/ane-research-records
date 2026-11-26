@@ -1,0 +1,5 @@
+{
+  "method": "fallback word approximation (tokenizers lib unavailable) \u2014 token count UNKNOWN",
+  "target_tokens": null,
+  "prompt_chars": 23431
+}

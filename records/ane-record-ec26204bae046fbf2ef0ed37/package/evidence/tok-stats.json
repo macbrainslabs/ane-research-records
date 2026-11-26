@@ -1,0 +1,157 @@
+{
+  "256": {
+    "tok_s_per_run": [
+      40.0,
+      41.2,
+      34.8,
+      38.2,
+      39.9
+    ],
+    "median": 39.9,
+    "mean": 38.82,
+    "sd": 2.488,
+    "ci95_mean_pm_1.96se": [
+      36.64,
+      41.0
+    ],
+    "first_token_ms": [
+      569,
+      513,
+      538,
+      523,
+      525
+    ],
+    "wall_s": [
+      30.727468013763428,
+      1.4584908485412598,
+      1.4276058673858643,
+      1.4073269367218018,
+      1.3650710582733154
+    ],
+    "method": "runner-reported tok/s parsed from stderr of each counted run (16 new tokens per run); CI = mean +/- 1.96*(SD/sqrt(n)), n=5"
+  },
+  "512": {
+    "tok_s_per_run": [
+      38.2,
+      38.6,
+      38.8,
+      33.1,
+      38.9
+    ],
+    "median": 38.6,
+    "mean": 37.52,
+    "sd": 2.485,
+    "ci95_mean_pm_1.96se": [
+      35.34,
+      39.7
+    ],
+    "first_token_ms": [
+      652,
+      610,
+      598,
+      606,
+      596
+    ],
+    "wall_s": [
+      32.189900159835815,
+      1.6454319953918457,
+      1.455402135848999,
+      1.5296940803527832,
+      1.4385390281677246
+    ],
+    "method": "runner-reported tok/s parsed from stderr of each counted run (16 new tokens per run); CI = mean +/- 1.96*(SD/sqrt(n)), n=5"
+  },
+  "1024": {
+    "tok_s_per_run": [
+      34.5,
+      31.7,
+      35.4,
+      35.3,
+      35.9
+    ],
+    "median": 35.3,
+    "mean": 34.56,
+    "sd": 1.676,
+    "ci95_mean_pm_1.96se": [
+      33.09,
+      36.03
+    ],
+    "first_token_ms": [
+      806,
+      748,
+      755,
+      810,
+      757
+    ],
+    "wall_s": [
+      35.77776098251343,
+      1.7960829734802246,
+      1.646381139755249,
+      1.7101969718933105,
+      1.6375577449798584
+    ],
+    "method": "runner-reported tok/s parsed from stderr of each counted run (16 new tokens per run); CI = mean +/- 1.96*(SD/sqrt(n)), n=5"
+  },
+  "2048": {
+    "tok_s_per_run": [
+      30.7,
+      30.2,
+      30.6,
+      33.3,
+      30.5
+    ],
+    "median": 30.6,
+    "mean": 31.06,
+    "sd": 1.266,
+    "ci95_mean_pm_1.96se": [
+      29.95,
+      32.17
+    ],
+    "first_token_ms": [
+      1154,
+      1108,
+      1053,
+      987,
+      1094
+    ],
+    "wall_s": [
+      38.62876009941101,
+      2.1768229007720947,
+      2.001007080078125,
+      1.89546799659729,
+      2.0916121006011963
+    ],
+    "method": "runner-reported tok/s parsed from stderr of each counted run (16 new tokens per run); CI = mean +/- 1.96*(SD/sqrt(n)), n=5"
+  },
+  "4096": {
+    "tok_s_per_run": [
+      24.3,
+      23.5,
+      24.4,
+      22.3,
+      22.9
+    ],
+    "median": 23.5,
+    "mean": 23.48,
+    "sd": 0.901,
+    "ci95_mean_pm_1.96se": [
+      22.69,
+      24.27
+    ],
+    "first_token_ms": [
+      1736,
+      1674,
+      1706,
+      1652,
+      1665
+    ],
+    "wall_s": [
+      39.35708808898926,
+      2.92828106880188,
+      2.827645778656006,
+      2.8193578720092773,
+      2.7947120666503906
+    ],
+    "method": "runner-reported tok/s parsed from stderr of each counted run (16 new tokens per run); CI = mean +/- 1.96*(SD/sqrt(n)), n=5"
+  }
+}
